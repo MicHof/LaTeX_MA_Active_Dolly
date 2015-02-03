@@ -1,0 +1,40 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdftex 2015.2.3)  3 FEB 2015 14:32
+entering extended mode
+**C:/Users/Sebastian/Documents/GitHub/LaTeX_MA_Active_Dolly/ExampleBib.bib
+(C:/Users/Sebastian/Documents/GitHub/LaTeX_MA_Active_Dolly/ExampleBib.bib
+Overfull \hbox (2.99611pt too wide) in paragraph at lines 1--4
+[]\tenrm See bibla-tex man-ual http://mirror.ctan.org/macros/latex/contrib/bibl
+atex/doc/biblatex.pdf for de-tailed|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm S
+.\tenrm e
+.\tenrm e
+.\glue 3.33333 plus 1.66666 minus 1.11111
+.etc.
+
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no £ in font cmr10!
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no ³ in font cmr10!
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no ¸ in font cmr10!
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.37 @Article{ kzfmodel_
+                        hanjalic2004,
+? 
+! Emergency stop.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.37 @Article{ kzfmodel_
+                        hanjalic2004,
+End of file on the terminal!
+
+!  ==> Fatal error occurred, no output PDF file produced!
