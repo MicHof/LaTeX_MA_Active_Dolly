@@ -1,9 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.5.26)  2 FEB 2015 13:40
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.5.26)  3 FEB 2015 11:05
 entering extended mode
 **ExampleMasters.tex
-
-(C:\Users\1.5V\Documents\GitHub\MA_Active_Steering_Dolly\LaTeX\ExampleMasters.t
-ex
+(C:\Users\1.5V\Documents\GitHub\LaTeX_MA_Active_Dolly\ExampleMasters.tex
 LaTeX2e <2014/05/01>
 Babel <3.9k> and hyphenation patterns for 68 languages loaded.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\nag\nag.sty"
@@ -20,8 +18,7 @@ Package nag Info: Loaded nag-orthodox.cfg  on input line 552.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\nag\nag-orthodox.cfg"
 File: nag-orthodox.cfg 2006/04/19 v1.8 strict rules for nag.sty (ulmi)
 ))
-(C:\Users\1.5V\Documents\GitHub\MA_Active_Steering_Dolly\LaTeX\chalmers-thesis.
-cls
+(C:\Users\1.5V\Documents\GitHub\LaTeX_MA_Active_Dolly\chalmers-thesis.cls
 Document Class: chalmers-thesis 2011/04/21 CHALMERS Thesis class
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\report.cls"
 Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
@@ -1137,8 +1134,7 @@ Package biblatex Info: ... file 'english.lbx' found.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\biblatex\lbx\english.lbx"
 File: english.lbx 2014/06/25 v2.9a biblatex localization (PK/JW/AB)
 )
-(C:\Users\1.5V\Documents\GitHub\MA_Active_Steering_Dolly\LaTeX\ExampleMasters.a
-ux)
+(C:\Users\1.5V\Documents\GitHub\LaTeX_MA_Active_Dolly\ExampleMasters.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 100.
 LaTeX Font Info:    ... okay on input line 100.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 100.
@@ -1228,10 +1224,8 @@ LaTeX Info: Redefining \ref on input line 100.
 LaTeX Info: Redefining \pageref on input line 100.
 LaTeX Info: Redefining \nameref on input line 100.
 
-(C:\Users\1.5V\Documents\GitHub\MA_Active_Steering_Dolly\LaTeX\ExampleMasters.o
-ut)
-(C:\Users\1.5V\Documents\GitHub\MA_Active_Steering_Dolly\LaTeX\ExampleMasters.o
-ut)
+(C:\Users\1.5V\Documents\GitHub\LaTeX_MA_Active_Dolly\ExampleMasters.out)
+(C:\Users\1.5V\Documents\GitHub\LaTeX_MA_Active_Dolly\ExampleMasters.out)
 \@outlinefile=\write5
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
@@ -1267,14 +1261,14 @@ Package nag Info: Command \hc@caption not defined, skipping amendment on input
 line 100.
 Package nag Info: Command \topcaption not defined, skipping amendment on input 
 line 100.
- <figures/Avancez_white.pdf, id=38, 407.19002pt x 380.59157pt>
+ <figures/Avancez_white.pdf, id=98, 407.19002pt x 380.59157pt>
 File: figures/Avancez_white.pdf Graphic file (type pdf)
 
 <use figures/Avancez_white.pdf>
 Package pdftex.def Info: figures/Avancez_white.pdf used on input line 114.
 (pdftex.def)             Requested size: 95.60344pt x 89.35773pt.
 
-<figures/ExampleCover.png, id=39, 1591.89325pt x 1019.59297pt>
+<figures/ExampleCover.png, id=99, 1591.89325pt x 1019.59297pt>
 File: figures/ExampleCover.png Graphic file (type png)
 
 <use figures/ExampleCover.png>
@@ -1292,50 +1286,59 @@ Overfull \hbox (18.9014pt too wide) in paragraph at lines 114--114
 [-100
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/1.5V/Documents/G
-itHub/MA_Active_Steering_Dolly/LaTeX/figures/Avancez_white.pdf> <C:/Users/1.5V/
-Documents/GitHub/MA_Active_Steering_Dolly/LaTeX/figures/ExampleCover.png (PNG c
-opy)>] [-99] [-98]
+itHub/LaTeX_MA_Active_Dolly/figures/Avancez_white.pdf> <C:/Users/1.5V/Documents
+/GitHub/LaTeX_MA_Active_Dolly/figures/ExampleCover.png (PNG copy)>]
+[-99] [-98]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 114.
 
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 114.
- [-97] [1]
-[2
+
+[-97] [1] [2
 
 ] [3] [4
 
 ] [5] [6
 
 ]
-(C:\Users\1.5V\Documents\GitHub\MA_Active_Steering_Dolly\LaTeX\ExampleMasters.t
-oc)
+(C:\Users\1.5V\Documents\GitHub\LaTeX_MA_Active_Dolly\ExampleMasters.toc)
 \tf@toc=\write6
- [7] [8
 
-]
-(C:\Users\1.5V\Documents\GitHub\MA_Active_Steering_Dolly\LaTeX\ExampleIntroduct
-ion.tex
+[7] [8
+
+] (C:\Users\1.5V\Documents\GitHub\LaTeX_MA_Active_Dolly\Introduction.tex
 Chapter 1.
-[1] [2])
+) (C:\Users\1.5V\Documents\GitHub\LaTeX_MA_Active_Dolly\Overview.tex
+Chapter 2.
+) (C:\Users\1.5V\Documents\GitHub\LaTeX_MA_Active_Dolly\HardwareSetUp.tex
+Chapter 3.
+) (C:\Users\1.5V\Documents\GitHub\LaTeX_MA_Active_Dolly\Discussion.tex
+Chapter 4.
+) (C:\Users\1.5V\Documents\GitHub\LaTeX_MA_Active_Dolly\Conclusion.tex
+Chapter 5.
+)
 
-LaTeX Warning: Empty bibliography on input line 124.
+LaTeX Warning: Empty bibliography on input line 127.
 
 No complaints by nag.
-[3]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 126.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 126.
+[1]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 129.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 129.
+ (C:\Users\1.5V\Documents\GitHub\LaTeX_MA_Active_Dolly\ExampleMasters.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 129.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 129.
 
-(C:\Users\1.5V\Documents\GitHub\MA_Active_Steering_Dolly\LaTeX\ExampleMasters.a
-ux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 126.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 126.
-Package rerunfilecheck Info: File `ExampleMasters.out' has not changed.
-(rerunfilecheck)             Checksum: 9A238565DF21EA8F1CD476264283D460;388.
 
+Package rerunfilecheck Warning: File `ExampleMasters.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `ExampleMasters.out':
+(rerunfilecheck)             Before: 60AD70324186522C92D64B41C5613F1B;1299
+(rerunfilecheck)             After:  DE4727FDD015E7C845F33A7CFF4CAA60;1370.
 
 LaTeX Warning: There were undefined references.
 
@@ -1347,10 +1350,10 @@ Package biblatex Warning: Please (re)run Biber on the file:
 Package logreq Info: Writing requests to 'ExampleMasters.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 25308 strings out of 493706
- 458141 string characters out of 3142168
- 1018227 words of memory out of 3000000
- 28167 multiletter control sequences out of 15000+200000
+ 25348 strings out of 493706
+ 458877 string characters out of 3142168
+ 1015282 words of memory out of 3000000
+ 28181 multiletter control sequences out of 15000+200000
  8608 words of font info for 44 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  55i,9n,54p,856b,1540s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1364,9 +1367,9 @@ am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Program
 iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss9.pfb><C:/Program File
 s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Program File
 s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on ExampleMasters.pdf (15 pages, 440630 bytes).
+Output written on ExampleMasters.pdf (13 pages, 448410 bytes).
 PDF statistics:
- 162 PDF objects out of 1000 (max. 8388607)
- 24 named destinations out of 1000 (max. 500000)
- 13911 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 235 PDF objects out of 1000 (max. 8388607)
+ 38 named destinations out of 1000 (max. 500000)
+ 14031 words of extra memory for PDF output out of 14400 (max. 10000000)
 
