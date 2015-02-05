@@ -31,20 +31,21 @@
 \BOOKMARK [2][]{subsection.6.2.1}{ECU-setup}{section.6.2}% 31
 \BOOKMARK [2][]{subsection.6.2.2}{CAN verification}{section.6.2}% 32
 \BOOKMARK [1][]{section.6.3}{Vehicle testing}{chapter.6}% 33
-\BOOKMARK [2][]{subsection.6.3.1}{Actuator tests}{section.6.3}% 34
-\BOOKMARK [2][]{subsection.6.3.2}{Algorithm testing}{section.6.3}% 35
-\BOOKMARK [2][]{subsection.6.3.3}{Sensor testing}{section.6.3}% 36
-\BOOKMARK [1][]{section.6.4}{Track testing}{chapter.6}% 37
-\BOOKMARK [2][]{subsection.6.4.1}{Testenvironment}{section.6.4}% 38
-\BOOKMARK [2][]{subsection.6.4.2}{Testmatrix}{section.6.4}% 39
-\BOOKMARK [2][]{subsection.6.4.3}{Test setup}{section.6.4}% 40
-\BOOKMARK [1][]{section.6.5}{Interface with Real-Time environment}{chapter.6}% 41
-\BOOKMARK [0][]{chapter.7}{Discussion}{}% 42
-\BOOKMARK [1][]{section.7.1}{Results from bench testing}{chapter.7}% 43
-\BOOKMARK [1][]{section.7.2}{Results from in vehicle testing}{chapter.7}% 44
-\BOOKMARK [1][]{section.7.3}{Results from on-track testing}{chapter.7}% 45
-\BOOKMARK [1][]{section.7.4}{Comparrison}{chapter.7}% 46
-\BOOKMARK [0][]{chapter.8}{Conclusion}{}% 47
-\BOOKMARK [1][]{section.8.1}{Recommendation}{chapter.8}% 48
-\BOOKMARK [1][]{section.8.2}{Future Work}{chapter.8}% 49
-\BOOKMARK [0][]{section.8.2}{References}{}% 50
+\BOOKMARK [2][]{subsection.6.3.1}{System calibration}{section.6.3}% 34
+\BOOKMARK [2][]{subsection.6.3.2}{Actuator tests}{section.6.3}% 35
+\BOOKMARK [2][]{subsection.6.3.3}{Algorithm evaluation}{section.6.3}% 36
+\BOOKMARK [2][]{subsection.6.3.4}{Sensor testing}{section.6.3}% 37
+\BOOKMARK [1][]{section.6.4}{Track testing}{chapter.6}% 38
+\BOOKMARK [2][]{subsection.6.4.1}{Testenvironment}{section.6.4}% 39
+\BOOKMARK [2][]{subsection.6.4.2}{Testmatrix}{section.6.4}% 40
+\BOOKMARK [2][]{subsection.6.4.3}{Test setup}{section.6.4}% 41
+\BOOKMARK [1][]{section.6.5}{Interface with Real-Time environment}{chapter.6}% 42
+\BOOKMARK [0][]{chapter.7}{Discussion}{}% 43
+\BOOKMARK [1][]{section.7.1}{Results from bench testing}{chapter.7}% 44
+\BOOKMARK [1][]{section.7.2}{Results from in vehicle testing}{chapter.7}% 45
+\BOOKMARK [1][]{section.7.3}{Results from on-track testing}{chapter.7}% 46
+\BOOKMARK [1][]{section.7.4}{Comparrison}{chapter.7}% 47
+\BOOKMARK [0][]{chapter.8}{Conclusion}{}% 48
+\BOOKMARK [1][]{section.8.1}{Recommendation}{chapter.8}% 49
+\BOOKMARK [1][]{section.8.2}{Future Work}{chapter.8}% 50
+\BOOKMARK [0][]{section.8.2}{References}{}% 51

@@ -82,6 +82,7 @@
     </requires>
     <requires type="editable">
       <file>ExampleBib.bib</file>
+      <file>ExampleBibSeb.bib</file>
     </requires>
     <requires type="static">
       <file>biblatex.bst</file>

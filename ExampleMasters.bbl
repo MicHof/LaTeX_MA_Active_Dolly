@@ -149,6 +149,45 @@
   \field{year}{2008}
 \endentry
 
+\entry{Steenhof2006369}{article}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Steenhof}{S.}%
+     {Paul}{P.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Woudsma}{W.}%
+     {Clarence}{C.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Sparling}{S.}%
+     {Erik}{E.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{SPWCSE1}
+  \strng{fullhash}{SPWCSE1}
+  \field{labelalpha}{SWS06}
+  \field{sortinit}{S}
+  \verb{doi}
+  \verb http://dx.doi.org/10.1016/j.trd.2006.07.003
+  \endverb
+  \field{issn}{1361-9209}
+  \field{number}{5}
+  \field{pages}{369 \bibrangedash  376}
+  \field{title}{Greenhouse gas emissions and the surface transport of freight
+  in Canada}
+  \verb{url}
+  \verb http://www.sciencedirect.com/science/article/pii/S1361920906000411
+  \endverb
+  \field{volume}{11}
+  \field{journaltitle}{Transportation Research Part D: Transport and
+  Environment}
+  \field{year}{2006}
+\endentry
+
 \lossort
 \endlossort
 
