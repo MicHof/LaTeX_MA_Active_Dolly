@@ -1,0 +1,155 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 2.4 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{kzfmodel_hanjalic2004}{article}{}
+  \true{moreauthor}
+  \name{author}{1}{}{%
+    {{}%
+     {Hanjalic}{H.}%
+     {Kemal}{K.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Elsevier}%
+  }
+  \strng{namehash}{HK+1}
+  \strng{fullhash}{HK+1}
+  \field{labelalpha}{Han+04}
+  \field{sortinit}{H}
+  \field{pages}{1047\bibrangedash 1051}
+  \field{shortjournal}{Int. J. Heat Fluid Flow}
+  \field{title}{A robust near-wall elliptic-relaxation eddy-viscosity
+  turbulence model for CFD}
+  \field{volume}{25}
+  \field{journaltitle}{International Journal of Heat and Fluid Flow}
+  \field{year}{2004}
+\endentry
+
+\entry{numerical_analysis_of_de_aiserles}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Iserles}{I.}%
+     {Arieh}{A.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Cambridge University Press}%
+  }
+  \strng{namehash}{IA1}
+  \strng{fullhash}{IA1}
+  \field{labelalpha}{Ise04}
+  \field{sortinit}{I}
+  \field{isbn}{0-521-55655-4}
+  \field{title}{A First Course in the Numerical Analysis of Differential
+  Equations}
+  \field{year}{2004}
+\endentry
+
+\entry{paper:B}{article}{skipbib}
+  \name{author}{2}{}{%
+    {{}%
+     {Jensen}{J.}%
+     {Carsten~Nordstrøm}{C.~N.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {True}{T.}%
+     {Hans}{H.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Kluwer Academic Publishers}%
+  }
+  \strng{namehash}{JCNTH1}
+  \strng{fullhash}{JCNTH1}
+  \field{labelalpha}{JT97}
+  \field{sortinit}{J}
+  \verb{doi}
+  \verb abc-123123123123123
+  \endverb
+  \field{number}{37}
+  \field{pages}{117\bibrangedash 129}
+  \field{title}{Application of a wheel-rail contact model to railway dynamics
+  in small radius curved tracks}
+  \field{volume}{13}
+  \field{journaltitle}{Nonlinear Dynamics}
+  \field{year}{1997}
+\endentry
+
+\entry{matlab:ode}{manual}{}
+  \list{publisher}{1}{%
+    {Mathworks}%
+  }
+  \field{labelalpha}{Mat}
+  \field{sortinit}{M}
+  \field{subtitle}{Ordinary Differential Equations}
+  \field{title}{MATLAB manual}
+  \verb{url}
+  \verb http://www.mathworks.com/access/helpdesk/help/techdoc/ref/ode45.html
+  \endverb
+  \field{version}{7.8}
+  \field{year}{2008}
+\endentry
+
+\entry{paper:A}{article}{skipbib}
+  \name{author}{2}{}{%
+    {{}%
+     {Pombo}{P.}%
+     {João~C.}{J.~C.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Ambrósio}{A.}%
+     {Jorge~A.C.}{J.~A.}%
+     {}{}%
+     {}{}}%
+  }
+  \true{moreshortauthor}
+  \name{shortauthor}{1}{}{%
+    {{}%
+     {Pombo}{P.}%
+     {J.}{J.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Springer Science}%
+  }
+  \strng{namehash}{PJ+1}
+  \strng{fullhash}{PJCAJA1}
+  \field{labelalpha}{Pom+08}
+  \field{sortinit}{P}
+  \verb{doi}
+  \verb 10.1007/s11044-007-9094-y
+  \endverb
+  \field{number}{F4}
+  \field{pages}{91\bibrangedash 114}
+  \field{title}{Application of a wheel-rail contact model to railway dynamics
+  in small radius curved tracks}
+  \field{volume}{19}
+  \field{journaltitle}{Multibody System Dynamics}
+  \field{year}{2008}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput

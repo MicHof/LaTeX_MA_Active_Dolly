@@ -53,3 +53,5 @@
 \contentsline {section}{\numberline {6.1}Recommendation}{1}{section.6.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6.2}Future Work}{1}{section.6.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{References}{1}{section.6.2}
