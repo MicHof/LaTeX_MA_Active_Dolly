@@ -31,14 +31,14 @@
 \usepackage{hyperref} % Required for in document links and document metadata.
 \usepackage[swedish, english]{babel}
 \usepackage{subscript}
-
+\usepackage[acronym]{glossaries}
 % More or less required packages
 \usepackage{csquotes} % Needed for biblatex
 % Biblatex allows you to choose backend, either the old "bibtex", or the new "biber".
 \usepackage[firstinits=true, style=alphabetic, backend=bibtex]{biblatex} % Modern bibliography facilities (you may change style to numeric)
 \usepackage{mathtools} % All your math related needs
 \usepackage{tikz} % Draw figures. Required for cover page
-
+\makeglossary
 % Read the manuals for the respective package to see the usage;
 %\usepackage{pdfpages} % For included other pdf files (like articles).
 %\usepackage{thmtools} % For theorems.
@@ -50,7 +50,6 @@
 %\usepackage{contmech} % Custom package for typesetting in continuum mechanics for applied mechanics.
 %\usepackage{yourcustomcommands} % Put your custom commands in a file 'yourcustomcommands.sty' and load it like this.
 
-\usepackage{lipsum}\setlipsumdefault{1-3} % Package used to put in placeholder text. Remove it.
 
 % User commands
 \title{Active Steering Dolly for Long Combination Vehicles}
@@ -101,6 +100,8 @@
 \begin{document}
 %\selectlanguage{swedish} % Use this if you are writing your thesis in swedish.
 \maketitle
+
+
 % If you need to do any modifications, you can redefine each page respectively, or just call them manually as;
 %\makecoverpage
 %\maketitlepage
@@ -116,6 +117,7 @@
  % Sets up page numbering for the rest of the document.
 % Highly recommended to put contents into subfiles, or use \input.
 \subfile{Introduction}
+
 \subfile{Overview}
 \subfile{HardwareSetUp}
 \subfile{TimeDelayMeasuring}
@@ -124,6 +126,9 @@
 \subfile{Discussion}
 
 \subfile{Conclusion}
+
+
+
 
 \clearpage
 \nocite{*} % Cites everything from the bibliography
