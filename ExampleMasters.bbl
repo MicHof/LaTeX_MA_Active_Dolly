@@ -188,6 +188,41 @@
   \field{year}{2006}
 \endentry
 
+\entry{96/53/EC}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {UNION}{U.}%
+     {THE COUNCIL OF THE~EUROPEAN}{T.~C. O. T.~E.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{UTCOTE1}
+  \strng{fullhash}{UTCOTE1}
+  \field{labelalpha}{UNI15}
+  \field{sortinit}{U}
+  \field{title}{Council Directive 96/53/EC}
+  \verb{url}
+  \verb http://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:31996L0053
+  \verb &from=en
+  \endverb
+  \field{day}{05}
+  \field{month}{02}
+  \field{year}{2015}
+\endentry
+
+\entry{Vägverket}{online}{}
+  \field{labelalpha}{Vgv}
+  \field{sortinit}{V}
+  \field{title}{Weight and Dimensions for Road Traffic}
+  \verb{url}
+  \verb http://www.unece.org/fileadmin/DAM/trans/wp24/wp24-presentations/docume
+  \verb nts/pres08-04.pdf
+  \endverb
+  \field{day}{05}
+  \field{month}{02}
+  \field{year}{2015}
+\endentry
+
 \lossort
 \endlossort
 

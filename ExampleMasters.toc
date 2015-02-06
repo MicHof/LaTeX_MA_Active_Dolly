@@ -4,13 +4,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{Abstract}{i}{section*.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Preface}{iii}{section*.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Acknowledgements}{iii}{section*.3}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Nomenclature}{v}{section*.4}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Contents}{vii}{section*.5}
+\contentsline {chapter}{Contents}{iii}{section*.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \defcounter {refsection}{0}\relax 
@@ -78,11 +72,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6.4}Track testing}{6}{section.6.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.4.1}Testenvironment}{6}{subsection.6.4.1}
+\contentsline {subsection}{\numberline {6.4.1}Testenvironment AstaZero}{6}{subsection.6.4.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.4.2}Testmatrix}{6}{subsection.6.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.4.3}Test setup}{6}{subsection.6.4.3}
+\contentsline {subsection}{\numberline {6.4.3}Test setup and instrumentation}{6}{subsection.6.4.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6.5}Interface with Real-Time environment}{6}{section.6.5}
 \defcounter {refsection}{0}\relax 
