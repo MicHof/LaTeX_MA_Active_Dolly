@@ -13,6 +13,19 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
+*.pdf
+*.acn
+*.acr
+*.aux
+*.bbl
+*.bcf
+*.glg
+*.glo
+*.gls
+*.ist
+*.log
+*.out
+*.toc
 
 # Windows shortcuts
 *.lnk
