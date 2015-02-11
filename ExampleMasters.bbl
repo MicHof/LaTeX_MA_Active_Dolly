@@ -16,140 +16,113 @@
   {}
 \endgroup
 
-\entry{kzfmodel_hanjalic2004}{article}{}
-  \true{moreauthor}
+\entry{LCV_USA}{online}{}
   \name{author}{1}{}{%
     {{}%
-     {Hanjalic}{H.}%
-     {Kemal}{K.}%
+     {Agency}{A.}%
+     {U.S. Environmental~Protection}{U.~E.~P.}%
      {}{}%
      {}{}}%
   }
-  \list{publisher}{1}{%
-    {Elsevier}%
-  }
-  \strng{namehash}{HK+1}
-  \strng{fullhash}{HK+1}
-  \field{labelalpha}{Han+04}
-  \field{sortinit}{H}
-  \field{pages}{1047\bibrangedash 1051}
-  \field{shortjournal}{Int. J. Heat Fluid Flow}
-  \field{title}{A robust near-wall elliptic-relaxation eddy-viscosity
-  turbulence model for CFD}
-  \field{volume}{25}
-  \field{journaltitle}{International Journal of Heat and Fluid Flow}
-  \field{year}{2004}
-\endentry
-
-\entry{numerical_analysis_of_de_aiserles}{book}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Iserles}{I.}%
-     {Arieh}{A.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{publisher}{1}{%
-    {Cambridge University Press}%
-  }
-  \strng{namehash}{IA1}
-  \strng{fullhash}{IA1}
-  \field{labelalpha}{Ise04}
-  \field{sortinit}{I}
-  \field{isbn}{0-521-55655-4}
-  \field{title}{A First Course in the Numerical Analysis of Differential
-  Equations}
-  \field{year}{2004}
-\endentry
-
-\entry{paper:B}{article}{skipbib}
-  \name{author}{2}{}{%
-    {{}%
-     {Jensen}{J.}%
-     {Carsten~Nordstrøm}{C.~N.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {True}{T.}%
-     {Hans}{H.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{publisher}{1}{%
-    {Kluwer Academic Publishers}%
-  }
-  \strng{namehash}{JCNTH1}
-  \strng{fullhash}{JCNTH1}
-  \field{labelalpha}{JT97}
-  \field{sortinit}{J}
-  \verb{doi}
-  \verb abc-123123123123123
-  \endverb
-  \field{number}{37}
-  \field{pages}{117\bibrangedash 129}
-  \field{title}{Application of a wheel-rail contact model to railway dynamics
-  in small radius curved tracks}
-  \field{volume}{13}
-  \field{journaltitle}{Nonlinear Dynamics}
-  \field{year}{1997}
-\endentry
-
-\entry{matlab:ode}{manual}{}
-  \list{publisher}{1}{%
-    {Mathworks}%
-  }
-  \field{labelalpha}{Mat}
-  \field{sortinit}{M}
-  \field{subtitle}{Ordinary Differential Equations}
-  \field{title}{MATLAB manual}
+  \strng{namehash}{AUEP1}
+  \strng{fullhash}{AUEP1}
+  \field{sortinit}{A}
+  \field{subtitle}{a glance at clean freight strategies}
+  \field{title}{Longer combination vehicles}
   \verb{url}
-  \verb http://www.mathworks.com/access/helpdesk/help/techdoc/ref/ode45.html
+  \verb http://www.epa.gov/smartway/forpartners/documents/trucks/techsheets-tru
+  \verb ck/420f10053.pdf
   \endverb
-  \field{version}{7.8}
-  \field{year}{2008}
+  \field{year}{2010}
+  \field{urlday}{09}
+  \field{urlmonth}{02}
+  \field{urlyear}{2015}
 \endentry
 
-\entry{paper:A}{article}{skipbib}
+\entry{balint2013correlation}{inproceedings}{}
+  \name{author}{4}{}{%
+    {{}%
+     {B{\'a}lint}{B.}%
+     {Andr{\'a}s}{A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Fagerlind}{F.}%
+     {Helen}{H.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Martinsson}{M.}%
+     {Jan}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Holmqvist}{H.}%
+     {Kristian}{K.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{BA+1}
+  \strng{fullhash}{BAFHMJHK1}
+  \field{sortinit}{B}
+  \field{booktitle}{Australasian College of Road Safety Conference, 2013,
+  Adelaide, South Australia, Australia}
+  \field{title}{Correlation between truck combination length and injury risk}
+  \field{year}{2013}
+\endentry
+
+\entry{LCV_Mexico}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Board}{B.}%
+     {Transportation~Research}{T.~R.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{BTR1}
+  \strng{fullhash}{BTR1}
+  \field{sortinit}{B}
+  \field{title}{REVIEW OF MEXICAN EXPERIENCE WITH THE REGULATION OF LARGE
+  COMMERCIAL MOTOR VEHICLES}
+  \verb{url}
+  \verb http://onlinepubs.trb.org/onlinepubs/nchrp/nchrp_rrd_362.pdf
+  \endverb
+  \field{month}{10}
+  \field{year}{2011}
+  \field{urlday}{09}
+  \field{urlmonth}{02}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{LCV_Canada}{online}{}
   \name{author}{2}{}{%
     {{}%
-     {Pombo}{P.}%
-     {João~C.}{J.~C.}%
+     {Infrastructure}{I.}%
+     {Alberta}{A.}%
      {}{}%
      {}{}}%
     {{}%
-     {Ambrósio}{A.}%
-     {Jorge~A.C.}{J.~A.}%
+     {Transportation}{T.}%
+     {}{}%
      {}{}%
      {}{}}%
   }
-  \true{moreshortauthor}
-  \name{shortauthor}{1}{}{%
-    {{}%
-     {Pombo}{P.}%
-     {J.}{J.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{publisher}{1}{%
-    {Springer Science}%
-  }
-  \strng{namehash}{PJ+1}
-  \strng{fullhash}{PJCAJA1}
-  \field{labelalpha}{Pom+08}
-  \field{sortinit}{P}
-  \verb{doi}
-  \verb 10.1007/s11044-007-9094-y
+  \strng{namehash}{IAT1}
+  \strng{fullhash}{IAT1}
+  \field{sortinit}{I}
+  \field{title}{Highway Provider View of Long Combination Vehicles}
+  \verb{url}
+  \verb http://www.transportation.alberta.ca/Content/docType59/Production/FAQs%
+  \verb 28US%29.pdf
   \endverb
-  \field{number}{F4}
-  \field{pages}{91\bibrangedash 114}
-  \field{title}{Application of a wheel-rail contact model to railway dynamics
-  in small radius curved tracks}
-  \field{volume}{19}
-  \field{journaltitle}{Multibody System Dynamics}
-  \field{year}{2008}
+  \field{month}{03}
+  \field{year}{2005}
+  \field{urlday}{09}
+  \field{urlmonth}{02}
+  \field{urlyear}{2015}
 \endentry
 
-\entry{Steenhof2006369}{article}{}
+\entry{greenhouse_gas_emisions}{article}{}
   \name{author}{3}{}{%
     {{}%
      {Steenhof}{S.}%
@@ -169,7 +142,6 @@
   }
   \strng{namehash}{SPWCSE1}
   \strng{fullhash}{SPWCSE1}
-  \field{labelalpha}{SWS06}
   \field{sortinit}{S}
   \verb{doi}
   \verb http://dx.doi.org/10.1016/j.trd.2006.07.003
@@ -188,6 +160,34 @@
   \field{year}{2006}
 \endentry
 
+\entry{LCV_Australia}{online}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Transport}{T.}%
+     {Department}{D.}%
+     {of}{o.}%
+     {}{}}%
+    {{}%
+     {Roads}{R.}%
+     {Main}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{TDoRM1}
+  \strng{fullhash}{TDoRM1}
+  \field{sortinit}{T}
+  \field{title}{Guideline for Multi-combination Vehicles in Queensland}
+  \verb{url}
+  \verb http://www.tmr.qld.gov.au/~/media/busind/Heavyvehicles/guidepermits/Gui
+  \verb deline_mcv_form1.pdf
+  \endverb
+  \field{month}{07}
+  \field{year}{2013}
+  \field{urlday}{09}
+  \field{urlmonth}{02}
+  \field{urlyear}{2015}
+\endentry
+
 \entry{96/53/EC}{online}{}
   \name{author}{1}{}{%
     {{}%
@@ -198,29 +198,39 @@
   }
   \strng{namehash}{UTCOTE1}
   \strng{fullhash}{UTCOTE1}
-  \field{labelalpha}{UNI15}
   \field{sortinit}{U}
   \field{title}{Council Directive 96/53/EC}
   \verb{url}
   \verb http://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:31996L0053
   \verb &from=en
   \endverb
-  \field{day}{05}
-  \field{month}{02}
-  \field{year}{2015}
+  \field{day}{25}
+  \field{month}{07}
+  \field{year}{1996}
+  \field{urlday}{05}
+  \field{urlmonth}{02}
+  \field{urlyear}{2015}
 \endentry
 
-\entry{V�gverket}{online}{}
-  \field{labelalpha}{Vgv}
+\entry{Vaegverket}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {V{\"a}gverket}{V.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{V1}
+  \strng{fullhash}{V1}
   \field{sortinit}{V}
   \field{title}{Weight and Dimensions for Road Traffic}
   \verb{url}
   \verb http://www.unece.org/fileadmin/DAM/trans/wp24/wp24-presentations/docume
   \verb nts/pres08-04.pdf
   \endverb
-  \field{day}{05}
-  \field{month}{02}
-  \field{year}{2015}
+  \field{urlday}{05}
+  \field{urlmonth}{02}
+  \field{urlyear}{2015}
 \endentry
 
 \lossort
