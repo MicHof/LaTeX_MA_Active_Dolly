@@ -29,17 +29,17 @@
 \BOOKMARK [1][]{section.6.1}{Background}{chapter.6}% 29
 \BOOKMARK [1][]{section.6.2}{Measured input delay}{chapter.6}% 30
 \BOOKMARK [1][]{section.6.3}{Computational delay}{chapter.6}% 31
-\BOOKMARK [0][]{chapter.7}{Fault detection and state}{}% 32
-\BOOKMARK [1][]{section.7.1}{Safety concepts}{chapter.7}% 33
-\BOOKMARK [1][]{section.7.2}{Capabilities of the system}{chapter.7}% 34
-\BOOKMARK [1][]{section.7.3}{Warning and state info-system}{chapter.7}% 35
-\BOOKMARK [0][]{chapter.8}{Testing}{}% 36
-\BOOKMARK [1][]{section.8.1}{Overview}{chapter.8}% 37
-\BOOKMARK [1][]{section.8.2}{Bench-Testing}{chapter.8}% 38
-\BOOKMARK [2][]{subsection.8.2.1}{ECU-setup}{section.8.2}% 39
-\BOOKMARK [2][]{subsection.8.2.2}{CAN verification}{section.8.2}% 40
-\BOOKMARK [2][]{subsection.8.2.3}{Fault detection system verification}{section.8.2}% 41
-\BOOKMARK [2][]{subsection.8.2.4}{FMEA}{section.8.2}% 42
+\BOOKMARK [0][]{chapter.7}{Fault detection and system ability}{}% 32
+\BOOKMARK [1][]{section.7.1}{Failure Mode and Effects Analysis \(FMEA\)}{chapter.7}% 33
+\BOOKMARK [1][]{section.7.2}{Safety concepts}{chapter.7}% 34
+\BOOKMARK [1][]{section.7.3}{Maximum capabilities of the system}{chapter.7}% 35
+\BOOKMARK [1][]{section.7.4}{Warning and state-info system}{chapter.7}% 36
+\BOOKMARK [0][]{chapter.8}{Testing}{}% 37
+\BOOKMARK [1][]{section.8.1}{Overview}{chapter.8}% 38
+\BOOKMARK [1][]{section.8.2}{Bench-Testing}{chapter.8}% 39
+\BOOKMARK [2][]{subsection.8.2.1}{ECU-setup}{section.8.2}% 40
+\BOOKMARK [2][]{subsection.8.2.2}{CAN verification}{section.8.2}% 41
+\BOOKMARK [2][]{subsection.8.2.3}{Fault detection system verification}{section.8.2}% 42
 \BOOKMARK [1][]{section.8.3}{Vehicle testing}{chapter.8}% 43
 \BOOKMARK [2][]{subsection.8.3.1}{System calibration}{section.8.3}% 44
 \BOOKMARK [2][]{subsection.8.3.2}{Actuator tests}{section.8.3}% 45
