@@ -9,6 +9,20 @@
 \label{chap:hardware_setup}
 \section{Utilized dolly system}
 \label{sec:dolly_system}
+The utilized dolly by Parator Industri AB (Parator) is equipped with two steerable axles. They are controlled by an after-market solution supplied by V.S.E. Vehicle Systems Engineering B.V. (VSE), of which figure \ref{fig:legacy_system_vse} gives an overview. Their product includes sensors, ECUs and hydraulic systems which come in a ready-to-mount housing, which is placed on the trailer/dolly. This solution is usually sold as a low-speed system for truck-trailer combinations to provide better maneuverability at low speeds in inner-city areas. Besides electrical power and compressed-air (see "2" in the figure) supply there is no connection with the truck in place. This allows for use with many different truck/trailer original equipment manufacturers (OEM), as no insight into proprietary CAN-communication is needed. In the original VSE system the two parameters that influence the actuation of the dolly's steering are vehicle speed ("4") and kingpin-deflection ("3") is considered. This deflection is the angle between the truck and trailer, which is measured by an additional kingpin-angle sensor supplied by VSE. Furthermore every steering-knuckle is equipped with an angle sensor to provide appropriate wheel-individual feedback for the VSE control-system. Furthermore a relatively simple diagnosis screen is available in the VSE-unit, which allows for set-up, calibration and parametrization to be done.\cite{dolly_datasheet}
+
+VSE provides assisted steering up to a speed of 25km/h over which intervention until it reaches zero at 55km/h. At this treshhold the steerable axles are locked and thus behave like normal rigid axles. This is to ensure stability at higher speeds.\cite{dolly_datasheet} To prevent the steering from being locked a suitable work-around solution had to be found for this thesis. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1.0\linewidth]{figures/legacy_system_vse}
+\caption[]{Active dolly legacy steering system supplied by VSE\cite{dolly_datasheet}}
+\label{fig:legacy_system_vse}
+\end{figure}
+
+
+
+
 
 Short overview for the dolly, including: 
 
@@ -21,6 +35,8 @@ Short overview for the dolly, including:
 \end{itemize}
 \section{Real-Time Environment}
 \label{sec:realtime_environment}
+
+
 
 \begin{itemize}
 	\item mechanical properties of box  (dimension, currents, mounting points in dolly)
@@ -37,19 +53,38 @@ Short overview for the dolly, including:
 \label{sec:interface_with_dolly}
 
 \begin{itemize}
-	\item CANbus with AngleSensor
-	\item Vehicle CAN
+	\item private CANbus with AngleSensor for kingpin
+	\item Vehicle CAN (ISO 11992, connector ISO 7638-2)
+	\subitem brake by-wire
+	\subitem EBS, ABS
+	\subitem sensors for EBS, ABS
+	\subitem signals/msgs on vehCAN
 	\item physial interface =$>$ diagnosis outlet
 \end{itemize}
 
 \section{Measurment Setup}
 \label{sec:measurement_setup}
+
 \subsection{On-board sensors}
 \begin{itemize}
 	\item king pin angle
 	\item steering angle 
 	\item speed
 \end{itemize}
+
+\subsection{Arduino Due}
+\label{sec:arduino}
+\begin{itemize}
+	\item clock frequency
+	\item robustness, reliability, cost-effectiveness
+	\item input/outputs analog $\&$ digital
+	\item native I2C capability
+	\item CANcomm except of physical layer/transceiver available (OSI reference!)
+\end{itemize}
+
+
+
+
 \subsection{Inertial measurement unit}
 \label{sec:IMU}
 To determine the processing delays in the control chain (refer to chapter \ref{chap:processing_time_delay}) as well as logging implementation for verification and analyses purposes a number of inertial measurement units (IMU) where utilizied throughout this thesis' work. The system at hand combined a gyroscope (L3GD20H), and an accelero- and magnetometer (LSM303D) into an IMU put on one circuit board\cite{IMU_homepage_shop}. This one-chip solution allowed for a convenient access to the sensor measurings, as the sensor outputs could be received via Inter-Integrated Circuit-protocol (I$^{2}$C)  which eliminates the need for transducer. Furthermore a high-pass filter is integrated into the IMU's accelerometer, which allows for easier compensation of the immanent drift. 
