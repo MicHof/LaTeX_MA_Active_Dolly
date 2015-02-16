@@ -122,6 +122,25 @@
   \field{urlyear}{2015}
 \endentry
 
+\entry{IMU_homepage_shop}{manual}{}
+  \name{author}{1}{}{%
+    {{}%
+     {PololuCorporation}{P.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{P1}
+  \strng{fullhash}{P1}
+  \field{sortinit}{P}
+  \field{title}{AltIMU-10 v4 Gyro, Accelerometer, Compass, and Altimeter
+  (L3GD20H, LSM303D, and LPS25H Carrier)}
+  \verb{url}
+  \verb https://www.pololu.com/product/2470/
+  \endverb
+  \field{year}{2015 (accessed February 12, 2015)}
+\endentry
+
 \entry{greenhouse_gas_emisions}{article}{}
   \name{author}{3}{}{%
     {{}%
@@ -158,6 +177,38 @@
   \field{journaltitle}{Transportation Research Part D: Transport and
   Environment}
   \field{year}{2006}
+\endentry
+
+\entry{gyrometer_datasheet}{manual}{}
+  \name{author}{1}{}{%
+    {{}%
+     {STMicroelectronics}{S.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{S1}
+  \strng{fullhash}{S1}
+  \field{sortinit}{S}
+  \field{title}{L3GD20H - MEMS motion sensor: three-axis digital output
+  gyroscope: Datasheet - production data}
+  \field{year}{2013}
+\endentry
+
+\entry{accelerometer_datasheet}{manual}{}
+  \name{author}{1}{}{%
+    {{}%
+     {STMicroelectronics}{S.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{S1}
+  \strng{fullhash}{S1}
+  \field{sortinit}{S}
+  \field{title}{LSM303D - Ultra compact high performance e-Compass 3D
+  accelerometer and 3D magnetometer module: Datasheet — preliminary data}
+  \field{year}{2012}
 \endentry
 
 \entry{LCV_Australia}{online}{}

@@ -9,12 +9,50 @@
 \label{chap:hardware_setup}
 \section{Utilized dolly system}
 \label{sec:dolly_system}
+
+Short overview for the dolly, including: 
+
+\begin{itemize}
+\item mechanical properties in short (weight, turning radius, max. tonnage)
+\item description of function (brake, steer, countersteer, lock at highspeed)
+\item difference low $<=>$ high speed
+\item control system by VSE, diagnosis, display connection with truck
+\item system overview picture/schematics
+\end{itemize}
 \section{Real-Time Environment}
 \label{sec:realtime_environment}
+
+\begin{itemize}
+	\item mechanical properties of box  (dimension, currents, mounting points in dolly)
+	\item computational power/limitations
+	\item explain interfaces with truck/dolly (abstract)
+	\item explain technical realisation of HW interface (ZIF)
+	\item explain rapid-prototyping
+	\item robustness
+	\item programming with software ref to \ref{sec:matlab}
+	\item runtime interface ref to \ref{sec:control_desk}
+\end{itemize}
+
 \section{Interfaces with Dolly}
 \label{sec:interface_with_dolly}
+
+\begin{itemize}
+	\item CANbus with AngleSensor
+	\item Vehicle CAN
+	\item physial interface =$>$ diagnosis outlet
+\end{itemize}
+
 \section{Measurment Setup}
 \label{sec:measurement_setup}
+\subsection{On-board sensors}
+\begin{itemize}
+	\item king pin angle
+	\item steering angle 
+	\item speed
+\end{itemize}
+\subsection{Inertial measurement unit}
+\label{sec:IMU}
+To determine the processing delays in the control chain (refer to chapter \ref{chap:processing_time_delay}) as well as logging implementation for verification and analyses purposes a number of inertial measurement units (IMU) where utilizied throughout this thesis' work. The system at hand combined a gyroscope (L3GD20H), and an accelero- and magnetometer (LSM303D) into an IMU put on one circuit board\cite{IMU_homepage_shop}. This one-chip solution allowed for a convenient access to the sensor measurings, as the sensor outputs could be received via Inter-Integrated Circuit-protocol (I$^{2}$C)  which eliminates the need for transducer. Furthermore a high-pass filter is integrated into the IMU's accelerometer, which allows for easier compensation of the immanent drift. 
 
-
+These units supply the measurings for three axes each at a maximum frequency of 1600Hz for the accelerometer and 757.6Hz for the gyroscope. \cite{accelerometer_datasheet}\cite{gyrometer_datasheet}
 \end{document}

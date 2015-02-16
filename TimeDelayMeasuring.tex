@@ -6,6 +6,13 @@
 \chapter{Processing Time evaluation}
 \label{chap:processing_time_delay}
 \section{Background}
+The desired solution is supposed to operate at any speed. For high speeds a quick processing and transmission time is required to ensure prompt and realtime intervention of the control system based on the measured input signals. If the delays induced by the different components in the complete system are known or can be estimated, they can be compensated for in the steering-algorithm running on the rapid-prototyping system.
+
+The dolly is equipped with a system to determine the deflection angle of the drawbar. This is measured at the kingpin. The sensor's raw signal is then parsed and filtered in a low-level system which feeds the filtered signals to the CAN-bus, where it is picked up by the MABII. The filtering operation takes a certain time and thus induces a delay. 
+
+Furthermore the model running on the rapid-prototyping system needs a certain time to calculate the current desired steering angle for the dollys' wheels. This has to be determined as well. The steering mechanisms on the dolly are also a delay-inducer due to the inertia in the hydro-mechanic system. This is as well unavoidable, but when measured can as well be compensated for. 
+
+
 \section{Measured input delay}
 \section{Computational delay}
 
