@@ -11,7 +11,7 @@
 \label{sec:dolly_system}
 The utilized dolly by Parator Industri AB (Parator) is equipped with two steerable axles. They are controlled by an after-market solution supplied by V.S.E. Vehicle Systems Engineering B.V. (VSE), of which figure \ref{fig:legacy_system_vse} gives an overview. Their product includes sensors, ECUs and hydraulic systems which come in a ready-to-mount housing, which is placed on the trailer/dolly. This solution is usually sold as a low-speed system for truck-trailer combinations to provide better maneuverability at low speeds in inner-city areas. Besides electrical power and compressed-air (see "2" in the figure) supply there is no connection with the truck in place. This allows for use with many different truck/trailer original equipment manufacturers (OEM), as no insight into proprietary CAN-communication is needed. In the original VSE system the two parameters that influence the actuation of the dolly's steering are vehicle speed ("4") and kingpin-deflection ("3") is considered. This deflection is the angle between the truck and trailer, which is measured by an additional kingpin-angle sensor supplied by VSE. Furthermore every steering-knuckle is equipped with an angle sensor to provide appropriate wheel-individual feedback for the VSE control-system. Furthermore a relatively simple diagnosis screen is available in the VSE-unit, which allows for set-up, calibration and parametrization to be done.\cite{dolly_datasheet}
 
-VSE provides assisted steering up to a speed of 25km/h over which intervention until it reaches zero at 55km/h. At this treshhold the steerable axles are locked and thus behave like normal rigid axles. This is to ensure stability at higher speeds.\cite{dolly_datasheet} To prevent the steering from being locked a suitable work-around solution had to be found for this thesis. 
+VSE provides assisted steering up to a speed of 25km/h over which intervention until it reaches zero at 55km/h. At this treshhold the steerable axles are locked and thus behave like normal rigid axles. This according to the manufacturer is to ensure stability at higher speeds.\cite{dolly_datasheet} Locking the steering at higher speeds leads to a more predictable behaviour for the user and system robustness. However, performance during high speed maneuvers can be improved by uniformly steering the dolly as well.\cite{performance_improvement} The desired demonstration of the algorithm presented in chapter \ref{chap:steering_model} will as outlined in the introduction to this thesis, include steering at higher speeds, thus a work-around had to be established.
 
 \begin{figure}[h]
 \centering
@@ -49,7 +49,7 @@ Short overview for the dolly, including:
 	\item runtime interface ref to \ref{sec:control_desk}
 \end{itemize}
 
-\section{Interfaces with Dolly}
+\section{Interfaces with dolly}
 \label{sec:interface_with_dolly}
 
 \begin{itemize}
@@ -62,12 +62,25 @@ Short overview for the dolly, including:
 	\item physial interface =$>$ diagnosis outlet
 \end{itemize}
 
+\section{Interfaces with truck}
+\label{sec:interface_with_dolly}
+
+\begin{itemize}
+	\item CAN communication with truck
+	\item steering system conncetion
+
+\end{itemize}
+
+
 \section{Measurment Setup}
 \label{sec:measurement_setup}
 
 \subsection{On-board sensors}
 \begin{itemize}
 	\item king pin angle
+	\subitem mounting
+	\subitem CANcomm
+	
 	\item steering angle 
 	\item speed
 \end{itemize}
@@ -76,6 +89,8 @@ Short overview for the dolly, including:
 \label{sec:arduino}
 \begin{itemize}
 	\item clock frequency
+	\item RAM/ROM
+	\item ISP flash
 	\item robustness, reliability, cost-effectiveness
 	\item input/outputs analog $\&$ digital
 	\item native I2C capability

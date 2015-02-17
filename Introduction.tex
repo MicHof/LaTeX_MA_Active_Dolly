@@ -23,7 +23,7 @@ The high-level control algorithm will be executed on a rapid-prototyping system 
 The main-goals that are supposed to be achieved within this thesis' scope of work are: 
 
 \begin{itemize}
-	\item{supply a software interface for the high-level Simulink control algorithm to be run on a rapid-prototyping system to control the active steering on an actual dolly}
+	\item{supply a software interface for the high-level Simulink control algorithm to be run on a rapid-prototyping system to control the active steering on an actual active dolly}
 	\item{set up the physical hardware interface with the dolly; establish a suitable environment connection for the rapid-prototyping system on board of the dolly} 
 	\item{come up with a measuring solution to determine the processing delays in the sensing system as well as the delays introduced by computation and actuator reaction times}  
 	\item{supply a safety system that continously monitors the active steering system and triggers necessary warning}
@@ -38,7 +38,7 @@ The main-goals that are supposed to be achieved within this thesis' scope of wor
 \label{sec:limitations}
 The actual high-level algorithm to compute the desired angle for the dolly's steerable axles is not in the scope of this thesis. Nevertheless to establish an easier insight into the interfaces' parameters, an overview of the structure, in- and outputs of the underlying computational steering model is needed and shall be presented in chapter \ref{chap:steering_model}. 
 
-The hardware- and low-level control-system of the hydraulic actuators is in place already and thus will not be part of this thesis. It is supplied as turn-key software by the manufacturer and readily available on the dolly's electrical control units (ECU). The ECU's software version will be available fully calibrated and parametrized for the dolly at hand and thus provide a reliable working base to build upon. 
+The hardware- and low-level control-system of the hydraulic actuators is in place already and thus will not be part of this thesis. It is supplied as turn-key software by the manufacturer and readily available on the dolly's electrical control units (ECU). Still some modifications are necessary to achieve the desired goals. The ECU's software version will be available fully calibrated and parametrized for the dolly at hand and thus provide a reliable working base to build upon. 
 
 
 \section{Structure of this work}

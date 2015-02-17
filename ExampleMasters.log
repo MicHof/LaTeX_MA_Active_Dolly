@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.5.26)  16 FEB 2015 16:15
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.5.26)  17 FEB 2015 13:20
 entering extended mode
 **ExampleMasters.tex
 (C:\Users\1.5V\Documents\GitHub\LaTeX_MA_Active_Dolly\ExampleMasters.tex
@@ -1288,7 +1288,11 @@ Package biblatex Info: ... file 'english.lbx' found.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\biblatex\lbx\english.lbx"
 File: english.lbx 2014/06/25 v2.9a biblatex localization (PK/JW/AB)
 )
-(C:\Users\1.5V\Documents\GitHub\LaTeX_MA_Active_Dolly\ExampleMasters.aux)
+(C:\Users\1.5V\Documents\GitHub\LaTeX_MA_Active_Dolly\ExampleMasters.aux
+
+LaTeX Warning: Label `sec:interface_with_dolly' multiply defined.
+
+)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 100.
 LaTeX Font Info:    ... okay on input line 100.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 100.
@@ -1423,19 +1427,19 @@ Package nag Info: Command \captionbelow not defined, skipping amendment on inpu
 t line 100.
 Package nag Info: Command \hc@caption not defined, skipping amendment on input 
 line 100.
- <figures/Avancez_white.pdf, id=273, 407.19002pt x 380.59157pt>
+ <figures/Avancez_white.pdf, id=281, 407.19002pt x 380.59157pt>
 File: figures/Avancez_white.pdf Graphic file (type pdf)
 
 <use figures/Avancez_white.pdf>
 Package pdftex.def Info: figures/Avancez_white.pdf used on input line 103.
 (pdftex.def)             Requested size: 95.60344pt x 89.35773pt.
 
-<figures/ExampleCover.png, id=274, 1591.89325pt x 1019.59297pt>
+<figures/ExampleCover.png, id=282, 392.21532pt x 557.08125pt>
 File: figures/ExampleCover.png Graphic file (type png)
 
 <use figures/ExampleCover.png>
 Package pdftex.def Info: figures/ExampleCover.png used on input line 103.
-(pdftex.def)             Requested size: 477.9846pt x 306.14473pt.
+(pdftex.def)             Requested size: 237.98222pt x 338.017pt.
 Package microtype Info: Loading generic settings for font family
 (microtype)             `cmss' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
@@ -1449,20 +1453,19 @@ Overfull \hbox (18.9014pt too wide) in paragraph at lines 103--103
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/1.5V/Documents/G
 itHub/LaTeX_MA_Active_Dolly/figures/Avancez_white.pdf> <C:/Users/1.5V/Documents
-/GitHub/LaTeX_MA_Active_Dolly/figures/ExampleCover.png (PNG copy)>]
-[-99] [-98]
+/GitHub/LaTeX_MA_Active_Dolly/figures/ExampleCover.png>] [-99] [-98]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 103.
 
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 103.
+ [-97] [1]
+[2
 
-[-97] [1] [2
-
-]
-(C:\Users\1.5V\Documents\GitHub\LaTeX_MA_Active_Dolly\ExampleMasters.toc
+] (C:\Users\1.5V\Documents\GitHub\LaTeX_MA_Active_Dolly\ExampleMasters.toc
 [3])
 \tf@toc=\write9
  [4] (C:\Users\1.5V\Documents\GitHub\LaTeX_MA_Active_Dolly\Introduction.tex
@@ -1483,7 +1486,7 @@ Chapter 3.
 
 ]
 Chapter 4.
-<figures/legacy_system_vse.jpg, id=432, 998.22937pt x 465.23813pt>
+<figures/legacy_system_vse.jpg, id=446, 998.22937pt x 465.23813pt>
 File: figures/legacy_system_vse.jpg Graphic file (type jpg)
 
 <use figures/legacy_system_vse.jpg>
@@ -1492,9 +1495,9 @@ Package pdftex.def Info: figures/legacy_system_vse.jpg used on input line 18.
  [5
 
  <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/legacy_system_vs
-e.jpg>])
+e.jpg>] [6])
 (C:\Users\1.5V\Documents\GitHub\LaTeX_MA_Active_Dolly\SoftwareSetUp.tex
-[6] [7]
+[7]
 Chapter 5.
 ) (C:\Users\1.5V\Documents\GitHub\LaTeX_MA_Active_Dolly\TimeDelayMeasuring.tex
 [8
@@ -1541,15 +1544,19 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 142.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 142.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 142.
 Package rerunfilecheck Info: File `ExampleMasters.out' has not changed.
-(rerunfilecheck)             Checksum: D31605365D773DB9D81C94C80A45F750;4430.
+(rerunfilecheck)             Checksum: A9EE58FED57CFE939C83B54041C47F74;4565.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package logreq Info: Writing requests to 'ExampleMasters.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 28601 strings out of 493706
- 508001 string characters out of 3142168
+ 28612 strings out of 493706
+ 508203 string characters out of 3142168
  932183 words of memory out of 3000000
- 31174 multiletter control sequences out of 15000+200000
- 12499 words of font info for 86 fonts, out of 3000000 for 9000
+ 31180 multiletter control sequences out of 15000+200000
+ 12550 words of font info for 87 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  55i,9n,54p,2248b,1869s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
@@ -1566,9 +1573,9 @@ x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss9.pfb><C:/Program Files (x86
 )/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/
 MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/Mi
 KTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on ExampleMasters.pdf (22 pages, 640860 bytes).
+Output written on ExampleMasters.pdf (22 pages, 452745 bytes).
 PDF statistics:
- 576 PDF objects out of 1000 (max. 8388607)
- 103 named destinations out of 1000 (max. 500000)
- 21556 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 591 PDF objects out of 1000 (max. 8388607)
+ 106 named destinations out of 1000 (max. 500000)
+ 21572 words of extra memory for PDF output out of 24883 (max. 10000000)
 

@@ -40,15 +40,17 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.2}Real-Time Environment}{6}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Interfaces with Dolly}{6}{section.4.3}
+\contentsline {section}{\numberline {4.3}Interfaces with dolly}{6}{section.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Measurment Setup}{6}{section.4.4}
+\contentsline {section}{\numberline {4.4}Interfaces with truck}{6}{section.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4.1}On-board sensors}{6}{subsection.4.4.1}
+\contentsline {section}{\numberline {4.5}Measurment Setup}{6}{section.4.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4.2}Arduino Due}{6}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.5.1}On-board sensors}{6}{subsection.4.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4.3}Inertial measurement unit}{7}{subsection.4.4.3}
+\contentsline {subsection}{\numberline {4.5.2}Arduino Due}{7}{subsection.4.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.5.3}Inertial measurement unit}{7}{subsection.4.5.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {5}Software Setup}{8}{chapter.5}
 \defcounter {refsection}{0}\relax 
@@ -112,11 +114,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {8.4}Track testing}{11}{section.8.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.4.1}Testenvironment AstaZero}{11}{subsection.8.4.1}
+\contentsline {subsection}{\numberline {8.4.1}Testmaneuvers}{11}{subsection.8.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.4.2}Testmatrix}{11}{subsection.8.4.2}
+\contentsline {subsection}{\numberline {8.4.2}Testenvironment AstaZero}{11}{subsection.8.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.4.3}Test setup and instrumentation}{11}{subsection.8.4.3}
+\contentsline {subsection}{\numberline {8.4.3}Testmatrix}{11}{subsection.8.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {8.4.4}Test setup and instrumentation}{11}{subsection.8.4.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {9}Discussion}{12}{chapter.9}
 \defcounter {refsection}{0}\relax 
