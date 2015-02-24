@@ -9,6 +9,30 @@
 \label{chap:fault_detection}
 \section{Failure Mode and Effects Analysis (FMEA)}
 \label{sec:FMEA}
+\begin{itemize}
+	\item system discription $\rightarrow\;$ diagram of system and subsystems
+	\item break system and subsystems down into components and in/out-puts
+	\item find for each component all:
+	\begin{itemize}
+		\item potential failure modes
+		\item potential effects of these failures
+	\end{itemize}
+	\item define severity of each effect (scale from 0-10)
+	\item find potential causes for each failure mode
+	\item define probability of each cause
+	\item list current design controls, that help to detect the specific failure
+	\item define detectability of each failure
+	\item calculate risk priority number (rpn=sev*prop*detec)
+	\begin{itemize}
+		\item rpn<40 $\rightarrow\;$ no action needed
+		\item 40<rpn<100 $\rightarrow\;$ take closer look
+		\item rpn>100 $\rightarrow\;$ action needed
+	\end{itemize}
+	\item for failures, where action is needed--> recommend actions that prevent failures
+	\item define new sev., prop. and detect.
+	\item calculate new rpn
+	\item if needed $\rightarrow\;$ iteration of process    
+\end{itemize}
 \section{Safety concepts}
 \label{sec:safetyconcepts}
 
