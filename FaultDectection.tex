@@ -13,9 +13,26 @@ FMEAs were first used by NASA in the apollo project in the 1960s.
 A FMEA is used to detect possible failures before they appear. Therefore the FMEA is done in a early stage of a project in order to be able to take the results of the FMEA into consideration when developing a system.
 In a first step a block diagram of the system with all of it's inputs, outputs and subsytems was created to gain a complete understanding of the system. Every subsystem was broken down to the lowest level and for those subsystems block diagrams with all the components, inputs and outputs were created as well.
 
-Starting from the block diagrams all potential failure modes were determined for every component of the system respectively subsystem. As a next step the potential effects of these failure modes were determined and the severity of these effects were evaluated on a scale from one to ten,  with 1 being the lowest severity and ten being the highest severity. For the evaluation a table that shows how different severities correlate with the numbers was used. \colorbox{yellow}{picture of severity-table}    
-
-
+Starting from the block diagrams all potential failure modes were determined for every component of the system respectively subsystem. As a next step the potential effects of these failure modes were determined and the severity of these effects were evaluated on a scale from one to ten,  with 1 being the lowest severity and ten being the highest severity. For the evaluation a table that shows how different severities correlate with the numbers was used. \colorbox{yellow}{picture of severity-table}
+Following this, potential causes for every failure mode were defined. Then the probability of occurrence for each cause was evaluated, also using a scale from one to ten.
+After that the current control mechanisms, that detect the failure when it should appear, were listed for each failure mechanism and the detectability of the failure mechanism was evaluated using a scale from one to ten.
+After the severity, probability and detectability were evaluated, a risk priority number is calculated as follows: 
+\begin{equation*}
+RPN=severity*probability*detectability
+\end{equation*}      
+This risk priority number is used to identify the failure mechanisms that need to be addressed. In table \ref{tab:RPN} it is shown how the risk priority number  
+\begin{table}[h]
+	\centering
+	\caption{Risk priority number}
+	\label{tab:RPN}
+	\begin{tabular}{l|l|}
+		RPN   & Action  \\ \hline
+		0$<$RPN$<$40     &       No action needed           \\
+		40$<$RPN$<$100   &      Decide if action is needed after review      \\
+		RPN$>$100 &      Action needed         \\
+		
+	\end{tabular} \\
+\end{table}
 \begin{itemize}
 	\item system discription $\rightarrow\;$ diagram of system and subsystems
 	\item break system and subsystems down into components and in/out-puts
@@ -24,7 +41,7 @@ Starting from the block diagrams all potential failure modes were determined for
 		\item potential failure modes
 		\item potential effects of these failures
 	\end{itemize}
-	\item define severity of each effect (scale from 0-10)
+	\item define severity of each effect (scale from 1-10)
 	\item find potential causes for each failure mode
 	\item define probability of each cause
 	\item list current design controls, that help to detect the specific failure
