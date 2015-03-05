@@ -98,16 +98,16 @@ These units supply the measurings for three axes each at a maximum frequency of 
 
 To parse the IMU's sensor output (see also section \ref{sec:IMU}) and convert it into a measurable format, it was decided to rely on the cost-efficient and robust Arduino platform. The Arduino platform was developed by  SmartProjects company in Italy and consists of a micro-controller board with several in- and output pins and a set of programming tools to program said micro-controller. This platform allows for a farely easy programming of the micro-controller in C with the help of some standard-libraries that make accessing the microcontroller's analog and digital in- and outputs very convenient. Additionally the downloading process to the micro-controller is simplyfied by a special boot-loader incorporated on the platform eliminating the need for special microcontroller programmers. 
 
-SmartProjects offers various Arduino boards mainly differing in number of communication pins, memory size, clock frequency and physical size. It was decided to utilize the most powerful Arduino Due, offering 84 MHz of clock-speed, 512kB flash memory for programm-code and a 96kB working SRAM. This was done in order to allow for future use of this platform in other projects and having enough space for different sub-programs on the controller as well as enough processing power to deal with basic signal filtering and parsing at appropriate speeds. The Due also has a native I$^{2}$C interface, which was used to gather the measurings from the IMU. In addition the Due offers an abundance of 54 digital and 12 analog I/O-pins. Most importantly it comes with an on-board CAN-controller, eliminating the need for additional hardware for CAN-bus interfacing or bitbanging the CAN-communication. Furthermore the price-difference between the Due and smaller models is marginal. 
+SmartProjects offers various Arduino boards mainly differing in number of communication pins, memory size, clock frequency and physical size. It was decided to utilize the most powerful Arduino Due, offering 84 MHz of clock-speed, 512kB flash memory for programm-code and a 96kB working SRAM. This was done in order to allow for future use of this platform in other projects and having enough space for different sub-programs on the controller as well as enough processing power to deal with basic signal filtering and parsing at appropriate speeds. The Due also has a native I$^{2}$C interface, which was used to gather the measurings from the IMU. In addition the Due offers an abundance of 54 digital and 12 analog I/O-pins. Most importantly it comes with an on-board CAN-controller for measurement transfer to the logging system, eliminating the need for additional hardware for CAN-bus interfacing or bitbanging the CAN-communication. Furthermore the price-difference between the Due and smaller models is marginal. 
 
 Besides the power-supply and the IMU-chip a MCP2551 CAN-transceiver by Microchip Technology Inc. was incorporated to take care of the pyhsical layer of CAN-bus communication by converting the digital signals from the Due's CAN-controller to the standardized voltage levels of the CAN. The MCP2551 is capable of different CAN standards and fully ISO-11898 compatible, which makes future use in different environments or as unit for in-vehicle CAN-interfacing feasible.
 
 
 \begin{itemize}
-	\item clock frequency
-	\item RAM/ROM
-	\item ISP flash
-	\item robustness, reliability, cost-effectiveness
+	%\item clock frequency
+	%\item RAM/ROM
+	%\item ISP flash
+	%\item robustness, reliability, cost-effectiveness
 	\item input/outputs analog $\&$ digital
 	\item native I2C capability
 	\item CANcomm except of physical layer/transceiver available (OSI reference!) --$>$ no bit-banging needed --$>$ faster
