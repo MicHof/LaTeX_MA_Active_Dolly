@@ -12,6 +12,8 @@ The dolly is equipped with a system to determine the deflection angle of the dra
 
 Furthermore the model running on the rapid-prototyping system needs a certain time to calculate the current desired steering angle for the dollys' wheels. This has to be determined as well. The steering mechanisms on the dolly are also a delay-inducer due to the inertia in the hydro-mechanic system. This is as well unavoidable, but when measured can as well be compensated for. 
 
+In this chapter the accuracy and delays in the Arduino measuring set-up, see also section \ref{sec:measurement_setup}, is outlined as well. Which is important for determining the hardware-induced delays.
+
 
 \section{Measured input delay}
 \label{sec:measuring_delay}
@@ -22,6 +24,8 @@ Furthermore the model running on the rapid-prototyping system needs a certain ti
 	\item msg-frequency from vehicle/dolly
 	
 \end{itemize}
+
+Two bus-protocols are used to aquire the data measured from the IMU and transmit  to the MABII. The datas is send via I$^2$C-protocol to the Arduino Due, where it is processed and then send out (to the MABII) on a private CAN-bus. 
 
 \section{Computational delay}
 \label{sec:computational_delay}
