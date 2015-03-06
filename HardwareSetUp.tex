@@ -9,7 +9,7 @@
 \label{chap:hardware_setup}
 \section{Utilized dolly system}
 \label{sec:dolly_system}
-The utilized dolly by Parator Industri AB (Parator) is equipped with two steerable axles. They are controlled by an after-market solution supplied by V.S.E. Vehicle Systems Engineering B.V. (VSE), of which figure \ref{fig:legacy_system_vse} gives an overview. Their product includes sensors, ECUs and hydraulic systems which come in a ready-to-mount housing, which is placed on the trailer/dolly. This solution is usually sold as a low-speed active steering system for truck-trailer combinations to provide better maneuverability at low speeds in inner-city areas. Besides electrical power and compressed-air (see "2" in the figure) supply there is no connection with the truck in place. This allows for use with many different truck/trailer original equipment manufacturers (OEM), as no insight into proprietary CAN-communication is needed. In the original VSE system the two parameters that influence the actuation of the dolly's steering are vehicle speed ("4") and kingpin-deflection ("3"). This deflection is the angle between the truck and trailer, which is measured by an additional kingpin-angle sensor supplied by VSE and mounted in the eye of the kingpin hub. Furthermore every steering-knuckle of the dolly is equipped with an angle sensor to provide appropriate wheel-individual feedback for the VSE control-system. A diagnosis screen is available in the VSE-unit, which allows for relatively simple set-up, calibration and parametrization to be done.\cite{dolly_datasheet}
+The utilized dolly by Parator Industri AB (Parator) is equipped with two steerable axles. They are controlled by an after-market solution called ETS Electronic Trailer Steering System (ETS) supplied by V.S.E. Vehicle Systems Engineering B.V. (VSE), of which figure \ref{fig:legacy_system_vse} gives an overview. Their product includes sensors, ECUs and hydraulic systems which come in a ready-to-mount housing, which is placed on the trailer/dolly. This solution is usually sold as a low-speed active steering system for truck-trailer combinations to provide better maneuverability at low speeds in inner-city areas. Besides electrical power and compressed-air (see "2" in the figure) supply there is no connection with the truck in place. This allows for use with many different truck/trailer original equipment manufacturers (OEM), as no insight into proprietary CAN-communication is needed. In the original VSE system the two parameters that influence the actuation of the dolly's steering are vehicle speed ("4") and kingpin-deflection ("3"). This deflection is the angle between the truck and trailer, which is measured by an additional kingpin-angle sensor supplied by VSE and mounted in the eye of the kingpin hub. Furthermore every steering-knuckle of the dolly is equipped with an angle sensor to provide appropriate wheel-individual feedback for the VSE control-system. A diagnosis screen is available in the VSE-unit, which allows for relatively simple set-up, calibration and parametrization to be done.\cite{dolly_datasheet}
 
 VSE provides assisted steering up to a speed of 25km/h over which intervention until it reaches zero at 55km/h. At this treshhold the steerable axles are locked and thus behave like normal rigid axles. This according to the manufacturer is to ensure stability at higher speeds.\cite{dolly_datasheet} Locking the steering at higher speeds leads to a more predictable behaviour for the user and system robustness. However, performance during high speed maneuvers can be improved by uniformly steering the dolly as well.\cite{performance_improvement} The desired demonstration of the algorithm presented in chapter \ref{chap:steering_model} will as outlined in the introduction to this thesis, include steering at higher speeds, thus a work-around had to be established.
 
@@ -76,6 +76,19 @@ Short overview for the dolly, including:
 \label{sec:measurement_setup}
 
 \subsection{On-board sensors}
+
+\begin{table}[h]
+	\begin{tabular}{llll}
+		\textbf{Sensor}       & \textbf{Measurings}                                                 & \textbf{Type} & \textbf{Mounting point} \\
+		Kingpin angle sensor  & \begin{tabular}[c]{@{}l@{}}Kingpin angle\\ Temperature\end{tabular} & External      & TBD!!!                  \\
+		EBS                   & wheel speed                                                         & External      & wheel brakes            \\
+		Steering angle sensor & steering angle (first, second axle)                                 & External      & steering knuckles      
+	\end{tabular}
+	\caption{Available sensors of VSE's ETS}
+	\label{tab:ets_sensors}
+\end{table}
+
+
 \begin{itemize}
 	\item king pin angle
 	\subitem mounting
@@ -102,16 +115,17 @@ SmartProjects offers various Arduino boards mainly differing in number of commun
 
 Besides the power-supply and the IMU-chip a MCP2551 CAN-transceiver by Microchip Technology Inc. was incorporated to take care of the pyhsical layer of CAN-bus communication by converting the digital signals from the Due's CAN-controller to the standardized voltage levels of the CAN. The MCP2551 is capable of different CAN standards and fully ISO-11898 compatible, which makes future use in different environments or as unit for in-vehicle CAN-interfacing feasible.
 
+The Arduino Due was used to determine the delays in the system (see section \ref{sec:measuring_delay}) as well as a light-weight solution to quickly read CAN-outputs of the various systems during this thesis' work. This proofed to be an easy debugging solution. Additionally it was used to trigger some error codes to test the developed safety mechanisms (see section \ref{sec:fault_detect_test}). 
 
-\begin{itemize}
+%\begin{itemize}
 	%\item clock frequency
 	%\item RAM/ROM
 	%\item ISP flash
 	%\item robustness, reliability, cost-effectiveness
-	\item input/outputs analog $\&$ digital
-	\item native I2C capability
-	\item CANcomm except of physical layer/transceiver available (OSI reference!) --$>$ no bit-banging needed --$>$ faster
-\end{itemize}
+	%\item input/outputs analog $\&$ digital
+	%\item native I2C capability
+	%\item CANcomm except of physical layer/transceiver available (OSI reference!) --$>$ no bit-banging needed --$>$ faster
+%\end{itemize}
 
 
 
