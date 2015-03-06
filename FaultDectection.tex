@@ -10,8 +10,9 @@
 \section{Failure Mode and Effects Analysis (FMEA)}
 \label{sec:FMEA}
 FMEAs were first used by NASA in the apollo project in the 1960s.
-A FMEA is used to detect possible failures before they appear. Therefore the FMEA is done in a early stage of a project in order to be able to take the results of the FMEA into consideration when developing a system.
-In a first step a block diagram of the system with all of it's inputs, outputs and subsytems was created to gain a complete understanding of the system. Every subsystem was broken down to the lowest level and for those subsystems block diagrams with all the components, inputs and outputs were created as well.
+A FMEA is used to detect possible failures before they appear. Therefore the FMEA is done in a early stage of a project in order to be able to take the results of the FMEA into consideration when developing a system. In the process every possible failure of a system are taken into consideration. 
+
+In a first step a block diagram of the system with all of its inputs, outputs and subsytems was created to gain a complete understanding of the system. Every subsystem was broken down to the lowest level and for those subsystems block diagrams with all the components, inputs and outputs were created as well.
 
 Starting from the block diagrams all potential failure modes were determined for every component of the system respectively subsystem. As a next step the potential effects of these failure modes were determined and the severity of these effects were evaluated on a scale from one to ten,  with 1 being the lowest severity and ten being the highest severity. For the evaluation a table that shows how different severities correlate with the numbers was used. \colorbox{yellow}{picture of severity-table}
 Following this, potential causes for every failure mode were defined. Then the probability of occurrence for each cause was evaluated, also using a scale from one to ten.
@@ -33,30 +34,8 @@ This risk priority number is used to identify the failure mechanisms that need t
 		
 	\end{tabular} \\
 \end{table}
-\begin{itemize}
-	\item system discription $\rightarrow\;$ diagram of system and subsystems
-	\item break system and subsystems down into components and in/out-puts
-	\item find for each component all:
-	\begin{itemize}
-		\item potential failure modes
-		\item potential effects of these failures
-	\end{itemize}
-	\item define severity of each effect (scale from 1-10)
-	\item find potential causes for each failure mode
-	\item define probability of each cause
-	\item list current design controls, that help to detect the specific failure
-	\item define detectability of each failure
-	\item calculate risk priority number (rpn=sev*prop*detec)
-	\begin{itemize}
-		\item rpn<40 $\rightarrow\;$ no action needed
-		\item 40<rpn<100 $\rightarrow\;$ take closer look
-		\item rpn>100 $\rightarrow\;$ action needed
-	\end{itemize}
-	\item for failures, where action is needed--> recommend actions that prevent failures
-	\item define new sev., prop. and detect.
-	\item calculate new rpn
-	\item if needed $\rightarrow\;$ iteration of process    
-\end{itemize}
+For the failure mechanisms that need to be addressed actions were decided, that either lower the severity, probability or detectability of them or more than one of those factors. After the performance of these actions the severity, probability and detectability were evaluated again and a new RPN was calculated. If the RPN still is to high a iteration of the process was done.  
+
 \section{Safety concepts}
 \label{sec:safetyconcepts}
 
@@ -71,7 +50,9 @@ This risk priority number is used to identify the failure mechanisms that need t
 \section{Warning and state-info system}
 \label{sec:warning_system}
 \begin{itemize}
-	\item warnings from dolly ECU
+	\item warnings from dolly ECU \\
+	In the original state, the ETS-ECU monitors all safety critical components of the dolly. In case of a malfunction, an error code is sent via the CAN-Bus and the error message is visible on the diagnose displays of the dolly.
+	Due to the required modification of the ASF- and speed-signal, the inbuilt supervision of the ETS-ECU is no longer fully functioning. Therefore a additional supervision of the system has to be implemented in the Simulink-model.    
 	\item warnings from EBS
 	\item warnings from vehicle
 	\item 'own' error codes and warnings (e.g. logging, MABII related, arduino-IMU related)
