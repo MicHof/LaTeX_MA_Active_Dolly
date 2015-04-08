@@ -20,17 +20,19 @@ In the "ControllerSetup" block first the name of the controller has to be set, t
 	\centering
 	\caption{CAN-layout MABII}
 	\label{tab:CAN-layout}
-	\begin{tabular}{c|c|c|}
-		CAN   & Module number & Controller number  \\ \hline
-		CAN1     &       1 & 1           \\
-		CAN2   &      1 & 2      \\
-		CAN3 &      2 & 1         \\
-		CAN4& 2 & 2  \\
-		
+	\begin{tabular}{c|c|c|c|c|}
+		CAN   & Module number & Controller number & ZIF-Pin CAN-High & ZIF-Pin CAN-Low  \\ \hline
+		CAN1     &       1 & 1  & c2 & c3         \\
+		CAN2   &      1 & 2  & b2 & b3    \\
+		CAN3 &      2 & 1 & B2 & B3        \\
+		CAN4& 2 & 2 & A2 & A3  \\
+		CAN5& 3 & 1 & P2 & P3 \\
+		CAN6& 3 & 2 & N2 & N3 \\
 	\end{tabular} \\
 \end{table}
 
 After setting the module- and controller number the identifier format has to be set to either standard or extended format, the transceiver type must be chosen between ISO11898-2 and ISO11898-6. ISO11898-2 is used for a high-speed medium access unit and ISO11989-6 for the selective wake-up functionality of a high-speed medium access unit. If needed, a termination resistance of 120 Ohms can be set in the block as well. As a last step the Baud rate of the CAN-bus has to be defined.
+
 
 In the "MainSetup" block a dbc-file is connected to one of the controller blocks, that were created before. A "ControllerSetup" block can only be connected to one "MainSetup" block at a time. When the dbc-file is loaded in the "MainSetup" block, the different messages and signals of the dbc-file can be chosen as inputs and/or outputs to the simulink-model.
 \subsection{Volvo Transportation Model}
