@@ -51,7 +51,10 @@ Short overview for the dolly, including:
 
 \section{Interfaces with dolly}
 \label{sec:interface_with_dolly}
+To control and measure signals of the dolly a connection to the dollies ETS- and EBS-system had to be established. To achieve this, different kinds of CAN-buses had to be used. That was necessary because the various systems of the dolly use different CAN-protocols. In total five CAN-buses connect the MABII with the dolly. Two for each of the ETS-ECUs and one for the ASF- and EBS-Signal.
 
+\colorbox{yellow}{BREAKOUTBOX-SCHEMA}
+ 
 \begin{itemize}
 	\item private CANbus with AngleSensor for kingpin
 	\item Vehicle CAN (ISO 11992, connector ISO 7638-2)
