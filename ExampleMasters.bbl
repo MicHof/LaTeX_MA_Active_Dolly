@@ -189,6 +189,51 @@
   \field{year}{2015 (accessed February 12, 2015)}
 \endentry
 
+\entry{rapidcontrolprototyping}{incollection}{}
+  \list{language}{1}{%
+    {German}%
+  }
+  \list{publisher}{1}{%
+    {Springer Berlin Heidelberg}%
+  }
+  \field{sortinit}{R}
+  \field{booktitle}{Rapid Control Prototyping}
+  \verb{doi}
+  \verb 10.1007/3-540-29525-9_7
+  \endverb
+  \field{isbn}{978-3-540-29524-2}
+  \field{pages}{295\bibrangedash 318}
+  \field{title}{Rapid Control Prototyping}
+  \verb{url}
+  \verb http://dx.doi.org/10.1007/3-540-29525-9_7
+  \endverb
+  \field{year}{2006}
+\endentry
+
+\entry{automotive_software_engineering}{book}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Sch{\"a}uffele}{S.}%
+     {J{\"o}rg}{J.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Zurawka}{Z.}%
+     {Thomas}{T.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Springer-Verlag}%
+  }
+  \strng{namehash}{SJZT1}
+  \strng{fullhash}{SJZT1}
+  \field{sortinit}{S}
+  \field{title}{Automotive software engineering: Grundlagen, Prozesse, Methoden
+  und Werkzeuge effizient einsetzen}
+  \field{year}{2012}
+\endentry
+
 \entry{greenhouse_gas_emisions}{article}{}
   \name{author}{3}{}{%
     {{}%
@@ -257,6 +302,37 @@
   \field{title}{LSM303D - Ultra compact high performance e-Compass 3D
   accelerometer and 3D magnetometer module: Datasheet — preliminary data}
   \field{year}{2012}
+\endentry
+
+\entry{CANbus_sorgen_und_noete}{inproceedings}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Tindell}{T.}%
+     {KW}{K.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Hansson}{H.}%
+     {Hans}{H.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Wellings}{W.}%
+     {Andy~J}{A.~J.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{organization}{1}{%
+    {IEEE}%
+  }
+  \strng{namehash}{TKHHWAJ1}
+  \strng{fullhash}{TKHHWAJ1}
+  \field{sortinit}{T}
+  \field{booktitle}{Real-Time Systems Symposium, 1994., Proceedings.}
+  \field{pages}{259\bibrangedash 263}
+  \field{title}{Analysing real-time communications: controller area network
+  (CAN)}
+  \field{year}{1994}
 \endentry
 
 \entry{LCV_Australia}{online}{}

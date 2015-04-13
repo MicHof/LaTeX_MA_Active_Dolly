@@ -5,11 +5,13 @@
 \clearpage
 
 
-\chapter{Software Setup}
+\chapter{Software Setup (8 Seiten)}
 \label{chap:software_setup}
 \section{Matlab/Simulink environment}
 \label{sec:matlab}
-\subsection{dSpace RTI-Blockset}
+
+\subsection{FMI toolbox}
+\subsection{dSpace RTI-blockset}
 The dSpace RTI-Blockset (Real-time interface) is a plug-in for MATLAB/Simulink that allows you to connect a simulink-model to the different inputs and outputs of the MABII. There are RTI-blocks for CAN, Ethernet, LIN, FPGA and the analog and digital outputs of the MABII.
 In this project only the RTI CAN MultiMessage Blockset was used. These blocks establish an interface between the physical CAN-Buses of the MABII and the simulink-model running on the MABII. There are four different blocks in this blockset: 
 
@@ -36,7 +38,7 @@ After setting the module- and controller number the identifier format has to be 
 
 In the "MainSetup" block a dbc-file is connected to one of the controller blocks, that were created before. A "ControllerSetup" block can only be connected to one "MainSetup" block at a time. When the dbc-file is loaded in the "MainSetup" block, the different messages and signals of the dbc-file can be chosen as inputs and/or outputs to the simulink-model.
 \subsection{Volvo Transportation Model}
-\subsection{Connecting with high-level steering model}
+
 
 
 \section{ControlDesk monitoring environment}

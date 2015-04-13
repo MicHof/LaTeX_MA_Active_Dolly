@@ -3,7 +3,7 @@
 
 \begin{document}
 \clearpage	
-\chapter{Introduction}
+\chapter{Introduction (3 Seiten)}
 \label{chap:introduction}
 
 \section{Purpose}
@@ -12,23 +12,24 @@ Heavy goods-transport on the road has constantly increased over the last decades
 
 The driving behaviour of LCVs is in many ways different to that of standard trucks and needs to be researched in great detail to gain an understanding of the vehicle's dynamic properties, that is equally detailed as it is for other vehicle classes. This will lead to development of better safety and assistance systems and thus reduction in accidents and fatalities involving this emerging mode of transportation. Different usage patterns of LCVs have to be considered as well, when developing functions for LCVs. For example inner-city use is no prevalent use-case for LCVs, whereas highway safety features and handling properties at higher speeds are prime goals due to high percentage of highway-driving for LCVs.
 
-Besides the technical implementation, socio-economic aspects have to be considered. Legislation has to be adjusted to allow for longer vehicle classes, including new certification processes and driver training. Furthermore infrastructure might have to be modified or reviewed to accomodate the needs and dimensions of extended truck combinations.
+Besides the technical implementation, socio-economic aspects have to be considered. Legislation has to be adjusted to allow for longer vehicle classes, including new certification processes and driver training. Furthermore infrastructure might have to be modified or reviewed to accommodate the needs and dimensions of extended truck combinations.
 
 The research project in which this thesis is embedded aims to develop an active dolly, meaning that steering will be autonomously conducted by the dolly based on the driving situation at hand and various vehicle parameters (e.g. speed, steering wheel angle). Furtheron braking capabilities are to be implemented to act in a similiar fashion as an electronic stability control system (ESC) by creating a yaw-moment countering undesired vehicle movements. This counter-stearing will be achieved through wheel-individual brake-application. 
 
-The high-level control algorithm will be executed on a rapid-prototyping system which is linked to and controls the dolly. To supply this connection between the hardware and control-algorithm implemented in the modelling-environment Simulink is the main-task out this thesis.   
+This high-level control algorithm will be executed on a rapid-prototyping system which is linked to and controls the dolly. To supply this connection between the hardware and control-algorithm implemented in the modeling-environment Simulink is the main-task of this thesis.   
 
 \section{Objectives}
 \label{sec:objectives}
 The main-goals that are supposed to be achieved within this thesis' scope of work are: 
 
 \begin{itemize}
-	\item{supply a software interface for the high-level Simulink control algorithm to be run on a rapid-prototyping system to control the active steering on an actual active dolly}
+	\item{supply a software interface for the high-level Simulink control algorithm to be run on a rapid-prototyping system to control the steering, braking, and air-suspended leveling system on an actual active dolly}
 	\item{set up the physical hardware interface with the dolly; establish a suitable environment connection for the rapid-prototyping system on board of the dolly} 
 	\item{come up with a measuring solution to determine the processing delays in the sensing system as well as the delays introduced by computation and actuator reaction times}  
 	\item{supply a safety system that continously monitors the active steering system and triggers necessary warning}
-	\item{supply an interface that allows to contiously determine the system's maximum actuation capapbilities depending on the system's current properties (loaded weight, speed, steering angle, yaw-behaviour) }
-	\item{conduct extensive testing leading to a high-speed on-track demonstration}
+	\item{supply an interface that allows to contiously determine the system's maximum actuation capapbilities depending on the system's current properties (loaded weight, speed, steering angle, yaw-behaviour)}
+	\item{verifitcation of designed systems through different stages of hardware-in-the-loop tests (HIL)}
+	\item{prepare on-track testing (road-ready measuring equipment, repeatable pre-recorded maneuver decription for automated testing)}
 	
 \end{itemize}
 
@@ -41,7 +42,7 @@ The actual high-level algorithm to compute the desired angle for the dolly's ste
 The hardware- and low-level control-system of the hydraulic actuators is in place already and thus will not be part of this thesis. It is supplied as turn-key software by the manufacturer and readily available on the dolly's electrical control units (ECU). Still some modifications are necessary to achieve the desired goals. The ECU's software version will be available fully calibrated and parametrized for the dolly at hand and thus provide a reliable working base to build upon. 
 
 
-\section{Structure of this work}
+\section{Structure of this thesis}
 \label{sec:structure}
 
 In the first two sections of this thesis a brief overview of the legal situation concerning LCV for different countries, the current state of the art and ongoing research in the field of LCV shall be presented (chapter \ref{chap:overview}). Furthermore an introduction to the model, that will be run on the rapid-prototyping system will be given (chapter \ref{chap:steering_model}). Those two chapters are meant to give an introduction into the matter and are in mainly based on literature review. 
