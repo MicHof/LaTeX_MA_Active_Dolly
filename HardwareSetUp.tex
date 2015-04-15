@@ -49,6 +49,21 @@ Short overview for the dolly, including:
 	\item programming with software ref to \ref{sec:matlab}
 	\item runtime interface ref to \ref{sec:control_desk}
 \end{itemize}
+\subsection{CAN-bus extension}
+
+The MABII comes with a preset number of in- and output ports. The maximum number of CAN-buses, that can be connected to the MABII's native controllers is limited to 6. As there is no off-the-shelf solution for extending the available bus-connections, it was necessary to come up with a gateway solution that allows to patch the needed amount of additional CAN-buses through to the ethernet connection which is also available on the MABII. 
+
+To do so, a gateway from CAN-protocol to the standardized User Datagram protocol (UDP) used for communication on ethernet  infrastructure was implemented. One limitation that was decided on, is to have receiving capabilities only for the MABII to eliminate the need for extensive calculation and CAN-matrix handling on the Arduino.
+
+
+\begin{itemize}
+	\item Skalierbarkeit
+	\item daten-konvertierung und packaging zu UDP und von UDP zu Daten in CD!!
+	\item Skizze des Systems
+	\item verwendete bibliotheken
+	\item verwendete Controller
+	\item I2C-anbindung und bus-layout
+\end{itemize}
 
 \section{Interfaces with dolly}
 \label{sec:interface_with_dolly}
