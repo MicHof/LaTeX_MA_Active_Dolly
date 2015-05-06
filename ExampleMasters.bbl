@@ -130,6 +130,22 @@
   \field{year}{2014}
 \endentry
 
+\entry{CAN_intro}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Corrigan}{C.}%
+     {Steve}{S.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{CS1}
+  \strng{fullhash}{CS1}
+  \field{sortinit}{C}
+  \field{title}{Introduction to the controller area network (CAN)}
+  \field{journaltitle}{Texas Instrument, Application Report}
+  \field{year}{2008}
+\endentry
+
 \entry{doll2009long}{article}{}
   \name{author}{8}{}{%
     {{}%

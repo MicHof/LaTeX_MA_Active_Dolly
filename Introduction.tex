@@ -10,26 +10,26 @@
 \label{sec:purpose}
 Heavy goods-transport on the road has constantly increased over the last decades. Coupled with the stricter environmental regulations concerning CO$_{2}$-emissions and pollution, the call for more economical transport solution has led to the wider introduction of long combination vehicles. Those truck-trailer combinations have a longer history in geographical areas with low population density, mining and transport within factory sites where rail-road transport is not a viable option but transportation of large volumes and tonnages are called for. The prospects of saving costs on driver's salarys, reduced fuel consumption and decreased costs suggests the introduction of those combinations in other environments as well. Introduction of a new vehicle class leads to many challenges in safety, research and development, and legislation. 
 
-The driving behaviour of LCVs is in many ways different to that of standard trucks and needs to be researched in great detail to gain an understanding of the vehicle's dynamic properties, that is equally detailed as it is for other vehicle classes. This will lead to development of better safety and assistance systems and thus reduction in accidents and fatalities involving this emerging mode of transportation. Different usage patterns of LCVs have to be considered as well, when developing functions for LCVs. For example inner-city use is no prevalent use-case for LCVs, whereas highway safety features and handling properties at higher speeds are prime goals due to high percentage of highway-driving for LCVs.
+The driving behaviour of LCVs is in many ways different to that of standard trucks and needs to be researched in great detail to gain an understanding of the vehicle's dynamic properties, that is equally detailed as it is for other vehicle classes. This will lead to development of better safety and assistance systems and thus reduce threat potential, accidents and fatalities involving this emerging mode of transportation. Different usage patterns of LCVs have to be considered as well, when developing functions for LCVs. For example inner-city use is no prevalent use-case for LCVs, whereas highway safety features and handling properties at higher speeds are prime goals due to high percentage of highway-driving for LCVs. Nevertheless maneuverability for docking is also a development goal.
 
 Besides the technical implementation, socio-economic aspects have to be considered. Legislation has to be adjusted to allow for longer vehicle classes, including new certification processes and driver training. Furthermore infrastructure might have to be modified or reviewed to accommodate the needs and dimensions of extended truck combinations.
 
 The research project in which this thesis is embedded aims to develop an active dolly, meaning that steering will be autonomously conducted by the dolly based on the driving situation at hand and various vehicle parameters (e.g. speed, steering wheel angle). Furtheron braking capabilities are to be implemented to act in a similiar fashion as an electronic stability control system (ESC) by creating a yaw-moment countering undesired vehicle movements. This counter-stearing will be achieved through wheel-individual brake-application. 
 
-This high-level control algorithm will be executed on a rapid-prototyping system which is linked to and controls the dolly. To supply this connection between the hardware and control-algorithm implemented in the modeling-environment Simulink is the main-task of this thesis.   
+This high-level control algorithm will be executed on a rapid-prototyping system which is linked to and controls the dolly. To supply this connection between the hardware and control-algorithm implemented in the modeling-environment Simulink is the main-task of this thesis.    
 
 \section{Objectives}
 \label{sec:objectives}
 The main-goals that are supposed to be achieved within this thesis' scope of work are: 
 
 \begin{itemize}
-	\item{supply a software interface for the high-level Simulink control algorithm to be run on a rapid-prototyping system to control the steering, braking, and air-suspended leveling system on an actual active dolly}
-	\item{set up the physical hardware interface with the dolly; establish a suitable environment connection for the rapid-prototyping system on board of the dolly} 
-	\item{come up with a measuring solution to determine the processing delays in the sensing system as well as the delays introduced by computation and actuator reaction times}  
-	\item{supply a safety system that continously monitors the active steering system and triggers necessary warning}
-	\item{supply an interface that allows to contiously determine the system's maximum actuation capapbilities depending on the system's current properties (loaded weight, speed, steering angle, yaw-behaviour)}
+	\item{supply a software interface for the high-level Simulink control algorithm to be run on a rapid-prototyping system to control the steering system on an actual dolly. The implementation of brake actuation and air-suspended leveling system will be explained in detail, but not carried out in practice.}
+	\item{set up the physical hardware interface with the dolly; establish a suitable environment connection for the rapid-prototyping system on-board of the dolly} 
+	\item{come up with a measuring solution to determine the processing delays in the sensing system as well as the delays introduced by computation and actuator reaction times. Determine and try to minimize these occuring delays.}  
 	\item{verifitcation of designed systems through different stages of hardware-in-the-loop tests (HIL)}
-	\item{prepare on-track testing (road-ready measuring equipment, repeatable pre-recorded maneuver decription for automated testing)}
+	\item{supply a safety system that continously monitors the active steering system and triggers necessary warnings.}
+	\item{supply an interface that allows to contiously determine the system's maximum actuation capapbilities depending on the system's current properties (loaded weight, speed, steering angle, yaw-behaviour). Utilize a vehicle dynamics model to find out the critical boundries for LCV's behaviour.}	
+	\item{prepare on-track testing (road-ready measuring equipment, start-up procedure, repeatable pre-recorded maneuver decription for automated testing)}
 	
 \end{itemize}
 
