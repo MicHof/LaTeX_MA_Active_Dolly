@@ -57,16 +57,20 @@ Short overview for the dolly, including:
 	\item runtime interface ref to \ref{sec:control_desk}
 \end{itemize}
 \subsection{CAN-bus extension}
+\label{sec:can_udp_gateway}
+The MABII comes with a preset number of in- and output ports. The maximum number of CAN-buses, that can be connected to the MABII's native controllers is limited to six. As there is no off-the-shelf solution by dSpace for extending the available bus-connections, it was necessary to come up with a gateway solution that allows to patch the needed amount of additional CAN-buses through to the ethernet connection which is also available on the MABII. 
 
-The MABII comes with a preset number of in- and output ports. The maximum number of CAN-buses, that can be connected to the MABII's native controllers is limited to 6. As there is no off-the-shelf solution for extending the available bus-connections, it was necessary to come up with a gateway solution that allows to patch the needed amount of additional CAN-buses through to the ethernet connection which is also available on the MABII. 
-
-To do so, a gateway from CAN-protocol to the standardized User Datagram protocol (UDP) used for communication on ethernet  infrastructure was implemented. One limitation that was decided on, is to have receiving capabilities only for the MABII to eliminate the need for extensive computation and CAN-matrix handling on the Arduino. \\
+To do so, a gateway from CAN-protocol to the standardized User Datagram protocol (UDP) used for communication on ethernet  infrastructure was implemented. It is a very leight-weight protocol, that is straight-forward to implement and runs well, even with limited processing power on a microcontroller. For future purposes the broadcasting capabilities of UDP might also proof useful, as many nodes could be connected to this CAN-to-UDP gateway for example for visualization on different computers or additional logging outside of the MABII environment. One limitation that was decided on, is to have receiving capabilities only for the MABII to eliminate the need for extensive computation and CAN-matrix handling on the Arduino. \\
 
 
 \textit{Excursus: The CAN-protocol is the most widespread protocol to allow for communication between different ECUs in the automotive field. Development began at the Robert Bosch GmbH, but is now standardized and enhanced and adjusted for special purposes internationally. Messages are broadcasted by the bus-participants and stamped with their unique identifier, which also doubles as an arbitration token to handle message prioritization. Each bus-participant can listen to all available messages and "only picks from the bus what he needs". The standard message has a size of eight byte \`{a} eight bit, transmitted after the identifier and followed by an ending sequence. Hardware-wise CAN-communication relies on only a pair of twisted wires, where a very robust voltage difference signal is transmitted. }\cite{CAN_intro}\\
 
 
-By utilizing the UDP-protocol to acquire data into the simulation, the MABII environment's very convenient possibilty to incorporate CAN database files (.dbc-file)\footnote{Correlates physical human readable signals with the actual distribution over the different bytes of a CAN-frame. It allows to "decrypt" the information which is available on the CAN-bus and allows to code and send messages in the respective format that the other bus-participants (ECUs, sensors) expect.}, which is the usual way to exchange information and instructions for CAN-networks is no longer available. To decompose the UDP packets into the original signals it was necessary to implement the function of a .dbc-file in the underlying Simulink-model. 
+By utilizing the UDP-protocol to acquire data into the simulation, the MABII environment's very convenient possibilty to incorporate CAN database files (.dbc-file)\footnote{Correlates physical human readable/understable signals with units to the actual distribution over the different bytes of a CAN-frame. It allows to "decrypt" the information which is available on a CAN-bus and allows to code and send messages in the respective format that the other bus-participants (ECUs, sensors) expect.}, which is the usual way to exchange information and instructions for CAN-networks is no longer available. To decompose the UDP packets into the original signals it was necessary to implement the function of a .dbc-file in the underlying Simulink-model. 
+
+All messages that the CAN-gateway is supposed to handle and forward are put into one UDP frame in succession with respective CAN-identifiers and additional spacer bytes between signals. The UDP frame is broadcasted every time a new CAN-message reaches the gateway on one of its CAN-buses. Messages that were not updated with the incoming CAN-message will be kept at their previous value. This is called for, as UDP is a connection-less protocol without any loss-prevention mechanisms like acknowledgment-handling or retransmission of messages. Holding the values, if not available ensures, that at least some value is available on the bus. UDP also doesn't have native 
+
+
 
 
 
@@ -131,19 +135,12 @@ To control and measure signals of the dolly a connection to the dollies ETS- and
 \end{table}
 
 
-\begin{itemize}
-	\item king pin angle
-	\subitem mounting
-	\subitem CANcomm
-	
-	\item steering angle 
-	\item speed
-\end{itemize}
+
 
 
 \subsection{Inertial measurement unit}
 \label{sec:IMU}
-To determine the processing delays in the control chain (refer to chapter \ref{chap:processing_time_delay}) as well as logging implementation for verification and analyses purposes a number of inertial measurement units (IMU) where utilizied throughout this thesis' work. The system at hand combined a gyroscope (L3GD20H), and an accelero- and magnetometer (LSM303D) into an IMU put on one circuit board.\cite{IMU_homepage_shop} This one-chip solution allowed for a convenient access to the sensor measurings, as the sensor outputs could be received via Inter-Integrated Circuit-protocol (I$^{2}$C)  which eliminates the need for transducer. Furthermore a high-pass filter is integrated into the IMU's accelerometer, which allows for easier compensation of the immanent drift. 
+To determine the processing delays in the control chain (refer to chapter \ref{chap:processing_time_delay}) as well as logging implementation for verification and analyses purposes a number of inertial measurement units (IMU) where utilizied throughout this thesis' work. The system at hand combined a gyroscope (L3GD20H), and an accelero- and magnetometer (LSM303D) into an IMU put on one circuit board.\cite{IMU_homepage_shop} This one-chip solution allowed for a convenient access to the sensor measurings, as the sensor outputs could be received via Inter-Integrated Circuit-protocol (I$^{2}$C)  which eliminates the need for transducer. Furthermore a high-pass filter is integrated into the IMU's accelerometer, which leads to simpler compensation of the immanent drift. 
 
 These units supply the measurings for three axes each at a maximum frequency of 1600Hz for the accelerometer and 757.6Hz for the gyroscope. \cite{accelerometer_datasheet}\cite{gyrometer_datasheet}
 
@@ -151,9 +148,11 @@ These units supply the measurings for three axes each at a maximum frequency of 
 \subsection{Arduino Due}
 \label{sec:arduino}
 
-To parse the IMU's sensor output (see also section \ref{sec:IMU}) and convert it into a measurable format, it was decided to rely on the cost-efficient and robust Arduino platform. The Arduino platform was developed by  SmartProjects company in Italy and consists of a micro-controller board with several in- and output pins and a set of programming tools to program said micro-controller. This platform allows for a farely easy programming of the micro-controller in C with the help of some standard-libraries that make accessing the microcontroller's analog and digital in- and outputs very convenient. Additionally the downloading process to the micro-controller is simplyfied by a special boot-loader incorporated on the platform eliminating the need for special microcontroller programmers. 
+To parse the IMU's sensor output (see also section \ref{sec:IMU}) and convert it into a measurable format and for the implementation of the CAN-to-UDP gateway, it was decided to rely on the cost-efficient and flexible Arduino microcontroller platform. The Arduino platform series was developed by  SmartProjects company in Italy and consists of a micro-controller board with several in- and output pins, and a set of programming tools to program said micro-controller (see also section \ref{sec:arduino_applications}). Hardware layouts as well as software of this solution are released under an open-source licence, so changes at any level of detail can be made and many other suppliers are now offering solution that tie in with the Arduino. Furthermore this lead to a broad user base and availability of vast supporting resources.
 
-SmartProjects offers various Arduino boards mainly differing in number of communication pins, memory size, clock frequency and physical size. It was decided to utilize the most powerful Arduino Due, offering 84 MHz of clock-speed, 512kB flash memory for programm-code and a 96kB working SRAM. This was done in order to allow for future use of this platform in other projects and having enough space for different sub-programs on the controller as well as enough processing power to deal with basic signal filtering and parsing at appropriate speeds. The Due also has a native I$^{2}$C interface, which was used to gather the measurings from the IMU. In addition the Due offers an abundance of 54 digital and 12 analog I/O-pins. Most importantly it comes with an on-board CAN-controller for measurement transfer to the logging system, eliminating the need for additional hardware for CAN-bus interfacing or bitbanging the CAN-communication. Furthermore the price-difference between the Due and smaller models is marginal. 
+SmartProjects offers various Arduino boards mainly differing in number of communication pins, memory size, clock frequency and physical size. It was decided to utilize the to date most powerful Arduino Due, offering 84 MHz of clock-speed on a ARM Cortex-M3 processor, 512kB flash memory for programm-code and a 96kB working SRAM. It is the first Arduino with 32-bit architecture. This was done in order to allow for future use of this platform in other projects and having enough space for different sub-programs on the controller as well as enough processing power to deal with basic signal filtering and parsing at appropriate speeds. 
+
+The Due has a native I$^{2}$C interface, which was used to gather the measurings from the IMU. It also has a Serial Peripheral Interface interface (SPI) which is needed to access the ethernet controller necessary for the CAN-UDP-gateway (refer to section \ref{sec:can_udp_gateway}), serial communication is also handled on hardware level. The availability of these ports in hardware form allow for robust systems and eliminate the need to implement those protocols on software level (bit-banging), which frees up memory resources. In addition to this digital communication possibilities the Due offers an abundance of 54 digital and 12 analog freely configurable I/O-pins. The Due is also the first Arduino to host an on-board CAN-controller, which in this thesis will be used for measurement transfer to the logging system (MABII), eliminating the need for additional hardware for CAN-bus interfacing on the Arduino side.
 
 Besides the power-supply and the IMU-chip a MCP2551 CAN-transceiver by Microchip Technology Inc. was incorporated to take care of the pyhsical layer of CAN-bus communication by converting the digital signals from the Due's CAN-controller to the standardized voltage levels of the CAN. The MCP2551 is capable of different CAN standards and fully ISO-11898 compatible, which makes future use in different environments or as unit for in-vehicle CAN-interfacing feasible.
 

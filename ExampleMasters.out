@@ -29,7 +29,7 @@
 \BOOKMARK [1][]{section.5.1}{Matlab/Simulink environment}{chapter.5}% 29
 \BOOKMARK [2][]{subsection.5.1.1}{FMI toolbox}{section.5.1}% 30
 \BOOKMARK [2][]{subsection.5.1.2}{dSpace RTI-blockset}{section.5.1}% 31
-\BOOKMARK [2][]{subsection.5.1.3}{Volvo Transportation Model}{section.5.1}% 32
+\BOOKMARK [2][]{subsection.5.1.3}{Volvo Truck Model}{section.5.1}% 32
 \BOOKMARK [1][]{section.5.2}{ControlDesk monitoring environment}{chapter.5}% 33
 \BOOKMARK [2][]{subsection.5.2.1}{Maneuver control}{section.5.2}% 34
 \BOOKMARK [2][]{subsection.5.2.2}{Monitoring and logging}{section.5.2}% 35

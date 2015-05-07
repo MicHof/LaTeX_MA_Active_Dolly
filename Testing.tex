@@ -13,12 +13,27 @@ In different states of the project different kind of tests were performed. As a 
 \label{sec:bench-testing}
 \subsection{ECU-setup}
 \subsection{VTM maneuver verification}
+\begin{itemize}
+	\item include simulation results for maneuver of controller being run inside VTM
+	\item perhaps include some picture of the video-output, with the actuated truck
+	\item plots for maneuver (steering input, speed over time)
+	
+\end{itemize}
 \subsection{CAN verification}
-
+\begin{itemize}
+	\item check output from ASF with arduino
+	\item check ECU CANs, make sure they differ in output
+	
+\end{itemize}
 
 \subsection{Fault detection system verification}
 \label{sec:fault_detect_test}
 
+\begin{itemize}
+	\item send faulty inputs
+	\item show plot of faulty input and system reaction
+	
+\end{itemize}
 
 \section{Vehicle testing}
 \label{sec:vehicle-testing}
@@ -27,6 +42,12 @@ In different states of the project different kind of tests were performed. As a 
 \subsection{Actuator tests}
 \subsection{Algorithm evaluation}
 \subsection{Sensor testing}
+
+\begin{itemize}
+	\item test angle sensor offline
+	\item zero IMUs, make sure paired sensors show the same outputs
+	
+\end{itemize}
 
 
 \section{Track testing}
