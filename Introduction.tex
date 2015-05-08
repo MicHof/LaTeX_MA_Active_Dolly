@@ -23,13 +23,13 @@ This high-level control algorithm will be executed on a rapid-prototyping system
 The main-goals that are supposed to be achieved within this thesis' scope of work are: 
 
 \begin{itemize}
-	\item{supply a software interface for the high-level Simulink control algorithm to be run on a rapid-prototyping system to control the steering system on an actual dolly. The implementation of brake actuation and air-suspended leveling system will be explained in detail, but not carried out in practice.}
+	\item{supply a software interface for the high-level control algorithm implemented in Simulink to be run on a rapid-prototyping system to control the steering system on an active dolly. }
 	\item{set up the physical hardware interface with the dolly; establish a suitable environment connection for the rapid-prototyping system on-board of the dolly} 
 	\item{come up with a measuring solution to determine the processing delays in the sensing system as well as the delays introduced by computation and actuator reaction times. Determine and try to minimize these occuring delays.}  
 	\item{verifitcation of designed systems through different stages of hardware-in-the-loop tests (HIL)}
-	\item{supply a safety system that continously monitors the active steering system and triggers necessary warnings.}
-	\item{supply an interface that allows to contiously determine the system's maximum actuation capapbilities depending on the system's current properties (loaded weight, speed, steering angle, yaw-behaviour). Utilize a vehicle dynamics model to find out the critical boundries for LCV's behaviour.}	
-	\item{prepare on-track testing (road-ready measuring equipment, start-up procedure, repeatable pre-recorded maneuver decription for automated testing)}
+	\item{supply a safety system that continously monitors the active steering system, prevents malicious inputs and triggers necessary warnings.}
+	\item{supply an interface that allows to contiously determine the system's maximum actuation capabilities depending on the system's current properties (axle load, speed, steering angle, yaw-behaviour). Utilize a vehicle dynamics model to find out the critical boundries for LCV's behaviour.}	
+	\item{prepare on-track testing (design road-ready measuring equipment, start-up procedure, repeatable pre-recorded maneuver decription for automated testing)}
 	
 \end{itemize}
 
@@ -37,9 +37,11 @@ The main-goals that are supposed to be achieved within this thesis' scope of wor
 
 \section{Limitations}
 \label{sec:limitations}
-The actual high-level algorithm to compute the desired angle for the dolly's steerable axles is not in the scope of this thesis. It was developed in the research project in which this thesis is embedded. Nevertheless to establish an easier insight into the interfaces' parameters, an overview of the structure, in- and outputs of the underlying computational steering model is needed and shall be presented in chapter \ref{chap:steering_model}. 
+To implement the actual high-level algorithm to compute the desired angle for the dolly's steerable axles is not in the scope of this thesis. It was developed in the research project in which this thesis is embedded. Nevertheless to establish an easier insight into the interfaces' parameters, an overview of the structure, in- and outputs of the underlying computational steering model is needed and shall be presented in chapter \ref{chap:steering_model}. 
 
-The hardware- and low-level control-system of the hydraulic actuators is in place already and thus will not be part of this thesis. It is supplied as turn-key software by the manufacturer and readily available on the dolly's electrical control units (ECU). Still some modifications are necessary to achieve the desired goals. The ECU's software version will be available fully calibrated and parametrized for the dolly at hand and thus provide a reliable working base to build upon. 
+The hardware- and low-level control-system of the hydraulic actuators is in place already and thus will not be part of this thesis. It is supplied as turn-key software by the manufacturer and readily available on the dolly's electrical control units (ECU). Substantial modifications are necessary to achieve the desired goals, though. The ECU's software version will be available fully calibrated and parametrized for the dolly at hand and thus provide a reliable working base to build upon. 
+
+Braking the dolly's axles individually will not be part of the testing and development scope of this work. Nevertheless the conceptual solution for including this functionalities furtheron will be outlined and a foundation for sending actuation request to these systems will be included in the rapid-protoyping interface block resulting from this thesis. 
 
 
 \section{Structure of this thesis}
