@@ -3,6 +3,10 @@ The style file: biblatex.bst
 Database file #1: ExampleMasters-blx.bib
 Database file #2: ExampleBib.bib
 Database file #3: ExampleBibSeb.bib
+Warning--I didn't find a database entry for "LVC_Australia"
+Warning--I didn't find a database entry for "LVC_USA"
+Warning--I didn't find a database entry for "LVC_Canada"
+Warning--I didn't find a database entry for "LVC_Mexico"
 Biblatex version: 2.9
 Name 1 in "GitHub," has a comma at the end for entry mcp_can_github
 while executing---line 2513 of file biblatex.bst

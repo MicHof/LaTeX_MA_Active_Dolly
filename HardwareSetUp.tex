@@ -5,8 +5,18 @@
 \clearpage
 
 
-\chapter{Hardware Setup (9 Seiten)}
+\chapter{Hardware architecture(9 Seiten)}
 \label{chap:hardware_setup}
+
+\section{Hardware overview}
+
+\begin{itemize}
+	\item give overview of system on truck
+	\item sketch for where which unit sits (with numbers to be referenced)
+	\item different tasks for Arduino
+	\item make communication diagramm with all protocols (CAN, i2c, SPI, serial, ethernet)
+	
+\end{itemize}
 \section{Utilized dolly system}
 \label{sec:dolly_system}
 The utilized dolly by Parator Industri AB (Parator) is equipped with two steerable axles. They are controlled by an after-market solution called ETS Electronic Trailer Steering System (ETS) supplied by V.S.E. Vehicle Systems Engineering B.V. (VSE), of which figure \ref{fig:legacy_system_vse} gives an overview. Their product includes sensors, ECUs and hydraulic systems which come in a ready-to-mount housing, which is placed on the trailer/dolly. This solution is usually sold as a low-speed active steering system for truck-trailer combinations to provide better maneuverability at low speeds in inner-city areas. Besides electrical power and compressed-air (see "2" in the figure) supply there is no connection with the truck in place. This allows for use with many different truck/trailer original equipment manufacturers (OEM), as no insight into proprietary Controler Area Network communication (CAN) is needed. In the original VSE system the two parameters that influence the actuation of the dolly's steering are vehicle speed ("4") and kingpin-deflection ("3"). This deflection is the angle between the truck and trailer, which is measured by an additional kingpin-angle sensor supplied by VSE and mounted in the eye of the kingpin hub. Furthermore every steering-knuckle of the dolly is equipped with an angle sensor to provide appropriate wheel-individual feedback for the VSE control-system. A diagnosis screen is available in the VSE-unit, which allows for relatively simple set-up, calibration and parametrization to be done.\cite{dolly_datasheet}
@@ -47,7 +57,7 @@ Short overview for the dolly, including:
 
 
 \begin{itemize}
-	\item mechanical properties of box  (dimension, currents, mounting points in dolly)
+	\item mechanical properties of MABII (dimension, currents, mounting points in dolly)
 	\item computational power/limitations
 	\item explain interfaces with truck/dolly (abstract)
 	\item explain technical realisation of HW interface (ZIF)
@@ -91,7 +101,7 @@ All messages that the CAN-gateway is supposed to handle and forward are put into
 	\item I2C-anbindung und bus-layout
 \end{itemize}
 
-\section{Interfaces with dolly}
+\section{Interfaces and connections with dolly}
 \label{sec:interface_with_dolly}
 To control and measure signals of the dolly a connection to the dollies ETS- and EBS-system had to be established. To achieve this, different kinds of CAN-buses had to be used. That was necessary because the various systems of the dolly use different CAN-protocols. In total five CAN-buses connect the MABII with the dolly. Two for each of the ETS-ECUs and one for the ASF- and EBS-Signal.
 
@@ -113,7 +123,8 @@ To control and measure signals of the dolly a connection to the dollies ETS- and
 
 \begin{itemize}
 	\item CAN communication with truck
-	\item steering system conncetion
+	\item steering system conncetion (VDS!)
+	\item physical CAN path to dolly?
 
 \end{itemize}
 
@@ -126,7 +137,7 @@ To control and measure signals of the dolly a connection to the dollies ETS- and
 \begin{table}[h]
 	\begin{tabular}{llll}
 		\textbf{Sensor}       & \textbf{Measurings}                                                 & \textbf{Type} & \textbf{Mounting point} \\
-		Kingpin angle sensor  & \begin{tabular}[c]{@{}l@{}}Kingpin angle\\ Temperature\end{tabular} & External      & TBD!!!                  \\
+		Draw bar sensor  & \begin{tabular}[c]{@{}l@{}}Kingpin angle\\ Temperature\end{tabular} & External      & TBD!!!                  \\
 		EBS                   & wheel speed                                                         & External      & wheel brakes            \\
 		Steering angle sensor & steering angle (first, second axle)                                 & External      & steering knuckles      
 	\end{tabular}

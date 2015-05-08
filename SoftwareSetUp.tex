@@ -5,12 +5,28 @@
 \clearpage
 
 
-\chapter{Software Setup (8 Seiten)}
+\chapter{Software Architecture (8 Seiten)}
 \label{chap:software_setup}
+
+\section{Functionality architecture}
+\label{sec:func_architecture}
+
+\begin{itemize}
+	\item describe VTT funct. artchitecture
+	\item make and insert sketch for (1)
+	\item outline which software system correspondes to what
+	\item differentiate between HiL, Bench and track
+	
+\end{itemize}
+
+
 \section{Matlab/Simulink environment}
 \label{sec:matlab}
 
-\subsection{FMI toolbox}
+%%\subsection{FMI toolbox}
+
+
+
 \subsection{dSpace RTI-blockset}
 The dSpace RTI-Blockset (Real-time interface) is a plug-in for MATLAB/Simulink that allows you to connect a simulink-model to the different inputs and outputs of the MABII. There are RTI-blocks for CAN, Ethernet, LIN, FPGA and the analog and digital outputs of the MABII.
 In this project only the RTI CAN MultiMessage Blockset was used. These blocks establish an interface between the physical CAN-Buses of the MABII and the simulink-model running on the MABII. There are four different blocks in this blockset: 
@@ -41,6 +57,18 @@ In the "MainSetup" block a dbc-file is connected to one of the controller blocks
 \label{sec:VTM}
 The Volvo Truck Model (VTM) is a computational framework used within Volvo Trucks to simulate the dynamic behaviours of trucks and combinations. As a library it extends Simulink, where maneuvers, track layout and the trucks kinematic and dynamic properties are linked together and then computed. This toolbox was used as a base for the simulation of the LVC including the dolly for this project. It is possible to run simulation offline with a predefined maneuver and a given environment as well online where these parameters are fed into the calculation live or as measurings from the real-world environment. For online use all relevant parameters and states can be accessed in Simulink or in case of execution on the MABII through ControlDesk as their respective representation of the Simulink variable. 
 
+\subsection{CAN-bus extension}
+\label{sec:can_bus_extension_software}
+
+\begin{itemize}
+	\item outline data diagram structure
+	\item show limitations uof UDP (time, reliability, retrans)
+	\item timestamping
+	
+	
+\end{itemize}
+
+
 \section{ControlDesk monitoring environment}
 \label{sec:control_desk}
 \subsection{Maneuver control}
@@ -66,7 +94,7 @@ The Arduino system provides an integrated development environment (IDE)  written
 		LSM303                & read magnetometer on IMU via I2C                    &                \cite{lsm303_github}  \\
 		L3G                   & read gyro \& accelerometer on IMU via I2C           &      
 		\cite{l3g_github}            \\
-		UIPethernet           &                                                     &             \cite{uip_ethernet_github}     \\
+		UIPethernet           &     control ENC28J60 via SPI                                                &             \cite{uip_ethernet_github}     \\
 		TinyGPSPlus           & acquire and parse GPS signal from EM-506 via serial & v0.94b\cite{tiny_gps_plus_github}     \\
 		mcp\_can & implement CAN via MCP2515 and MCP2551 via SPI     & \cite{mcp_can_github}
 	\end{tabular}

@@ -11,61 +11,69 @@
 \BOOKMARK [1][]{section.2.3}{Market overview for existing solutions}{chapter.2}% 11
 \BOOKMARK [1][]{section.2.4}{Rapid Control Prototyping}{chapter.2}% 12
 \BOOKMARK [0][]{chapter.3}{Steering Model \(3 Seiten\)}{}% 13
-\BOOKMARK [1][]{section.3.1}{Overview of the model}{chapter.3}% 14
-\BOOKMARK [1][]{section.3.2}{Input parameters}{chapter.3}% 15
-\BOOKMARK [1][]{section.3.3}{Real-Time implementation}{chapter.3}% 16
-\BOOKMARK [1][]{section.3.4}{Interface with Real-Time environment}{chapter.3}% 17
-\BOOKMARK [0][]{chapter.4}{Hardware Setup \(9 Seiten\)}{}% 18
-\BOOKMARK [1][]{section.4.1}{Utilized dolly system}{chapter.4}% 19
-\BOOKMARK [1][]{section.4.2}{Real-Time Environment}{chapter.4}% 20
-\BOOKMARK [2][]{subsection.4.2.1}{CAN-bus extension}{section.4.2}% 21
-\BOOKMARK [1][]{section.4.3}{Interfaces with dolly}{chapter.4}% 22
-\BOOKMARK [1][]{section.4.4}{Interfaces with truck}{chapter.4}% 23
-\BOOKMARK [1][]{section.4.5}{Measurment Setup}{chapter.4}% 24
-\BOOKMARK [2][]{subsection.4.5.1}{On-board sensors}{section.4.5}% 25
-\BOOKMARK [2][]{subsection.4.5.2}{Inertial measurement unit}{section.4.5}% 26
-\BOOKMARK [2][]{subsection.4.5.3}{Arduino Due}{section.4.5}% 27
-\BOOKMARK [0][]{chapter.5}{Software Setup \(8 Seiten\)}{}% 28
-\BOOKMARK [1][]{section.5.1}{Matlab/Simulink environment}{chapter.5}% 29
-\BOOKMARK [2][]{subsection.5.1.1}{FMI toolbox}{section.5.1}% 30
-\BOOKMARK [2][]{subsection.5.1.2}{dSpace RTI-blockset}{section.5.1}% 31
-\BOOKMARK [2][]{subsection.5.1.3}{Volvo Truck Model}{section.5.1}% 32
-\BOOKMARK [1][]{section.5.2}{ControlDesk monitoring environment}{chapter.5}% 33
-\BOOKMARK [2][]{subsection.5.2.1}{Maneuver control}{section.5.2}% 34
-\BOOKMARK [2][]{subsection.5.2.2}{Monitoring and logging}{section.5.2}% 35
-\BOOKMARK [1][]{section.5.3}{Arduino IDE and applications}{chapter.5}% 36
-\BOOKMARK [0][]{chapter.6}{Processing Time evaluation \(3-4 Seiten\)}{}% 37
-\BOOKMARK [1][]{section.6.1}{Background}{chapter.6}% 38
-\BOOKMARK [1][]{section.6.2}{Measured input delay}{chapter.6}% 39
-\BOOKMARK [1][]{section.6.3}{Computational delay}{chapter.6}% 40
-\BOOKMARK [0][]{chapter.7}{Fault detection and system ability \(5 Seiten\)}{}% 41
-\BOOKMARK [1][]{section.7.1}{Failure Mode and Effects Analysis \(FMEA\)}{chapter.7}% 42
-\BOOKMARK [1][]{section.7.2}{Safety concepts}{chapter.7}% 43
-\BOOKMARK [1][]{section.7.3}{Maximum capabilities of the system}{chapter.7}% 44
-\BOOKMARK [1][]{section.7.4}{Warning and state-info system}{chapter.7}% 45
-\BOOKMARK [0][]{chapter.8}{Testing \(2-3 Seiten\)}{}% 46
-\BOOKMARK [1][]{section.8.1}{Overview}{chapter.8}% 47
-\BOOKMARK [1][]{section.8.2}{Bench-Testing}{chapter.8}% 48
-\BOOKMARK [2][]{subsection.8.2.1}{ECU-setup}{section.8.2}% 49
-\BOOKMARK [2][]{subsection.8.2.2}{VTM maneuver verification}{section.8.2}% 50
-\BOOKMARK [2][]{subsection.8.2.3}{CAN verification}{section.8.2}% 51
-\BOOKMARK [2][]{subsection.8.2.4}{Fault detection system verification}{section.8.2}% 52
-\BOOKMARK [1][]{section.8.3}{Vehicle testing}{chapter.8}% 53
-\BOOKMARK [2][]{subsection.8.3.1}{System calibration}{section.8.3}% 54
-\BOOKMARK [2][]{subsection.8.3.2}{Actuator tests}{section.8.3}% 55
-\BOOKMARK [2][]{subsection.8.3.3}{Algorithm evaluation}{section.8.3}% 56
-\BOOKMARK [2][]{subsection.8.3.4}{Sensor testing}{section.8.3}% 57
-\BOOKMARK [1][]{section.8.4}{Track testing}{chapter.8}% 58
-\BOOKMARK [2][]{subsection.8.4.1}{Testmaneuvers}{section.8.4}% 59
-\BOOKMARK [2][]{subsection.8.4.2}{Testenvironment AstaZero}{section.8.4}% 60
-\BOOKMARK [2][]{subsection.8.4.3}{Testmatrix}{section.8.4}% 61
-\BOOKMARK [2][]{subsection.8.4.4}{Test setup and instrumentation}{section.8.4}% 62
-\BOOKMARK [0][]{chapter.9}{Discussion \(3-4 Seiten\)}{}% 63
-\BOOKMARK [1][]{section.9.1}{Results from bench testing}{chapter.9}% 64
-\BOOKMARK [1][]{section.9.2}{Results from in vehicle testing}{chapter.9}% 65
-\BOOKMARK [1][]{section.9.3}{Results from on-track testing}{chapter.9}% 66
-\BOOKMARK [1][]{section.9.4}{Comparrison}{chapter.9}% 67
-\BOOKMARK [0][]{chapter.10}{Conclusion \(2 Seiten\)}{}% 68
-\BOOKMARK [1][]{section.10.1}{Recommendation}{chapter.10}% 69
-\BOOKMARK [1][]{section.10.2}{Future Work}{chapter.10}% 70
-\BOOKMARK [0][]{section.10.2}{References}{}% 71
+\BOOKMARK [1][]{section.3.1}{Low-Speed controller}{chapter.3}% 14
+\BOOKMARK [2][]{subsection.3.1.1}{Input parameters}{section.3.1}% 15
+\BOOKMARK [1][]{section.3.2}{High-Speed controller}{chapter.3}% 16
+\BOOKMARK [2][]{subsection.3.2.1}{Input parameters}{section.3.2}% 17
+\BOOKMARK [1][]{section.3.3}{Overview of the model}{chapter.3}% 18
+\BOOKMARK [1][]{section.3.4}{Real-Time implementation of controllers}{chapter.3}% 19
+\BOOKMARK [1][]{section.3.5}{Interface with Real-Time environment}{chapter.3}% 20
+\BOOKMARK [0][]{chapter.4}{Hardware architecture\(9 Seiten\)}{}% 21
+\BOOKMARK [1][]{section.4.1}{Hardware overview}{chapter.4}% 22
+\BOOKMARK [1][]{section.4.2}{Utilized dolly system}{chapter.4}% 23
+\BOOKMARK [1][]{section.4.3}{Real-Time Environment}{chapter.4}% 24
+\BOOKMARK [2][]{subsection.4.3.1}{CAN-bus extension}{section.4.3}% 25
+\BOOKMARK [1][]{section.4.4}{Interfaces and connections with dolly}{chapter.4}% 26
+\BOOKMARK [1][]{section.4.5}{Interfaces with truck}{chapter.4}% 27
+\BOOKMARK [1][]{section.4.6}{Measurment Setup}{chapter.4}% 28
+\BOOKMARK [2][]{subsection.4.6.1}{On-board sensors}{section.4.6}% 29
+\BOOKMARK [2][]{subsection.4.6.2}{Inertial measurement unit}{section.4.6}% 30
+\BOOKMARK [2][]{subsection.4.6.3}{Arduino Due}{section.4.6}% 31
+\BOOKMARK [0][]{chapter.5}{Software Architecture \(8 Seiten\)}{}% 32
+\BOOKMARK [1][]{section.5.1}{Functionality architecture}{chapter.5}% 33
+\BOOKMARK [1][]{section.5.2}{Matlab/Simulink environment}{chapter.5}% 34
+\BOOKMARK [2][]{subsection.5.2.1}{dSpace RTI-blockset}{section.5.2}% 35
+\BOOKMARK [2][]{subsection.5.2.2}{Volvo Truck Model}{section.5.2}% 36
+\BOOKMARK [2][]{subsection.5.2.3}{CAN-bus extension}{section.5.2}% 37
+\BOOKMARK [1][]{section.5.3}{ControlDesk monitoring environment}{chapter.5}% 38
+\BOOKMARK [2][]{subsection.5.3.1}{Maneuver control}{section.5.3}% 39
+\BOOKMARK [2][]{subsection.5.3.2}{Monitoring and logging}{section.5.3}% 40
+\BOOKMARK [1][]{section.5.4}{Arduino IDE and applications}{chapter.5}% 41
+\BOOKMARK [0][]{chapter.6}{Fault detection and system ability \(5 Seiten\)}{}% 42
+\BOOKMARK [1][]{section.6.1}{Failure Mode and Effects Analysis \(FMEA\)}{chapter.6}% 43
+\BOOKMARK [1][]{section.6.2}{Safety concepts}{chapter.6}% 44
+\BOOKMARK [1][]{section.6.3}{Maximum capabilities of the system}{chapter.6}% 45
+\BOOKMARK [1][]{section.6.4}{Warning and state-info system}{chapter.6}% 46
+\BOOKMARK [0][]{chapter.7}{Verification and validation of steering \(2-3 Seiten\)}{}% 47
+\BOOKMARK [1][]{section.7.1}{Overview}{chapter.7}% 48
+\BOOKMARK [1][]{section.7.2}{Bench-Testing}{chapter.7}% 49
+\BOOKMARK [2][]{subsection.7.2.1}{ECU-setup}{section.7.2}% 50
+\BOOKMARK [2][]{subsection.7.2.2}{VTM maneuver verification}{section.7.2}% 51
+\BOOKMARK [2][]{subsection.7.2.3}{CAN verification}{section.7.2}% 52
+\BOOKMARK [2][]{subsection.7.2.4}{Fault detection system verification}{section.7.2}% 53
+\BOOKMARK [1][]{section.7.3}{Processing time evaluation}{chapter.7}% 54
+\BOOKMARK [2][]{subsection.7.3.1}{Background}{section.7.3}% 55
+\BOOKMARK [2][]{subsection.7.3.2}{Measured input delay}{section.7.3}% 56
+\BOOKMARK [2][]{subsection.7.3.3}{Computational delay}{section.7.3}% 57
+\BOOKMARK [1][]{section.7.4}{Vehicle testing}{chapter.7}% 58
+\BOOKMARK [2][]{subsection.7.4.1}{System calibration}{section.7.4}% 59
+\BOOKMARK [2][]{subsection.7.4.2}{Actuator tests}{section.7.4}% 60
+\BOOKMARK [2][]{subsection.7.4.3}{Algorithm evaluation}{section.7.4}% 61
+\BOOKMARK [2][]{subsection.7.4.4}{Sensor testing}{section.7.4}% 62
+\BOOKMARK [1][]{section.7.5}{Hardware-in-the-loop testing}{chapter.7}% 63
+\BOOKMARK [2][]{subsection.7.5.1}{Low-speed controller}{section.7.5}% 64
+\BOOKMARK [2][]{subsection.7.5.2}{High-speed controller}{section.7.5}% 65
+\BOOKMARK [1][]{section.7.6}{Track testing}{chapter.7}% 66
+\BOOKMARK [2][]{subsection.7.6.1}{Testmaneuvers}{section.7.6}% 67
+\BOOKMARK [2][]{subsection.7.6.2}{Testenvironment AstaZero}{section.7.6}% 68
+\BOOKMARK [2][]{subsection.7.6.3}{Testmatrix}{section.7.6}% 69
+\BOOKMARK [2][]{subsection.7.6.4}{Test setup and instrumentation}{section.7.6}% 70
+\BOOKMARK [0][]{chapter.8}{Discussion \(3-4 Seiten\)}{}% 71
+\BOOKMARK [1][]{section.8.1}{Results from bench testing}{chapter.8}% 72
+\BOOKMARK [1][]{section.8.2}{Results from in vehicle testing}{chapter.8}% 73
+\BOOKMARK [1][]{section.8.3}{Results from hardware-in-the-loop testing}{chapter.8}% 74
+\BOOKMARK [1][]{section.8.4}{Comparison}{chapter.8}% 75
+\BOOKMARK [0][]{chapter.9}{Conclusion \(2 Seiten\)}{}% 76
+\BOOKMARK [1][]{section.9.1}{Recommendation}{chapter.9}% 77
+\BOOKMARK [1][]{section.9.2}{Future Work}{chapter.9}% 78
+\BOOKMARK [0][]{section.9.2}{References}{}% 79
