@@ -39,18 +39,26 @@ In different states of the project different kind of tests were performed. As a 
 \subsection{Background}
 The desired solution is supposed to operate at any speed. For high speeds a quick processing and transmission time is required to ensure prompt and realtime intervention of the control system based on the measured input signals. If the delays induced by the different components in the complete system are known or can be estimated, they can be compensated for in the steering-algorithm running on the rapid-prototyping system.
 
-As outliined in section \ref{sec:measurement_setup} the dolly is equipped with a system to determine the deflection angle of the drawbar and both the kingpin angles of the LVC. The sensors' raw signal is then parsed and filtered in an integrated low-level system which feeds the filtered signals to a private CAN-bus, where it is picked up by the MABII. The filtering operation takes a certain time and thus induces a delay.  
-
-Furthermore the model running on the rapid-prototyping system needs a certain time to calculate the current desired steering angle for the dollys' wheels. This has to be determined as well. The steering mechanisms on the dolly are also a delay-inducer due to the inertia in the hydro-mechanic system. This is as well unavoidable, but when measured can as well to a certain degree be compensated for. 
+As outlined in section \ref{sec:measurement_setup} the dolly is equipped with a system to determine the deflection angle of the draw-bar and both the kingpin angles of the LVC. The sensors' raw signal is then parsed and filtered in an integrated low-level system which feeds the filtered signals to a private CAN-bus, where it is picked up by the MABII. The filtering operation takes a certain time and thus induces a delay. Furthermore the model running on the rapid-prototyping system needs a certain time to calculate the current desired steering angle for the dollys' wheels. This has to be determined as well. The steering mechanisms on the dolly are also a delay-inducer due to the inertia in the hydro-mechanic system. This is as well unavoidable, but when measured can as well to a certain degree be compensated for. 
 
 The measuring chain for the logging solution will also be discussed and the different delays will be discussed. 
 
 \subsection{Measured input delay}
 \label{sec:measuring_delay}
 
-The response time of the dolly's steering system was determined in workshop environment in stand-still without any additional axle loads. Tests were conducted for both axles individually to ensure that maximum power was available preventing further delays through insufficient electrical power or hydraulic pressure. A repeated steering angle in the form of a step input was used to determine the reaction time of the system. The step amplitude was increased over different tests to account for possible dependencies on articulation of the steering system. The tests each started and ended with a steering angle of $0^\circ .$ 
+The response time of the dolly's steering system was determined in workshop environment in stand-still without any additional axle loads. Tests were conducted for both axles individually to ensure that maximum power was available preventing further delays through insufficient electrical power or hydraulic pressure. A repeated steering angle in the form of a step input was used to determine the reaction time of the system. The step amplitude was increased over different tests to account for possible dependencies on articulation of the steering system. The tests each started and ended with a steering angle of $0^\circ .$ An example for the test sequence can be seen in figure \ref{fig:example_for_step_input_delay_measuring}. Clearly the difference between the requested angle and the actual articulation of the wheel can be seen. Further discussion of the results can be found in section \ref{sec:results_processing_time}.\\
 
-To eliminate tire friction the investigated axle was suspended in the air in further series of testing by slightly craning up the dolly's front/rear (see figure \ref{fig:dolly_craned_up}) to allow for free movement. An example for the utilized testing routine can be gathered from table \ref{tab:test_matrx_delay_measuring}. Between the different steps (double amplitude) a sufficient wait time of 3500ms was used to allow the system to reach the requested steering angle. This waiting time was kept constant throughout all tests. \\
+\begin{figure*}
+\centering
+\includegraphics[width=1\linewidth]{figures/example_for_step_input_delay_measuring}
+\caption{Example of step input for delay determination, front axle lifted, $8^\circ $ amplitude, six repetitions.}
+\label{fig:example_for_step_input_delay_measuring}
+\end{figure*}
+
+
+To eliminate tire friction the investigated axle was suspended in the air in further series of testing by slightly craning up the dolly's front/rear (see figure \ref{fig:dolly_craned_up}) to allow for free movement of the tires. An example for the utilized testing routine can be gathered from table \ref{tab:test_matrx_delay_measuring}. Between the different steps (double amplitude) a sufficient wait time of 3500ms was used to allow the system to reach the requested steering angle. This waiting time was kept constant throughout all tests. \\
+
+All testing was automated in ControlDesk using Python scripts to loop through the different tests. The utilized graphical user interface (GUI) can be seen in figure \ref{fig:control_desk_GUI}. Logging within ControlDesk was started and stopped manually after each test and automatically exported to MATLAB for parsing and analysis. All data was acquired from the steering knuckle sensors originally present in the ETS.  
 
 	\begin{table}[h]
 	\label{tab:test_matrx_delay_measuring}

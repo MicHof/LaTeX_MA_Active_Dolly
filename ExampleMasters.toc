@@ -24,7 +24,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.3}Market overview for existing solutions}{5}{section.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Rapid Control Prototyping}{5}{section.2.4}
+\contentsline {section}{\numberline {2.4}Rapid Control Prototyping}{6}{section.2.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Steering Model (3 Seiten)}{8}{chapter.3}
 \defcounter {refsection}{0}\relax 
@@ -114,29 +114,29 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.3.2}Measured input delay}{25}{subsection.7.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.3.3}Delays in logging measuring chain}{25}{subsection.7.3.3}
+\contentsline {subsection}{\numberline {7.3.3}Delays in logging measuring chain}{26}{subsection.7.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.4}Vehicle testing}{25}{section.7.4}
+\contentsline {section}{\numberline {7.4}Vehicle testing}{26}{section.7.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.4.1}System calibration}{25}{subsection.7.4.1}
+\contentsline {subsection}{\numberline {7.4.1}System calibration}{26}{subsection.7.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.4.2}Actuator tests}{25}{subsection.7.4.2}
+\contentsline {subsection}{\numberline {7.4.2}Actuator tests}{26}{subsection.7.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.4.3}Algorithm evaluation}{25}{subsection.7.4.3}
+\contentsline {subsection}{\numberline {7.4.3}Algorithm evaluation}{26}{subsection.7.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.4.4}Sensor testing}{25}{subsection.7.4.4}
+\contentsline {subsection}{\numberline {7.4.4}Sensor testing}{26}{subsection.7.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.5}Hardware-in-the-loop testing}{25}{section.7.5}
+\contentsline {section}{\numberline {7.5}Hardware-in-the-loop testing}{27}{section.7.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.5.1}Low-speed controller}{26}{subsection.7.5.1}
+\contentsline {subsection}{\numberline {7.5.1}Low-speed controller}{27}{subsection.7.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.5.2}High-speed controller}{26}{subsection.7.5.2}
+\contentsline {subsection}{\numberline {7.5.2}High-speed controller}{27}{subsection.7.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.6}Track testing}{26}{section.7.6}
+\contentsline {section}{\numberline {7.6}Track testing}{27}{section.7.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.6.1}Testmaneuvers}{26}{subsection.7.6.1}
+\contentsline {subsection}{\numberline {7.6.1}Testmaneuvers}{27}{subsection.7.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.6.2}Testenvironment AstaZero}{26}{subsection.7.6.2}
+\contentsline {subsection}{\numberline {7.6.2}Testenvironment AstaZero}{27}{subsection.7.6.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.6.3}Testmatrix}{27}{subsection.7.6.3}
 \defcounter {refsection}{0}\relax 
@@ -146,11 +146,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {8.1}Results from bench testing}{28}{section.8.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.2}Results from in vehicle testing}{28}{section.8.2}
+\contentsline {section}{\numberline {8.2}Results from processing time evaluation}{28}{section.8.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.3}Results from hardware-in-the-loop testing}{28}{section.8.3}
+\contentsline {section}{\numberline {8.3}Results from in vehicle testing}{28}{section.8.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.4}Comparison}{28}{section.8.4}
+\contentsline {section}{\numberline {8.4}Results from hardware-in-the-loop testing}{28}{section.8.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8.5}Comparison}{28}{section.8.5}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {9}Conclusion (2 Seiten)}{29}{chapter.9}
 \defcounter {refsection}{0}\relax 
@@ -162,4 +164,4 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {A}Appendix}{30}{appendix.A}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{References}{31}{figure.A.1}
+\contentsline {chapter}{References}{32}{figure.A.2}
