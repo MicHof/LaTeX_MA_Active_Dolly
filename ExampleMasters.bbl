@@ -16,7 +16,7 @@
   {}
 \endgroup
 
-\entry{LCV_USA}{online}{}
+\entry{LVC_USA}{online}{}
   \name{author}{1}{}{%
     {{}%
      {Agency}{A.}%
@@ -92,7 +92,7 @@
   \field{year}{2013}
 \endentry
 
-\entry{LCV_Mexico}{online}{}
+\entry{LVC_Mexico}{online}{}
   \name{author}{1}{}{%
     {{}%
      {Board}{B.}%
@@ -219,7 +219,7 @@
   \field{year}{2015}
 \endentry
 
-\entry{LCV_Canada}{online}{}
+\entry{LVC_Canada}{online}{}
   \name{author}{2}{}{%
     {{}%
      {Infrastructure}{I.}%
@@ -341,26 +341,6 @@
   \verb https://github.com/mikalhart/TinyGPSPlus/
   \endverb
   \field{year}{2013}
-\endentry
-
-\entry{peters_kappa}{book}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Nilsson}{N.}%
-     {Peter}{P.}%
-     {}{}%
-     {}{}}%
-  }
-  \keyw{long vehicle combination, vehicle dynamics, active safety, driver
-  behaviour, heavy trucks, steering, braking, prediction, automated driving}
-  \strng{namehash}{NP1}
-  \strng{fullhash}{NP1}
-  \field{sortinit}{N}
-  \field{series}{Technical report - Department of Applied Mechanics, Chalmers
-  University of Technology, Göteborg, Sweden, no:}
-  \field{title}{On Traffic Situation Predictions for Automated Driving of Long
-  Vehicle Combinations}
-  \field{year}{2015}
 \endentry
 
 \entry{uip_ethernet_github}{misc}{}
@@ -584,7 +564,7 @@
   \field{year}{1994}
 \endentry
 
-\entry{LCV_Australia}{online}{}
+\entry{LVC_Australia}{online}{}
   \name{author}{2}{}{%
     {{}%
      {Transport}{T.}%

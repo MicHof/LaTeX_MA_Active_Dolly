@@ -39,34 +39,51 @@ In different states of the project different kind of tests were performed. As a 
 \subsection{Background}
 The desired solution is supposed to operate at any speed. For high speeds a quick processing and transmission time is required to ensure prompt and realtime intervention of the control system based on the measured input signals. If the delays induced by the different components in the complete system are known or can be estimated, they can be compensated for in the steering-algorithm running on the rapid-prototyping system.
 
-The dolly is equipped with a system to determine the deflection angle of the drawbar. This is measured at the kingpin. The sensor's raw signal is then parsed and filtered in a low-level system which feeds the filtered signals to the CAN-bus, where it is picked up by the MABII. The filtering operation takes a certain time and thus induces a delay. 
+As outliined in section \ref{sec:measurement_setup} the dolly is equipped with a system to determine the deflection angle of the drawbar and both the kingpin angles of the LVC. The sensors' raw signal is then parsed and filtered in an integrated low-level system which feeds the filtered signals to a private CAN-bus, where it is picked up by the MABII. The filtering operation takes a certain time and thus induces a delay.  
 
-Furthermore the model running on the rapid-prototyping system needs a certain time to calculate the current desired steering angle for the dollys' wheels. This has to be determined as well. The steering mechanisms on the dolly are also a delay-inducer due to the inertia in the hydro-mechanic system. This is as well unavoidable, but when measured can as well be compensated for. 
+Furthermore the model running on the rapid-prototyping system needs a certain time to calculate the current desired steering angle for the dollys' wheels. This has to be determined as well. The steering mechanisms on the dolly are also a delay-inducer due to the inertia in the hydro-mechanic system. This is as well unavoidable, but when measured can as well to a certain degree be compensated for. 
 
-
-In this chapter the accuracy and delays in the Arduino measuring set-up, see also section \ref{sec:measurement_setup}, is outlined as well. Which is important for determining the hardware-induced delays.
-
+The measuring chain for the logging solution will also be discussed and the different delays will be discussed. 
 
 \subsection{Measured input delay}
 \label{sec:measuring_delay}
-\begin{itemize}
-	\item critical transmission time CAN (worst case)
-	\item I$^2$C delay
-	\item IMU-frequency
-	\item msg-frequency from vehicle/dolly
-	
-\end{itemize}
 
-Two bus-protocols are used to aquire the data measured from the IMU and transmit  to the MABII. The data0 is send via I$^2$C-protocol to the Arduino Due, where it is processed and then send out (to the MABII) on a private CAN-bus. 
+The response time of the dolly's steering system was determined in workshop environment in stand-still without any additional axle loads. Tests were conducted for both axles individually to ensure that maximum power was available preventing further delays through insufficient electrical power or hydraulic pressure. A repeated steering angle in the form of a step input was used to determine the reaction time of the system. The step amplitude was increased over different tests to account for possible dependencies on articulation of the steering system. The tests each started and ended with a steering angle of $0^\circ .$ 
 
-\subsection{Computational delay}
-\label{sec:computational_delay}
-\begin{itemize}
-	\item filtering on arduino
-	\item averaging
-	\item drift correction
-	
-\end{itemize}
+To eliminate tire friction the investigated axle was suspended in the air in further series of testing by slightly craning up the dolly's front/rear (see figure \ref{fig:dolly_craned_up}) to allow for free movement. An example for the utilized testing routine can be gathered from table \ref{tab:test_matrx_delay_measuring}. Between the different steps (double amplitude) a sufficient wait time of 3500ms was used to allow the system to reach the requested steering angle. This waiting time was kept constant throughout all tests. \\
+
+	\begin{table}[h]
+	\label{tab:test_matrx_delay_measuring}
+	\centering
+	\begin{tabular}{llll}
+		\textbf{\#} & \textbf{Amplitude [$  ^\circ $]} & \textbf{Axle}  & \textbf{Comment}                                                                  \\
+		1  & 1                & front & lift front axle, ETS dead band \\
+		2  & 2                & front &                                                                          \\
+		3  & 3                & front &                                                                          \\
+		4  & 4                & front &                                                                          \\
+		5  & 5                & front &                                                                          \\
+		6  & 6                & front &                                                                          \\
+		7  & 7                & front &                                                                          \\
+		8  & 8                & front &                                                                          \\
+		9  & 9                & front & error mode, step too big                                                 \\\hline
+		10 & 1                & rear  & lift rear axle, ETS dead band  \\
+		11 & 2                & rear &                                                                          \\
+		12 & 3                & rear &                                                                          \\
+		13 & 4                & rear &                                                                          \\
+		14 & 5                & rear &                                                                          \\
+		15 & 6                & rear &                                                                          \\
+		16 & 7                & rear &                                                                          \\
+		17 & 8                & rear &                                                                          \\
+		18 & 9                & rear & error mode, step too big                                                                    \\
+		             
+	\end{tabular}
+	\caption{Test matrix for delay measuring with lifted axle (analogous matrix for non-lifted testing)}
+\end{table}
+
+
+\subsection{Delays in logging measuring chain}
+\label{sec:delays_on_arduino}
+
 
 \section{Vehicle testing}
 \label{sec:vehicle-testing}
