@@ -50,15 +50,15 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.3}Real-Time Environment}{13}{section.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.1}CAN-bus extension}{13}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.1}CAN-bus extension}{14}{subsection.4.3.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.4}Interfaces and connections with dolly}{15}{section.4.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.5}Interfaces with truck}{15}{section.4.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.6}Measurment Setup}{15}{section.4.6}
+\contentsline {section}{\numberline {4.6}Measurment Setup}{16}{section.4.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.1}On-board sensors}{15}{subsection.4.6.1}
+\contentsline {subsection}{\numberline {4.6.1}On-board sensors}{16}{subsection.4.6.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.6.2}Inertial measurement unit}{16}{subsection.4.6.2}
 \defcounter {refsection}{0}\relax 

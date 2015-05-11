@@ -14,9 +14,17 @@
 	\item give overview of system on truck
 	\item sketch for where which unit sits (with numbers to be referenced)
 	\item different tasks for Arduino
-	\item make communication diagramm with all protocols (CAN, i2c, SPI, serial, ethernet)
+	\item make communication diagramm with all protocols (CAN, i2c, SPI, serial, ethernet) $<$== this could also be moved to software chapter?
 	
 \end{itemize}
+
+\begin{figure*}[ph]
+\centering
+\includegraphics[width=1\linewidth]{figures/combination_overview_with_positions}
+\caption{Positioning of different sensors on the LVC}
+\label{fig:combination_overview_with_positions}
+\end{figure*}
+
 \section{Utilized dolly system}
 \label{sec:dolly_system}
 The utilized dolly by Parator Industri AB (Parator) is equipped with two steerable axles. They are controlled by an after-market solution called ETS Electronic Trailer Steering System (ETS) supplied by V.S.E. Vehicle Systems Engineering B.V. (VSE), of which figure \ref{fig:legacy_system_vse} gives an overview. Their product includes sensors, ECUs and hydraulic systems which come in a ready-to-mount housing, which is placed on the trailer/dolly. This solution is usually sold as a low-speed active steering system for truck-trailer combinations to provide better maneuverability at low speeds in inner-city areas. Besides electrical power and compressed-air (see "2" in the figure) supply there is no connection with the truck in place. This allows for use with many different truck/trailer original equipment manufacturers (OEM), as no insight into proprietary Controler Area Network communication (CAN) is needed. In the original VSE system the two parameters that influence the actuation of the dolly's steering are vehicle speed ("4") and kingpin-deflection ("3"). This deflection is the angle between the truck and trailer, which is measured by an additional kingpin-angle sensor supplied by VSE and mounted in the eye of the kingpin hub. Furthermore every steering-knuckle of the dolly is equipped with an angle sensor to provide appropriate wheel-individual feedback for the VSE control-system. A diagnosis screen is available in the VSE-unit, which allows for relatively simple set-up, calibration and parametrization to be done.\cite{dolly_datasheet}
