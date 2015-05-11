@@ -20,6 +20,7 @@ Table \ref{tab:LVC_in_different_countries} shows the maximum length and weight o
 	\label{tab:LVC_in_different_countries}
 	\begin{tabular}{l|l|l|}
 		Country   & Max. Length [m] & Max. Weight [t] \\ \hline
+		EU (general) & 18.35 & 44.00\\
 		Sweden    &       25.25      &       60.00      \\
 		Finland   &            25.25 &         60.00    \\
 		Australia &      53.50       &           132.00  \\
@@ -31,14 +32,23 @@ Table \ref{tab:LVC_in_different_countries} shows the maximum length and weight o
 In Sweden there are attempts to have LVC that exceed the current dimensions. One example is an A-double combination, which consists of a tractor, two semitrailers and a dolly between the semitrailers. This type of combination was used for the simulations and hardware-in-the-loop tests conducted in this project.\\
 
 There are certain regulations for LVC in terms of driver requirements. In countries of the European Union a person who drives a LVC is required to have the CE drivers license, which allows you to drive a tractor with a  mass over 3.5 tonnes with a trailer, whose mass is over 750 kg. To be able to acquire that drivers license the person has to be over 21 years old. \cite{EU_driving_licenses} 
-On top of that, there have been more requirements for the drivers that took part in trials of LVC in European countries. For example for the trials in the Netherlands drivers were required to have the drivers license for at least five years, haven't been in an accident in the last three years and they had to undertake a safe driving training. \colorbox{yellow}{reference}  \\
+On top of that, there have been more requirements for the drivers that took part in trials of LVC in European countries. For example for the trials in the Netherlands drivers were required to have their drivers license for at least five years, to not have lost it during the last three years and they had to acquire a special certificate. To get that certificate the drivers had to take theoretical as well as practical courses.
+\cite{LVC_test_netherlands} \\
 
-Road wear is a big concern when it comes to road transport. The main factor of road wear is the axle load of the vehicles.
-The axle load for a vehicle is calculated as follows:\\
+Road wear is a big concern when it comes to road transport. The main factor of road wear is the axle load of the vehicles. With the following equation a load equivalency factor can be calculated: 
+
 \begin{equation}
-F_{axl}=\frac{m_{tot}}{N_{axl}}
+\frac{N_{ref}}{N_x}=\left(\frac{W_x}{W_{ref}}\right)^4
+\label{eq:LEF}
+\end{equation}
+Where $W_x$ and $W_{ref}$ are axle loads and $N_x$ and $N_{ref}$ are the corresponding numbers of load applications.\cite{road_wear}
+
+Assuming an equal distribution of the load over the different axles, the axle load for a vehicle is calculated as follows:\\
+\begin{equation}
+W_x=\frac{m_{tot}}{n_{axl}}
 \label{eq:Axle_load}
 \end{equation}
+Where $m_{tot}$ is the total mass of the vehicle and $n_{axl}$ is the numbers of axles.
 A standard tractor-semitrailer combination has five or six axles and a maximum mass of 40 tonnes.
 With equation \eqref{eq:Axle_load} the axle load, if fully loaded, for that combination is 8 tonnes/axle and 6.67 tonnes/axle, respectively.
 An A-double-combination, which has ten or eleven axles and a maximum mass of 80 tonnes, also reaches a maximum axle  load of 8 tonnes/axle and 7.27 tonnes/axle, respectively.
