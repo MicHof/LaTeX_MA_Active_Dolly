@@ -60,33 +60,30 @@ For a 25.25 m combination, which has nine or ten axles and a maximum mass of 60 
 \label{sec:ongoing_research}
 There is a lot of research going on concerning high capacity transport vehicles. The main topics are the safety of HCT, their environmental impact as well as economical aspects.\\
 
-There are many concerns about the safety of HCT in public opinion, so there have been quite a lot studies that investigated this issue.
+There are many concerns about the safety of HCT in public opinion, so there have been quite a lot studies that investigated this issue. One concern is the extended length of HCT, which causes an increase of time needed to overtake a combination. Studies showed that accident risk for overtaking a long combination is not statistically higher than for standard combinations. \cite{EMS}
+For overall safety, the majority of studies show that the use of HCT increases traffic safety due to the reduced number of vehicles on the roads, which is induced by the higher capacity of HCT. However, HCT might have a higher accident rate for individual vehicles. \cite{EMS}
 The analysis of crash data from the Swedish Traffic Accident Data Acquisition showed that there is no higher rate of fatal or severe crashes per traveled vehicle km for LVC compared to standard vehicle combinations. \cite{balint2013correlation}
 
-\begin{itemize}
-	\item LVC advantages/disadvantages (Baltin)
-	\subitem rearward amplification
-	\subitem wendekreis
-	\subitem überholvorgaenge
-	\item safety aspect 
-	\item Environmental aspects \\
-	With the use of LVC the environmental impact of goods transportation can be reduce significantly for high loading factors. The fuel consumption is about 15\% lower compared to the standard vehicle combinations used in the EU. In the number of trips a reduction of 32\% can be seen. This reduction is achieved because two LVC can carry the same amount of goods as three standard vehicle combinations.  \cite{backman2002improved}
-	However, the environmental impact of LVC can become negative if due to a high penetration of LVC goods transportation is shifted from rail to the road. \cite{doll2009long}
-	\item development of safety systems\\
-	One aim of safety systems for HCT is to reduce the rearward amplification of yaw rate and lateral acceleration. A possibility to achieve that is to use a steerable dolly. In section \ref{sec:high-speed_controller} a controller to reduce rearward amplification for high speed is described.\\
-	Another problem of HCT is the off-tracking of the last trailer for low speed cornering. Off-tracking means that the trailer doesn't follow the path of the tractor but moves on a radius that is smaller then the tractors. This issue can also be addressed by using a steerable dolly. In section \ref{sec:low-speed_controller} a controller to improve the path-following is described.
-	
-\end{itemize}
+To reduce the effects on safety, which might occur with the use of HCT, different safety systems are being developed.
+
+One aim of safety systems for HCT is to reduce the rearward amplification of yaw rate and lateral acceleration. A possibility to achieve that is to use a steerable dolly. In section \ref{sec:high-speed_controller} a controller to reduce rearward amplification for high speed is described.\\
+Another problem of HCT is the off-tracking of the last trailer for low speed cornering. Off-tracking means that the trailer doesn't follow the path of the tractor but moves on a radius that is smaller then the tractors. This issue can also be addressed by using a steerable dolly. In section \ref{sec:low-speed_controller} a controller to improve the path-following is described.
+
+One reason for the use of HCT is the expected positive influence on the environment compared with standard combinations. 
+Studies showed that with the use of LVC the environmental impact of goods transportation can be reduce significantly for high loading factors. The fuel consumption is about 15\% lower compared to the standard vehicle combinations used in the EU. In the number of trips a reduction of 32\% can be seen. This reduction is achieved because two LVC can carry the same amount of goods as three standard vehicle combinations.  \cite{backman2002improved}
+However, the environmental impact of LVC can become negative if due to a high penetration of LVC goods transportation is shifted from rail to the road. \cite{doll2009long}
+
+Probably the main reason for introduction of HCT is their economical advantage. First of all, the transport costs decrease by 1.8-3.4\%. Together with the environmental costs, that are lower compared to standard combinations, an overall benefit of HCT can be seen.\cite{EMS}
+
 
 \section{Market overview for existing solutions}
 \label{sec:market_overview}
-\begin{itemize}
-	\item Fahrzeugwerk Bernard Krone: \\
-	mechanical steering of front axle with adjustable steering ratio; input through movable drawbar.
-	\item Schmitz Cargobull: \\
-	front axle steerable (no information how)
-	
-\end{itemize}
+There are some solutions for dollys with steerable axles that exist today. However, the steering angles of the axles is only based on the articulation angle between the dolly and the trailer or truck it is attached to. \\
+One of these solutions is the "active articulated dolly" manufactured by "Fahrzeugwerk Bernard Krone". The front axle of this dolly is steerable. In order to achieve that, the drawbar of the dolly is mechanically connected to the frontaxle and is rotateable. So if the drawbar is turned the wheels of the front axle steer. The transmission of the steering can be varied by changing the length of the drawbar, which is adjustable. For safety reasons the steering is mechanically locked automatically depending on the velocity. The main reason for implementing this steering capability is to reduce off-tracking. This dolly is equipped with air suspension, an electronic breaking system as well as a stability system. \cite{Krone_dolly} \\
+Other manufacturers that offer steerable dollys, that work the same way, are "Schmitz Cargobull" and "K{\"o}gel Trailer". \cite{Kogel_dolly}\cite{Schmitz_dolly} \\
+In order to use the dolly to improve the vehicle dynamics of a  combination in a more advanced way, a solution that allows more independently steering is preferable. The dolly used in this project is capable of steering both front and rear axles individually and independent of the articulation angle between the dolly and the trailer in front of it. In section \ref{sec:dolly_system} this system is described in detail.
+
+
 \section{Rapid Control Prototyping}
 \label{sec:rapid_proto}
 
