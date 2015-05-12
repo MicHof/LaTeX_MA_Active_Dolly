@@ -58,35 +58,54 @@ The response time of the dolly's steering system was determined in workshop envi
 
 To eliminate tire friction the investigated axle was suspended in the air in further series of testing by slightly craning up the dolly's front/rear (see figure \ref{fig:dolly_craned_up}) to allow for free movement of the tires. An example for the utilized testing routine can be gathered from table \ref{tab:test_matrx_delay_measuring}. Between the different steps (double amplitude) a sufficient wait time of 3500ms was used to allow the system to reach the requested steering angle. This waiting time was kept constant throughout all tests. \\
 
+	\begin{table}[h]
+		\label{tab:test_matrx_delay_measuring}
+		\centering
+		\begin{tabular}{llll}
+			\textbf{\#} & \textbf{Amplitude [$  ^\circ $]} & \textbf{Axle}  & \textbf{Comment}                                                                  \\
+			1  & 1                & front & lift front axle, ETS dead band \\
+			2  & 2                & front &                                                                          \\
+			3  & 3                & front &                                                                          \\
+			4  & 4                & front &                                                                          \\
+			5  & 5                & front &                                                                          \\
+			6  & 6                & front &                                                                          \\
+			7  & 7                & front &                                                                          \\
+			8  & 8                & front &                                                                          \\
+			9  & 9                & front & error mode, step too\footnotemark[1]                                      \\\hline
+			10 & 1                & rear  & lift rear axle, ETS dead band  \\
+			11 & 2                & rear &                                                                          \\
+			12 & 3                & rear &                                                                          \\
+			13 & 4                & rear &                                                                          \\
+			14 & 5                & rear &                                                                          \\
+			15 & 6                & rear &                                                                          \\
+			16 & 7                & rear &                                                                          \\
+			17 & 8                & rear &                                                                          \\
+			18 & 9                & rear & error mode, step too big\footnotemark[1]                                                                   \\
+			
+		\end{tabular}
+		\caption{Test matrix for delay measuring with lifted axle (analogous matrix for non-lifted testing (\#19-\#36))}
+	\end{table}
+	\footnotetext[1]{If a too big of a step is requested from the steering system, VSE's ECU will go into emergency mode. Steering is completely locked, turning the dolly completely passive.}   
+
+
+As also described in section \ref{sec:results_processing_time} additional response tests were conducted utilizing a ramp input. Here a maximum steering amplitude of $15^\circ $ was used and the slope of the ramp was varied. As the request was not in the form of a step input, no error was triggered like in test \#9 and \#18 (see table \ref{tab:test_matrx_delay_measuring}). The test matrix for this setup is outlined in table \ref{tab:test_matrx_ramp_input}. 
+
+\begin{table}[h]
+	\label{tab:test_matrx_ramp_input}
+	\centering
+\begin{tabular}{llllll}
+ \textbf{\#} &\textbf{ Amplitude [$^\circ$]} & \textbf{Rate} & \textbf{Sample time [s]} & \textbf{Comment} &  \\ 
+1	  &  15 & 0.01 & 0.001 &   \\ 
+2	  & 15 & 0.001 &  0.001&  \\ 
+3	  & 15 & 0.1 &  0.001&   \\ 
+4	  & 15 & 0.3 & 	 0.001&   \\ 
+5	  & 15 & 0.4 & 0.001 &  error mode, step too big \\ 
+
+\end{tabular} 
+\caption{Test matrix for delay measurings with ramp input}
+\end{table}
 All testing was automated in ControlDesk using Python scripts to loop through the different tests. The utilized graphical user interface (GUI) can be seen in figure \ref{fig:control_desk_GUI}. Logging within ControlDesk was started and stopped manually after each test and automatically exported to MATLAB for parsing and analysis. All data was acquired from the steering knuckle sensors originally present in the ETS.  
 
-	\begin{table}[h]
-	\label{tab:test_matrx_delay_measuring}
-	\centering
-	\begin{tabular}{llll}
-		\textbf{\#} & \textbf{Amplitude [$  ^\circ $]} & \textbf{Axle}  & \textbf{Comment}                                                                  \\
-		1  & 1                & front & lift front axle, ETS dead band \\
-		2  & 2                & front &                                                                          \\
-		3  & 3                & front &                                                                          \\
-		4  & 4                & front &                                                                          \\
-		5  & 5                & front &                                                                          \\
-		6  & 6                & front &                                                                          \\
-		7  & 7                & front &                                                                          \\
-		8  & 8                & front &                                                                          \\
-		9  & 9                & front & error mode, step too big                                                 \\\hline
-		10 & 1                & rear  & lift rear axle, ETS dead band  \\
-		11 & 2                & rear &                                                                          \\
-		12 & 3                & rear &                                                                          \\
-		13 & 4                & rear &                                                                          \\
-		14 & 5                & rear &                                                                          \\
-		15 & 6                & rear &                                                                          \\
-		16 & 7                & rear &                                                                          \\
-		17 & 8                & rear &                                                                          \\
-		18 & 9                & rear & error mode, step too big                                                                    \\
-		             
-	\end{tabular}
-	\caption{Test matrix for delay measuring with lifted axle (analogous matrix for non-lifted testing)}
-\end{table}
 
 
 \subsection{Delays in logging measuring chain}

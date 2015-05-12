@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.5.26)  11 MAY 2015 15:32
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.5.26)  12 MAY 2015 13:23
 entering extended mode
 **ExampleMasters.tex
 (C:\Users\1.5V\Documents\GitHub\LaTeX_MA_Active_Dolly\ExampleMasters.tex
@@ -1524,20 +1524,22 @@ LaTeX Warning: Citation 'road_wear' on page 4 undefined on input line 44.
 
 [4
 
-] [5] <figures/v_model/Folie1.jpg, id=534, 963.6pt x 542.025pt>
+]
+Underfull \hbox (badness 10000) in paragraph at lines 61--62
+
+ []
+
+[5] <figures/v_model/Folie1.jpg, id=537, 963.6pt x 542.025pt>
 File: figures/v_model/Folie1.jpg Graphic file (type jpg)
 
 <use figures/v_model/Folie1.jpg>
-Package pdftex.def Info: figures/v_model/Folie1.jpg used on input line 91.
+Package pdftex.def Info: figures/v_model/Folie1.jpg used on input line 97.
 (pdftex.def)             Requested size: 430.1962pt x 241.98193pt.
-
-Underfull \vbox (badness 1478) has occurred while \output is active []
-
- [6 <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/v_model/Folie
-1.jpg>])
-(C:\Users\1.5V\Documents\GitHub\LaTeX_MA_Active_Dolly\DynamicModel.tex [7]
+ [6])
+(C:\Users\1.5V\Documents\GitHub\LaTeX_MA_Active_Dolly\DynamicModel.tex [7 <C:/U
+sers/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/v_model/Folie1.jpg>]
 Chapter 3.
-<figures/Low_speed_diagram.png, id=549, 606.01407pt x 424.58624pt>
+<figures/Low_speed_diagram.png, id=552, 606.01407pt x 424.58624pt>
 File: figures/Low_speed_diagram.png Graphic file (type png)
 
 <use figures/Low_speed_diagram.png>
@@ -1547,7 +1549,7 @@ Package pdftex.def Info: figures/Low_speed_diagram.png used on input line 28.
 
  <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/Low_speed_diagra
 m.png>]
-<figures/Inverse_of_A-double_single-track.png, id=560, 670.00313pt x 485.56406p
+<figures/Inverse_of_A-double_single-track.png, id=563, 670.00313pt x 485.56406p
 t>
 File: figures/Inverse_of_A-double_single-track.png Graphic file (type png)
  <use figures/Inverse_of_A-double_single-track.png>
@@ -1564,7 +1566,7 @@ f_A-double_single-track.png>])
 [11]
 Chapter 4.
 
-<figures/combination_overview_with_positions.jpg, id=578, 822.07124pt x 216.81p
+<figures/combination_overview_with_positions.jpg, id=581, 822.07124pt x 216.81p
 t>
 File: figures/combination_overview_with_positions.jpg Graphic file (type jpg)
  <use figures/combination_overview_with_positions.jpg>
@@ -1574,7 +1576,7 @@ n input line 23.
  [12
 
  <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/combination_over
-view_with_positions.jpg>] <figures/legacy_system_vse.jpg, id=591, 998.22937pt x
+view_with_positions.jpg>] <figures/legacy_system_vse.jpg, id=594, 998.22937pt x
  465.23813pt>
 File: figures/legacy_system_vse.jpg Graphic file (type jpg)
 
@@ -1582,7 +1584,7 @@ File: figures/legacy_system_vse.jpg Graphic file (type jpg)
 Package pdftex.def Info: figures/legacy_system_vse.jpg used on input line 36.
 (pdftex.def)             Requested size: 477.99902pt x 222.77934pt.
 
-<figures/system_overview_ETS.jpg, id=593, 963.6pt x 542.025pt>
+<figures/system_overview_ETS.jpg, id=596, 963.6pt x 542.025pt>
 File: figures/system_overview_ETS.jpg Graphic file (type jpg)
 
 <use figures/system_overview_ETS.jpg>
@@ -1600,7 +1602,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 84--85
 
  []
 
-[14] <figures/can_extension.png, id=612, 963.6pt x 446.41782pt>
+[14] <figures/can_extension.png, id=615, 963.6pt x 446.41782pt>
 File: figures/can_extension.png Graphic file (type png)
 
 <use figures/can_extension.png>
@@ -1619,7 +1621,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 verview_ETS.jpg> <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/
 can_extension.png>]
 Chapter 5.
-<figures/functionality_architecture.png, id=646, 963.6pt x 542.025pt>
+<figures/functionality_architecture.png, id=649, 963.6pt x 542.025pt>
 File: figures/functionality_architecture.png Graphic file (type png)
 
 <use figures/functionality_architecture.png>
@@ -1649,7 +1651,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 49--50
  []
 
 
-<figures/example_for_step_input_delay_measuring.jpg, id=692, 592.2125pt x 316.1
+<figures/example_for_step_input_delay_measuring.jpg, id=695, 592.2125pt x 316.1
 8124pt>
 File: figures/example_for_step_input_delay_measuring.jpg Graphic file (type jpg
 )
@@ -1665,27 +1667,35 @@ Underfull \hbox (badness 10000) in paragraph at lines 59--60
 [25 <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/example_for_s
 tep_input_delay_measuring.jpg>]
 
-Package nag Warning: \label in float, but not after \caption on input line 64.
+Package nag Warning: \label in float, but not after \caption on input line 62.
 
-[26]) (C:\Users\1.5V\Documents\GitHub\LaTeX_MA_Active_Dolly\Discussion.tex
-[27]
+
+Package nag Warning: \label in float, but not after \caption on input line 94.
+
+
+Underfull \vbox (badness 1107) has occurred while \output is active []
+
+ [26]
+[27]) (C:\Users\1.5V\Documents\GitHub\LaTeX_MA_Active_Dolly\Discussion.tex
+[28]
 Chapter 8.
-) (C:\Users\1.5V\Documents\GitHub\LaTeX_MA_Active_Dolly\Conclusion.tex [28
+) (C:\Users\1.5V\Documents\GitHub\LaTeX_MA_Active_Dolly\Conclusion.tex [29
 
 ]
+[30]
 Chapter 9.
-) (C:\Users\1.5V\Documents\GitHub\LaTeX_MA_Active_Dolly\blinddarm.tex [29
+) (C:\Users\1.5V\Documents\GitHub\LaTeX_MA_Active_Dolly\blinddarm.tex [31
 
 ]
 Appendix A.
-<figures/dolly_craned_up.jpg, id=721, 3276.24pt x 2457.18pt>
+<figures/dolly_craned_up.jpg, id=736, 3276.24pt x 2457.18pt>
 File: figures/dolly_craned_up.jpg Graphic file (type jpg)
 
 <use figures/dolly_craned_up.jpg>
 Package pdftex.def Info: figures/dolly_craned_up.jpg used on input line 14.
 (pdftex.def)             Requested size: 477.99902pt x 358.47534pt.
 
-<figures/CD_Layout.png, id=722, 1025.33063pt x 547.2947pt>
+<figures/CD_Layout.png, id=737, 1025.33063pt x 547.2947pt>
 File: figures/CD_Layout.png Graphic file (type png)
 
 <use figures/CD_Layout.png>
@@ -1695,10 +1705,10 @@ Package pdftex.def Info: figures/CD_Layout.png used on input line 22.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [30
+) [32
 
  <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/dolly_craned_up.
-jpg>] [31 <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/CD_Layo
+jpg>] [33 <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/CD_Layo
 ut.png>]
 Package microtype Info: Loading generic settings for font family
 (microtype)             `cmtt' (encoding: OT1).
@@ -1749,7 +1759,7 @@ Overfull \hbox (9.09294pt too wide) in paragraph at lines 143--143
 Gyro, Ac-celerom-e-ter, Com-pass, and Al-time-ter (L3GD20H,
  []
 
-[32
+[34
 
 ]
 
@@ -1758,9 +1768,9 @@ Package glossaries Warning: No \printglossary or \printglossaries found.
 This document will not have a glossary.
 
 
-Package nag Warning: 2 complaints in total.
+Package nag Warning: 3 complaints in total.
 
-[33]
+[35]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 145.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 145.
  (C:\Users\1.5V\Documents\GitHub\LaTeX_MA_Active_Dolly\ExampleMasters.aux)
@@ -1783,10 +1793,10 @@ Package biblatex Warning: Please (re)run BibTeX on the file(s):
 Package logreq Info: Writing requests to 'ExampleMasters.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 28965 strings out of 493706
- 515114 string characters out of 3142168
+ 28969 strings out of 493706
+ 515164 string characters out of 3142168
  935578 words of memory out of 3000000
- 31414 multiletter control sequences out of 15000+200000
+ 31415 multiletter control sequences out of 15000+200000
  16648 words of font info for 111 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  55i,14n,54p,2441b,1876s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1808,9 +1818,9 @@ X 2.9/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/Program Files (x86)/MiKTeX
 9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
 onts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
 ts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on ExampleMasters.pdf (43 pages, 3721173 bytes).
+Output written on ExampleMasters.pdf (45 pages, 3727741 bytes).
 PDF statistics:
- 868 PDF objects out of 1000 (max. 8388607)
- 173 named destinations out of 1000 (max. 500000)
+ 884 PDF objects out of 1000 (max. 8388607)
+ 176 named destinations out of 1000 (max. 500000)
  24798 words of extra memory for PDF output out of 24883 (max. 10000000)
 

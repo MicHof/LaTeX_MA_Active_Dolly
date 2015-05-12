@@ -19,12 +19,20 @@
 \section{Results from processing time evaluation}
 \label{sec:results_processing_time}
 
+\begin{itemize}
+	\item diagrams (over amplitude, show time)
+	\item explain different curves
+	\item explain data gathering
+	\item mention ramp input 
+	\item show reaction time
+\end{itemize}
+
+During plot analysis of preliminary results it was discussed, whether it would be possible to by-pass the occuring delay by feeding a ramp-input instead of a step-input into the ETS. It was assumed that there is a low-pass filter in place which would not affect ramp inputs. Subsequent tests with ramp inputs with varying slopes and amplitudes showed that it was indeed possible to eliminate the low-pass filter leading to no delay between the target angle and the request angle. Nevertheless it was not possible to get any faster change than with the request of a step input. It thus can be concluded that the maximum steering rate of $5 ^\circ /s$ can not be circumvented.
 
 \section{Results from in vehicle testing}
 \label{sec:results_vehicle_testing}
 
 \begin{itemize}
-	\item measured delay
 	\item CAN-analysis
 	\item robustness?
 	\item reliability of safety features
