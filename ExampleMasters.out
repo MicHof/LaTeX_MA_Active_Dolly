@@ -10,7 +10,7 @@
 \BOOKMARK [1][]{section.2.2}{Ongoing research}{chapter.2}% 10
 \BOOKMARK [1][]{section.2.3}{Market overview for existing solutions}{chapter.2}% 11
 \BOOKMARK [1][]{section.2.4}{Rapid Control Prototyping}{chapter.2}% 12
-\BOOKMARK [0][]{chapter.3}{Steering Model \(3 Seiten\)}{}% 13
+\BOOKMARK [0][]{chapter.3}{Vehicle Model controllers \(3 Seiten\)}{}% 13
 \BOOKMARK [1][]{section.3.1}{Low-Speed controller}{chapter.3}% 14
 \BOOKMARK [2][]{subsection.3.1.1}{Input parameters}{section.3.1}% 15
 \BOOKMARK [1][]{section.3.2}{High-Speed controller}{chapter.3}% 16
@@ -33,7 +33,7 @@
 \BOOKMARK [1][]{section.5.1}{Functionality architecture}{chapter.5}% 33
 \BOOKMARK [1][]{section.5.2}{Matlab/Simulink environment}{chapter.5}% 34
 \BOOKMARK [2][]{subsection.5.2.1}{dSpace RTI-blockset}{section.5.2}% 35
-\BOOKMARK [2][]{subsection.5.2.2}{Volvo Truck Model}{section.5.2}% 36
+\BOOKMARK [2][]{subsection.5.2.2}{Virtual Truck Modelling Library}{section.5.2}% 36
 \BOOKMARK [2][]{subsection.5.2.3}{CAN-bus extension}{section.5.2}% 37
 \BOOKMARK [1][]{section.5.3}{ControlDesk monitoring environment}{chapter.5}% 38
 \BOOKMARK [2][]{subsection.5.3.1}{Maneuver control}{section.5.3}% 39

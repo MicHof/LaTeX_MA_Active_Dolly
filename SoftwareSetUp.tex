@@ -59,16 +59,16 @@ After setting the module- and controller number the identifier format has to be 
 
 
 In the "MainSetup" block a dbc-file is connected to one of the controller blocks, that were created before. A "ControllerSetup" block can only be connected to one "MainSetup" block at a time. When the dbc-file is loaded in the "MainSetup" block, the different messages and signals of the dbc-file can be chosen as inputs and/or outputs to the simulink-model.
-\subsection{Volvo Truck Model}
+\subsection{Virtual Truck Modelling Library}
 \label{sec:VTM}
-The Volvo Truck Model (VTM) is a computational framework used within Volvo Trucks to simulate the dynamic behaviours of trucks and combinations. As a library it extends Simulink, where maneuvers, track layout and the trucks kinematic and dynamic properties are linked together and then computed. This toolbox was used as a base for the simulation of the LVC including the dolly for this project. It is possible to run simulation offline with a predefined maneuver and a given environment as well online where these parameters are fed into the calculation live or as measurings from the real-world environment. For online use all relevant parameters and states can be accessed in Simulink or in case of execution on the MABII through ControlDesk as their respective representation of the Simulink variable. 
+The Virtual Truck Modelling Library (VTM) is a computational framework used within Volvo Trucks to simulate the dynamic behaviours of trucks and combinations. As a library it extends Simulink, where maneuvers, track layout and the trucks kinematic and dynamic properties are linked together and then computed. This toolbox was used as a base for the simulation of the LVC including the dolly for this project. It is possible to run simulation offline with a predefined maneuver and a given environment as well online where these parameters are fed into the calculation live or as measurings from the real-world environment. For online use all relevant parameters and states can be accessed in Simulink or in case of execution on the MABII through ControlDesk as their respective representation of the Simulink variable. 
 
 \subsection{CAN-bus extension}
 \label{sec:can_bus_extension_software}
 
 \begin{itemize}
 	\item outline data diagram structure
-	\item show limitations uof UDP (time, reliability, retrans)
+	\item show limitations uf UDP (time, reliability, retrans)
 	\item timestamping
 	
 	
