@@ -133,6 +133,17 @@ All testing was automated in ControlDesk using Python scripts to loop through th
 	\item Limitations (axle loads, standing still)
 \end{itemize}
 
+Usually a hardware iLack in processing power does not allow for VTM's execution in the dSpace environment on the MABII. To perform HIL-test it was thus necessary to split the comptuation and allow for real-time data exchange between the hardware controlling system on the MABII and the rest of the simulation which will run on a standard PC. 
+
+\begin{figure*}[h]
+\centering
+\includegraphics[width=1\linewidth]{figures/HIL_overview}
+\caption{Overview of HIL-simulation, distribution of sub-functions over different physical platforms (top) and correlation to Volvo functional architecture (bottom)}
+
+\label{fig:HIL_overview}
+\end{figure*}
+
+
 \subsection{Low-speed controller}
 \subsection{High-speed controller}
 
