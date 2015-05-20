@@ -134,22 +134,17 @@ The MABII is connected to the CAN bus of each ETS-ECU. Because of the use of dif
 	\caption{Breakout box scheme}
 	\label{fig:BOB}
 \end{figure*}
-\begin{itemize}
-	\item private CANbus with AngleSensor for kingpin\\
-	\item Vehicle CAN (ISO 11992, connector ISO 7638-2) \\
-	Furthermore there is the ISO 11992 CAN bus which is used for communication between tractor and the attached semitrailers. In the current design this CAN is only connected to the EBS-units of the dolly. For future projects it is preferable to connect to that CAN, too. If the connection is established and a matching DBC-file for the ISO 11992 standard is acquired, there would be the possibility to also control breaking and the leveling of the air suspension of dolly. With this a more sophisticated control of the vehicle dynamics of the dolly can be achieved.\\
-	Another possibility to get control over the braking and leveling system could be over the diagnosis port of the EBS. This port is usually used for diagnostic purposes. With the matching diagnostic software the braking and leveling can be controlled manually.
-	\subitem brake by-wire
-	\subitem EBS, ABS
-	\subitem sensors for EBS, ABS
-	\subitem signals/msgs on vehCAN
-	\item physial interface =$>$ diagnosis outlet
+
+
+	Furthermore there is the ISO 11992 CAN bus which is used for communication between tractor and the attached semitrailers. In the current design this CAN is only connected to the EBS-units of the dolly. For future projects it is preferable to connect the MABII to that CAN, too. If the connection is established and a matching DBC-file for the ISO 11992 standard is acquired, there would be different benefits. For one thing more information about the state of the trailers, like for example axle loads and wheel speeds, could be received and used to improve quality of the capability-state of the dolly (see section \ref{sec:maxi_capabilities}), for another thing there would be the possibility to also control breaking and the leveling of the air suspension of the dolly. With this a more sophisticated control of the vehicle dynamics of the dolly can be achieved.\\
+	Another possibility to get control over the braking and leveling system could be over the diagnosis port of the EBS. This port is usually used for diagnostic purposes. With the matching diagnostic software the braking and leveling can be controlled manually. If the EBS supplier provides insight into how the diagnostic software communicates with the EBS unit, this port could be used to access the EBS units and the brake and leveling control could be implemented.
+\begin{itemize}	
 	\item \textbf{distinguish between HIL/bench-testing and track-testing!!}
 \end{itemize}
 
 \section{Interfaces with truck}
 \label{sec:interface_with_truck}
-
+The vehicle model controllers depend on inputs from the tractor unit(see section \ref{sec:overview_of_the_model}). One of the inputs is the steering angle of the tractors front axle, another the current vehicle speed. For track-testing the MABII is connected to the Chassis CAN of the tractor, in order to get those signals. For the HIL-testing the tractor unit is simulated using VTM (see section \ref{sec:VTM}).
 \begin{itemize}
 	\item CAN communication with truck
 	\item steering system conncetion (VDS!)

@@ -35,7 +35,9 @@
 
 \subsection{dSpace RTI-blockset}
 The dSpace RTI-Blockset (Real-time interface) is a plug-in for MATLAB/Simulink that allows you to connect a simulink-model to the different inputs and outputs of the MABII. There are RTI-blocks for CAN, Ethernet, LIN, FPGA and the analog and digital outputs of the MABII.
-In this project only the RTI CAN MultiMessage Blockset was used. These blocks establish an interface between the physical CAN-Buses of the MABII and the simulink-model running on the MABII. There are four different blocks in this blockset: 
+In this project the RTI CAN MultiMessage and the RTI Ethernet (UDP) Blocksets were used.\\ 
+\subsubsection{RTI CAN MultiMessage Blockset}
+The RTI CAN MultiMessage blocks establish an interface between the physical CAN-Buses of the MABII and the simulink-model running on the MABII. There are four different blocks in this blockset: 
 
 In the "GeneralSetup" block the paths of the model root and the destination folder for generated files are set. 
 
@@ -58,7 +60,13 @@ In the "ControllerSetup" block first the name of the controller has to be set, t
 After setting the module- and controller number the identifier format has to be set to either standard or extended format, the transceiver type must be chosen between ISO11898-2 and ISO11898-6. ISO11898-2 is used for a high-speed medium access unit and ISO11989-6 for the selective wake-up functionality of a high-speed medium access unit. If needed, a termination resistance of 120 Ohms can be set in the block as well. As a last step the Baud rate of the CAN-bus has to be defined.
 
 
-In the "MainSetup" block a dbc-file is connected to one of the controller blocks, that were created before. A "ControllerSetup" block can only be connected to one "MainSetup" block at a time. When the dbc-file is loaded in the "MainSetup" block, the different messages and signals of the dbc-file can be chosen as inputs and/or outputs to the simulink-model.
+In the "MainSetup" block a dbc-file is connected to one of the controller blocks, that were created before. A "ControllerSetup" block can only be connected to one "MainSetup" block at a time. When the dbc-file is loaded in the "MainSetup" block, the different messages and signals of the dbc-file can be chosen as inputs and/or outputs to the simulink-model.\\
+\subsubsection{RTI Ethernet (UDP) Blockset}
+The RTI Ethernet (UDP) Blockset was used for two purposes: On the one hand for the HIL-testing (see section \ref{sec:HIL}), on the other hand for the CAN-bus extension of the MABII (see section \ref{sec:can_bus_extension_software}). The RTI Ethernet (UDP) Blockset contains four different blocks:
+In the "Ethernet\_UDP\_SETUP" block \colorbox{yellow}{Blablbalba}\\
+The "Ethernet\_UDP\_RX" block is used to receive data over Ethernet. \colorbox{yellow}{Blablbalba}\\
+The "Ethernet\_UDP\_TX" block is used to send data over Ethernet.\colorbox{yellow}{Blablbalba}\\
+The "Ethernet\_UDP\_INTERRUPT" block is used to send data over Ethernet.\colorbox{yellow}{Blablbalba}\\
 \subsection{Virtual Truck Modelling Library}
 \label{sec:VTM}
 The Virtual Truck Modelling Library (VTM) is a computational framework used within Volvo Trucks to simulate the dynamic behaviours of trucks and combinations. As a library it extends Simulink, where maneuvers, track layout and the trucks kinematic and dynamic properties are linked together and then computed. This toolbox was used as a base for the simulation of the LVC including the dolly for this project. It is possible to run simulation offline with a predefined maneuver and a given environment as well online where these parameters are fed into the calculation live or as measurings from the real-world environment. For online use all relevant parameters and states can be accessed in Simulink or in case of execution on the MABII through ControlDesk as their respective representation of the Simulink variable. 
