@@ -115,9 +115,9 @@ It was decided to neglect the delays induced by the CAN communication. The reaso
 \subsection{Delays in logging measuring chain}
 \label{sec:delays_on_arduino}
 
-To have a complete picture of the occuring delays in the measuring chain all relevant bigger execution blocks of the code running cyclically on the Arduino Due to broadcast the IMU data to the CAN-bus were evaluated for execution time. Figure \ref{fig:arduino_delays_sketch} gives an overview, into which functions the code was grouped as well as the respectively used protocol for communication. The output via the serial port (Universal Asynchronous Receiver Transmitter (UART)) for visualization purposes on the computer while logging takes very long compared to the other execution time of the other code blocks. \footnote{The maximum transmission rate on the UART for the Due is 115200bit/s. Transmitting the payload (3x3 sensor axes, signed integer) only excluding all control bits accumulates to 3 sensors x 3 axes x 16bit = 144bit  or 1.25ms}It therefore is disabled while actually logging. 
+To have a complete picture of the occuring delays in the measuring chain all relevant bigger execution blocks of the code running cyclically on the Arduino Due to broadcast the IMU data to the CAN-bus were evaluated for execution time. Figure \ref{fig:arduino_delays_sketch} gives an overview, into which functions the code was grouped as well as the respectively used protocol for communication. The output via the serial port (Universal Asynchronous Receiver Transmitter (UART)) for visualization purposes on the computer while logging takes very long compared to the execution times of the other depicted code blocks.\footnote{The maximum transmission rate on the UART for the Due is 115200bit/s. Transmitting the payload (3x3 sensor axes, signed integer) only excluding all control bits accumulates to 3 sensors x 3 axes x 16bit = 144bit  or 1.25ms}It therefore is disabled while actually logging. 
 
-The delays were evaluated by inserting timestamped variables into the code before and after each examined function's call. Using the Due's $micros()$ function a resolution in microseonds can be achieved\footnote{On earlier/smaller Arduinos $micros()$ resolution is 4$\mu$s!} with an accuracy of the inverse of the processors clock frequency (i.e. 11.9ns for the Due). $micros()$' call/execution time was neglected as it is in the magnitude of a couple of dozen nanoseconds.
+The delays were evaluated by inserting time-stamped variables into the code before and after each examined function's call. Using the Due's $micros()$ function a resolution in microseonds can be achieved\footnote{On earlier/smaller Arduinos $micros()$ resolution is 4$\mu$s!} with an accuracy of the inverse of the processors clock frequency (i.e. 11.9ns for the Due). $micros()$' call/execution time was neglected as it is in the magnitude of a couple of dozen nanoseconds. As 
 
 \begin{figure*}[h!]
 \centering
@@ -148,15 +148,24 @@ The delays were evaluated by inserting timestamped variables into the code befor
 	\item Limitations (axle loads, standing still)
 \end{itemize}
 
-Usually a hardware iLack in processing power does not allow for VTM's execution in the dSpace environment on the MABII. To perform HIL-test it was thus necessary to split the comptuation and allow for real-time data exchange between the hardware controlling system on the MABII and the rest of the simulation which will run on a standard PC. 
+Insufficient processing power does not allow for VTM's execution in the dSpace environment on the MABII. To perform HIL-testing it was thus necessary to split the comptuational load and accomplish real-time data exchange between the hardware controlling system on the MABII and the rest of the simulation which will be run parallely in Simulink in real-time on a standard PC. Though there are dedicated real-time platforms available to achieve real-time execution it was decided to rely on a standard PC to minimize costs and have a lean work-process without extra steps of code conversion to different platforms. Figure \ref{fig:HIL_overview} illustrates the distribution of the HIL-setup's different components over two computers, the MABII and the actual hardware. 
 
 \begin{figure*}[h]
-\centering
-\includegraphics[width=1\linewidth]{figures/HIL_overview}
-\caption{Overview of HIL-simulation, distribution of sub-functions over different physical platforms (top) and correlation to Volvo functional architecture (bottom)}
-
-\label{fig:HIL_overview}
+	\centering
+	\includegraphics[width=1\linewidth]{figures/HIL_overview}
+	\caption{Overview of HIL-simulation, distribution of sub-functions over different physical platforms (top) and correlation to Volvo functional architecture (bottom)}
+	
+	\label{fig:HIL_overview}
 \end{figure*}
+
+
+The Host-PC fulfills the usual task to start-up the dolly and simulation during HIL testing and log the behaviour of the dolly system and the IMUs. This is done through the ControlDesk GUI which was described in section \ref{sec:control_desk} and of which a screenshot can be found in the appendix (figure \ref{fig:control_desk_GUI}). It already runs the final version of the control and capturing environment and does not require changes for track testing. It is connected to the MABII via the Host-PC port.
+
+On the Simulation-PC the simulation of the complete rest of the hardware-system is computed in real-time. Mainly truck, trailers, environment and steering behaviour of the truck are part of this model. All these sub-systems are modeled in VTM which runs on this computer in Simulink. 
+
+Usually Simulink simulations are computed as fast as possible and then afterwards analysis of the results and system's behaviour is conducted offline. This is an unsuitable approach for this thesis' purposes, as it is important to have real-time execution for this sub-system to provide the actual hardware of the HIL-test with the needed parameters and simulate the environment at the correct instance also considering the hardware's feedback. I.e. the hardware runs in real-time, so the rest of its environment has to as well. Simulink's Desktop Real-Time toolbox provides the functionality to execute models in real-time on a desktop PC as well aas support for a variety of hardware systems. This toolbox was used to connect the MABII's ethernet port to the simulation-PC's ethernet port using the UDP protocol. 
+
+Limitations: HIL-testing took place in workshop environment and thus the dolly was not rolling compromising the tire friction compared with a rolling combination. As outlined in section \ref{sec:results_processing_time} this does not increase the reaction time of the system, though. Furthermore the additional axle load was zero for both axles, as it was not possible to increase the load without a trailer in the lab environment at hand. This is also unlikely to change the results, as is suggested in \ref{sec:results_processing_time} the axle-load is no deciding factor in the wheel articulation's performance. 
 
 
 \subsection{Low-speed controller}
