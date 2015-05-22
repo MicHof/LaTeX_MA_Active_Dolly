@@ -41,6 +41,9 @@ For the failure mechanisms that need to be addressed actions were decided, that 
 
 \section{Maximum capabilities of the system}
 \label{sec:maxi_capabilities}
+The capabilities of the system can be divided into two parts. For one thing there are the capabilities that are independent from influences. These are the maximum steering angle and maximum steering rate, which is limited through the ETS-ECU, because of the physical limitation of the hydraulic system.
+For another thing there are the capabilities that are influenced by the vehicle speed, load of the dolly, state of the hydraulic and electrical system of the dolly, and environmental influences.
+Depending on those parameters the capabilities are lowered.
 \begin{itemize}
 	\item give indicator of maximum angle/angle rate
 	\item describe "algorithm"/lookuptable
@@ -51,8 +54,8 @@ For the failure mechanisms that need to be addressed actions were decided, that 
 \label{sec:warning_system}
 \begin{itemize}
 	\item warnings from dolly ECU \\
-	In the original state, the ETS-ECU monitors all safety critical components of the dolly. In case of a malfunction, an error code is sent via the CAN-Bus and the error message is visible on the diagnose displays of the dolly.
-	Due to the required modification of the ASF- and speed-signal, the inbuilt supervision of the ETS-ECU is no longer fully functioning. Therefore a additional supervision of the system has to be implemented in the Simulink-model.    
+	In the original state, the ETS-ECU monitors all safety critical components of the dolly. In case of a malfunction, an error code is sent via the CAN-Bus and the error message is visible on the diagnose displays of the dolly. Depending on the severity of the error the steering is deactivated and the axes steer back to a steering angle of 0 deg.
+	Due to the required modification of the ASF- and speed-signal, the inbuilt supervision of the ETS-ECU is no longer fully functioning. Therefore a additional supervision of the system has to be implemented in the Simulink-model. This supervision considers the current capabilities of the dolly and reduces the requested steering angle or steering rate, if needed.    
 	\item warnings from EBS
 	\item warnings from vehicle
 	\item 'own' error codes and warnings (e.g. logging, MABII related, arduino-IMU related)

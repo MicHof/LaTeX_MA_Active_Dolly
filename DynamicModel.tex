@@ -70,22 +70,29 @@ With this delay and the lateral acceleration of the tractor $a_{y1}$ a reference
 \begin{equation}
 a_{y3ref}(t)=a_{y1}(t-\tau_{13})
 \end{equation}
-This reference signal, together with the steering angle of the tractor, the forward speed of the vehicle and the actual steering angle of the dolly, is used as inputs to an inverse single track model, that is modeled in the Modelica language. The outputs of the model are the request steering angle $\delta_{dolreq}$ and the lateral acceleration $a_{y3}$ of the dolly. Figure \ref{fig:inverse_model} shows a block diagram of that model.  
+This reference signal, together with the steering angle of the tractor, the forward speed of the vehicle and the actual steering angle of the dolly, is used as inputs to an inverse single track model, that is modeled in the Modelica language. The outputs of the model are the request steering angle $\delta_{dolreq}$ and the lateral acceleration $a_{y3}$ of the dolly. Figure \ref{fig:inverse_single_track_model} shows a block diagram of that model.  
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.5\linewidth]{figures/Inverse_of_A-double_single-track}
 	\caption[]{Inverse of the single track A-double model \cite{High-speed_paper}}
 	
-	\label{fig:inverse_model}
+	\label{fig:inverse_single_track_model}
 \end{figure}
 
 To determine the performance of this controller simulations of a single lane change at 20 meters per second and a sine wave steering input of 0.4 Hz with an amplitude of 0.026 rad were done. As a result the rearward amplification of the yaw rate of the second trailer is 0.95 with this controller compared to 1.49 for a passive dolly. Furthermore the transient off-tracking is improved by 67\%. 
 
 \subsection{Input parameters}
 \label{sec:input_parameters_HS}
+Figure \ref{fig:inverse_model_controller} shows the input and outputs of the inverse model controller.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\linewidth]{figures/inverse_controller}
+	\caption[]{Inverse model controller\cite{High-speed_paper}}
+	
+	\label{fig:inverse_model_controller}
+\end{figure}\\
 The input parameters of the high-speed controller are:
-
 \begin{itemize}
 \item The vehicle speed: $v_x$ 
 \item The steering angle of the tractor's front axle: $\delta_{11}$
@@ -99,7 +106,7 @@ The input parameters of the high-speed controller are:
 	\item this paragraph in close cooperation with MI
 	\item what had to be changed to allow for MABII execution?
 	\item how will feedback loop be handled?
-	item incorporate measurings?
+	\item incorporate measurings?
 	\item simulation step size?
 	\item utilized computational method
 \end{itemize}
