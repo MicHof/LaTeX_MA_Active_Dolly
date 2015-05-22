@@ -59,50 +59,38 @@ The input parameters for the low-speed controller are:
 	
 \end{itemize}
 
-\section{High-Speed controller}
+\section{High-Speed controller \cite{High-speed_paper}}
 \label{sec:high-speed_controller}
 The high-speed controller is implemented using a nonlinear inverse of a dynamic vehicle model.
-\begin{itemize}
+The aim of the controller is to copy the movement of the first unit to the following ones at a certain point. Therefore the movements of the following units need to be delayed by the time it takes them to reach this point. For the dolly unit, this delay $\tau_{13}$ is calculated with the vehicle speed $v_x$ and the distance $l_{cg13}$ between the COG of the tractor and the dolly as follows:
+\begin{equation}
+\tau_{13}=\frac{l_{cg13}}{v_x(t)}
+\end{equation}
+With this delay and the lateral acceleration of the tractor $a_{y1}$ a reference signal for the dolly's lateral acceleration is calculated as follows:
+\begin{equation}
+a_{y3ref}(t)=a_{y1}(t-\tau_{13})
+\end{equation}
+This reference signal, together with the steering angle of the tractor, the forward speed of the vehicle and the actual steering angle of the dolly, is used as inputs to an inverse single track model, that is modeled in the Modelica language. The outputs of the model are the request steering angle $\delta_{dolreq}$ and the lateral acceleration $a_{y3}$ of the dolly. Figure \ref{fig:inverse_model} shows a block diagram of that model.  
 
-\item same path of all units --> time delay of units considered
-\item lateral acceleration of dolly(t) = lat. accel. of truck(t-tau)
-\item modelica used because it can do inverse models
-\item imported to simulink as a functional mock-up unit (FMU) using FMI-toolbox
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\linewidth]{figures/Inverse_of_A-double_single-track}
+	\caption[]{Inverse of the single track A-double model \cite{High-speed_paper}}
+	
+	\label{fig:inverse_model}
+\end{figure}
+
+To determine the performance of this controller simulations of a single lane change at 20 meters per second and a sine wave steering input of 0.4 Hz with an amplitude of 0.026 rad were done. As a result the rearward amplification of the yaw rate of the second trailer is 0.95 with this controller compared to 1.49 for a passive dolly. Furthermore the transient off-tracking is improved by 67\%. 
+
 \subsection{Input parameters}
 \label{sec:input_parameters_HS}
+The input parameters of the high-speed controller are:
 
 \begin{itemize}
-	\item ay3ref = delayed ay1
-	\item ay3; delta11, vx
-	\item derivative of delta11 needed for inversion operation
-	\item explain feedback/inverse path
-	
+\item The vehicle speed: $v_x$ 
+\item The steering angle of the tractor's front axle: $\delta_{11}$
+\item The reference signal of the lateral acceleration of the dolly: $a_{y3ref}$
 \end{itemize}
-
-\end{itemize}
- \begin{figure}[h]
- 	\centering
- 	\includegraphics[width=1.0\linewidth]{figures/Inverse_of_A-double_single-track}
- 	\caption[]{Inverse of the single track A-double model \cite{High-speed_paper}}
- 
- 	\label{fig:inverse_model}
- \end{figure}
- 
-\section{Overview of the model}
-\label{sec:overview_of_the_model}
-			
-\begin{itemize}
-	\item based on lit from MI-paper 
-	\item overview graph of model
-	\item single track model
-	
-	\item filtering of inputs?
-	\item feedback-loop
-	\item start condition
-	\item what can be concluded with the model?
-\end{itemize}
-
-
 
 \section{Real-Time implementation of controllers}
 \label{sec:real_time_implementation}
