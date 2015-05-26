@@ -108,7 +108,7 @@ As also described in section \ref{sec:results_processing_time} additional respon
 
 All testing was automated in ControlDesk using Python scripts to loop through the different tests. The utilized graphical user interface (GUI) can be seen in figure \ref{fig:control_desk_GUI}. Logging within ControlDesk was started and stopped manually after each test and automatically exported to MATLAB for parsing and analysis. All data was acquired from the steering knuckle sensors originally present in the ETS. This sensor's signal is available on the ETS-CAN (also see section \ref{sec:dolly_system}). 
 
-It was decided to neglect the delays induced by the CAN communication. The reason for this is, that both the request as well as the measuring are send over the CAN. Which means that the two transmission times are counted with different signs and thus almost exactly cancel out only leaving double the worst case transmission (maximum stuffing bits, worst case arbitration) time as a maximum error of 232$\mu$s. This is sufficiently low regarding the fact, that the simulation on the MABII is executed every 0.001s.    
+It was decided to neglect the delays induced by the CAN communication. The reason for this is, that both the request as well as the measuring are send over the CAN. Which means that the two transmission times are counted with different signs and thus almost exactly cancel out only leaving double the worst case transmission (maximum stuffing bits, worst case arbitration) time as a maximum error of 232$\mu$s. This is sufficiently low regarding the fact, that the simulation on the MABII is executed every 0.001s.     
 
 
 
@@ -131,7 +131,21 @@ The delays were evaluated by inserting time-stamped variables into the code befo
 \label{sec:vehicle-testing}
 
 \subsection{System calibration}
+
+The two ECUs on the standard ETS were calibrated to account for the hardware characteristics before handing-over the legacy system to the active converter dolly project. The parameter set included zeroing of hydraulic pressure levels of the steering system and the integration of the EBS-CAN signals as well as the articulation angle sensor CAN (ASF), as it would be theoretically be possible to use other sources for the speed-signal needed in the legacy ETS. This calibration ensured a correctly and fully working base-system, which in case of failure could be reverted back to. Further on this parameter sets will not be changed to prevent inconsistent behaviour. 
+
 \subsection{Actuator tests}
+
+Actuator test
+
+\begin{figure*}[h]
+\centering
+\includegraphics[width=0.6\linewidth]{figures/ETS_display_homescreen}
+\caption{ETS' diagnosis sceen patched out of the original ETS-locke rto allow easy access during workshop testing. The display is showing the homescreen.}
+\caption{}
+\label{fig:ETS_display_homescreen}
+\end{figure*}
+
 \subsection{Algorithm evaluation}
 \subsection{Sensor testing}
 
