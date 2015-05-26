@@ -62,9 +62,11 @@ As the final step testing on a test track will be performed. There a complete ve
 
 
 \subsection{dSpace RTI-blockset}
+\label{dSpace_RTI}
 The dSpace RTI-Blockset (Real-time interface) is a plug-in for MATLAB/Simulink that allows you to connect a simulink-model to the different inputs and outputs of the MABII. There are RTI-blocks for CAN, Ethernet, LIN, FPGA and the analog and digital outputs of the MABII.
 In this project the RTI CAN MultiMessage and the RTI Ethernet (UDP) Blocksets were used.\\ 
 \subsubsection{RTI CAN MultiMessage Blockset}
+\label{RTI_CAN}
 The RTI CAN MultiMessage blocks establish an interface between the physical CAN-Buses of the MABII and the simulink-model running on the MABII. There are four different blocks in this blockset: 
 
 In the "GeneralSetup" block the paths of the model root and the destination folder for generated files are set. 
@@ -118,8 +120,41 @@ The Virtual Truck Modelling Library (VTM) is a computational framework used with
 	
 	
 \end{itemize}
-
-
+\section{Steering interface}
+The steering interface block constitutes the interface between the vehicle model controller and the different CANs of the dolly. It is a Simulink model that runs on the MABII.
+Figure \ref{fig:steering_interface} shows the steering interface block with its in- and outputs. 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\linewidth]{figures/steering_interface}
+	
+	\caption{Steering interface block}
+	\label{fig:steering_interface}
+\end{figure} \\
+The inputs to the block are:
+\begin{itemize}
+	\item Steering angle requests for both the front and  the rear axle of the dolly 
+\end{itemize} 
+ The outputs of the block are:
+ \begin{itemize}
+ 	\item All signals on the ETS-CAN for both front and rear axle
+ 	\item The actual articulation angle between the dolly and the first semitrailer
+ 	\item The vehicle speed signal from the dolly's EBS
+ 	\item The wheel speed difference from the dolly's EBS
+ \end{itemize}
+ The outputs are used to monitor the dolly's state and for the calculation of the current capabilities (see section \ref{sec:maxi_capabilities}).
+ Figure \ref{fig:steering_interface_inside} shows the inside of the steering interface block. It contains RTI CAN MultiMessage blocks (see section \ref{RTI_CAN}).   
+ 
+ \begin{figure}[h]
+ 	\centering
+ 	\includegraphics[angle=-90,width=1\linewidth]{figures/steering_interface_inside}
+ 	
+ 	\caption{Steering interface block CAN layout}
+ 	\label{fig:steering_interface_inside}
+ \end{figure} \\
+ 
+ The software CAN-layout corresponds to the hardware CAN-layout described in section \ref{sec:interface_with_dolly}. There are five different CAN-controllers. Controller1 is used to receive the signals of the ASF-Sensor and the dolly's EBS system. These signals, except for the "Angle", "Wheel\_BasedVehicleSpeed" and the "WheelSpeedDiffMainAxle" signals are forwarded to Controller2 and Controller3. Controller2 corresponds to the ETS-CAN of the front axle and Controller3 to the one of the rear axle. The inputs Delta31 and Delta32 are sent to the front ETS-CAN (Controller2) and rear ETS-CAN (Controller3), respectively. For the signals "Wheel\_BasedVehicleSpeed" and  "WheelSpeedDiffMainAxle" constants with the value zero are forwarded both to Controller2 and Controller3.
+ Controller4 and Controller5 also correspond to the front ETS-CAN and rear ETS-CAN, respectively. As mentioned in section \ref{sec:interface_with_dolly} this is necessary because different CAN-protocols are used. The signals received from those Controllers, together with the signals from Controller1, that weren't forwarded, are outputs of the steering interface block.
+ 
 \section{ControlDesk monitoring environment}
 \label{sec:control_desk}
 \subsection{Maneuver control}

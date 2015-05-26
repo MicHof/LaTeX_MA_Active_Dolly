@@ -9,7 +9,7 @@
 \label{chap:fault_detection}
 \section{Failure Mode and Effects Analysis (FMEA)}
 \label{sec:FMEA}
-FMEAs were first used by NASA in the apollo project in the 1960s.
+FMEAs were developed by the US military in the late 1940s and later also used by NASA in the apollo project in the 1960s.
 A FMEA is used to detect possible failures before they appear. Therefore the FMEA is done in a early stage of a project in order to be able to take the results of the FMEA into consideration when developing a system. In the process every possible failure of a system are taken into consideration. 
 
 In a first step a block diagram of the system with all of its inputs, outputs and subsytems was created to gain a complete understanding of the system. Every subsystem was broken down to the lowest level and for those subsystems block diagrams with all the components, inputs and outputs were created as well.
@@ -21,20 +21,21 @@ After the severity, probability and detectability were evaluated, a risk priorit
 \begin{equation*}
 RPN=severity*probability*detectability
 \end{equation*}      
-This risk priority number is used to identify the failure mechanisms that need to be addressed. In table \ref{tab:RPN} it is shown how the risk priority number have to be handled.
-\begin{table}[h]
-	\centering
-	\caption{Risk priority number}
-	\label{tab:RPN}
-	\begin{tabular}{l|l|}
-		RPN   & Action  \\ \hline
-		0$<$RPN$<$40     &       No action needed           \\
-		40$<$RPN$<$100   &      Decide if action is needed after review      \\
-		RPN$>$100 &      Action needed         \\
+This risk priority number is used to identify the failure mechanisms that need to be addressed. After the RPN for every causes is calculated, the RPN are ranked from highest to lowest using a Pareto diagram. The causes with the highest RPN need to be addressed first. Special attention needs to be paid to cases where a high severity number, which means 9 or 10, occurred, even if the RPN isn't as high as for other cases. 
+%In table \ref{tab:RPN} it is shown how the risk priority number have to be handled.
+%\begin{table}[h]
+%	\centering
+%	\caption{Risk priority number}
+%	\label{tab:RPN}
+%	\begin{tabular}{l|l|}
+%		RPN   & Action  \\ \hline
+%		0$<$RPN$<$40     &       No action needed           \\
+%		40$<$RPN$<$100   &      Decide if action is needed after review      \\
+%		RPN$>$100 &      Action needed         \\
 		
-	\end{tabular} \\
-\end{table}
-For the failure mechanisms that need to be addressed actions were decided, that either lower the severity, probability or detectability of them or more than one of those factors. After the performance of these actions the severity, probability and detectability were evaluated again and a new RPN was calculated. If the RPN still is to high a iteration of the process was done.
+%	\end{tabular} \\
+%\end{table}
+In order to lower the RPN for those cases actions need to be decided, that either lower the severity, probability or detectability of them or more than one of those factors. After the performance of these actions the severity, probability and detectability are evaluated again and a new RPN is calculated. If the RPN still is to high a iteration of the process needs to be done. \cite{din_60812_fmea}
 Figure \ref{fig:fmea_example} shows a screen shot of the FMEA-Excel-worksheet for the first iteration.    
 \begin{figure}[h]
 	\centering
@@ -42,7 +43,13 @@ Figure \ref{fig:fmea_example} shows a screen shot of the FMEA-Excel-worksheet fo
 	\caption[]{Example of FMEA-worksheet for the first step of the FMEA}
 	\label{fig:fmea_example}
 \end{figure}
-
+The consequences of the FMEA conducted for this thesis were:
+\begin{itemize}
+	\item Special attention needs to be paid to the mounting of the MABII in the Dolly's ETS-box
+	\item The design of the breakout box was revised
+	\item Bench- and HIL-testing is necessary to validate  the vehicle model controllers and to exclude dangerous behavior, that might be caused by delays in the system. 
+	\item A start-up checklist for the track testing needs to be created	 
+\end{itemize}  
 \section{Safety concepts}
 \label{sec:safetyconcepts}
 
