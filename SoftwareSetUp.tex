@@ -155,6 +155,14 @@ The inputs to the block are:
  The software CAN-layout corresponds to the hardware CAN-layout described in section \ref{sec:interface_with_dolly}. There are five different CAN-controllers. Controller1 is used to receive the signals of the ASF-Sensor and the dolly's EBS system. These signals, except for the "Angle", "Wheel\_BasedVehicleSpeed" and the "WheelSpeedDiffMainAxle" signals are forwarded to Controller2 and Controller3. Controller2 corresponds to the ETS-CAN of the front axle and Controller3 to the one of the rear axle. The inputs Delta31 and Delta32 are sent to the front ETS-CAN (Controller2) and rear ETS-CAN (Controller3), respectively. For the signals "Wheel\_BasedVehicleSpeed" and  "WheelSpeedDiffMainAxle" constants with the value zero are forwarded both to Controller2 and Controller3.
  Controller4 and Controller5 also correspond to the front ETS-CAN and rear ETS-CAN, respectively. As mentioned in section \ref{sec:interface_with_dolly} this is necessary because different CAN-protocols are used. The signals received from those Controllers, together with the signals from Controller1, that weren't forwarded, are outputs of the steering interface block.
  
+ \begin{figure*}
+\centering
+\includegraphics[width=1\linewidth]{figures/steering_interface_inside_pdf}
+\caption{}
+\label{fig:steering_interface_inside_pdf}
+\end{figure*}
+
+ 
 \section{ControlDesk monitoring environment}
 \label{sec:control_desk}
 \subsection{Maneuver control}
