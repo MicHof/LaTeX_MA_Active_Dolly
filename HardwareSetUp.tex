@@ -10,7 +10,7 @@
 
 \section{Hardware overview}
 
-As already outlined in chapter \ref{chap:overview} the LCV consists of a truck with two semi-trailers. To achieve the goals of this thesis, some modifications had to be done to the combination as well as equipment mounted in addition to the legacy fixtures. The utilized combination can be seen in figure \ref{fig:combination_overview_with_positions}, the shown number will be referenced further-on to give easier insight into the implemented systems' mounting points.
+As already outlined in chapter \ref{chap:overview} the HCT vehicles consists of a truck with two semi-trailers. To achieve the goals of this thesis, some modifications had to be done to the combination as well as equipment mounted in addition to the legacy fixtures. The utilized combination can be seen in figure \ref{fig:combination_overview_with_positions}, the shown number will be referenced further-on to give easier insight into the implemented systems' mounting points.
 
 
 The first semi-trailer's (number 2 in figure \ref{fig:combination_overview_with_positions}) rear needs to be equipped with a drawbar eye to accommodate the dolly's drawbar. Besides this obvious physical requirement power supply for the dolly and second trailer, pressurized air hoses for brake actuation, e-brake CAN-buses and lighting connectors have to be routed through the first trailer and supplied to the second trailer with a robust enough cable. This solution had to mainly be custom-made, as these appliances usually would not be available in the rear of a semi-trailer as usually no further towed unit is present. These installations would also apply for any passive combination or for the legacy VSE ETS system. Furthermore CAN networks have to be patched through the first semi-trailers (see section \ref{sec:interface_with_truck}). The Real-Time system will be mounted on the dolly directly (position 3) to ensure short signal pathes and minimize wiring efforts. However the Host-PC will have to sit in the tractor (position 1) to sufficiently protect it against the track environment, which would be impossible if sitting on the dolly directly. This leads to an additional ethernet-cable for the Host-PC connection in the cabin which also needs to be routed through the first semi-trailer. The second semi-trailer does not require these modifications, as it is merely a passively towed unit.
@@ -29,7 +29,7 @@ Figure \ref{fig:combination_overview_with_positions} also depicts another import
 \begin{figure*}[ph]
 \centering
 \includegraphics[width=1\linewidth]{figures/combination_overview_with_positions}
-\caption{Positioning of different sensors on the LVC}
+\caption{Positioning of different sensors on the HCT vehicle}
 \label{fig:combination_overview_with_positions}
 \end{figure*}
 
@@ -127,10 +127,17 @@ There's a second connector, which includes different pins for different kinds of
 The dolly also receives compressed air from the first semitrailer.
 For controlling the MABII an Ethernet connection is established between the dolly and the tractor unit, where a laptop is located. 
 The interfaces of the dolly with the second semitrailer are the same as those to the first one.  
-To control and measure signals of the dolly a connection to the dollies ETS- and EBS-system had to be established. To achieve this, different kinds of CAN-buses had to be used. That was necessary because the various systems of the dolly use different CAN-protocols. In total five CAN-buses connect the MABII with the dolly. Two for each of the ETS-ECUs and one for the ASF- and EBS-Signal.
+To control and measure signals of the dolly a connection to the dolly's ETS- and EBS-system had to be established. To achieve this, different kinds of CAN-buses had to be used. That was necessary because the various systems of the dolly use different CAN-protocols. In total five CAN-buses connect the MABII with the dolly. Two for each of the ETS-ECUs and one for the ASF- and EBS-Signal.
 
 
-One of the CAN-buses contains the signals from the EBS-ECUs and the articulation angle sensor, which measures the angle between the dolly and the first semitrailer. It uses the extended CAN-standard. In the original state this CAN is directly routed to the CAN of the two ETS-ECUs (see section \ref{sec:dolly_system}). In order to achieve steering that is both independently from the articulation angle as well as the velocity of the vehicle the connection between the ASF/EBS-CAN and the CAN of the ETS-ECU was cut. Instead the ASF/EBS-CAN is connected to the MABII. \\
+One of the CAN-buses contains the signals from the EBS-ECUs and the articulation angle sensor, which measures the angle between the dolly and the first semitrailer. It uses the extended CAN-standard. In the original state this CAN is directly routed to the CAN of the two ETS-ECUs (see section \ref{sec:dolly_system}). In order to achieve steering that is both independently from the articulation angle as well as the velocity of the vehicle the connection between the ASF/EBS-CAN and the CAN of the ETS-ECU was cut. Instead the ASF/EBS-CAN is connected to the MABII. Figure \ref{fig:dolly_split} shows an illustration of that.
+\begin{figure*}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{figures/dolly_split}
+	\caption{Split of ETS-CAN}
+	\label{fig:dolly_split}
+\end{figure*}  \\
+
 The MABII is connected to the CAN bus of each ETS-ECU. Because of the use of different CAN standards of the ASF/EBS-CAN, which uses the extended CAN standard, and the ETS-ECU CAN, which uses the J1939 protocol, two physical CAN ports are needed on the MABII for each ETS-ECU. Those two CANs are merged inside the breakout-box. Figure \ref{fig:BOB} shows the breakout box which is used to as an interface between the different CANs that were used and the MABII. The merging of the two CANs that contain signals for the ETS-ECU can be seen on the right side of the scheme.
 \begin{figure*}[h]
 	\centering
@@ -148,7 +155,8 @@ The MABII is connected to the CAN bus of each ETS-ECU. Because of the use of dif
 
 \section{Interfaces with truck}
 \label{sec:interface_with_truck}
-The vehicle model controllers depend on inputs from the tractor unit(see section \ref{sec:overview_of_the_model}). One of the inputs is the steering angle of the tractors front axle, another the current vehicle speed. For track-testing the MABII is connected to the Chassis CAN of the tractor, in order to get those signals. For the HIL-testing the tractor unit is simulated using VTM (see section \ref{sec:VTM}).
+The vehicle model controllers depend on inputs from the tractor unit(see section \ref{sec:overview_of_the_model}). One of the inputs is the steering angle of the tractors front axle, another the current vehicle speed. For track-testing the MABII is connected to the Chassis CAN of the tractor, in order to get those signals. Since the chassis CAN of the tractor is not usually available on trailers, the chassis CAN needs to be accessed somewhere in the tractor and looped through all the way to the dolly.   
+For the HIL-testing the tractor unit is simulated using VTM (see section \ref{sec:VTM}). As already mentioned in section \ref{sec:interface_with_dolly} the dolly gets power supply and compressed air from the tractor.
 \begin{itemize}
 	\item CAN communication with truck
 	\item steering system conncetion (VDS!)
@@ -185,7 +193,7 @@ The IMU-chip was put in a suitable plastic housing and cast into resin, to fixat
 
 Figure \ref{fig:IMU_overview} shows, how the IMU is connected to the Arduino Due utilizing the I$^{2}$C-interface on the Due. Not pictured are the power supplies (both 5V) for the MCP2515 CAN-transceiver and the IMU itself. To minimize cables that have to be rooted through the combination and avoid problems with cable length for the power cables, it was decided to equip each of these assemblies with a rechargeable battery-pack. This also allows to measure in remote location and collect data locally on the Arduino Due during testing, eliminating the need for CAN-communication completely if needed in the future.
 
-A maximum of two IMUs can run on one I$^{2}$C line as it is possible to override the last bit of the otherwise hard-coded I$^{2}$C address via a hardware jumper. If both I$^{2}$C lines of the Due are used, it would be possible to connect up to four IMUs to one Arduino. Though eight IMUs are desired for the whole LCV, this was outruled as a possibility for this project, due to the limitations of the physical bus-length of the I$^{2}$C lines of only a few meters (as the name already suggests I$^{2}$C is not meant for long distance communication). As can also be seen in the overview figure of the setup on the truck in figure \ref{fig:combination_overview_with_positions} this distance would be exceeded with the distance between the different mounting points (15-20m).
+A maximum of two IMUs can run on one I$^{2}$C line as it is possible to override the last bit of the otherwise hard-coded I$^{2}$C address via a hardware jumper. If both I$^{2}$C lines of the Due are used, it would be possible to connect up to four IMUs to one Arduino. Though eight IMUs are desired for the whole HCT vehicle, this was outruled as a possibility for this project, due to the limitations of the physical bus-length of the I$^{2}$C lines of only a few meters (as the name already suggests I$^{2}$C is not meant for long distance communication). As can also be seen in the overview figure of the setup on the truck in figure \ref{fig:combination_overview_with_positions} this distance would be exceeded with the distance between the different mounting points (15-20m).
 
 In the final measuring setup the assembly shown in figure \ref{fig:IMU_overview} will be present four times in the whole combination, to gather motion data from each independently moving part. Figure \ref{fig:combination_overview_with_positions} shows those placements in an overview sketch. The correct placement will be as close as possible to the center of gravity (CoG) of the respective unit to have as little influence of the vehicle's rotary motions as possible, which drastically reduces work in  data analysis further on. CoG locations can be gathered from Volvo's internal database and are available at the test site. Putting two IMUs in each spot allows for averaging and ensure redundancy should one IMU chip fail or produce corrupt outputs, which occured from time to time during the bench-testing of the assembly if the voltage of the preliminary power-supply dropped due to other loads.
 

@@ -113,15 +113,10 @@ The input parameters of the high-speed controller are:
 
 \section{Interface with Real-Time environment}
 \label{sec:interface_with_real_time}
+As described in section \ref{sec:low-speed_controller} and \ref{sec:high-speed_controller} the controllers need different kind of input signals. These signals are received by the Simulink model running on the MABII via CAN. When the controllers are tested on a test track they are implemented in the same Simulink model, so they can get the necessary input signals directly within the model. 
 
-\begin{itemize}
-	\item capabilities of system (see section \ref{sec:maxi_capabilities})
-	\item signals passed forward from environment + restriction
-	
-	\item actuator signals
-	\item signal modification (correct frequency for CAN)
-	\item safety flags/signals
-	
-\end{itemize}
+In order to guaranty safety at all time the steering angle requests of the controllers are checked before sending them to the dolly. This is done by first sending the requests to a supervisor block in the same Simulink model. The supervisor block compares the steering angle requests with the current capabilities of the system. The functionality of that block is described in detail in section \ref{sec:warning_system}.   
+
+
 
 \end{document}

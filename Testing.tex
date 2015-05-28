@@ -20,8 +20,10 @@ In different states of the project different kind of tests were performed. As a 
 	
 \end{itemize}
 \subsection{CAN verification}
+To test the functionality of the ASF-Sensor as a first step it was just connected to power supply and an Arduino with a attached CAN-shield. After the CAN-message was received successfully with the Arduino, as a next step the Sensor's CAN pins was connected to the MABII. On the MABII a simple model, that only contained one CAN-Controller with the corresponding dbc-file, was loaded. The Bus-monitor tool of ControlDesk, that shows all incoming and outgoing signals on the CAN for the corresponding dbc-file, was used to check the sensor signals.     
+
 \begin{itemize}
-	\item check output from ASF with arduino
+	
 	\item check ECU CANs, make sure they differ in output
 	
 \end{itemize}
