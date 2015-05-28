@@ -41,9 +41,9 @@ To test the functionality of the ASF-Sensor as a first step it was just connecte
 \subsection{Background}
 The desired solution is supposed to operate at any speed. For high speeds a quick processing and transmission time is required to ensure prompt and realtime intervention of the control system based on the measured input signals. If the delays induced by the different components in the complete system are known or can be estimated, they can be compensated for in the steering-algorithm running on the rapid-prototyping system.
 
-As outlined in section \ref{sec:measurement_setup} the dolly is equipped with a system to determine the deflection angle of the draw-bar and both the kingpin angles of the LVC. The sensors' raw signal is then parsed and filtered in an integrated low-level system which feeds the filtered signals to a private CAN-bus, where it is picked up by the MABII. The filtering operation takes a certain time and thus induces a delay. Furthermore the model running on the rapid-prototyping system needs a certain time to calculate the current desired steering angle for the dollys' wheels. This has to be determined as well. The steering mechanisms on the dolly are also a delay-inducer due to the inertia in the hydro-mechanic system. This is as well unavoidable, but when measured can as well to a certain degree be compensated for. 
+As outlined in section \ref{sec:measurement_setup} the dolly is equipped with a system to determine the deflection angle of the draw-bar and both the kingpin angles of the LVC. The sensors' raw signal is then parsed and filtered in an integrated low-level system which feeds the filtered signals to a private CAN-bus, where it is picked up by the MABII. The filtering operation takes a certain time and thus induces a delay. Furthermore the model running on the rapid-prototyping system needs a certain time to calculate the current desired steering angle for the dollys' wheels. This has to be determined as well. The steering mechanisms on the dolly are also a delay-inducer due to the inertia in the hydro-mechanic system. This is of course unavoidable in any physical system, but when measured can as well to a certain degree be compensated for in the calculations. 
 
-The measuring chain for the logging solution will also be discussed and the different delays will be discussed. 
+%The measuring chain for the logging solution will also be discussed and the different delays will be discussed. 
 
 \subsection{Measured input delay}
 \label{sec:measuring_delay}
@@ -61,7 +61,7 @@ The response time of the dolly's steering system was determined in workshop envi
 To eliminate tire friction the investigated axle was suspended in the air in further series of testing by slightly craning up the dolly's front/rear (see figure \ref{fig:dolly_craned_up}) to allow for free movement of the tires. An example for the utilized testing routine can be gathered from table \ref{tab:test_matrx_delay_measuring}. Between the different steps (double amplitude) a sufficient wait time of 3500ms was used to allow the system to reach the requested steering angle. This waiting time was kept constant throughout all tests. \\
 
 	\begin{table}[h]
-		\label{tab:test_matrx_delay_measuring}
+		
 		\centering
 		\begin{tabular}{llll}
 			\textbf{\#} & \textbf{Amplitude [$  ^\circ $]} & \textbf{Axle}  & \textbf{Comment}                                                                  \\
@@ -86,16 +86,18 @@ To eliminate tire friction the investigated axle was suspended in the air in fur
 			
 		\end{tabular}
 		\caption{Test matrix for delay measuring with lifted axle (analogous matrix for non-lifted testing (\#19-\#36))}
+		\label{tab:test_matrx_delay_measuring}
 	\end{table}
 	\footnotetext[1]{If a too big of a step is requested from the steering system, VSE's ECU will go into emergency mode. Steering is completely locked, turning the dolly completely passive.}   
 
 
-As also described in section \ref{sec:results_processing_time} additional response tests were conducted utilizing a ramp input. Here a maximum steering amplitude of $15^\circ $ was used and the slope of the ramp was varied. As the request was not in the form of a step input, no error was triggered like in test \#9 and \#18 (see table \ref{tab:test_matrx_delay_measuring}). The test matrix for this setup is outlined in table \ref{tab:test_matrx_ramp_input}. 
+As also described in section \ref{sec:results_processing_time} additional response tests were conducted utilizing a ramp input. Here a maximum steering amplitude of $15^\circ $ was used and the slope of the ramp was varied. As the request was not in the form of a step input, no error was triggered like in test \#9 and \#18 (see table \ref{tab:test_matrx_delay_measuring}). The test matrix for this setup is outlined in table \ref{tab:test_matrx_ramp_input}. Besides the changed input-pattern the test- and logging-setup was left unchanged
 
 \begin{table}[h]
-	\label{tab:test_matrx_ramp_input}
+	
 	\centering
 \begin{tabular}{llllll}
+
  \textbf{\#} &\textbf{ Amplitude [$^\circ$]} & \textbf{Rate} & \textbf{Sample time [s]} & \textbf{Comment} &  \\ 
 1	  &  15 & 0.01 & 0.001 &   \\ 
 2	  & 15 & 0.001 &  0.001&  \\ 
@@ -105,6 +107,7 @@ As also described in section \ref{sec:results_processing_time} additional respon
 
 \end{tabular} 
 \caption{Test matrix for delay measurings with ramp input}
+\label{tab:test_matrx_ramp_input}	
 \end{table}
 
 
@@ -138,7 +141,7 @@ The two ECUs on the standard ETS were calibrated to account for the hardware cha
 
 \subsection{Actuator tests}
 
-Actuator test
+Actuator tests to verify working hydraulic system for the steering system and correctly pressurized brake-lines as well as normally running ECUs receiving correct analog sensor-information (voltage levels) within the legacy ETS and CAN-signals are possible with VSE's diagnosis screen, that usually sits in the ETS locker but was patched out for the HiL-tests and during setup in the workshop. As this diagnosis utility ties in directly with the core-functionality it provides a very robust and reliable way to track errors during testing.
 
 \begin{figure*}[h]
 \centering
@@ -151,8 +154,13 @@ Actuator test
 \subsection{Algorithm evaluation}
 \subsection{Sensor testing}
 
+The three angle-sensors to determine the articulation between the different independently moving units of the combinations differ in form-factor as they are mounted either on the fifth-wheel turntable or the king-pin respectively, nonetheless all rely on the same measuring principle and broadcast their gathered data in the same fashion on a private CAN-bus (refer to figure \ref{fig:dolly_interfaces}). 
+
+As was laid out in section HIER-REF-FUER-BILD-MIT-WEITERFUEHRPARAMETERN! some CAN-messages needed to be patched through to the receiving ECU and some had to be changed. It was necessary to run the sensors in bench-tests first to ensure this communication was understood and controllable before implementing it into the final system. The VSE sensors need to be connected to 24V DC and then independently setup and broadcast the angle of deflection of their turning-plate. The CAN-signal was picked up with a slim Arduino CAN-setup at first to verify the data. In further tests the CAN-reception was realized n th MABII where subsequently the describes by-pass with modification of selected signals was developed. HIER NOCH EIN BILD VOM SENSOR AM ARDUINO BREADBOARD!!!! Further calibration or testing was not necessary for this sensors, as they are very robust and reliable. 
+
+
+
 \begin{itemize}
-	\item test angle sensor offline
 	\item zero IMUs, make sure paired sensors show the same outputs
 	
 \end{itemize}
