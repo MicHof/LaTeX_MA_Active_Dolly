@@ -13,6 +13,17 @@ In different states of the project different kind of tests were performed. As a 
 \label{sec:bench-testing}
 \subsection{ECU-setup}
 \subsection{VTM maneuver verification}
+
+For the testing of the vehicle model controllers described in chapter \ref{chap:steering_model} as a first step all the parts were simulated in Simulink. Therefore all parts of the functionality architecture introduced in section \ref{sec:func_architecture} are simulated.
+For the HMI lookup tables were used for the steering angle and vehicle speed input. The VMM consists of the vehicle model controller. The steering actuators in the MSD domain were simulated by implementing a first order filter and a time delay, that represents the delay caused by the hydraulic system. For the vehicle plant the virtual truck modelling library (VTM) (see section \ref{sec:VTM}) was used. Figure \ref{fig:funct_architecture_sim} shows how the parts of the functionality architecture are divided to different systems for the simulation of the vehicle model controllers.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\linewidth]{figures/functionality_architecture_sim}
+	
+	\caption{Functionality Architecture in simulation}
+	\label{fig:funct_architecture_sim}
+\end{figure}\\
+
 \begin{itemize}
 	\item include simulation results for maneuver of controller being run inside VTM
 	\item perhaps include some picture of the video-output, with the actuated truck
@@ -192,6 +203,15 @@ Usually Simulink simulations are computed as fast as possible and then afterward
 
 Limitations: HIL-testing took place in workshop environment and thus the dolly was not rolling compromising the tire friction compared with a rolling combination. As outlined in section \ref{sec:results_processing_time} this does not increase the reaction time of the system, though. Furthermore the additional axle load was zero for both axles, as it was not possible to increase the load without a trailer in the lab environment at hand. This is also unlikely to change the results, as is suggested in \ref{sec:results_processing_time} the axle-load is no deciding factor in the wheel articulation's performance. 
 
+The setup for the HIL-testing can also be represented using the functionality architecture introduced in section \ref{sec:func_architecture}.
+Compared with the testing of the controllers described in section \ref{sec:bench-testing}, the division of the functionality architecture changed. The MSD are no longer simulated but the actual dolly together with the MABII, which is needed as an interface between the MSD and the other parts of the functionality architecture, is used. The HMI, VMM and vehicle plant are still simulated in Simulink. Figure \ref{fig:funct_architecture_hil} shows how the parts are divided to different systems.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\linewidth]{figures/functionality_architecture_hil}
+	
+	\caption{Functionality Architecture for HIL-testing}
+	\label{fig:funct_architecture_hil}
+\end{figure}\\
 
 \subsection{Low-speed controller}
 The maneuver that was used for testing the Low-speed controller was a 180 degree turn at constant speed. The steering angle of the tractor can be seen in Figure \ref{fig:HIL002_delta11}.\\
@@ -203,55 +223,21 @@ The maneuver that was used for testing the Low-speed controller was a 180 degree
 	\label{fig:HIL002_delta11}
 \end{figure*}
 As a first step a very simple controller was used for controlling the steering of the dolly. The controller used the articulation angle between the first semitrailer and the dolly as an input. The output to both axles was this angle multiplied with a gain of 4.
-Figure \ref{fig:HIL002_front} shows the measurements of the ETS-CAN of the front axle of the dolly.\\
 
-\begin{figure*}[h]
-	\centering
-	\includegraphics[width=1\linewidth]{figures/HIL002_front}
-	\caption{HIL test front axle}
-	
-	\label{fig:HIL002_front}
-\end{figure*}
 
-The request angle is the angle that was requested from the controller and then sent from the simulation-PC to the MABII. The target angle is the angle that was calculated by the ETS-ECU and sent as a request to the actuators of the dolly. The actual angle is the angle that the sensors on the dolly's wheels measured.
-Figure \ref{fig:HIL002_rear} shows the same measurements for the rear axle.
-
-\begin{figure*}[h]
-	\centering
-	\includegraphics[width=1\linewidth]{figures/HIL002_rear}
-	\caption{HIL test rear axle}
-	
-	\label{fig:HIL002_rear}
-\end{figure*}
-Since the same requested angle for front and rear is the same, below only the front axle is looked upon.
-Figure \ref{fig:HIL002_front_closeup} shows an extraction of the measurements of the front axle.
-\begin{figure*}[h]
-	\centering
-	\includegraphics[width=1\linewidth]{figures/HIL002_front_closeup}
-	\caption{HIL test front axle details}
-	
-	\label{fig:HIL002_front_closeup}
-\end{figure*}
-
-\begin{figure*}[h]
-	\centering
-	\includegraphics[width=1\linewidth]{figures/HIL002_alles}
-	\caption{HIL test front axle comparison between VTM and ETS}
-	
-	\label{fig:HIL002_complete}
-\end{figure*}
-\begin{figure*}[h]
-	\centering
-	\includegraphics[width=1\linewidth]{figures/HIL002_alles_details}
-	\caption{HIL test front axle comparison between VTM and ETS details}
-	
-	\label{fig:HIL002_complete_details}
-\end{figure*}
 \subsection{High-speed controller}
 
 \section{Track testing}
 \label{sec:track-testing}
-
+For testing on a test track the different parts of the  functionality architecture (see section \ref{sec:func_architecture}) will be handled as follows:
+Since a complete vehicle combination will be used for track testing, this corresponds to the vehicle plant of the functionality architecture. The HMI domain is represented by the driver of the vehicle. The VMM is running on the MABII, which works as an interface between the VMM, the dolly and the vehicle. Figure \ref{fig:funct_architecture_track} shows how the parts are divided to different systems.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\linewidth]{figures/functionality_architecture_track}
+	
+	\caption{Functionality Architecture on track testing}
+	\label{fig:funct_architecture_track}
+\end{figure} 
 \subsection{Testmaneuvers}
 
 \begin{itemize}

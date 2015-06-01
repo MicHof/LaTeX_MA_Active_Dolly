@@ -109,4 +109,31 @@ The increasing complexity of mechatronic systems and shorter product life-cycles
 	%\item extensive lecture notes from \cite{rapidcontrolprototyping}
 \end{itemize}
 
+\section{Functionality architecture}
+\label{sec:func_architecture}
+
+As a basis for this project a functionality architecture developed at Volvo GTT was used. The different parts of this architecture are shown in Figure \ref{fig:funct_architecture}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{figures/functionality_architecture}
+	
+	\caption{Functionality Architecture}
+	\label{fig:funct_architecture}
+\end{figure}
+
+The functionality architecture consists of four different parts: The Human machine interface, the vehicle motion management, the motion support devices and the vehicle plant.\\
+The Human machine interface (HMI) is the interface between the driver and the vehicle. The driver can input requests to the vehicle, for example a steering angle via the steering wheel or a torque request via the accelerator pedal. The driver gets feedback from the vehicle about the vehicle's state, for example via the speedometer.
+
+The vehicle motion management (VMM) contains the high-level controllers for the vehicle's motion and stability. It has an time horizon up to one second. As an input it gets the request of the driver from the HMI and transforms these requests into requests for the actuators of the vehicle. These request are then sent to the Motion support device (MSD). From the MSD the VMM receives information about the state of the actuators and the current capabilities.
+
+The MSD contains the actuators and low-level controllers of the vehicle. In there the requests from the VMM are executed. Information about the status of the actuators is sent both to the VMM and the vehicle plant.
+
+The vehicle plant corresponds to the rest of the vehicle.
+\\
+In different kind of tests, the parts of the functionality architecture are either simulated or real hardware is used. The more advanced the development process is, more and more of the functionality is shifted from simulation to actual hardware.
+
+
+
+
 \end{document}
