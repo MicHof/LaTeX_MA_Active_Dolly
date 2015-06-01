@@ -68,15 +68,13 @@
 \coverfigure{\includegraphics[width=\textwidth,height=0.4\paperheight,keepaspectratio]{figures/ExampleCover}}
 \covercaption{Some explanation}
 
-<<<<<<< HEAD
-\firstabstract{To improve the dynamic behaviour of high capacity transport vehicles, the converter dolly can also be equipped with steered and braked axles. By improving the actuation and steering strategy, the combinations performance can be increased drastically. 
-=======
 \firstabstract{To improve the dynamic behaviour of high capacity transport vehicles, the second semi-trailer can be equipped with steered and braked axles. By improving the actuation and steering strategy, the combinations performance can be increased drastically. 
->>>>>>> origin/master
 
 This thesis modified an existing steered dolly to accommodate a RapidPrototpying system, so that the previously developed steering algorithms can be executed in real-time and evaluated in a hardware-in-the-loop simulation as well as on-track testing further on. The main-outcomes are a ready-to-use interface for algorithm development in MATLAB's Simulink that allows to request steering angles and braking torques individually for each axle and supplies feedback for all relevant parameters (e.g. articulation angle between different units of combination, steering angle of tractor) for their computation in real-time. To ensure safety of the whole combination, especially during track-tests, a supervisor system was implemented to limit the request based on vehicle-dynamic simulations and hardware limitations. Additionally an inertial measurement unit setup was developed and implemented for use on the combination to gather sufficient data for each of the combination's independently moving units dynamic behaviour during testing to calibrate and parametrize the tested algorithms. 
 
 In the scope of this thesis the dolly was modified to conduct hardware-in-the-loop simulations. All necessary systems to achieve this were built as prototypes for a workshop test-environment limiting the use-case to a standing-system. Reliable track-proof solutions were developed and commissioned for manufacturing, so that track-testing is possible soon after. 
+
+The \gls{CAN} cans.
 	}
 %\secondabstract{swedish}{\lipsum} % Optional
 \keywords{High capacity transport vehicles, steered converter dolly, RapidPrototyping, dSpace MicroAutobBoxII, Arduino platform}
@@ -113,8 +111,8 @@ In the scope of this thesis the dolly was modified to conduct hardware-in-the-lo
 
 \begin{document}
 %\selectlanguage{swedish} % Use this if you are writing your thesis in swedish.
-\maketitle
 
+\maketitle
 
 % If you need to do any modifications, you can redefine each page respectively, or just call them manually as;
 %\makecoverpage
@@ -127,6 +125,7 @@ In the scope of this thesis the dolly was modified to conduct hardware-in-the-lo
 %\maketableofpaperspage
 %\cleardoublepage\tableofcontents
 %\cleardoublepage\pagenumbering{arabic}
+
 
  % Sets up page numbering for the rest of the document.
 % Highly recommended to put contents into subfiles, or use \input.
@@ -142,10 +141,11 @@ In the scope of this thesis the dolly was modified to conduct hardware-in-the-lo
 \subfile{Discussion}
 \subfile{Conclusion}
 \subfile{blinddarm}
-
+\subfile{glossary}
 
 
 \clearpage
+
 \nocite{*} % Cites everything from the bibliography
 \printbibliography % This command is new in biblatex. Do not attempt to use
 %\subfile{Theory}

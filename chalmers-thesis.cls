@@ -790,6 +790,15 @@
   \cleardoublepage
  \fi
  \tableofcontents
+\newpage
+\addcontentsline{toc}{chapter}{\listfigurename}
+\listoffigures
+\newpage
+\addcontentsline{toc}{chapter}{\listtablename}
+\listoftables
+\newpage
+\addcontentsline{toc}{chapter}{List of Acronyms}
+\printglossaries
 
  % Sets up page numbering for the rest of the document.
  \if@draft
