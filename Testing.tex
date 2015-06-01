@@ -25,17 +25,17 @@ For the HMI lookup tables were used for the steering angle and vehicle speed inp
 \end{figure}\\
 
 \begin{itemize}
-	\item include simulation results for maneuver of controller being run inside VTM
+	\item include simulation results for maneuver of controller being run inside \gls{VTM} 
 	\item perhaps include some picture of the video-output, with the actuated truck
 	\item plots for maneuver (steering input, speed over time)
 	
 \end{itemize}
 \subsection{CAN verification}
-To test the functionality of the ASF-Sensor as a first step it was just connected to power supply and an Arduino with a attached CAN-shield. After the CAN-message was received successfully with the Arduino, as a next step the Sensor's CAN pins was connected to the MABII. On the MABII a simple model, that only contained one CAN-Controller with the corresponding dbc-file, was loaded. The Bus-monitor tool of ControlDesk, that shows all incoming and outgoing signals on the CAN for the corresponding dbc-file, was used to check the sensor signals.     
+To test the functionality of the \gls{ASF}-Sensor as a first step it was just connected to power supply and an Arduino with a attached CAN-shield. After the CAN-message was received successfully with the Arduino, as a next step the Sensor's \gls{CAN} pins was connected to the \gls{MABII}. On the \gls{MABII} a simple model, that only contained one \gls{CAN}-Controller with the corresponding dbc-file, was loaded. The Bus-monitor tool of ControlDesk, that shows all incoming and outgoing signals on the \gls{CAN} for the corresponding dbc-file, was used to check the sensor signals.     
 
 \begin{itemize}
 	
-	\item check ECU CANs, make sure they differ in output
+	\item check \gls{ECU} \gls{CAN}s, make sure they differ in output
 	
 \end{itemize}
 
@@ -50,9 +50,9 @@ To test the functionality of the ASF-Sensor as a first step it was just connecte
 \section{Processing time evaluation}
 \label{chap:processing_time_delay}
 \subsection{Background}
-The desired solution is supposed to operate at any speed. For high speeds a quick processing and transmission time is required to ensure prompt and realtime intervention of the control system based on the measured input signals. If the delays induced by the different components in the complete system are known or can be estimated, they can be compensated for in the steering-algorithm running on the rapid-prototyping system.
+The desired solution is supposed to operate at any speed. For high speeds a quick processing and transmission time is required to ensure prompt and realtime intervention of the control system based on the measured input signals. If the delays induced by the different components in the complete system are known or \gls{CAN} be estimated, they can be compensated for in the steering-algorithm running on the rapid-prototyping system.
 
-As outlined in section \ref{sec:measurement_setup} the dolly is equipped with a system to determine the deflection angle of the draw-bar and both the kingpin angles of the LVC. The sensors' raw signal is then parsed and filtered in an integrated low-level system which feeds the filtered signals to a private CAN-bus, where it is picked up by the MABII. The filtering operation takes a certain time and thus induces a delay. Furthermore the model running on the rapid-prototyping system needs a certain time to calculate the current desired steering angle for the dollys' wheels. This has to be determined as well. The steering mechanisms on the dolly are also a delay-inducer due to the inertia in the hydro-mechanic system. This is of course unavoidable in any physical system, but when measured can as well to a certain degree be compensated for in the calculations. 
+As outlined in section \ref{sec:measurement_setup} the dolly is equipped with a system to determine the deflection angle of the draw-bar and both the kingpin angles of the \gls{HCT} combination. The sensors' raw signal is then parsed and filtered in an integrated low-level system which feeds the filtered signals to a private \gls{CAN}-bus, where it is picked up by the \gls{MABII}. The filtering operation takes a certain time and thus induces a delay. Furthermore the model running on the rapid-prototyping system needs a certain time to calculate the current desired steering angle for the dollys' wheels. This has to be determined as well. The steering mechanisms on the dolly are also a delay-inducer due to the inertia in the hydro-mechanic system. This is of course unavoidable in any physical system, but when measured can as well to a certain degree be compensated for in the calculations. 
 
 %The measuring chain for the logging solution will also be discussed and the different delays will be discussed. 
 
@@ -76,7 +76,7 @@ To eliminate tire friction the investigated axle was suspended in the air in fur
 		\centering
 		\begin{tabular}{llll}
 			\textbf{\#} & \textbf{Amplitude [$  ^\circ $]} & \textbf{Axle}  & \textbf{Comment}                                                                  \\
-			1  & 1                & front & lift front axle, ETS dead band \\
+			1  & 1                & front & lift front axle, \gls{ETS} dead band \\
 			2  & 2                & front &                                                                          \\
 			3  & 3                & front &                                                                          \\
 			4  & 4                & front &                                                                          \\
@@ -85,7 +85,7 @@ To eliminate tire friction the investigated axle was suspended in the air in fur
 			7  & 7                & front &                                                                          \\
 			8  & 8                & front &                                                                          \\
 			9  & 9                & front & error mode, step too\footnotemark[1]                                      \\\hline
-			10 & 1                & rear  & lift rear axle, ETS dead band  \\
+			10 & 1                & rear  & lift rear axle, \gls{ETS} dead band  \\
 			11 & 2                & rear &                                                                          \\
 			12 & 3                & rear &                                                                          \\
 			13 & 4                & rear &                                                                          \\
@@ -99,7 +99,7 @@ To eliminate tire friction the investigated axle was suspended in the air in fur
 		\caption{Test matrix for delay measuring with lifted axle (analogous matrix for non-lifted testing (\#19-\#36))}
 		\label{tab:test_matrx_delay_measuring}
 	\end{table}
-	\footnotetext[1]{If a too big of a step is requested from the steering system, VSE's ECU will go into emergency mode. Steering is completely locked, turning the dolly completely passive.}   
+	\footnotetext[1]{If a too big of a step is requested from the steering system, VSE's \gls{ECU} will go into emergency mode. Steering is completely locked, turning the dolly completely passive.}   
 
 
 As also described in section \ref{sec:results_processing_time} additional response tests were conducted utilizing a ramp input. Here a maximum steering amplitude of $15^\circ $ was used and the slope of the ramp was varied. As the request was not in the form of a step input, no error was triggered like in test \#9 and \#18 (see table \ref{tab:test_matrx_delay_measuring}). The test matrix for this setup is outlined in table \ref{tab:test_matrx_ramp_input}. Besides the changed input-pattern the test- and logging-setup was left unchanged
@@ -122,23 +122,23 @@ As also described in section \ref{sec:results_processing_time} additional respon
 \end{table}
 
 
-All testing was automated in ControlDesk using Python scripts to loop through the different tests. The utilized graphical user interface (GUI) can be seen in figure \ref{fig:control_desk_GUI}. Logging within ControlDesk was started and stopped manually after each test and automatically exported to MATLAB for parsing and analysis. All data was acquired from the steering knuckle sensors originally present in the ETS. This sensor's signal is available on the ETS-CAN (also see section \ref{sec:dolly_system}). 
+All testing was automated in ControlDesk using Python scripts to loop through the different tests. The utilized graphical user interface (GUI) \gls{CAN} be seen in figure \ref{fig:control_desk_GUI}. Logging within ControlDesk was started and stopped manually after each test and automatically exported to MATLAB for parsing and analysis. All data was acquired from the steering knuckle sensors originally present in the \gls{ETS}. This sensor's signal is available on the \gls{ETS}-\gls{CAN} (also see section \ref{sec:dolly_system}). 
 
-It was decided to neglect the delays induced by the CAN communication. The reason for this is, that both the request as well as the measuring are send over the CAN. Which means that the two transmission times are counted with different signs and thus almost exactly cancel out only leaving double the worst case transmission (maximum stuffing bits, worst case arbitration) time as a maximum error of 232$\mu$s. This is sufficiently low regarding the fact, that the simulation on the MABII is executed every 0.001s.     
+It was decided to neglect the delays induced by the \gls{CAN} communication. The reason for this is, that both the request as well as the measuring are send over the \gls{CAN}. Which means that the two transmission times are counted with different signs and thus almost exactly cancel out only leaving double the worst case transmission (maximum stuffing bits, worst case arbitration) time as a maximum error of 232$\mu$s. This is sufficiently low regarding the fact, that the simulation on the \gls{MABII} is executed every 0.001s.     
 
 
 
 \subsection{Delays in logging measuring chain}
 \label{sec:delays_on_arduino}
 
-To have a complete picture of the occuring delays in the measuring chain all relevant bigger execution blocks of the code running cyclically on the Arduino Due to broadcast the IMU data to the CAN-bus were evaluated for execution time. Figure \ref{fig:arduino_delays_sketch} gives an overview, into which functions the code was grouped as well as the respectively used protocol for communication. The output via the serial port (Universal Asynchronous Receiver Transmitter (UART)) for visualization purposes on the computer while logging takes very long compared to the execution times of the other depicted code blocks.\footnote{The maximum transmission rate on the UART for the Due is 115200bit/s. Transmitting the payload (3x3 sensor axes, signed integer) only excluding all control bits accumulates to 3 sensors x 3 axes x 16bit = 144bit  or 1.25ms}It therefore is disabled while actually logging. 
+To have a complete picture of the occuring delays in the measuring chain all relevant bigger execution blocks of the code running cyclically on the Arduino Due to broadcast the \gls{IMU} data to the CAN-bus were evaluated for execution time. Figure \ref{fig:arduino_delays_sketch} gives an overview, into which functions the code was grouped as well as the respectively used protocol for communication. The output via the serial port (\gls{UART}) for visualization purposes on the computer while logging takes very long compared to the execution times of the other depicted code blocks.\footnote{The maximum transmission rate on the \gls{UART} for the Due is 115200bit/s. Transmitting the payload (3x3 sensor axes, signed integer) only excluding all control bits accumulates to 3 sensors x 3 axes x 16bit = 144bit  or 1.25ms}It therefore is disabled while actually logging. 
 
-The delays were evaluated by inserting time-stamped variables into the code before and after each examined function's call. Using the Due's $micros()$ function a resolution in microseonds can be achieved\footnote{On earlier/smaller Arduinos $micros()$ resolution is 4$\mu$s!} with an accuracy of the inverse of the processors clock frequency (i.e. 11.9ns for the Due). $micros()$' call/execution time was neglected as it is in the magnitude of a couple of dozen nanoseconds. As 
+The delays were evaluated by inserting time-stamped variables into the code before and after each examined function's call. Using the Due's $micros()$ function a resolution in microseonds \gls{CAN} be achieved\footnote{On earlier/smaller Arduinos $micros()$ resolution is 4$\mu$s!} with an accuracy of the inverse of the processors clock frequency (i.e. 11.9ns for the Due). $micros()$' call/execution time was neglected as it is in the magnitude of a couple of dozen nanoseconds. As 
 
 \begin{figure*}[h!]
 \centering
 \includegraphics[width=1\linewidth]{figures/arduino_delays_sketch}
-\caption{Execution blocks for IMU data acquisition on the Arduino Due (overview)}
+\caption{Execution blocks for \gls{IMU} data acquisition on the Arduino Due (overview)}
 \label{fig:arduino_delays_sketch}
 \end{figure*}
 
@@ -148,26 +148,26 @@ The delays were evaluated by inserting time-stamped variables into the code befo
 
 \subsection{System calibration}
 
-The two ECUs on the standard ETS were calibrated to account for the hardware characteristics before handing-over the legacy system to the active converter dolly project. The parameter set included zeroing of hydraulic pressure levels of the steering system and the integration of the EBS-CAN signals as well as the articulation angle sensor CAN (ASF), as it would theoretically be possible to use other sources for the speed-signal needed in the legacy ETS. This calibration ensured a correctly and fully working base-system, which in case of failure could be reverted back to. Further on this parameter sets will not be changed to prevent inconsistent behaviour. 
+The two \gls{ECU}s on the standard \gls{ETS} were calibrated to account for the hardware characteristics before handing-over the legacy system to the active converter dolly project. The parameter set included zeroing of hydraulic pressure levels of the steering system and the integration of the \gls{EBS}-\gls{CAN} signals as well as the articulation angle sensor \gls{CAN} (\gls{ASF}), as it would theoretically be possible to use other sources for the speed-signal needed in the legacy \gls{ETS}. This calibration ensured a correctly and fully working base-system, which in case of failure could be reverted back to. Further on this parameter sets will not be changed to prevent inconsistent behaviour. 
 
 \subsection{Actuator tests}
 
-Actuator tests to verify working hydraulic system for the steering system and correctly pressurized brake-lines as well as normally running ECUs receiving correct analog sensor-information (voltage levels) within the legacy ETS and CAN-signals are possible with VSE's diagnosis screen, that usually sits in the ETS locker but was patched out for the HiL-tests and during setup in the workshop. As this diagnosis utility ties in directly with the core-functionality it provides a very robust and reliable way to track errors during testing. An example of the home-screen output of the diagnosis display can be seen in figure \ref{fig:ETS_display_homescreen}. Note that it is in "Alarm Mode", which is the fall-back safety level, where all steering cylinders are locked in middle position (i.e. wheels straight). The ETS reverts to this state, if sensor information is corrupted or deemed inconsistent. This particular example was triggered by the tests described in section \ref{sec:measuring_delay}.
+Actuator tests to verify working hydraulic system for the steering system and correctly pressurized brake-lines as well as normally running \gls{ECU}s receiving correct analog sensor-information (voltage levels) within the legacy \gls{ETS} and \gls{CAN}-signals are possible with \gls{VSE}'s diagnosis screen, that usually sits in the \gls{ETS} locker but was patched out for the \gls{HIL} -tests and during setup in the workshop. As this diagnosis utility ties in directly with the core-functionality it provides a very robust and reliable way to track errors during testing. An example of the home-screen output of the diagnosis display can be seen in figure \ref{fig:ETS_display_homescreen}. Note that it is in "Alarm Mode", which is the fall-back safety level, where all steering cylinders are locked in middle position (i.e. wheels straight). The \gls{ETS} reverts to this state, if sensor information is corrupted or deemed inconsistent. This particular example was triggered by the tests described in section \ref{sec:measuring_delay}.
 
 
 \begin{figure*}[h]
 \centering
 \includegraphics[width=0.6\linewidth]{figures/ETS_display_homescreen}
-\caption{ETS' diagnosis sceen patched out of the original ETS-locke rto allow easy access during workshop testing. The display is showing the homescreen.}
+\caption{\gls{ETS}' diagnosis sceen patched out of the original ETS-locke rto allow easy access during workshop testing. The display is showing the homescreen.}
 \label{fig:ETS_display_homescreen}
 \end{figure*}
 
 \subsection{Algorithm evaluation}
 \subsection{Sensor testing}
 
-The three angle-sensors to determine the articulation between the different independently moving units of the combinations differ in form-factor as they are mounted either on the fifth-wheel turntable or the king-pin respectively, nonetheless all rely on the same measuring principle and broadcast their gathered data in the same fashion on a private CAN-bus (refer to figure \ref{fig:dolly_interfaces}). 
+The three angle-sensors to determine the articulation between the different independently moving units of the combinations differ in form-factor as they are mounted either on the fifth-wheel turntable or the king-pin respectively, nonetheless all rely on the same measuring principle and broadcast their gathered data in the same fashion on a private \gls{CAN}-bus (refer to figure \ref{fig:dolly_interfaces}). 
 
-As was laid out in section HIER-REF-FUER-BILD-MIT-WEITERFUEHRPARAMETERN! some CAN-messages needed to be patched through to the receiving ECU and some had to be changed. It was necessary to run the sensors in bench-tests first to ensure this communication was understood and controllable before implementing it into the final system. The VSE sensors need to be connected to 24V DC and then independently setup and broadcast the angle of deflection of their turning-plate. The CAN-signal was picked up with a slim Arduino CAN-setup at first to verify the data. In further tests the CAN-reception was realized n th MABII where subsequently the describes by-pass with modification of selected signals was developed. HIER NOCH EIN BILD VOM SENSOR AM ARDUINO BREADBOARD!!!! Further calibration or testing was not necessary for this sensors, as they are very robust and reliable. 
+As was laid out in section HIER-REF-FUER-BILD-MIT-WEITERFUEHRPARAMETERN! some CAN-messages needed to be patched through to the receiving \gls{ECU} and some had to be changed. It was necessary to run the sensors in bench-tests first to ensure this communication was understood and controllable before implementing it into the final system. The \gls{VSE} sensors need to be connected to 24V \gls{DC} and then independently setup and broadcast the angle of deflection of their turning-plate. The CAN-signal was picked up with a slim Arduino CAN-setup at first to verify the data. In further tests the \gls{CAN}-reception was realized n th \gls{MABII} where subsequently the describes by-pass with modification of selected signals was developed. HIER NOCH EIN BILD VOM SENSOR AM ARDUINO BREADBOARD!!!! Further calibration or testing was not necessary for this sensors, as they are very robust and reliable. 
 
 
 
@@ -179,29 +179,29 @@ As was laid out in section HIER-REF-FUER-BILD-MIT-WEITERFUEHRPARAMETERN! some CA
 \section{Hardware-in-the-loop testing}
 \label{sec:HIL}
 \begin{itemize}
-	\item description of HIL
+	\item description of \gls{HIL} 
 	\item Functional architecture diagram (MSD replaced with actual dolly)
 	\item Limitations (axle loads, standing still)
 \end{itemize}
 
-Insufficient processing power does not allow for VTM's execution in the dSpace environment on the MABII. To perform HIL-testing it was thus necessary to split the comptuational load and accomplish real-time data exchange between the hardware controlling system on the MABII and the rest of the simulation which will be run parallely in Simulink in real-time on a standard PC. Though there are dedicated real-time platforms available to achieve real-time execution it was decided to rely on a standard PC to minimize costs and have a lean work-process without extra steps of code conversion to different platforms. Figure \ref{fig:HIL_overview} illustrates the distribution of the HIL-setup's different components over two computers, the MABII and the actual hardware. 
+Insufficient processing power does not allow for \gls{VTM} 's execution in the dSpace environment on the \gls{MABII}. To perform \gls{HIL} -testing it was thus necessary to split the comptuational load and accomplish real-time data exchange between the hardware controlling system on the \gls{MABII} and the rest of the simulation which will be run parallely in Simulink in real-time on a standard PC. Though there are dedicated real-time platforms available to achieve real-time execution it was decided to rely on a standard PC to minimize costs and have a lean work-process without extra steps of code conversion to different platforms. Figure \ref{fig:HIL_overview} illustrates the distribution of the \gls{HIL} -setup's different components over two computers, the \gls{MABII} and the actual hardware. 
 
 \begin{figure*}[h]
 	\centering
 	\includegraphics[width=1\linewidth]{figures/HIL_overview}
-	\caption{Overview of HIL-simulation, distribution of sub-functions over different physical platforms (top) and correlation to Volvo functional architecture (bottom)}
+	\caption{Overview of \gls{HIL} -simulation, distribution of sub-functions over different physical platforms (top) and correlation to Volvo functional architecture (bottom)}
 	
 	\label{fig:HIL_overview}
 \end{figure*}
 
 
-The Host-PC fulfills the usual task to start-up the dolly and simulation during HIL testing and log the behaviour of the dolly system and the IMUs. This is done through the ControlDesk GUI which was described in section \ref{sec:control_desk} and of which a screenshot can be found in the appendix (figure \ref{fig:control_desk_GUI}). It already runs the final version of the control and capturing environment and does not require changes for track testing. It is connected to the MABII via the Host-PC port.
+The Host-PC fulfills the usual task to start-up the dolly and simulation during \gls{HIL}  testing and log the behaviour of the dolly system and the \gls{IMU}s. This is done through the ControlDesk GUI which was described in section \ref{sec:control_desk} and of which a screenshot can be found in the appendix (figure \ref{fig:control_desk_GUI}). It already runs the final version of the control and capturing environment and does not require changes for track testing. It is connected to the \gls{MABII} via the Host-PC port.
 
-On the Simulation-PC the simulation of the complete rest of the hardware-system is computed in real-time. Mainly truck, trailers, environment and steering behaviour of the truck are part of this model. All these sub-systems are modeled in VTM which runs on this computer in Simulink. 
+On the Simulation-PC the simulation of the complete rest of the hardware-system is computed in real-time. Mainly truck, trailers, environment and steering behaviour of the truck are part of this model. All these sub-systems are modeled in \gls{VTM}  which runs on this computer in Simulink. 
 
-Usually Simulink simulations are computed as fast as possible and then afterwards analysis of the results and system's behaviour is conducted offline. This is an unsuitable approach for this thesis' purposes, as it is important to have real-time execution for this sub-system to provide the actual hardware of the HIL-test with the needed parameters and simulate the environment at the correct instance also considering the hardware's feedback. I.e. the hardware runs in real-time, so the rest of its environment has to as well. Simulink's Desktop Real-Time toolbox provides the functionality to execute models in real-time on a desktop PC as well as support for a variety of hardware systems. This toolbox was used to connect the MABII's ethernet port to the simulation-PC's ethernet port using the UDP protocol. Also part of this toolbox is a sub-packet to access the PC's serial port within the simulation-environment. As it was not possible to receive reliable real-time data via the ethernet-interface which lead to the introduction of the serial interface for the feedback-loop. A similiar setup as decribed in section \ref{sec:arduino} was used to realize the conversion of the CAN-messages directly taken from the EBS-CAN to serial output on a Arduino Due. As depicted in figure \ref{fig:dolly_split} it is essential to to keep the CAN-buses of the two axles separated to ensure individual steering. Thus two MCP2551 CAN-transceivers had to be used for the feedback-loop in the HIL-setup.
+Usually Simulink simulations are computed as fast as possible and then afterwards analysis of the results and system's behaviour is conducted offline. This is an unsuitable approach for this thesis' purposes, as it is important to have real-time execution for this sub-system to provide the actual hardware of the \gls{HIL} -test with the needed parameters and simulate the environment at the correct instance also considering the hardware's feedback. I.e. the hardware runs in real-time, so the rest of its environment has to as well. Simulink's Desktop Real-Time toolbox provides the functionality to execute models in real-time on a desktop PC as well as support for a variety of hardware systems. This toolbox was used to connect the MABII's ethernet port to the simulation-PC's ethernet port using the \gls{UDP} protocol. Also part of this toolbox is a sub-packet to access the PC's serial port within the simulation-environment. As it was not possible to receive reliable real-time data via the ethernet-interface which lead to the introduction of the serial interface for the feedback-loop. A similiar setup as decribed in section \ref{sec:arduino} was used to realize the conversion of the CAN-messages directly taken from the \gls{EBS}-\gls{CAN} to serial output on a Arduino Due. As depicted in figure \ref{fig:dolly_split} it is essential to to keep the CAN-buses of the two axles separated to ensure individual steering. Thus two MCP2551 \gls{CAN}-transceivers had to be used for the feedback-loop in the \gls{HIL} -setup.
 
-Limitations: HIL-testing took place in workshop environment and thus the dolly was not rolling compromising the tire friction compared with a rolling combination. As outlined in section \ref{sec:results_processing_time} this does not increase the reaction time of the system, though. Furthermore the additional axle load was zero for both axles, as it was not possible to increase the load without a trailer in the lab environment at hand. This is also unlikely to change the results, as is suggested in \ref{sec:results_processing_time} the axle-load is no deciding factor in the wheel articulation's performance. 
+Limitations: \gls{HIL} -testing took place in workshop environment and thus the dolly was not rolling compromising the tire friction compared with a rolling combination. As outlined in section \ref{sec:results_processing_time} this does not increase the reaction time of the system, though. Furthermore the additional axle load was zero for both axles, as it was not possible to increase the load without a trailer in the lab environment at hand. This is also unlikely to change the results, as is suggested in \ref{sec:results_processing_time} the axle-load is no deciding factor in the wheel articulation's performance. 
 
 The setup for the HIL-testing can also be represented using the functionality architecture introduced in section \ref{sec:func_architecture}.
 Compared with the testing of the controllers described in section \ref{sec:bench-testing}, the division of the functionality architecture changed. The MSD are no longer simulated but the actual dolly together with the MABII, which is needed as an interface between the MSD and the other parts of the functionality architecture, is used. The HMI, VMM and vehicle plant are still simulated in Simulink. Figure \ref{fig:funct_architecture_hil} shows how the parts are divided to different systems.
@@ -223,8 +223,55 @@ The maneuver that was used for testing the Low-speed controller was a 180 degree
 	\label{fig:HIL002_delta11}
 \end{figure*}
 As a first step a very simple controller was used for controlling the steering of the dolly. The controller used the articulation angle between the first semitrailer and the dolly as an input. The output to both axles was this angle multiplied with a gain of 4.
+<<<<<<< HEAD
 
 
+=======
+Figure \ref{fig:HIL002_front} shows the measurements of the \gls{ETS}-\gls{CAN} of the front axle of the dolly.\\
+
+\begin{figure*}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{figures/HIL002_front}
+	\caption{HIL test front axle}
+	
+	\label{fig:HIL002_front}
+\end{figure*}
+
+The request angle is the angle that was requested from the controller and then sent from the simulation-PC to the \gls{MABII} The target angle is the angle that was calculated by the \gls{ETS}-\gls{ECU} and sent as a request to the actuators of the dolly. The actual angle is the angle that the sensors on the dolly's wheels measured.
+Figure \ref{fig:HIL002_rear} shows the same measurements for the rear axle.
+
+\begin{figure*}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{figures/HIL002_rear}
+	\caption{HIL test rear axle}
+	
+	\label{fig:HIL002_rear}
+\end{figure*}
+Since the same requested angle for front and rear is the same, below only the front axle is looked upon.
+Figure \ref{fig:HIL002_front_closeup} shows an extraction of the measurements of the front axle.
+\begin{figure*}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{figures/HIL002_front_closeup}
+	\caption{\gls{HIL} test front axle details}
+	
+	\label{fig:HIL002_front_closeup}
+\end{figure*}
+
+\begin{figure*}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{figures/HIL002_alles}
+	\caption{HIL test front axle comparison between \gls{VTM}  and ETS}
+	
+	\label{fig:HIL002_complete}
+\end{figure*}
+\begin{figure*}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{figures/HIL002_alles_details}
+	\caption{HIL test front axle comparison between \gls{VTM}  and \gls{ETS} details}
+	
+	\label{fig:HIL002_complete_details}
+\end{figure*}
+>>>>>>> origin/master
 \subsection{High-speed controller}
 
 \section{Track testing}

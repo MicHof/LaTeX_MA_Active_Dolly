@@ -7,21 +7,21 @@
 
 \chapter{Fault detection and system ability (5 Seiten)}
 \label{chap:fault_detection}
-\section{Failure Mode and Effects Analysis (FMEA)}
+\section{\gls{FMEA}}
 \label{sec:FMEA}
-FMEAs were developed by the US military in the late 1940s and later also used by NASA in the apollo project in the 1960s.
-A FMEA is used to detect possible failures before they appear. Therefore the FMEA is done in a early stage of a project in order to be able to take the results of the FMEA into consideration when developing a system. In the process every possible failure of a system are taken into consideration. 
+\gls{FMEA}s were developed by the US military in the late 1940s and later also used by NASA in the Apollo project in the 1960s.
+A \gls{FMEA} is used to detect possible failures before they appear. Therefore the \gls{FMEA} is done in a early stage of a project in order to be able to take the results of the \gls{FMEA} into consideration when developing a system. In the process every possible failure of a system are taken into consideration. 
 
 In a first step a block diagram of the system with all of its inputs, outputs and subsytems was created to gain a complete understanding of the system. Every subsystem was broken down to the lowest level and for those subsystems block diagrams with all the components, inputs and outputs were created as well.
 
 Starting from the block diagrams all potential failure modes were determined for every component of the system respectively subsystem. As a next step the potential effects of these failure modes were determined and the severity of these effects were evaluated on a scale from one to ten,  with 1 being the lowest severity and ten being the highest severity. For the evaluation a table that shows how different severities correlate with the numbers was used (see Table \ref{tab:fmea_severity}). 
 Following this, potential causes for every failure mode were defined. Then the probability of occurrence for each cause was evaluated, also using a scale from one to ten (Table \ref{tab:fmea_probability}).
 After that the current control mechanisms, that detect the failure when it should appear, were listed for each failure mechanism and the detectability of the failure mechanism was evaluated using a scale from one to ten (Table \ref{tab:fmea_detectability}).
-After the severity, probability and detectability were evaluated, a risk priority number is calculated as follows: 
+After the severity, probability and detectability were evaluated, a \gls{RPN} is calculated as follows: 
 \begin{equation*}
 RPN=severity*probability*detectability
 \end{equation*}      
-This risk priority number is used to identify the failure mechanisms that need to be addressed. After the RPN for every causes is calculated, the RPN are ranked from highest to lowest using a Pareto diagram. The causes with the highest RPN need to be addressed first. Special attention needs to be paid to cases where a high severity number, which means 9 or 10, occurred, even if the RPN isn't as high as for other cases. 
+This \gls{RPN} is used to identify the failure mechanisms that need to be addressed. After the \gls{RPN} for every causes is calculated, the \gls{RPN} are ranked from highest to lowest using a Pareto diagram. The causes with the highest \gls{RPN} need to be addressed first. Special attention needs to be paid to cases where a high severity number, which means 9 or 10, occurred, even if the \gls{RPN} isn't as high as for other cases. 
 %In table \ref{tab:RPN} it is shown how the risk priority number have to be handled.
 %\begin{table}[h]
 %	\centering
@@ -35,19 +35,19 @@ This risk priority number is used to identify the failure mechanisms that need t
 		
 %	\end{tabular} \\
 %\end{table}
-In order to lower the RPN for those cases actions need to be decided, that either lower the severity, probability or detectability of them or more than one of those factors. After the performance of these actions the severity, probability and detectability are evaluated again and a new RPN is calculated. If the RPN still is to high a iteration of the process needs to be done. \cite{din_60812_fmea}
+In order to lower the \gls{RPN} for those cases actions need to be decided, that either lower the severity, probability or detectability of them or more than one of those factors. After the performance of these actions the severity, probability and detectability are evaluated again and a new \gls{RPN} is calculated. If the \gls{RPN} still is to high a iteration of the process needs to be done. \cite{din_60812_fmea}
 Figure \ref{fig:fmea_example} shows a screen shot of the FMEA-Excel-worksheet for the first iteration.    
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=1.0\linewidth]{figures/fmea_example}
-	\caption[]{Example of FMEA-worksheet for the first step of the FMEA}
+	\caption[]{Example of \gls{FMEA}-worksheet for the first step of the FMEA}
 	\label{fig:fmea_example}
 \end{figure}
-The consequences of the FMEA conducted for this thesis were:
+The consequences of the \gls{FMEA} conducted for this thesis were:
 \begin{itemize}
-	\item Special attention needs to be paid to the mounting of the MABII in the Dolly's ETS-box
+	\item Special attention needs to be paid to the mounting of the \gls{MABII} in the Dolly's \gls{ETS}-box
 	\item The design of the breakout box was revised
-	\item Bench- and HIL-testing is necessary to validate  the vehicle model controllers and to exclude dangerous behavior, that might be caused by delays in the system. 
+	\item Bench- and \gls{HIL} -testing is necessary to validate  the vehicle model controllers and to exclude dangerous behavior, that might be caused by delays in the system. 
 	\item A start-up checklist for the track testing needs to be created	 
 \end{itemize}  
 \section{Safety concepts}
@@ -55,7 +55,7 @@ The consequences of the FMEA conducted for this thesis were:
 
 \section{Maximum capabilities of the system}
 \label{sec:maxi_capabilities}
-The capabilities of the system can be divided into two parts. For one thing there are the capabilities that are independent from influences. These are the maximum steering angle and maximum steering rate, which is limited through the ETS-ECU, because of the physical limitation of the hydraulic system.
+The capabilities of the system \gls{CAN} be divided into two parts. For one thing there are the capabilities that are independent from influences. These are the maximum steering angle and maximum steering rate, which is limited through the \gls{ETS}-\gls{ECU}, because of the physical limitation of the hydraulic system.
 For another thing there are the capabilities that are influenced by the vehicle speed, load of the dolly, state of the hydraulic and electrical system of the dolly, and environmental influences.
 Depending on those parameters the capabilities are lowered.
 \begin{itemize}
@@ -67,12 +67,12 @@ Depending on those parameters the capabilities are lowered.
 \section{Warning and state-info system}
 \label{sec:warning_system}
 \begin{itemize}
-	\item warnings from dolly ECU \\
-	In the original state, the ETS-ECU monitors all safety critical components of the dolly. In case of a malfunction, an error code is sent via the CAN-Bus and the error message is visible on the diagnose displays of the dolly. Depending on the severity of the error the steering is deactivated and the axes steer back to a steering angle of 0 deg.
-	Due to the required modification of the ASF- and speed-signal, the inbuilt supervision of the ETS-ECU is no longer fully functioning. Therefore a additional supervision of the system has to be implemented in the Simulink-model. This supervision considers the current capabilities of the dolly and reduces the requested steering angle or steering rate, if needed.    
-	\item warnings from EBS
+	\item warnings from dolly \gls{ECU} \\
+	In the original state, the \gls{ETS}-\gls{ECU} monitors all safety critical components of the dolly. In case of a malfunction, an error code is sent via the \gls{CAN}-Bus and the error message is visible on the diagnose displays of the dolly. Depending on the severity of the error the steering is deactivated and the axes steer back to a steering angle of 0 deg.
+	Due to the required modification of the \gls{ASF}- and speed-signal, the inbuilt supervision of the \gls{ETS}-\gls{ECU} is no longer fully functioning. Therefore a additional supervision of the system has to be implemented in the Simulink-model. This supervision considers the current capabilities of the dolly and reduces the requested steering angle or steering rate, if needed.    
+	\item warnings from \gls{EBS}
 	\item warnings from vehicle
-	\item 'own' error codes and warnings (e.g. logging, MABII related, arduino-IMU related)
+	\item 'own' error codes and warnings (e.g. logging, \gls{MABII} related, arduino-\gls{IMU} related)
 \end{itemize}
 
 
