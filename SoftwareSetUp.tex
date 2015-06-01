@@ -8,55 +8,6 @@
 \chapter{Software Architecture (8 Seiten)}
 \label{chap:software_setup}
 
-<<<<<<< HEAD
-         
-=======
-\section{Functionality architecture}
-\label{sec:func_architecture}
-
-The software architecture \gls{CAN} be divided into four different parts using the functionality architecture developed at Volvo GTT. Figure \ref{fig:funct_architecture} shows the different parts this architecture:
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=1\linewidth]{figures/functionality_architecture}
-
-\caption{Functionality Architecture}
-\label{fig:funct_architecture}
-\end{figure}
-
-The \gls{HMI} is the interface between the driver and the vehicle. The driver can input requests to the vehicle, for example a steering angle via the steering wheel or a torque request via the accelerator pedal. The driver gets feedback from the vehicle about the vehicle's state, for example via the speedometer.
-
-The vehicle motion management (VMM) contains the high-level controllers for the vehicle's motion and stability. It has an time horizon up to one second. As an input it gets the request of the driver from the \gls{HMI} and transforms these requests into requests for the actuators of the vehicle. These request are then sent to the \gls{MSD}. From the \gls{MSD} the \gls{VMM} receives information about the state of the actuators and the current capabilities.
-
-The \gls{MSD} contains the actuators and low-level controllers of the vehicle. In there the requests from the \gls{VMM} are executed. Information about the status of the actuators is sent both to the \gls{VMM} and the vehicle plant.
-
-The vehicle plant corresponds to the whole vehicle.
-\\
-In different kind of tests, the parts functionality architecture are either simulated or real hardware is used. The more advanced the development is, more and more of the functionality is shifted from simulation to actual hardware. For the development and first testing of the vehicle model controllers described in chapter \ref{chap:steering_model}, all the parts were simulated in Simulink. For the \gls{HMI} lookup tables were used for the steering angle and vehicle speed input. The \gls{VMM} consists of the vehicle model controller. The steering actuators in the \gls{MSD} domain were simulated by implementing a first order filter and a time delay, that represents the delay caused by the hydraulic system. For the vehicle plant the \gls{vtm} library (see section \ref{sec:VTM}) was used. Figure \ref{fig:funct_architecture_sim} shows how the parts are divided to different systems.
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.5\linewidth]{figures/functionality_architecture_sim}
-	
-	\caption{Functionality Architecture in simulation}
-	\label{fig:funct_architecture_sim}
-\end{figure}\\
-As a next step \gls{HIL} tests were performed (see section \ref{sec:HIL}). In that case the \gls{MSD} are no longer simulated but the actual dolly together with the \gls{MABII}, which is needed as an interface between the \gls{MSD} and the other parts of the functionality architecture, is used. The \gls{HMI}, \gls{VMM} and vehicle plant are still simulated in Simulink. Figure \ref{fig:funct_architecture_hil} shows how the parts are divided to different systems.
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.5\linewidth]{figures/functionality_architecture_hil}
-	
-	\caption{Functionality Architecture for \gls{HIL} -testing}
-	\label{fig:funct_architecture_hil}
-\end{figure}\\
-As the final step testing on a test track will be performed. There a complete vehicle combination will be used. This corresponds to the vehicle plant of the functionality architecture. The \gls{HMI} domain is represented by the driver of the vehicle. The \gls{VMM} is running on the \gls{MABII}, which works as an interface between the \gls{VMM}, the dolly and the vehicle. Figure \ref{fig:funct_architecture_track} shows how the parts are divided to different systems.
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.5\linewidth]{figures/functionality_architecture_track}
-	
-	\caption{Functionality Architecture on track testing}
-	\label{fig:funct_architecture_track}
-\end{figure}          
->>>>>>> origin/master
 
 \section{Matlab/Simulink environment}
 \label{sec:matlab}

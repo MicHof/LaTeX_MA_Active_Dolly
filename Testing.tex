@@ -223,55 +223,9 @@ The maneuver that was used for testing the Low-speed controller was a 180 degree
 	\label{fig:HIL002_delta11}
 \end{figure*}
 As a first step a very simple controller was used for controlling the steering of the dolly. The controller used the articulation angle between the first semitrailer and the dolly as an input. The output to both axles was this angle multiplied with a gain of 4.
-<<<<<<< HEAD
 
 
-=======
-Figure \ref{fig:HIL002_front} shows the measurements of the \gls{ETS}-\gls{CAN} of the front axle of the dolly.\\
 
-\begin{figure*}[h]
-	\centering
-	\includegraphics[width=1\linewidth]{figures/HIL002_front}
-	\caption{HIL test front axle}
-	
-	\label{fig:HIL002_front}
-\end{figure*}
-
-The request angle is the angle that was requested from the controller and then sent from the simulation-PC to the \gls{MABII} The target angle is the angle that was calculated by the \gls{ETS}-\gls{ECU} and sent as a request to the actuators of the dolly. The actual angle is the angle that the sensors on the dolly's wheels measured.
-Figure \ref{fig:HIL002_rear} shows the same measurements for the rear axle.
-
-\begin{figure*}[h]
-	\centering
-	\includegraphics[width=1\linewidth]{figures/HIL002_rear}
-	\caption{HIL test rear axle}
-	
-	\label{fig:HIL002_rear}
-\end{figure*}
-Since the same requested angle for front and rear is the same, below only the front axle is looked upon.
-Figure \ref{fig:HIL002_front_closeup} shows an extraction of the measurements of the front axle.
-\begin{figure*}[h]
-	\centering
-	\includegraphics[width=1\linewidth]{figures/HIL002_front_closeup}
-	\caption{\gls{HIL} test front axle details}
-	
-	\label{fig:HIL002_front_closeup}
-\end{figure*}
-
-\begin{figure*}[h]
-	\centering
-	\includegraphics[width=1\linewidth]{figures/HIL002_alles}
-	\caption{HIL test front axle comparison between \gls{VTM}  and ETS}
-	
-	\label{fig:HIL002_complete}
-\end{figure*}
-\begin{figure*}[h]
-	\centering
-	\includegraphics[width=1\linewidth]{figures/HIL002_alles_details}
-	\caption{HIL test front axle comparison between \gls{VTM}  and \gls{ETS} details}
-	
-	\label{fig:HIL002_complete_details}
-\end{figure*}
->>>>>>> origin/master
 \subsection{High-speed controller}
 
 \section{Track testing}
