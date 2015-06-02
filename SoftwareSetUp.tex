@@ -78,16 +78,17 @@ The \gls{VTM} is a computational framework used within Volvo Trucks to simulate 
 \label{sec:steering_interface}
 The steering interface block constitutes the interface between the vehicle model controller and the different \gls{CAN}s of the dolly. It is a Simulink model that runs on the \gls{MABII}
 Figure \ref{fig:steering_interface} shows the steering interface block with its in- and outputs. 
-\begin{figure}[h]
+\begin{figure*}[!htb]
 	\centering
 	\includegraphics[width=0.5\linewidth]{figures/steering_interface}
 	
 	\caption{Steering interface block}
 	\label{fig:steering_interface}
-\end{figure} \\
+\end{figure*} \\
 The inputs to the block are:
 \begin{itemize}
-	\item Steering angle requests for both the front and  the rear axle of the dolly 
+	\item Steering angle requests for front axle of the dolly 
+	\item Steering angle requests for rear axle of the dolly 
 \end{itemize} 
  The outputs of the block are:
  \begin{itemize}
@@ -99,21 +100,36 @@ The inputs to the block are:
  The outputs are used to monitor the dolly's state and for the calculation of the current capabilities (see section \ref{sec:maxi_capabilities}).
  Figure \ref{fig:steering_interface_inside} shows the inside of the steering interface block. It contains \gls{RTI} \gls{CAN} MultiMessage blocks (see section \ref{RTI_CAN}).   
  
- \begin{figure}[h]
+ \begin{figure*}[!htb]
  	\centering
  	\includegraphics[width=1\linewidth]{figures/steering_interface_inside}
  	
  	\caption{Steering interface block \gls{CAN} layout}
  	\label{fig:steering_interface_inside_pdf}
- \end{figure} \\
+ \end{figure*} \\
  
  The software CAN-layout corresponds to the hardware CAN-layout described in section \ref{sec:interface_with_dolly}. There are five different CAN-controllers. Controller1 is used to receive the signals of the ASF-Sensor and the dolly's \gls{EBS} system. These signals, except for the "Angle", "Wheel\_BasedVehicleSpeed" and the "WheelSpeedDiffMainAxle" signals are forwarded to Controller2 and Controller3. Controller2 corresponds to the \gls{ETS}-\gls{CAN} of the front axle and Controller3 to the one of the rear axle. The inputs Delta31 and Delta32 are sent to the front \gls{ETS}-\gls{CAN} (Controller2) and rear \gls{ETS}-\gls{CAN} (Controller3), respectively. For the signals "Wheel\_BasedVehicleSpeed" and  "WheelSpeedDiffMainAxle" constants with the value zero are forwarded both to Controller2 and Controller3.
  Controller4 and Controller5 also correspond to the front \gls{ETS}-\gls{CAN} and rear \gls{ETS}-\gls{CAN}, respectively. As mentioned in section \ref{sec:interface_with_dolly} this is necessary because different CAN-protocols are used. The signals received from those Controllers, together with the signals from Controller1, that weren't forwarded, are outputs of the steering interface block.
   
 \section{ControlDesk monitoring environment}
 \label{sec:control_desk}
-The software used to monitor the Simulink model running on the \gls{MABII} and for logging of data is called dSpace ControlDesk. It also provides the possibility to control the Simulink model running on the MABII, for example by changing parameters like constants in the model. Therefore it was used for bench-testing the dolly system (see section \ref{sec:bench-testing}) to directly send steering angle request to the \gls{ETS}-\gls{CAN} via the steering interface (section \ref{sec:steering_interface}). In ControlDesk the CANs that the \gls{MABII} is connected to \gls{CAN} be monitored as well. This is very useful for checking if all systems work correctly. 
+The software used to monitor the Simulink model running on the \gls{MABII} and for logging of data is called dSpace ControlDesk. It also provides the possibility to control the Simulink model running on the MABII, for example by changing parameters like constants in the model during run-time. Therefore it was used for bench-testing the dolly system (see section \ref{sec:bench-testing}) to directly send steering angle request to the \gls{ETS}-\gls{CAN} via the steering interface (section \ref{sec:steering_interface}). In ControlDesk the \gls{CAN}s that the \gls{MABII} is connected to can be monitored as well. This proofed very useful for checking if all systems work correctly during early stages of development. 
+
 \subsection{Maneuver control}
+Though as mentioned in section \ref{sec:realtime_environment} the \gls{MABII} is capable of running headless and it would be possible to execute the maneuvers fully independently on start-up, it was decided to rely on manual maneuver triggering to have an extra level of safety. For controlled testing environments with clearly delimited maneuvers, the structure shown in figure \ref{fig:controlDesk_trigger} was introduced and allows to either command a steering request of zero to the dolly or patch through the calculated steering angle that is computed by the steering controller and thus starting the maneuver. 
+
+\begin{figure*}[!htb]
+	\centering
+	\includegraphics[width=0.6\linewidth]{figures/controlDesk_trigger}
+	\caption{Trigger to start maneuver or fall back to safe-mode (e.i commanding a steering angle of zero degree on the dolly); this structure was used in \gls{HIL}-testing}
+	\label{fig:controlDesk_trigger}
+\end{figure*}
+
+Sending a steering request of zero results in the dolly behaving like a passive un-steered dolly, which is also the fall-back level implemented in hardware in the legacy \gls{ETS} system. The constant block in the depicted system can be changed manually in ControlDesk to use this as a maneuver start-switch, but of course can also be accessed by the model itself. The supervisor-block can thus shutdown the steering completely on software level, preventing the triggering of the hardware-level error-mode. the hardware implementation moves the hydraulic piston of the steering system back to the middle position, if pressure is not present anymore. In doing so it enters error-mode, which needs to be reset by turning the truck's ignition off and on again. Software shutdown within the environment developed in this thesis, allows reverting back from locked mode to steering mode. 
+
+
+
+
 
 
 \subsection{Monitoring and logging}
@@ -129,7 +145,7 @@ The software used to monitor the Simulink model running on the \gls{MABII} and f
 
 The Arduino system provides an \gls{IDE}  written in Java, providing cross-platform support. It is used to develop the code as well as compiling the code and subsequently uploading it into the microcontroller via the computers serial interface. Within the IDE it is also possible to load some of the officially supported libraries directly. It conveniently is possible to monitor the computer's serial interface as well, which is the most practical way to monitor and debug code that is executed on the Arduino. 
 
-\begin{table}[h]
+\begin{table}[!htb]
 	\label{tab:list_of_arduino_libs}
 	\begin{tabular}{lll}
 		\textbf{Library name} & \textbf{Purpose}                                    & \textbf{Comment} \\

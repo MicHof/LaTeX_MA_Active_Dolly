@@ -41,7 +41,7 @@ During plot analysis of preliminary results it was discussed, whether it would b
 <<<<<<< HEAD
 Figure \ref{fig:HIL002_front} shows the measurements of the ETS-CAN of the front axle of the dolly for the low-speed maneuver described in section \ref{sec:HIL}.\\
 
-\begin{figure*}[h]
+\begin{figure*}[!htb]
 	\centering
 	\includegraphics[width=1\linewidth]{figures/HIL002_front}
 	\caption{HIL-test low-speed front axle}
@@ -52,7 +52,7 @@ Figure \ref{fig:HIL002_front} shows the measurements of the ETS-CAN of the front
 The request angle is the angle that was requested from the controller and then sent from the simulation-PC to the MABII. The target angle is the angle that was calculated by the ETS-ECU and sent as a request to the actuators of the dolly. The actual angle is the angle that the sensors on the dolly's wheels measured.
 Figure \ref{fig:HIL002_rear} shows the same measurements for the rear axle.
 
-\begin{figure*}[h]
+\begin{figure*}[!htb]
 	\centering
 	\includegraphics[width=1\linewidth]{figures/HIL002_rear}
 	\caption{HIL-test low-speed rear axle}
@@ -61,7 +61,7 @@ Figure \ref{fig:HIL002_rear} shows the same measurements for the rear axle.
 \end{figure*}
 Since the same requested angle for front and rear is the same, below only the front axle is looked upon.
 Figure \ref{fig:HIL002_front_closeup} shows an extraction of the measurements of the front axle. 
-\begin{figure*}[h]
+\begin{figure*}[!htb]
 	\centering
 	\includegraphics[width=1\linewidth]{figures/HIL002_front_closeup}
 	\caption{Details of HIL-test low-speed front axle}
@@ -71,7 +71,7 @@ Figure \ref{fig:HIL002_front_closeup} shows an extraction of the measurements of
 As already mentioned in section \ref{sec:measuring_delay} there is a delay between the angle requested of the ETS-ECU and the actual angle of the wheels. This can also be seen in this plot. In comparison to this, the delay between the angle request that is sent from the MABII to the CAN and the target angle that is sent from the ETS-ECU to the actuators is very small and can therefore be neglected.\\
 
 To get a picture of the overall results of the HIL-test, Figure \ref{fig:HIL002_complete} shows the measurements conducted on the simulation-PC and the measurements done in ControllDesk in the same plot.  
-\begin{figure*}[h]
+\begin{figure*}[!htb]
 	\centering
 	\includegraphics[width=1\linewidth]{figures/HIL002_alles}
 	\caption{HIL-test front axle measurements from VTM and ETS-CAN}	
@@ -81,7 +81,7 @@ To get a picture of the overall results of the HIL-test, Figure \ref{fig:HIL002_
 For one thing the plot shows the limitation of the angle that is requested from the controller by the supervisor block described in section \ref{sec:warning_system}. For another thing it shows that there is a relatively high delay between the signal of the actual angle of the dolly from the ETS-CAN and the signal that is feedback to the simulation-PC. This is most likely caused by the use of the serial interface to transmit the signal from the CAN to the simulation-PC. This delay causes a amplification of the articulation angle between the first semitrailer and the dolly, which directly correlates to the steering angle request to the dolly. This amplification can be seen in the end of the measurements.\\
 To get a more detailed view of this delay as well as the limitation of the request angle Figure \ref{fig:HIL002_complete_details} shows a extraction of Figure \ref{fig:HIL002_complete}.   
 
-\begin{figure*}[h]
+\begin{figure*}[!htb]
 	\centering
 	\includegraphics[width=1\linewidth]{figures/HIL002_alles_details}
 	\caption{Details of HIL-test front axle measurements from VTM and ETS-CAN}

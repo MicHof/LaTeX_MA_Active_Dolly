@@ -41,12 +41,12 @@ Table \ref{tab:gains_after_optimization} shows the values of the gains after the
 \end{table}\\
 Figure \ref{fig:low_speed_diagram} shows the implementation of the controller in the functional architecture.
 
-\begin{figure}[h]
+\begin{figure*}[!htb]
 	\centering
 	\includegraphics[width=1.0\linewidth]{figures/Low_speed_diagram}
-	\caption[]{Controller implementation in the functional architecture \cite{Low-speed_paper}}
+	\caption{Controller implementation in the functional architecture \cite{Low-speed_paper}}
 	\label{fig:low_speed_diagram}
-\end{figure}
+\end{figure*}
 
 \subsection{Input parameters}
 \label{sec:input_parameters_LS}
@@ -72,26 +72,26 @@ a_{y3ref}(t)=a_{y1}(t-\tau_{13})
 \end{equation}
 This reference signal, together with the steering angle of the tractor, the forward speed of the vehicle and the actual steering angle of the dolly, is used as inputs to an inverse single track model, that is modeled in the Modelica language. The outputs of the model are the request steering angle $\delta_{dolreq}$ and the lateral acceleration $a_{y3}$ of the dolly. Figure \ref{fig:inverse_single_track_model} shows a block diagram of that model.  
 
-\begin{figure}[h]
+\begin{figure*}[!htb]
 	\centering
 	\includegraphics[width=0.5\linewidth]{figures/Inverse_of_A-double_single-track}
-	\caption[]{Inverse of the single track A-double model \cite{High-speed_paper}}
+	\caption{Inverse of the single track A-double model \cite{High-speed_paper}}
 	
 	\label{fig:inverse_single_track_model}
-\end{figure}
+\end{figure*}
 
 To determine the performance of this controller simulations of a single lane change at 20 meters per second and a sine wave steering input of 0.4 Hz with an amplitude of 0.026 rad were done. As a result the rearward amplification of the yaw rate of the second trailer is 0.95 with this controller compared to 1.49 for a passive dolly. Furthermore the transient off-tracking is improved by 67\%. 
 
 \subsection{Input parameters}
 \label{sec:input_parameters_HS}
 Figure \ref{fig:inverse_model_controller} shows the input and outputs of the inverse model controller.
-\begin{figure}[h]
+\begin{figure*}[!htb]
 	\centering
 	\includegraphics[width=0.5\linewidth]{figures/inverse_controller}
-	\caption[]{Inverse model controller\cite{High-speed_paper}}
+	\caption{Inverse model controller\cite{High-speed_paper}}
 	
 	\label{fig:inverse_model_controller}
-\end{figure}\\
+\end{figure*}\\
 The input parameters of the high-speed controller are:
 \begin{itemize}
 \item The vehicle speed: $v_x$ 

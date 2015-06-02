@@ -14,7 +14,7 @@ In countries of the EU the permitted maximum length of a truck-trailer combinati
 In several other countries of the EU \gls{HCT} vehicles are allowed on certain roads for testing purposes. 
 Table \ref{tab:HCT_vehicles_in_different_countries} shows the maximum length and weight of \gls{HCT} vehicles in different countries.
 
-\begin{table}[h]
+\begin{table}[!htb]
 	\centering
 	\caption{\gls{HCT} vehicles in different countries\cite{Vaegverket}\cite{HCT_vehicles_Australia}\Cite{HCT_vehicles_USA}\cite{HCT_vehicles_Canada}\Cite{HCT_vehicles_Mexico}}
 	\label{tab:HCT_vehicles_in_different_countries}
@@ -89,7 +89,7 @@ In order to use the dolly to improve the vehicle dynamics of a  combination in a
 
 In automotive software development standardized processes are applied to assure structured work. The V-model which derives its name from the characteristic shape constitutes one graphic representations of the sequence of steps towards the finished overall system. It also gives an approximate impression about the level of detail of each of the steps on the vertical axle, as well as chronological progress on the horizontal. A simplified version of this V-model can be seen in figure \ref{fig:v_model}. First the user or customer needs are analyzed and put into a schematic formulation of the system showing the logic dependencies and underlying physical working principles. This is usually done in a semi-standardized fashion utilizing \gls{UML} or similiar diagrams, preventing non-specific prose to ensure less room for mis-communication and better readability. Technical decisions and limitations are not yet considered. After the logical system and dependencies have been established they will be analyzed and broken down to actual technical system descriptions defining also which subsystem will take over which function, what parts are to be realised as software or hardware (e.g. filtering, safety functions). The different parts of the technical system are then specified in detail, defining interfaces between different software sub-system, operational states and distribution of functions over sub-systems. The fourth step will define the specifications for the software in details for example: data types, control sequences, decision structures, real-time behaviour. Finally the actual design step will implement these specification with regards to the hardware limitations (RAM/ROM, processing power), computation methods, data handling (detailed format, variable types, utilization of parameters or variables). To compile the system from the component-level sub-system a similar hierachy is used in inverse. The corresponding steps of the project definition and specification phase (left side of the schematic) are supposed to provide test-procedures and goals. If necessary after insufficient test outcomes, another iteration of the previous step will be performed (vertical iterations). A similar sequence of development steps is applied to develop the hardware platform in parallel.\cite{automotive_software_engineering}
 
-\begin{figure*}[htpb]
+\begin{figure*}[!htb]
 	\centering
 	\includegraphics[width=0.9\linewidth]{figures/v_model/Folie1}
 	\caption{Overview for a process in automotive software development after the V-model}
@@ -114,13 +114,13 @@ The increasing complexity of mechatronic systems and shorter product life-cycles
 
 As a basis for this project a functionality architecture developed at Volvo GTT was used. The different parts of this architecture are shown in Figure \ref{fig:funct_architecture}.
 
-\begin{figure}[h]
+\begin{figure*}[!htb]
 	\centering
 	\includegraphics[width=1\linewidth]{figures/functionality_architecture}
 	
 	\caption{Functionality Architecture}
 	\label{fig:funct_architecture}
-\end{figure}
+\end{figure*}
 
 The functionality architecture consists of four different parts: The Human machine interface, the vehicle motion management, the motion support devices and the vehicle plant.\\
 The Human machine interface (HMI) is the interface between the driver and the vehicle. The driver can input requests to the vehicle, for example a steering angle via the steering wheel or a torque request via the accelerator pedal. The driver gets feedback from the vehicle about the vehicle's state, for example via the speedometer.

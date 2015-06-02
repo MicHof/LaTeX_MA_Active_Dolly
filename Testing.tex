@@ -16,13 +16,13 @@ In different states of the project different kind of tests were performed. As a 
 
 For the testing of the vehicle model controllers described in chapter \ref{chap:steering_model} as a first step all the parts were simulated in Simulink. Therefore all parts of the functionality architecture introduced in section \ref{sec:func_architecture} are simulated.
 For the HMI lookup tables were used for the steering angle and vehicle speed input. The VMM consists of the vehicle model controller. The steering actuators in the MSD domain were simulated by implementing a first order filter and a time delay, that represents the delay caused by the hydraulic system. For the vehicle plant the virtual truck modelling library (VTM) (see section \ref{sec:VTM}) was used. Figure \ref{fig:funct_architecture_sim} shows how the parts of the functionality architecture are divided to different systems for the simulation of the vehicle model controllers.
-\begin{figure}[h]
+\begin{figure*}[h]
 	\centering
 	\includegraphics[width=0.5\linewidth]{figures/functionality_architecture_sim}
 	
 	\caption{Functionality Architecture in simulation}
 	\label{fig:funct_architecture_sim}
-\end{figure}\\
+\end{figure*}\\
 
 \begin{itemize}
 	\item include simulation results for maneuver of controller being run inside \gls{VTM} 
@@ -184,7 +184,7 @@ As was laid out in section HIER-REF-FUER-BILD-MIT-WEITERFUEHRPARAMETERN! some CA
 	\item Limitations (axle loads, standing still)
 \end{itemize}
 
-Insufficient processing power does not allow for \gls{VTM} 's execution in the dSpace environment on the \gls{MABII}. To perform \gls{HIL} -testing it was thus necessary to split the comptuational load and accomplish real-time data exchange between the hardware controlling system on the \gls{MABII} and the rest of the simulation which will be run parallely in Simulink in real-time on a standard PC. Though there are dedicated real-time platforms available to achieve real-time execution it was decided to rely on a standard PC to minimize costs and have a lean work-process without extra steps of code conversion to different platforms. Figure \ref{fig:HIL_overview} illustrates the distribution of the \gls{HIL} -setup's different components over two computers, the \gls{MABII} and the actual hardware. 
+\gls{VTM} includes a lot of processing heavy sub-models (tire models, vehicle parameter sets) which lead to processing power not sufficing to allow for \gls{VTM} 's execution in the dSpace environment on the \gls{MABII}. To perform \gls{HIL} -testing it was thus necessary to split the comptuational load and accomplish real-time data exchange between the hardware controlling system on the \gls{MABII} and the rest of the simulation which will be run parallely in Simulink in real-time on a standard PC. Though there are dedicated real-time platforms available to achieve real-time execution it was decided to rely on a standard PC to minimize costs and have a lean work-process without extra steps of code conversion to different platforms. Figure \ref{fig:HIL_overview} illustrates the distribution of the \gls{HIL} -setup's different components over two computers, the \gls{MABII} and the actual hardware. 
 
 \begin{figure*}[h]
 	\centering
@@ -195,7 +195,7 @@ Insufficient processing power does not allow for \gls{VTM} 's execution in the d
 \end{figure*}
 
 
-The Host-PC fulfills the usual task to start-up the dolly and simulation during \gls{HIL}  testing and log the behaviour of the dolly system and the \gls{IMU}s. This is done through the ControlDesk GUI which was described in section \ref{sec:control_desk} and of which a screenshot can be found in the appendix (figure \ref{fig:control_desk_GUI}). It already runs the final version of the control and capturing environment and does not require changes for track testing. It is connected to the \gls{MABII} via the Host-PC port.
+The Host-PC fulfills the usual task to start-up the dolly and simulation during \gls{HIL}  testing and log the behaviour of the dolly system and the \gls{IMU}s. This is done through the ControlDesk \gls{GUI} which was described in section \ref{sec:control_desk} and of which a screenshot can be found in the appendix (figure \ref{fig:control_desk_GUI}). It already runs the final version of the control and capturing environment and does not require changes for track testing. It is connected to the \gls{MABII} via the Host-PC port.
 
 On the Simulation-PC the simulation of the complete rest of the hardware-system is computed in real-time. Mainly truck, trailers, environment and steering behaviour of the truck are part of this model. All these sub-systems are modeled in \gls{VTM}  which runs on this computer in Simulink. 
 
@@ -205,17 +205,17 @@ Limitations: \gls{HIL} -testing took place in workshop environment and thus the 
 
 The setup for the HIL-testing can also be represented using the functionality architecture introduced in section \ref{sec:func_architecture}.
 Compared with the testing of the controllers described in section \ref{sec:bench-testing}, the division of the functionality architecture changed. The MSD are no longer simulated but the actual dolly together with the MABII, which is needed as an interface between the MSD and the other parts of the functionality architecture, is used. The HMI, VMM and vehicle plant are still simulated in Simulink. Figure \ref{fig:funct_architecture_hil} shows how the parts are divided to different systems.
-\begin{figure}[h]
+\begin{figure*}[!htb]
 	\centering
 	\includegraphics[width=0.5\linewidth]{figures/functionality_architecture_hil}
 	
 	\caption{Functionality Architecture for HIL-testing}
 	\label{fig:funct_architecture_hil}
-\end{figure}\\
+\end{figure*}\\
 
 \subsection{Low-speed controller}
 The maneuver that was used for testing the Low-speed controller was a 180 degree turn at constant speed. The steering angle of the tractor can be seen in Figure \ref{fig:HIL002_delta11}.\\
-\begin{figure*}[h]
+\begin{figure*}[!htb]
 	\centering
 	\includegraphics[width=1\linewidth]{figures/HIL_delta11}
 	\caption{HIL test steering angle tractor}
@@ -232,13 +232,13 @@ As a first step a very simple controller was used for controlling the steering o
 \label{sec:track-testing}
 For testing on a test track the different parts of the  functionality architecture (see section \ref{sec:func_architecture}) will be handled as follows:
 Since a complete vehicle combination will be used for track testing, this corresponds to the vehicle plant of the functionality architecture. The HMI domain is represented by the driver of the vehicle. The VMM is running on the MABII, which works as an interface between the VMM, the dolly and the vehicle. Figure \ref{fig:funct_architecture_track} shows how the parts are divided to different systems.
-\begin{figure}[h]
+\begin{figure*}[!htb]
 	\centering
 	\includegraphics[width=0.5\linewidth]{figures/functionality_architecture_track}
 	
 	\caption{Functionality Architecture on track testing}
 	\label{fig:funct_architecture_track}
-\end{figure} 
+\end{figure*} 
 \subsection{Testmaneuvers}
 
 \begin{itemize}
