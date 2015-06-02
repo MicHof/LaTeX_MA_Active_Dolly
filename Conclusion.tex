@@ -10,26 +10,28 @@
 \section{Recommendation}
 \label{sec:recommendation}
 
+The mounted systems only give information about the physical state of the combination but leave no possibility to take environmental circumstances into consideration. Sensing for the surroundings, such as radar/LIDAR or cameras can greatly simplify and enhance the results in post-processing for the data logged during testing. 
+
+For simplified delay-free \gls{HIL} testing a dedicated real-time system could be utilized, which would also provide the possibility of including environment to a greater detail (e.g. randomly generated road situations) to achieve a very robust verification in safe lab-environment before integrating the dolly in an A-double combination on track.
+
+Direct command of the \gls{ECU}s with designated request messages would greatly simplify the system, eliminating many work-around solutions that were developed in this thesis. Also directly controlling the hydraulic actuation on a lower control level could benefit the investigated delays by circumventing the added control-layers.
+
+Utilizing electric motors for the steering instead of hydraulic systems could decrease the delays induced by the mechanical mechanism greatly. 
+
 
 
 \section{Future Work}
 \label{sec:future_work}
 
-The braking solution that was outlined in this thesis has to be implemented in detail and evaluated with great  precautions before taking it to the track. The safest solution would be to request torques/brake pressures via the brake \gls{ECU}'s diagnosis interface, as this would leave the original braking CAN-communication intact and prevent a solution similiar to the one implemented for the interception and modification of the \gls{ETS} sensor signals. 
-
-An air-suspended leveling system is available on the dolly and \gls{CAN} be controlled fairly easily over the standardized ISO-11992 CAN, physically available on the 7-pin trailer connector which carries the \gls{ABS}/\gls{EBS} signals. It has to be evaluated whether this functionality is available while the combination is moving and of course whether it contributes anything to the enhanced dynamic behaviour of the whole combination.
-
-Wheel individual propulsion via hub-mounted electric/hydraulic motors is already available for cars and leads to a safety system similiar to the working principal of \gls{ESC} but without the disadvantage of slowing down the vehicle. These implementations are usually called torque vectoring or active yaw and greatly increase the performance in highly dynamic situations. Of course it is not possible to drive the second semi-trailer independently for extended periods of time as this exceed the output of the trucks alternator and thus require impossibly large energy-storage. Still besides the great advantages that can be expected in dynamic situation, a electronically propelled dolly would allow independent shunting of the decoupled second semi-trailer unit.
+The developed solutions can fairly easily be adopted to accommodate wireless network support for logging as well as direct controls, because all main-signals at some are transmitted via \gls{IP}. The controller is executed robustly on the \gls{MABII} and runs independently as soon as \gls{HIL} testing is left behind for track-testing; this ensures safety, as all the supervisor systems are in place before the immanently fragile wireless transmission of the data. Wireless networking support makes the implemented systems on the dolly more accessible for example for convenient and quick debugging, visualization or even app-controlled steering of the dolly in shunting or couplings situations where the driver could maneuver his combination outside of the tractor cabine, greatly enhancing his view-point.
 
 
+The braking solution that was outlined in this thesis has to be implemented in detail and evaluated with great  precautions before taking it to the track. The safest solution would be to request braking torques/brake pressures via the brake \gls{ECU}'s diagnosis interface, as this would leave the original braking CAN-communication intact and prevent a solution similar to the one implemented for the interception and modification of the \gls{ETS} sensor signals. 
 
-\begin{itemize}
-	\item braking (indivi)
-	\item leveling
-	\item wireless configuration?
-	\item track testing
-	\item propulsion
-	\item 
-\end{itemize}
+An air-suspended leveling system is available on the dolly and \gls{CAN} be controlled fairly easily over the standardized ISO-11992 CAN, physically available on the 7-pin trailer connector which carries the \gls{ABS}/\gls{EBS} signals. It has to be evaluated whether this functionality is available while the combination is moving and of course whether it contributes anything to the enhanced dynamic behaviour of the whole combination. 
+
+Wheel individual propulsion via hub-mounted electric/hydraulic motors is already available for cars and leads to a safety system similiar to the working principal of \gls{ESC} but without the disadvantage of slowing down the vehicle. These implementations are usually called torque vectoring or active yaw and greatly increase the performance in highly dynamic situations. Of course it is not possible to drive the second semi-trailer independently for extended periods of time as this exceed the output of the trucks alternator and would thus require impossibly large energy-storage in the second semi-trailer. Besides the great advantages that can be expected in dynamic situation, a electronically propelled dolly would allow independent shunting of the decoupled second semi-trailer unit in constricted spaces. 
+
+
 
 \end{document}
