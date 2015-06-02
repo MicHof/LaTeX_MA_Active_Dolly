@@ -28,6 +28,29 @@
 \end{itemize}
 
 During plot analysis of preliminary results it was discussed, whether it would be possible to by-pass the occuring delay by feeding a ramp-input instead of a step-input into the \gls{ETS}. It was assumed that there is a low-pass filter in place which would not affect ramp inputs. Subsequent tests with ramp inputs with varying slopes and amplitudes showed that it was indeed possible to eliminate the low-pass filter leading to no delay between the target angle and the request angle. Nevertheless it was not possible to get any faster change than with the request of a step input. It thus can be concluded that the maximum steering rate of $5 ^\circ /s$ can not be circumvented.
+\begin{figure*}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{figures/rate_limiter1}
+	\caption{Step input with rate limiter}
+	
+	\label{fig:rate_limiter1}
+\end{figure*}
+\begin{figure*}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{figures/rate_limiter2}
+	\caption{Low rate input}
+	
+	\label{fig:rate_limiter2}
+\end{figure*}
+
+\begin{figure*}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{figures/rate_limiter4}
+	\caption{High rate input}
+	
+	\label{fig:rate_limiter4}
+\end{figure*}
+
 
 \section{Results from in vehicle testing}
 \label{sec:results_vehicle_testing}
