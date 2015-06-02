@@ -27,16 +27,22 @@
 	\item mention ramp input 
 	\item show reaction time
 \end{itemize}
-
+\begin{figure*}[!hbt]
+	\centering
+	\includegraphics[width=1\linewidth]{figures/lifted_front_5deg}
+	\caption{Step input 5 degree}
+	
+	\label{fig:step_input}
+\end{figure*}
 During plot analysis of preliminary results it was discussed, whether it would be possible to by-pass the occuring delay by feeding a ramp-input instead of a step-input into the \gls{ETS}. It was assumed that there is a low-pass filter in place which would not affect ramp inputs. Subsequent tests with ramp inputs with varying slopes and amplitudes showed that it was indeed possible to eliminate the low-pass filter leading to no delay between the target angle and the request angle. Nevertheless it was not possible to get any faster change than with the request of a step input. It thus can be concluded that the maximum steering rate of $5 ^\circ /s$ can not be circumvented.
-\begin{figure*}[h]
+\begin{figure*}[!hbt]
 	\centering
 	\includegraphics[width=1\linewidth]{figures/rate_limiter1}
 	\caption{Step input with rate limiter}
 	
 	\label{fig:rate_limiter1}
 \end{figure*}
-\begin{figure*}[h]
+\begin{figure*}[!hbt]
 	\centering
 	\includegraphics[width=1\linewidth]{figures/rate_limiter2}
 	\caption{Low rate input}
@@ -44,7 +50,7 @@ During plot analysis of preliminary results it was discussed, whether it would b
 	\label{fig:rate_limiter2}
 \end{figure*}
 
-\begin{figure*}[h]
+\begin{figure*}[!hbt]
 	\centering
 	\includegraphics[width=1\linewidth]{figures/rate_limiter4}
 	\caption{High rate input}
@@ -56,13 +62,16 @@ During plot analysis of preliminary results it was discussed, whether it would b
 \section{Results from in vehicle testing}
 \label{sec:results_vehicle_testing}
 
+
+
+
 \begin{itemize}
 	\item CAN-analysis
 	\item robustness?
 	\item reliability of safety features
 \end{itemize}
 \section{Results from hardware-in-the-loop testing}
-<<<<<<< HEAD
+
 Figure \ref{fig:HIL002_front} shows the measurements of the ETS-CAN of the front axle of the dolly for the low-speed maneuver described in section \ref{sec:HIL}.\\
 
 \begin{figure*}[!htb]
@@ -114,11 +123,11 @@ To get a more detailed view of this delay as well as the limitation of the reque
 \end{figure*}
 
 
-=======
+
 \begin{itemize}
 	\item compare plots from \gls{HIL}  with simulation
 \end{itemize}
->>>>>>> origin/master
+
 
 \section{Comparison}
 \label{sec:results_comparrison}
