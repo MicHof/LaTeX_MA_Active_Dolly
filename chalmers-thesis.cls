@@ -775,7 +775,8 @@
  }
 
  \@ifundefined{@extrafrontmatter}{}{
-  \cleardoublepage
+  \clearpage
+{\pagestyle{empty}\cleardoublepage}%
   \@extrafrontmatter
  }
 
@@ -784,27 +785,30 @@
   \maketableofpaperspage
  \fi\fi
 
- \if@draft
-  \newpage
- \else
-  \cleardoublepage
- \fi
+
+  \clearpage
+{\pagestyle{empty}\cleardoublepage}%
+
  \tableofcontents
-\newpage
+
+\clearpage
 \addcontentsline{toc}{chapter}{\listfigurename}
 \listoffigures
-\newpage
+
+\clearpage
 \addcontentsline{toc}{chapter}{\listtablename}
 \listoftables
-\newpage
+
+\clearpage
 \addcontentsline{toc}{chapter}{List of Acronyms}
-\printglossaries
+\printglossary[type=\acronymtype]
 
  % Sets up page numbering for the rest of the document.
  \if@draft
   \newpage
  \else
-  \cleardoublepage
+ \clearpage
+{\pagestyle{empty}\cleardoublepage}%
  \fi
  \pagenumbering{arabic}
 }
@@ -813,7 +817,8 @@
   \renewcommand{\maketitle}{%
    \setcounter{page}{-99} % Necessary to give the first pages a unique identifier using hyperref.
    \maketitlepage
-   \cleardoublepage
+   \clearpage
+{\pagestyle{empty}\cleardoublepage}%
 
  % Preface and acknowledgements
  \@ifundefined{@preface}{}{
@@ -824,15 +829,18 @@
  }
 
  \@ifundefined{@extrafrontmatter}{}{
-  \cleardoublepage
+  \clearpage
+{\pagestyle{empty}\cleardoublepage}%
   \@extrafrontmatter
  }
 
-   \cleardoublepage
+  \clearpage
+{\pagestyle{empty}\cleardoublepage}%
    \pagenumbering{roman}
    \pagestyle{plain}
    \tableofcontents
-   \cleardoublepage
+   \clearpage
+{\pagestyle{empty}\cleardoublepage}%
    \pagenumbering{arabic}
   }
 \fi

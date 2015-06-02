@@ -3,6 +3,7 @@
 
 \begin{document}
 \clearpage
+{\pagestyle{empty}\cleardoublepage}%
 \chapter{Verification and validation of steering  (2-3 Seiten)}
 \label{chap:testing}
 
@@ -11,12 +12,13 @@ In different states of the project different kind of tests were performed. As a 
 
 \section{Bench-Testing}
 \label{sec:bench-testing}
-\subsection{ECU-setup}
 \subsection{VTM maneuver verification}
 
 For the testing of the vehicle model controllers described in chapter \ref{chap:steering_model} as a first step all the parts were simulated in Simulink. Therefore all parts of the functionality architecture introduced in section \ref{sec:func_architecture} are simulated.
-For the HMI lookup tables were used for the steering angle and vehicle speed input. The VMM consists of the vehicle model controller. The steering actuators in the MSD domain were simulated by implementing a first order filter and a time delay, that represents the delay caused by the hydraulic system. For the vehicle plant the virtual truck modelling library (VTM) (see section \ref{sec:VTM}) was used. Figure \ref{fig:funct_architecture_sim} shows how the parts of the functionality architecture are divided to different systems for the simulation of the vehicle model controllers.
-\begin{figure*}[h]
+For the \gls{HMI} lookup tables were used for the steering angle and vehicle speed input, so instead of actual driver input a pre-defined maneuver was executed. The \gls{VMM} consists of the vehicle model controller. The steering actuators in the MSD domain were simulated by implementing a first order filter and a time delay, that represents the delay caused by the hydraulic system. For the vehicle plant the \gls{VTM} (see section \ref{sec:VTM}) was used. Figure \ref{fig:funct_architecture_sim} shows how the parts of the functionality architecture are divided to different systems for the simulation of the vehicle model controllers.
+
+\begin{figure*}[!htb]
+
 	\centering
 	\includegraphics[width=0.5\linewidth]{figures/functionality_architecture_sim}
 	
@@ -31,13 +33,10 @@ For the HMI lookup tables were used for the steering angle and vehicle speed inp
 	
 \end{itemize}
 \subsection{CAN verification}
-To test the functionality of the \gls{ASF}-Sensor as a first step it was just connected to power supply and an Arduino with a attached CAN-shield. After the CAN-message was received successfully with the Arduino, as a next step the Sensor's \gls{CAN} pins was connected to the \gls{MABII}. On the \gls{MABII} a simple model, that only contained one \gls{CAN}-Controller with the corresponding dbc-file, was loaded. The Bus-monitor tool of ControlDesk, that shows all incoming and outgoing signals on the \gls{CAN} for the corresponding dbc-file, was used to check the sensor signals.     
+To test the functionality of the \gls{ASF}-Sensor as a first step it was just connected to power supply and an Arduino with a attached \gls{CAN}-shield. After the \gls{CAN}-message was received successfully with the Arduino, as a next step the sensor's \gls{CAN} pins were connected to the \gls{MABII}. On the \gls{MABII} a simple model, that only contained one \gls{CAN}-Controller with the corresponding dbc-file, was loaded. The bus-monitor tool of ControlDesk, that shows all incoming and outgoing signals on the \gls{CAN} for the corresponding dbc-file, was used to check the sensor signals. 
 
-\begin{itemize}
-	
-	\item check \gls{ECU} \gls{CAN}s, make sure they differ in output
-	
-\end{itemize}
+As outlined in section \ref{sec:interface_with_dolly} the signals generated for each \gls{ETS}-\gls{ECU} need to differ to achieve independent steering. The \gls{CAN}-wiring of the legacy system thus had to be interrupted and split. To ensure that only the correct set of messages was available after the splitting point, Arduino Dues were spliced into the system at all relevant junctions. This was a necessary procedure as gateway-systems between all different \gls{CAN}-subnets on the dolly are in place and needed to be circumvented, which proofed to be a challenging task operating under the maxim of easy revertability to the original state.
+
 
 \subsection{Fault detection system verification}
 \label{sec:fault_detect_test}
@@ -163,6 +162,9 @@ Actuator tests to verify working hydraulic system for the steering system and co
 \end{figure*}
 
 \subsection{Algorithm evaluation}
+
+
+
 \subsection{Sensor testing}
 
 The three angle-sensors to determine the articulation between the different independently moving units of the combinations differ in form-factor as they are mounted either on the fifth-wheel turntable or the king-pin respectively, nonetheless all rely on the same measuring principle and broadcast their gathered data in the same fashion on a private \gls{CAN}-bus (refer to figure \ref{fig:dolly_interfaces}). 

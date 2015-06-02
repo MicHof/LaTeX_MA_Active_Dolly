@@ -1,0 +1,23 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {english}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {2.1}{\ignorespaces \gls {HCT} vehicles in different countries\cite {Vaegverket}\cite {HCT_vehicles_Australia}\Cite {HCT_vehicles_USA}\cite {HCT_vehicles_Canada}\Cite {HCT_vehicles_Mexico}}}{5}{table.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {3.1}{\ignorespaces Control gains and performance improvement}}{11}{table.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.1}{\ignorespaces Available sensors of VSE's ETS}}{23}{table.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {5.1}{\ignorespaces CAN-layout MABII}}{27}{table.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {5.2}{\ignorespaces List of utilized libraries on the Arduino platform}}{31}{table.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {7.1}{\ignorespaces Test matrix for delay measuring with lifted axle (analogous matrix for non-lifted testing (\#19-\#36))}}{42}{table.7.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {7.2}{\ignorespaces Test matrix for delay measurings with ramp input}}{42}{table.7.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {A.1}{\ignorespaces Severity table for \gls {FMEA} \cite {FMEA_tables}}}{57}{table.A.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {A.2}{\ignorespaces Probability table for \gls {FMEA} \cite {FMEA_tables}}}{57}{table.A.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {A.3}{\ignorespaces Detectability table for \gls {FMEA} \cite {FMEA_tables}}}{58}{table.A.3}

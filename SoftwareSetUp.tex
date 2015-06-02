@@ -3,6 +3,7 @@
 
 \begin{document}
 \clearpage
+{\pagestyle{empty}\cleardoublepage}%
 
 
 \chapter{Software Architecture (8 Seiten)}
@@ -154,7 +155,8 @@ The Arduino system provides an \gls{IDE}  written in Java, providing cross-platf
 		\cite{l3g_github}            \\
 		UIPethernet           &     control ENC28J60 via \gls{SPI}                                                 &             \cite{uip_ethernet_github}     \\
 		TinyGPSPlus           & acquire and parse GPS signal from EM-506 via serial & v0.94b\cite{tiny_gps_plus_github}     \\
-		mcp\_can & implement \gls{CAN} via MCP2515 and MCP2551 via \gls{SPI}      & \cite{mcp_can_github}
+		mcp\_can & implement \gls{CAN} via MCP2515 and MCP2551 via \gls{SPI}      & \cite{mcp_can_github}\\
+		due\_can & implement \gls{CAN} via MCP2515 using Due's \gls{CAN}-transceiver   & \cite{due_can_github}
 	\end{tabular}
 	
 	\caption{List of utilized libraries on the Arduino platform}

@@ -16,7 +16,49 @@
   {}
 \endgroup
 
-\entry{LVC_USA}{online}{}
+\entry{HCT_vehicles_test_netherlands}{article}{}
+  \name{author}{6}{}{%
+    {{}%
+     {Aarts}{A.}%
+     {Loes}{L.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Honer}{H.}%
+     {M}{M}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Davydenko}{D.}%
+     {Igor}{I.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Quak}{Q.}%
+     {Hans}{H.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Van~Staalduinen}{V.~S.}%
+     {J}{J}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Verweij}{V.}%
+     {Kees}{K.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{AL+1}
+  \strng{fullhash}{ALHMDIQHVSJVK1}
+  \field{sortinit}{A}
+  \field{title}{Longer and heavier vehicles in the Netherlands: Facts, figures
+  and experiences in the period 1995-2010}
+  \field{journaltitle}{The Hague: Ministerie van Verkeer en Waterstaat (VenW)}
+  \field{year}{2010}
+\endentry
+
+\entry{HCT_vehicles_USA}{online}{}
   \name{author}{1}{}{%
     {{}%
      {Agency}{A.}%
@@ -37,6 +79,28 @@
   \field{urlday}{09}
   \field{urlmonth}{02}
   \field{urlyear}{2015}
+\endentry
+
+\entry{EMS}{article}{}
+  \name{author}{2}{}{%
+    {{}%
+     {{\AA}kerman}{{\AA}.}%
+     {Ingemar}{I.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Jonsson}{J.}%
+     {Rikard}{R.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{AIJR1}
+  \strng{fullhash}{AIJR1}
+  \field{sortinit}{A}
+  \field{title}{European Modular System for road freight transport--experiences
+  and possibilities}
+  \field{journaltitle}{TFK report}
+  \field{year}{2007}
 \endentry
 
 \entry{backman2002improved}{article}{}
@@ -92,7 +156,7 @@
   \field{year}{2013}
 \endentry
 
-\entry{LVC_Mexico}{online}{}
+\entry{HCT_vehicles_Mexico}{online}{}
   \name{author}{1}{}{%
     {{}%
      {Board}{B.}%
@@ -144,6 +208,25 @@
   \field{title}{Introduction to the controller area network (CAN)}
   \field{journaltitle}{Texas Instrument, Application Report}
   \field{year}{2008}
+\endentry
+
+\entry{din_60812_fmea}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {DIN}{D.}%
+     {EN}{E.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{DE1}
+  \strng{fullhash}{DE1}
+  \field{sortinit}{D}
+  \field{title}{60812: 2006-11 (2006) Analysetechniken f{\"u}r die
+  Funktionsf{\"a}higkeit von Systemen--Verfahren f{\"u}r die
+  Fehlzustandsart-und-auswirkungsanalyse (FMEA)(IEC 60812: 2006)}
+  \field{volume}{60812}
+  \field{journaltitle}{Deutsche Fassung EN}
+  \field{year}{2006}
 \endentry
 
 \entry{doll2009long}{article}{}
@@ -201,6 +284,24 @@
   \field{year}{2009}
 \endentry
 
+\entry{due_can_github}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {GitHub}{G.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{G1}
+  \strng{fullhash}{G1}
+  \field{sortinit}{G}
+  \field{title}{collin80/due_can}
+  \verb{url}
+  \verb https://github.com/collin80/due_can
+  \endverb
+  \field{year}{2015}
+\endentry
+
 \entry{mcp_can_github}{misc}{}
   \name{author}{1}{}{%
     {{}%
@@ -219,7 +320,99 @@
   \field{year}{2015}
 \endentry
 
-\entry{LVC_Canada}{online}{}
+\entry{MABII_product_descr}{manual}{}
+  \name{author}{1}{}{%
+    {{}%
+     {GmbH}{G.}%
+     {}{}%
+     {dSpace}{d.}%
+     {}{}}%
+  }
+  \strng{namehash}{Gd1}
+  \strng{fullhash}{Gd1}
+  \field{sortinit}{G}
+  \field{title}{MicroAutoBox II - Product Brochure}
+  \verb{url}
+  \verb https://www.dspace.com/shared/data/pdf/2013/ProductBrochure_MicroAutoBo
+  \verb x-HW_E_ebook.pdf
+  \endverb
+  \field{year}{2013}
+\endentry
+
+\entry{Krone_dolly}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {GmbH}{G.}%
+     {Fahrzeugwerk Bernard~KRONE}{F.~B.~K.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{GFBK1}
+  \strng{fullhash}{GFBK1}
+  \field{sortinit}{G}
+  \field{title}{Excellent driving characteristics outstanding manoeuvrability -
+  The active articulated dolly}
+  \verb{url}
+  \verb http://www.krone-trailer.com/english/neuheiten/excellent-driving-charac
+  \verb teristics-outstanding-manoeuvrability/
+  \endverb
+  \field{month}{09}
+  \field{year}{2012}
+  \field{urlday}{12}
+  \field{urlmonth}{05}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{road_wear}{book}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Hjort}{H.}%
+     {Mattias}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Haraldsson}{H.}%
+     {Mattias}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Jansen}{J.}%
+     {Jan~M}{J.~M.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{2}{%
+    {NVF Committee Vehicles}%
+    {Transports, Nordiska v{\"a}gtekniska f{\"o}rbundet}%
+  }
+  \strng{namehash}{HMHMJJM1}
+  \strng{fullhash}{HMHMJJM1}
+  \field{sortinit}{H}
+  \field{title}{Road Wear from Heavy Vehicles: An Overview}
+  \field{year}{2008}
+\endentry
+
+\entry{FMEA_tables}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Idaho}{I.}%
+     {University}{U.}%
+     {of}{o.}%
+     {}{}}%
+  }
+  \strng{namehash}{IUo1}
+  \strng{fullhash}{IUo1}
+  \field{sortinit}{I}
+  \field{title}{FMEA}
+  \verb{url}
+  \verb http://www.ece.uidaho.edu/ee/classes/EE481S03/FMEA.PDF
+  \endverb
+  \field{urlday}{25}
+  \field{urlmonth}{05}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{HCT_vehicles_Canada}{online}{}
   \name{author}{2}{}{%
     {{}%
      {Infrastructure}{I.}%
@@ -334,6 +527,30 @@
   \field{year}{2014}
 \endentry
 
+\entry{Kogel_dolly}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {KG}{K.}%
+     {K{\"o}gel Trailer GmbH &~Co.}{K.~T. G. .~C.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{KKTGC1}
+  \strng{fullhash}{KKTGC1}
+  \field{sortinit}{K}
+  \field{title}{K{\"o}gel Lang-Lkw: Drei Dollys stehen zur Wahl}
+  \verb{url}
+  \verb http://www.koegel.com/de/news/artikel/datum/2012/04/11/koegel-lang-lkw-
+  \verb drei-dollys-stehen-zur-wahl/
+  \endverb
+  \field{day}{11}
+  \field{month}{04}
+  \field{year}{2012}
+  \field{urlday}{12}
+  \field{urlmonth}{05}
+  \field{urlyear}{2015}
+\endentry
+
 \entry{tiny_gps_plus_github}{misc}{}
   \field{sortinit}{M}
   \field{title}{mikalhart/TinyGPSPlus}
@@ -341,6 +558,25 @@
   \verb https://github.com/mikalhart/TinyGPSPlus/
   \endverb
   \field{year}{2013}
+\endentry
+
+\entry{nilsson2015traffic}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Nilsson}{N.}%
+     {Peter}{P.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Chalmers University of Technology}%
+  }
+  \strng{namehash}{NP1}
+  \strng{fullhash}{NP1}
+  \field{sortinit}{N}
+  \field{title}{On Traffic Situation Predictions for Automated Driving of Long
+  Vehicle Combinations}
+  \field{year}{2015}
 \endentry
 
 \entry{uip_ethernet_github}{misc}{}
@@ -564,7 +800,7 @@
   \field{year}{1994}
 \endentry
 
-\entry{LVC_Australia}{online}{}
+\entry{HCT_vehicles_Australia}{online}{}
   \name{author}{2}{}{%
     {{}%
      {Transport}{T.}%
@@ -635,6 +871,34 @@
   \field{urlday}{05}
   \field{urlmonth}{02}
   \field{urlyear}{2015}
+\endentry
+
+\entry{Schmitz_dolly}{article}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Wangrin}{W.}%
+     {G}{G}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {St{\"u}rmer}{S.}%
+     {B}{B}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {W{\"o}hrmann}{W.}%
+     {M}{M}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{WGSBWM1}
+  \strng{fullhash}{WGSBWM1}
+  \field{sortinit}{W}
+  \field{title}{Technische Erprobung von Fahrzeugkombinationen mit einer
+  Gesamtl{\"a}nge bis 25, 25m („GigaLiner “)}
+  \field{journaltitle}{Abschlussbericht NRW Modellversuch. T{\"U}V Rheinland
+  Kraftfahrt GmbH, K{\"o}ln}
+  \field{year}{2009}
 \endentry
 
 \lossort

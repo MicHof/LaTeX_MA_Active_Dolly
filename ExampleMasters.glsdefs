@@ -1,0 +1,1200 @@
+\ifglsentryexists{CAN}{}%
+{%
+\gls@defglossaryentry{CAN}%
+{%
+name={CAN},%
+sort={CAN},%
+type={acronym},%
+first={Controler Area Network\glsspace (CAN)},%
+firstplural={Controler Area Networks\glsspace (CANs)},%
+text={CAN},%
+plural={CANs},%
+description={Controler Area Network},%
+descriptionplural={Controler Area Network\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Controler Area Network},%
+longplural={Controler Area Networks},%
+short={CAN},%
+shortplural={CANs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{UART}{}%
+{%
+\gls@defglossaryentry{UART}%
+{%
+name={UART},%
+sort={UART},%
+type={acronym},%
+first={Universal Asynchronous Receiver Transmitter\glsspace (UART)},%
+firstplural={Universal Asynchronous Receiver Transmitters\glsspace (UARTs)},%
+text={UART},%
+plural={UARTs},%
+description={Universal Asynchronous Receiver Transmitter},%
+descriptionplural={Universal Asynchronous Receiver Transmitter\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Universal Asynchronous Receiver Transmitter},%
+longplural={Universal Asynchronous Receiver Transmitters},%
+short={UART},%
+shortplural={UARTs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{EBS}{}%
+{%
+\gls@defglossaryentry{EBS}%
+{%
+name={EBS},%
+sort={EBS},%
+type={acronym},%
+first={Electronic Brake System\glsspace (EBS)},%
+firstplural={Electronic Brake Systems\glsspace (EBSs)},%
+text={EBS},%
+plural={EBSs},%
+description={Electronic Brake System},%
+descriptionplural={Electronic Brake System\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Electronic Brake System},%
+longplural={Electronic Brake Systems},%
+short={EBS},%
+shortplural={EBSs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{ETS}{}%
+{%
+\gls@defglossaryentry{ETS}%
+{%
+name={ETS},%
+sort={ETS},%
+type={acronym},%
+first={Electronic Truck Steering\glsspace (ETS)},%
+firstplural={Electronic Truck Steerings\glsspace (ETSs)},%
+text={ETS},%
+plural={ETSs},%
+description={Electronic Truck Steering},%
+descriptionplural={Electronic Truck Steering\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Electronic Truck Steering},%
+longplural={Electronic Truck Steerings},%
+short={ETS},%
+shortplural={ETSs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{UDP}{}%
+{%
+\gls@defglossaryentry{UDP}%
+{%
+name={UDP},%
+sort={UDP},%
+type={acronym},%
+first={User Datagram Protocol\glsspace (UDP)},%
+firstplural={User Datagram Protocols\glsspace (UDPs)},%
+text={UDP},%
+plural={UDPs},%
+description={User Datagram Protocol},%
+descriptionplural={User Datagram Protocol\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={User Datagram Protocol},%
+longplural={User Datagram Protocols},%
+short={UDP},%
+shortplural={UDPs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{IMU}{}%
+{%
+\gls@defglossaryentry{IMU}%
+{%
+name={IMU},%
+sort={IMU},%
+type={acronym},%
+first={Inertial Measurment Unit\glsspace (IMU)},%
+firstplural={Inertial Measurment Units\glsspace (IMUs)},%
+text={IMU},%
+plural={IMUs},%
+description={Inertial Measurment Unit},%
+descriptionplural={Inertial Measurment Unit\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Inertial Measurment Unit},%
+longplural={Inertial Measurment Units},%
+short={IMU},%
+shortplural={IMUs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{VSE}{}%
+{%
+\gls@defglossaryentry{VSE}%
+{%
+name={VSE},%
+sort={VSE},%
+type={acronym},%
+first={V.S.E. Vehicle Systems Engineering B.V.\glsspace (VSE)},%
+firstplural={V.S.E. Vehicle Systems Engineering B.V.s\glsspace (VSEs)},%
+text={VSE},%
+plural={VSEs},%
+description={V.S.E. Vehicle Systems Engineering B.V.},%
+descriptionplural={V.S.E. Vehicle Systems Engineering B.V.\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={V.S.E. Vehicle Systems Engineering B.V.},%
+longplural={V.S.E. Vehicle Systems Engineering B.V.s},%
+short={VSE},%
+shortplural={VSEs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{MABII}{}%
+{%
+\gls@defglossaryentry{MABII}%
+{%
+name={MABII},%
+sort={MABII},%
+type={acronym},%
+first={dSpace MicroAutoBoxII\glsspace (MABII)},%
+firstplural={dSpace MicroAutoBoxIIs\glsspace (MABIIs)},%
+text={MABII},%
+plural={MABIIs},%
+description={dSpace MicroAutoBoxII},%
+descriptionplural={dSpace MicroAutoBoxII\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={dSpace MicroAutoBoxII},%
+longplural={dSpace MicroAutoBoxIIs},%
+short={MABII},%
+shortplural={MABIIs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{ECU}{}%
+{%
+\gls@defglossaryentry{ECU}%
+{%
+name={ECU},%
+sort={ECU},%
+type={acronym},%
+first={Electronic Control Unit\glsspace (ECU)},%
+firstplural={Electronic Control Units\glsspace (ECUs)},%
+text={ECU},%
+plural={ECUs},%
+description={Electronic Control Unit},%
+descriptionplural={Electronic Control Unit\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Electronic Control Unit},%
+longplural={Electronic Control Units},%
+short={ECU},%
+shortplural={ECUs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{ABS}{}%
+{%
+\gls@defglossaryentry{ABS}%
+{%
+name={ABS},%
+sort={ABS},%
+type={acronym},%
+first={Anti-lock braking system\glsspace (ABS)},%
+firstplural={Anti-lock braking systems\glsspace (ABSs)},%
+text={ABS},%
+plural={ABSs},%
+description={Anti-lock braking system},%
+descriptionplural={Anti-lock braking system\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Anti-lock braking system},%
+longplural={Anti-lock braking systems},%
+short={ABS},%
+shortplural={ABSs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{ASF}{}%
+{%
+\gls@defglossaryentry{ASF}%
+{%
+name={ASF},%
+sort={ASF},%
+type={acronym},%
+first={Angular Sensor Fusion\glsspace (ASF)},%
+firstplural={Angular Sensor Fusions\glsspace (ASFs)},%
+text={ASF},%
+plural={ASFs},%
+description={Angular Sensor Fusion},%
+descriptionplural={Angular Sensor Fusion\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Angular Sensor Fusion},%
+longplural={Angular Sensor Fusions},%
+short={ASF},%
+shortplural={ASFs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{I2C}{}%
+{%
+\gls@defglossaryentry{I2C}%
+{%
+name={I$^{2}$C},%
+sort={I$^{2}$C},%
+type={acronym},%
+first={Inter-Integrated Circuit\glsspace (I$^{2}$C)},%
+firstplural={Inter-Integrated Circuits\glsspace (I$^{2}$Cs)},%
+text={I$^{2}$C},%
+plural={I$^{2}$Cs},%
+description={Inter-Integrated Circuit},%
+descriptionplural={Inter-Integrated Circuit\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Inter-Integrated Circuit},%
+longplural={Inter-Integrated Circuits},%
+short={I$^{2}$C},%
+shortplural={I$^{2}$Cs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{VMM}{}%
+{%
+\gls@defglossaryentry{VMM}%
+{%
+name={VMM},%
+sort={VMM},%
+type={acronym},%
+first={Vehicle Motion Management\glsspace (VMM)},%
+firstplural={Vehicle Motion Managements\glsspace (VMMs)},%
+text={VMM},%
+plural={VMMs},%
+description={Vehicle Motion Management},%
+descriptionplural={Vehicle Motion Management\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Vehicle Motion Management},%
+longplural={Vehicle Motion Managements},%
+short={VMM},%
+shortplural={VMMs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{HMI}{}%
+{%
+\gls@defglossaryentry{HMI}%
+{%
+name={HMI},%
+sort={HMI},%
+type={acronym},%
+first={Human Machine Interface\glsspace (HMI)},%
+firstplural={Human Machine Interfaces\glsspace (HMIs)},%
+text={HMI},%
+plural={HMIs},%
+description={Human Machine Interface},%
+descriptionplural={Human Machine Interface\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Human Machine Interface},%
+longplural={Human Machine Interfaces},%
+short={HMI},%
+shortplural={HMIs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{MSD}{}%
+{%
+\gls@defglossaryentry{MSD}%
+{%
+name={MSD},%
+sort={MSD},%
+type={acronym},%
+first={Motion Support Device\glsspace (MSD)},%
+firstplural={Motion Support Devices\glsspace (MSDs)},%
+text={MSD},%
+plural={MSDs},%
+description={Motion Support Device},%
+descriptionplural={Motion Support Device\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Motion Support Device},%
+longplural={Motion Support Devices},%
+short={MSD},%
+shortplural={MSDs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{GTT}{}%
+{%
+\gls@defglossaryentry{GTT}%
+{%
+name={GTT},%
+sort={GTT},%
+type={acronym},%
+first={(Volvo) Group Trucks Technology\glsspace (GTT)},%
+firstplural={(Volvo) Group Trucks Technologys\glsspace (GTTs)},%
+text={GTT},%
+plural={GTTs},%
+description={(Volvo) Group Trucks Technology},%
+descriptionplural={(Volvo) Group Trucks Technology\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={(Volvo) Group Trucks Technology},%
+longplural={(Volvo) Group Trucks Technologys},%
+short={GTT},%
+shortplural={GTTs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{HCT}{}%
+{%
+\gls@defglossaryentry{HCT}%
+{%
+name={HCT},%
+sort={HCT},%
+type={acronym},%
+first={High Capacity Transport\glsspace (HCT)},%
+firstplural={High Capacity Transports\glsspace (HCTs)},%
+text={HCT},%
+plural={HCTs},%
+description={High Capacity Transport},%
+descriptionplural={High Capacity Transport\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={High Capacity Transport},%
+longplural={High Capacity Transports},%
+short={HCT},%
+shortplural={HCTs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{ESC}{}%
+{%
+\gls@defglossaryentry{ESC}%
+{%
+name={ESC},%
+sort={ESC},%
+type={acronym},%
+first={Electronic Stability Control\glsspace (ESC)},%
+firstplural={Electronic Stability Controls\glsspace (ESCs)},%
+text={ESC},%
+plural={ESCs},%
+description={Electronic Stability Control},%
+descriptionplural={Electronic Stability Control\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Electronic Stability Control},%
+longplural={Electronic Stability Controls},%
+short={ESC},%
+shortplural={ESCs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{HIL}{}%
+{%
+\gls@defglossaryentry{HIL}%
+{%
+name={HiL},%
+sort={HiL},%
+type={acronym},%
+first={Hardware In the Loop\glsspace (HiL)},%
+firstplural={Hardware In the Loops\glsspace (HiLs)},%
+text={HiL},%
+plural={HiLs},%
+description={Hardware In the Loop},%
+descriptionplural={Hardware In the Loop\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Hardware In the Loop},%
+longplural={Hardware In the Loops},%
+short={HiL},%
+shortplural={HiLs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{SPI}{}%
+{%
+\gls@defglossaryentry{SPI}%
+{%
+name={SPI},%
+sort={SPI},%
+type={acronym},%
+first={Serial Peripheral Interface\glsspace (SPI)},%
+firstplural={Serial Peripheral Interfaces\glsspace (SPIs)},%
+text={SPI},%
+plural={SPIs},%
+description={Serial Peripheral Interface},%
+descriptionplural={Serial Peripheral Interface\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Serial Peripheral Interface},%
+longplural={Serial Peripheral Interfaces},%
+short={SPI},%
+shortplural={SPIs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{ZIF}{}%
+{%
+\gls@defglossaryentry{ZIF}%
+{%
+name={ZIF},%
+sort={ZIF},%
+type={acronym},%
+first={Zero Insertion Force\glsspace (ZIF)},%
+firstplural={Zero Insertion Forces\glsspace (ZIFs)},%
+text={ZIF},%
+plural={ZIFs},%
+description={Zero Insertion Force},%
+descriptionplural={Zero Insertion Force\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Zero Insertion Force},%
+longplural={Zero Insertion Forces},%
+short={ZIF},%
+shortplural={ZIFs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{LEMO}{}%
+{%
+\gls@defglossaryentry{LEMO}%
+{%
+name={LEMO},%
+sort={LEMO},%
+type={acronym},%
+first={Swiss company specialized in industrial connector manufacturing\glsspace (LEMO)},%
+firstplural={Swiss company specialized in industrial connector manufacturings\glsspace (LEMOs)},%
+text={LEMO},%
+plural={LEMOs},%
+description={Swiss company specialized in industrial connector manufacturing},%
+descriptionplural={Swiss company specialized in industrial connector manufacturing\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Swiss company specialized in industrial connector manufacturing},%
+longplural={Swiss company specialized in industrial connector manufacturings},%
+short={LEMO},%
+shortplural={LEMOs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{VDS}{}%
+{%
+\gls@defglossaryentry{VDS}%
+{%
+name={VDS},%
+sort={VDS},%
+type={acronym},%
+first={Volvo Dynamic Steering\glsspace (VDS)},%
+firstplural={Volvo Dynamic Steerings\glsspace (VDSs)},%
+text={VDS},%
+plural={VDSs},%
+description={Volvo Dynamic Steering},%
+descriptionplural={Volvo Dynamic Steering\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Volvo Dynamic Steering},%
+longplural={Volvo Dynamic Steerings},%
+short={VDS},%
+shortplural={VDSs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{VTM}{}%
+{%
+\gls@defglossaryentry{VTM}%
+{%
+name={VTM},%
+sort={VTM},%
+type={acronym},%
+first={Virtual Truck Model\glsspace (VTM)},%
+firstplural={Virtual Truck Models\glsspace (VTMs)},%
+text={VTM},%
+plural={VTMs},%
+description={Virtual Truck Model},%
+descriptionplural={Virtual Truck Model\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Virtual Truck Model},%
+longplural={Virtual Truck Models},%
+short={VTM},%
+shortplural={VTMs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{COG}{}%
+{%
+\gls@defglossaryentry{COG}%
+{%
+name={CoG},%
+sort={CoG},%
+type={acronym},%
+first={Center of Gravity\glsspace (CoG)},%
+firstplural={Center of Gravitys\glsspace (CoGs)},%
+text={CoG},%
+plural={CoGs},%
+description={Center of Gravity},%
+descriptionplural={Center of Gravity\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Center of Gravity},%
+longplural={Center of Gravitys},%
+short={CoG},%
+shortplural={CoGs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{RAM}{}%
+{%
+\gls@defglossaryentry{RAM}%
+{%
+name={RAM},%
+sort={RAM},%
+type={acronym},%
+first={Random-Access Memory\glsspace (RAM)},%
+firstplural={Random-Access Memorys\glsspace (RAMs)},%
+text={RAM},%
+plural={RAMs},%
+description={Random-Access Memory},%
+descriptionplural={Random-Access Memory\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Random-Access Memory},%
+longplural={Random-Access Memorys},%
+short={RAM},%
+shortplural={RAMs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{ROM}{}%
+{%
+\gls@defglossaryentry{ROM}%
+{%
+name={ROM},%
+sort={ROM},%
+type={acronym},%
+first={Read-only memory\glsspace (ROM)},%
+firstplural={Read-only memorys\glsspace (ROMs)},%
+text={ROM},%
+plural={ROMs},%
+description={Read-only memory},%
+descriptionplural={Read-only memory\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Read-only memory},%
+longplural={Read-only memorys},%
+short={ROM},%
+shortplural={ROMs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{TX}{}%
+{%
+\gls@defglossaryentry{TX}%
+{%
+name={TX},%
+sort={TX},%
+type={acronym},%
+first={Transceive\glsspace (TX)},%
+firstplural={Transceives\glsspace (TXs)},%
+text={TX},%
+plural={TXs},%
+description={Transceive},%
+descriptionplural={Transceive\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Transceive},%
+longplural={Transceives},%
+short={TX},%
+shortplural={TXs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{RX}{}%
+{%
+\gls@defglossaryentry{RX}%
+{%
+name={RX},%
+sort={RX},%
+type={acronym},%
+first={Receive\glsspace (RX)},%
+firstplural={Receives\glsspace (RXs)},%
+text={RX},%
+plural={RXs},%
+description={Receive},%
+descriptionplural={Receive\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Receive},%
+longplural={Receives},%
+short={RX},%
+shortplural={RXs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{RTI}{}%
+{%
+\gls@defglossaryentry{RTI}%
+{%
+name={RTI},%
+sort={RTI},%
+type={acronym},%
+first={Real-Time Interface\glsspace (RTI)},%
+firstplural={Real-Time Interfaces\glsspace (RTIs)},%
+text={RTI},%
+plural={RTIs},%
+description={Real-Time Interface},%
+descriptionplural={Real-Time Interface\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Real-Time Interface},%
+longplural={Real-Time Interfaces},%
+short={RTI},%
+shortplural={RTIs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{FMEA}{}%
+{%
+\gls@defglossaryentry{FMEA}%
+{%
+name={FMEA},%
+sort={FMEA},%
+type={acronym},%
+first={Failure Mode and Effect Analysis\glsspace (FMEA)},%
+firstplural={Failure Mode and Effect Analysiss\glsspace (FMEAs)},%
+text={FMEA},%
+plural={FMEAs},%
+description={Failure Mode and Effect Analysis},%
+descriptionplural={Failure Mode and Effect Analysis\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Failure Mode and Effect Analysis},%
+longplural={Failure Mode and Effect Analysiss},%
+short={FMEA},%
+shortplural={FMEAs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{RPN}{}%
+{%
+\gls@defglossaryentry{RPN}%
+{%
+name={RPN},%
+sort={RPN},%
+type={acronym},%
+first={Risk Priority Number\glsspace (RPN)},%
+firstplural={Risk Priority Numbers\glsspace (RPNs)},%
+text={RPN},%
+plural={RPNs},%
+description={Risk Priority Number},%
+descriptionplural={Risk Priority Number\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Risk Priority Number},%
+longplural={Risk Priority Numbers},%
+short={RPN},%
+shortplural={RPNs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{UML}{}%
+{%
+\gls@defglossaryentry{UML}%
+{%
+name={UML},%
+sort={UML},%
+type={acronym},%
+first={Unified Markup Language\glsspace (UML)},%
+firstplural={Unified Markup Languages\glsspace (UMLs)},%
+text={UML},%
+plural={UMLs},%
+description={Unified Markup Language},%
+descriptionplural={Unified Markup Language\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Unified Markup Language},%
+longplural={Unified Markup Languages},%
+short={UML},%
+shortplural={UMLs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{RCP}{}%
+{%
+\gls@defglossaryentry{RCP}%
+{%
+name={RCP},%
+sort={RCP},%
+type={acronym},%
+first={Rapid Control Prototyping\glsspace (RCP)},%
+firstplural={Rapid Control Prototypings\glsspace (RCPs)},%
+text={RCP},%
+plural={RCPs},%
+description={Rapid Control Prototyping},%
+descriptionplural={Rapid Control Prototyping\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Rapid Control Prototyping},%
+longplural={Rapid Control Prototypings},%
+short={RCP},%
+shortplural={RCPs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{DC}{}%
+{%
+\gls@defglossaryentry{DC}%
+{%
+name={DC},%
+sort={DC},%
+type={acronym},%
+first={Descrete Current\glsspace (DC)},%
+firstplural={Descrete Currents\glsspace (DCs)},%
+text={DC},%
+plural={DCs},%
+description={Descrete Current},%
+descriptionplural={Descrete Current\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Descrete Current},%
+longplural={Descrete Currents},%
+short={DC},%
+shortplural={DCs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{OEM}{}%
+{%
+\gls@defglossaryentry{OEM}%
+{%
+name={OEM},%
+sort={OEM},%
+type={acronym},%
+first={Original Equipment Manufacturer\glsspace (OEM)},%
+firstplural={Original Equipment Manufacturers\glsspace (OEMs)},%
+text={OEM},%
+plural={OEMs},%
+description={Original Equipment Manufacturer},%
+descriptionplural={Original Equipment Manufacturer\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Original Equipment Manufacturer},%
+longplural={Original Equipment Manufacturers},%
+short={OEM},%
+shortplural={OEMs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{GPS}{}%
+{%
+\gls@defglossaryentry{GPS}%
+{%
+name={GPS},%
+sort={GPS},%
+type={acronym},%
+first={Global Positioning System\glsspace (GPS)},%
+firstplural={Global Positioning Systems\glsspace (GPSs)},%
+text={GPS},%
+plural={GPSs},%
+description={Global Positioning System},%
+descriptionplural={Global Positioning System\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Global Positioning System},%
+longplural={Global Positioning Systems},%
+short={GPS},%
+shortplural={GPSs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{IP}{}%
+{%
+\gls@defglossaryentry{IP}%
+{%
+name={IP},%
+sort={IP},%
+type={acronym},%
+first={Internet Protocol\glsspace (IP)},%
+firstplural={Internet Protocols\glsspace (IPs)},%
+text={IP},%
+plural={IPs},%
+description={Internet Protocol},%
+descriptionplural={Internet Protocol\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Internet Protocol},%
+longplural={Internet Protocols},%
+short={IP},%
+shortplural={IPs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{IDE}{}%
+{%
+\gls@defglossaryentry{IDE}%
+{%
+name={IDE},%
+sort={IDE},%
+type={acronym},%
+first={Integrated Development Environment\glsspace (IDE)},%
+firstplural={Integrated Development Environments\glsspace (IDEs)},%
+text={IDE},%
+plural={IDEs},%
+description={Integrated Development Environment},%
+descriptionplural={Integrated Development Environment\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Integrated Development Environment},%
+longplural={Integrated Development Environments},%
+short={IDE},%
+shortplural={IDEs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{GUI}{}%
+{%
+\gls@defglossaryentry{GUI}%
+{%
+name={GUI},%
+sort={GUI},%
+type={acronym},%
+first={Graphical User Interface\glsspace (GUI)},%
+firstplural={Graphical User Interfaces\glsspace (GUIs)},%
+text={GUI},%
+plural={GUIs},%
+description={Graphical User Interface},%
+descriptionplural={Graphical User Interface\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Graphical User Interface},%
+longplural={Graphical User Interfaces},%
+short={GUI},%
+shortplural={GUIs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
