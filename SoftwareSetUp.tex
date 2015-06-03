@@ -107,7 +107,7 @@ The inputs to the block are:
  	
  	\caption{Steering interface block \gls{CAN} layout}
  	\label{fig:steering_interface_inside_pdf}
- \end{figure*} \\
+ \end{figure*}
  
  The software CAN-layout corresponds to the hardware CAN-layout described in section \ref{sec:interface_with_dolly}. There are five different CAN-controllers. Controller1 is used to receive the signals of the ASF-Sensor and the dolly's \gls{EBS} system. These signals, except for the "Angle", "Wheel\_BasedVehicleSpeed" and the "WheelSpeedDiffMainAxle" signals are forwarded to Controller2 and Controller3. Controller2 corresponds to the \gls{ETS}-\gls{CAN} of the front axle and Controller3 to the one of the rear axle. The inputs Delta31 and Delta32 are sent to the front \gls{ETS}-\gls{CAN} (Controller2) and rear \gls{ETS}-\gls{CAN} (Controller3), respectively. For the signals "Wheel\_BasedVehicleSpeed" and  "WheelSpeedDiffMainAxle" constants with the value zero are forwarded both to Controller2 and Controller3.
  Controller4 and Controller5 also correspond to the front \gls{ETS}-\gls{CAN} and rear \gls{ETS}-\gls{CAN}, respectively. As mentioned in section \ref{sec:interface_with_dolly} this is necessary because different CAN-protocols are used. The signals received from those Controllers, together with the signals from Controller1, that weren't forwarded, are outputs of the steering interface block.
