@@ -74,7 +74,7 @@ Since one of the reasons for using of \gls{HCT} vehicles is the expected positiv
 Overall this studies showed that with the use of \gls{HCT} vehicles the environmental impact of goods transportation can be reduced significantly for high loading factors. The fuel consumption is about 15\% lower compared to the standard vehicle combinations used in the EU. In the number of trips a reduction of 32\% can be seen. This reduction is achieved because two \gls{HCT} vehicles can carry the same amount of goods as three standard vehicle combinations.  \cite{backman2002improved}
 However, the environmental impact of \gls{HCT} vehicles can become negative if due to a high penetration of \gls{HCT} vehicles goods transportation is shifted from rail to the road. \cite{doll2009long}
 
-The introduction of new systems is alway driven by economical aspects, especially in the transportation industry. This \colorbox{yellow}{VBLBALLABLBA} \gls{HCT} vehicles is their economical advantage. First of all, the transport costs decrease by 1.8-3.4\%. Together with the environmental costs, that are lower compared to standard combinations, an overall benefit of \gls{HCT} vehicles can be seen.\cite{EMS}
+The introduction of new systems is alway driven by economical aspects, especially in the transportation industry, hence positive effects of \gls{HCT} vehicles are expected. First of all, the transport costs decrease by 1.8-3.4\%. Together with the environmental costs, that are lower compared to standard combinations, an overall benefit of \gls{HCT} vehicles can be seen \cite{EMS}.
 
 
 \section{Market overview for existing solutions}
@@ -103,11 +103,9 @@ The increasing complexity of mechatronic systems and shorter product life-cycles
 
 
 \begin{itemize}
-	\item V-model
+
 	\item real-time capability
-	\item abstract high level model to programm ==> focus on function development and modelling, no low level coding needed
-	\item time critical processes
-	%\item extensive lecture notes from \cite{rapidcontrolprototyping}
+	
 \end{itemize}
 
 \section{Functionality architecture}
@@ -123,18 +121,16 @@ As a basis for this project a functionality architecture developed at Volvo GTT 
 	\label{fig:funct_architecture}
 \end{figure*}
 
-The functionality architecture consists of four different parts: The Human machine interface, the vehicle motion management, the motion support devices and the vehicle plant.\\
-The Human machine interface (HMI) is the interface between the driver and the vehicle. The driver can input requests to the vehicle, for example a steering angle via the steering wheel or a torque request via the accelerator pedal. The driver gets feedback from the vehicle about the vehicle's state, for example via the speedometer.
+The functionality architecture consists of four different parts: The \gls{HMI}, the \gls{VMM}, the \gls{MSD} and the vehicle plant.\\
+The \gls{HMI} is the interface between the driver and the vehicle. The driver can input requests to the vehicle, for example a steering angle via the steering wheel or a torque request via the accelerator pedal. The driver gets feedback from the vehicle about the vehicle's state, for example via the speedometer.
 
-The vehicle motion management (VMM) contains the high-level controllers for the vehicle's motion and stability. It has an time horizon up to one second. As an input it gets the request of the driver from the HMI and transforms these requests into requests for the actuators of the vehicle. These request are then sent to the Motion support device (MSD). From the MSD the VMM receives information about the state of the actuators and the current capabilities.
+The \gls{VMM} contains the high-level controllers for the vehicle's motion and stability. The time horizon, in which the \gls{VMM} acts, is up to one second. As an input it gets the request of the driver from the \gls{HMI} and transforms these requests into requests for the actuators of the vehicle. These request are then sent to the \gls{MSD}. From the \gls{MSD} the \gls{VMM} receives information about the state of the actuators and the current capabilities.
 
-The MSD contains the actuators and low-level controllers of the vehicle. In there the requests from the VMM are executed. Information about the status of the actuators is sent both to the VMM and the vehicle plant.
+The \gls{MSD} contains the actuators and low-level controllers of the vehicle. In there the requests from the \gls{VMM} are executed. Information about the status of the actuators is sent both to the \gls{VMM} and the vehicle plant.
 
 The vehicle plant corresponds to the rest of the vehicle.
 \\
 In different kind of tests, the parts of the functionality architecture are either simulated or real hardware is used. The more advanced the development process is, more and more of the functionality is shifted from simulation to actual hardware.
-
-
 
 
 \end{document}

@@ -18,15 +18,15 @@
 
 
 \subsection{dSpace RTI-blockset}
-\label{dSpace_RTI}
-The dSpace RTI-Blockset (Real-time interface) is a plug-in for MATLAB/Simulink that allows you to connect a simulink-model to the different inputs and outputs of the \gls{MABII} There are \gls{RTI}-blocks for CAN, Ethernet, and the analog and digital outputs of the \gls{MABII}
+
+The dSpace RTI-Blockset (Real-time interface) is a plug-in for MATLAB/Simulink that makes it possible to connect a simulink-model to the different inputs and outputs of the \gls{MABII} There are \gls{RTI}-blocks for CAN, Ethernet, and the analog and digital outputs of the \gls{MABII}
 In this project the \gls{RTI} \gls{CAN} MultiMessage and the \gls{RTI} Ethernet (UDP) Blocksets were used.\\ 
 \subsubsection{RTI \gls{CAN} MultiMessage Blockset}
-The \gls{RTI} \gls{CAN} MultiMessage blocks establish an interface between the physical \gls{CAN}-Buses of the \gls{MABII} and the simulink-model running on the \gls{MABII} There are four different blocks in this blockset: 
+The \gls{RTI} \gls{CAN} MultiMessage blocks establish an interface between the physical \gls{CAN}-Buses of the \gls{MABII} and the simulink-model running on the \gls{MABII} There are four different blocks in this blockset: A GeneralSetup-, a ControllerSetup-, a Main- and a Gateway-block. 
 
 In the "GeneralSetup" block the paths of the model root and the destination folder for generated files are set. 
 
-In the "ControllerSetup" block first the name of the controller has to be set. After that the physical CAN-Bus, that should be used, is set by choosing a module number and a controller number. How the module- and controller numbers have to be set for the different CAN-buses of the \gls{MABII} is shown in \ref{tab:CAN-layout}.
+In the "ControllerSetup" block first the name of the controller has to be set. After that the physical CAN-Bus, that should be used, is set by choosing a module number and a controller number. How the module- and controller numbers have to be set for the different CAN-buses of the \gls{MABII} is shown in table \ref{tab:CAN-layout}.
 \begin{table}[h]
 	\centering
 	\caption{CAN-layout MABII}
@@ -45,9 +45,11 @@ In the "ControllerSetup" block first the name of the controller has to be set. A
 After setting the module- and controller number the identifier format has to be set to either standard or extended format, the transceiver type must be chosen between ISO11898-2 and ISO11898-6. ISO11898-2 is used for a high-speed medium access unit and ISO11989-6 for the selective wake-up functionality of a high-speed medium access unit. If needed, a termination resistance of 120 Ohms can be set in the block as well. As a last step the Baud rate of the \gls{CAN}-bus has to be defined.
 
 
-In the "Main Block" block a dbc-file is connected to one of the controller blocks, that were created before. A "ControllerSetup" block \gls{CAN} only be connected to one "Main Block" at a time. When the dbc-file is loaded in the "Main Block", the different messages and signals that are specified in the dbc-file can be chosen as inputs and/or outputs of the "Main block". For signals that should be transmitted it has to be defined when they should be transmitted. There are different ways to specify this. One way is to set a cycle time in the simulink model, that determines with which frequency the signal is sent out. Another way is to use triggers that trigger the transmission every time a specific event happens. This \gls{CAN} be set in the tab "Messages" under "Triggering".
+In the "Main Block" a dbc-file is connected to one of the controller blocks, that were created before. A "ControllerSetup" block \gls{CAN} only be connected to one "Main Block" at a time. When the dbc-file is loaded in the "Main Block", the different messages and signals that are specified in the dbc-file can be chosen as inputs and/or outputs of the "Main block". For signals that should be transmitted it has to be defined when they should be transmitted. There are different ways to specify this. One way is to set a cycle time in the simulink model, that determines with which frequency the signal is sent out. Another way is to use triggers that trigger the transmission every time a specific event happens. This \gls{CAN} be set in the tab "Messages" under "Triggering".
+
+The "Gateway block" is used to gateway signals from one \gls{CAN} to another. 
 \subsubsection{RTI Ethernet (UDP) Blockset}
-The \gls{RTI} Ethernet (\gls{UDP}) Blockset was used for two purposes: On the one hand for the \gls{HIL} -testing (see section \ref{sec:HIL}), on the other hand for the \gls{CAN}-bus extension of the \gls{MABII} (see section \ref{sec:can_bus_extension_software}). The \gls{RTI} Ethernet (UDP) Blockset contains four different blocks:\\
+The \gls{RTI} Ethernet (\gls{UDP}) Blockset was used for two purposes: On the one hand for the \gls{HIL} -testing (see section \ref{sec:HIL}), on the other hand for the \gls{CAN}-bus extension of the \gls{MABII} (see section \ref{sec:can_bus_extension_software}). The \gls{RTI} Ethernet (UDP) Blockset contains four different blocks: An setup-, RX-, TX-, and an interrupt-block.\\
 The "Ethernet\_UDP\_SETUP" block consists of two pages. In the "Unit" page the main settings for the Ethernet are made. First the interface name has to be chosen. Then the board type has to be selected. There are two types of boards: "ETH Type 1" and "ECU Type 1 ETH". If the Ethernet cable is connected to the Ethernet port of the \gls{MABII}, "ETH Type 1" has to be chosen. The module number, which has to be set in the next step, must be set to 1 since the used \gls{MABII} only has one module.
 After that, the local \gls{IP} address has to be set.\\
 On the options page of the setup block up to four different sockets \gls{CAN} be enabled. For each socket a local port number, the remote ip address and the remote port number have to be set.\\
@@ -63,7 +65,7 @@ The inputs to the transmit block are the data to transmit, the message size and 
 The "Ethernet\_UDP\_INTERRUPT" \gls{CAN} be used to make the hardware interrupts available as trigger sources.
 \subsection{Virtual Truck Modelling Library}
 \label{sec:VTM}
-The \gls{VTM} is a computational framework used within Volvo Trucks to simulate the dynamic behaviours of trucks and combinations. As a library it extends Simulink, where maneuvers, track layout and the trucks kinematic and dynamic properties are linked together and then computed. This toolbox was used as a base for the simulation of the LVC including the dolly for this project. It is possible to run simulation offline with a predefined maneuver and a given environment as well online where these parameters are fed into the calculation live or as measurings from the real-world environment. For online use all relevant parameters and states \gls{CAN} be accessed in Simulink or in case of execution on the \gls{MABII} through ControlDesk as their respective representation of the Simulink variable. 
+The \gls{VTM} is a computational framework used within Volvo Trucks to simulate the dynamic behaviours of trucks and combinations. As a library it extends Simulink, where maneuvers, track layout and the trucks kinematic and dynamic properties are linked together and then computed. This toolbox was used as a base for the simulation of \gls{HCT} vehicles including the dolly for this project. It is possible to run simulation offline with a predefined maneuver and a given environment as well online where these parameters are fed into the calculation live or as measurings from the real-world environment. For online use all relevant parameters and states \gls{CAN} be accessed in Simulink or in case of execution on the \gls{MABII} through ControlDesk as their respective representation of the Simulink variable. 
 
 \subsection{CAN-bus extension}
 \label{sec:can_bus_extension_software}
@@ -88,15 +90,16 @@ Figure \ref{fig:steering_interface} shows the steering interface block with its 
 \end{figure*} \\
 The inputs to the block are:
 \begin{itemize}
-	\item Steering angle requests for front axle of the dolly 
-	\item Steering angle requests for rear axle of the dolly 
+	\item Delta31: Steering angle requests for front axle of the dolly 
+	\item Delta32: Steering angle requests for rear axle of the dolly 
 \end{itemize} 
  The outputs of the block are:
  \begin{itemize}
- 	\item All signals on the \gls{ETS}-\gls{CAN} for both front and rear axle
- 	\item The actual articulation angle between the dolly and the first semitrailer
- 	\item The vehicle speed signal from the dolly's \gls{EBS}
- 	\item The wheel speed difference from the dolly's \gls{EBS}
+ 	\item ETS\_rear: All signals on the \gls{ETS}-\gls{CAN} rear axle
+ 	\item ETS\_front: All signals on the \gls{ETS}-\gls{CAN} for front axle
+ 	\item Art\_Angle\_dolly\_semitrailer1: The actual articulation angle between the dolly and the first semitrailer
+ 	\item Wheel\_BasedVehicleSpeed: The vehicle speed signal from the dolly's \gls{EBS}
+ 	\item WheelSpeedDiffMainAxle: The wheel speed difference from the dolly's \gls{EBS}
  \end{itemize}
  The outputs are used to monitor the dolly's state and for the calculation of the current capabilities (see section \ref{sec:maxi_capabilities}).
  Figure \ref{fig:steering_interface_inside} shows the inside of the steering interface block. It contains \gls{RTI} \gls{CAN} MultiMessage blocks (see section \ref{RTI_CAN}).   

@@ -6,6 +6,7 @@
 {\pagestyle{empty}\cleardoublepage}%
 \chapter{Vehicle Model controllers (3 Seiten)}
 \label{chap:steering_model}
+The vehicle model controllers that were used in this thesis were developed in a research project at Chalmers.
 There are two different controllers used to control the steerable axles of the dolly. One is used for low-speed and one for high-speed maneuvers. The main purpose of the low-speed controller is the reduction of off-tracking.
 For the high-speed controller the aim is to reduce the rearward amplification.
 \section{Low-Speed controller \cite{Low-speed_paper}}
@@ -40,7 +41,7 @@ Table \ref{tab:gains_after_optimization} shows the values of the gains after the
 		
 	\end{tabular} \\
 \end{table}\\
-Figure \ref{fig:low_speed_diagram} shows the implementation of the controller in the functional architecture.
+Figure \ref{fig:low_speed_diagram} shows the implementation of the controller in the functional architecture, introduced in section \ref{sec:func_architecture}.
 
 \begin{figure*}[!htb]
 	\centering
@@ -100,21 +101,10 @@ The input parameters of the high-speed controller are:
 \item The reference signal of the lateral acceleration of the dolly: $a_{y3ref}$
 \end{itemize}
 
-\section{Real-Time implementation of controllers}
-\label{sec:real_time_implementation}
-
-\begin{itemize}
-	\item this paragraph in close cooperation with MI
-	\item what had to be changed to allow for \gls{MABII} execution?
-	\item how will feedback loop be handled?
-	\item incorporate measurings?
-	\item simulation step size?
-	\item utilized computational method
-\end{itemize}
 
 \section{Interface with Real-Time environment}
 \label{sec:interface_with_real_time}
-As described in section \ref{sec:low-speed_controller} and \ref{sec:high-speed_controller} the controllers need different kind of input signals. These signals are received by the Simulink model running on the \gls{MABII} via \gls{CAN}. When the controllers are tested on a test track they are implemented in the same Simulink model, so they can get the necessary input signals directly within the model. 
+As described in section \ref{sec:low-speed_controller} and \ref{sec:high-speed_controller} the controllers need different kind of input signals. These signals are received by the Simulink model running on the \gls{MABII} via \gls{CAN} (refer to section \ref{sec:matlab}). When the controllers are tested on a test track they are implemented in the same Simulink model, so they can get the necessary input signals directly within the model. For the \gls{HIL}-tests, that were conducted the controllers where implemented in a Simulink model running on a simulation PC. In that case the necessary inputs were sent to this PC via serial interface. In  section \ref{sec:HIL} this approach is described in detail.     
 
 In order to guaranty safety at all time the steering angle requests of the controllers are checked before sending them to the dolly. This is done by first sending the requests to a supervisor block in the same Simulink model. The supervisor block compares the steering angle requests with the current capabilities of the system. The functionality of that block is described in detail in section \ref{sec:warning_system}.   
 
