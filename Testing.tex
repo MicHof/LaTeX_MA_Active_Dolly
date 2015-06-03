@@ -15,7 +15,7 @@ In different states of the project different kind of tests were performed. As a 
 \subsection{VTM maneuver verification}
 
 For the testing of the vehicle model controllers described in chapter \ref{chap:steering_model} as a first step all the parts were simulated in Simulink. Therefore all parts of the functionality architecture introduced in section \ref{sec:func_architecture} are simulated.
-For the \gls{HMI} lookup tables were used for the steering angle and vehicle speed input, so instead of actual driver input a pre-defined maneuver was executed. The \gls{VMM} consists of the vehicle model controller. The steering actuators in the MSD domain were simulated by implementing a first order filter and a time delay, that represents the delay caused by the hydraulic system. For the vehicle plant the \gls{VTM} (see section \ref{sec:VTM}) was used. Figure \ref{fig:funct_architecture_sim} shows how the parts of the functionality architecture are divided to different systems for the simulation of the vehicle model controllers.
+For the \gls{HMI} lookup tables were used for the steering angle and vehicle speed input, so instead of actual driver input a pre-defined maneuver was executed. The \gls{VMM} consists of the vehicle model controller. The steering actuators in the \gls{MSD} domain were simulated by implementing a first order filter and a time delay, that represents the delay caused by the hydraulic system. For the vehicle plant the \gls{VTM} (see section \ref{sec:VTM}) was used. Figure \ref{fig:funct_architecture_sim} shows how the parts of the functionality architecture are divided to different systems for the simulation of the vehicle model controllers.
 
 \begin{figure*}[!htb]
 
@@ -121,7 +121,7 @@ As also described in section \ref{sec:results_processing_time} additional respon
 \end{table}
 
 
-All testing was automated in ControlDesk using Python scripts to loop through the different tests. The utilized graphical user interface (GUI) \gls{CAN} be seen in figure \ref{fig:control_desk_GUI}. Logging within ControlDesk was started and stopped manually after each test and automatically exported to MATLAB for parsing and analysis. All data was acquired from the steering knuckle sensors originally present in the \gls{ETS}. This sensor's signal is available on the \gls{ETS}-\gls{CAN} (also see section \ref{sec:dolly_system}). 
+All testing was automated in ControlDesk using Python scripts to loop through the different tests. The utilized \gls{GUI} \gls{CAN} be seen in figure \ref{fig:control_desk_GUI}. Logging within ControlDesk was started and stopped manually after each test and automatically exported to MATLAB for parsing and analysis. All data was acquired from the steering knuckle sensors originally present in the \gls{ETS}. This sensor's signal is available on the \gls{ETS}-\gls{CAN} (also see section \ref{sec:dolly_system}). 
 
 It was decided to neglect the delays induced by the \gls{CAN} communication. The reason for this is, that both the request as well as the measuring are send over the \gls{CAN}. Which means that the two transmission times are counted with different signs and thus almost exactly cancel out only leaving double the worst case transmission (maximum stuffing bits, worst case arbitration) time as a maximum error of 232$\mu$s. This is sufficiently low regarding the fact, that the simulation on the \gls{MABII} is executed every 0.001s.     
 
@@ -233,7 +233,8 @@ As a first step a very simple controller was used for controlling the steering o
 \section{Track testing}
 \label{sec:track-testing}
 For testing on a test track the different parts of the  functionality architecture (see section \ref{sec:func_architecture}) will be handled as follows:
-Since a complete vehicle combination will be used for track testing, this corresponds to the vehicle plant of the functionality architecture. The HMI domain is represented by the driver of the vehicle. The VMM is running on the MABII, which works as an interface between the VMM, the dolly and the vehicle. Figure \ref{fig:funct_architecture_track} shows how the parts are divided to different systems.
+Since a complete vehicle combination will be used for track testing, this corresponds to the vehicle plant of the functionality architecture. The \gls{HMI} domain is represented by the driver of the vehicle. The \gls{VMM} is running on the \gls{MABII}, which works as an interface between the \gls{VMM}, the dolly and the vehicle. Figure \ref{fig:funct_architecture_track} shows how the parts are divided to different systems.
+
 \begin{figure*}[!htb]
 	\centering
 	\includegraphics[width=0.5\linewidth]{figures/functionality_architecture_track}

@@ -12,6 +12,8 @@
 
 The mounted systems only give information about the physical state of the combination but leave no possibility to take environmental circumstances into consideration. Sensing for the surroundings, such as radar/LIDAR or cameras can greatly simplify and enhance the results in post-processing for the data logged during testing. 
 
+The supervisor-functions have to be extended as well to incorporate a broader use of the combinatation's dynamic data (yaw, acceleration).  
+
 For simplified delay-free \gls{HIL} testing a dedicated real-time system could be utilized, which would also provide the possibility of including environment to a greater detail (e.g. randomly generated road situations) to achieve a very robust verification in safe lab-environment before integrating the dolly in an A-double combination on track.
 
 Direct command of the \gls{ECU}s with designated request messages would greatly simplify the system, eliminating many work-around solutions that were developed in this thesis. Also directly controlling the hydraulic actuation on a lower control level could benefit the investigated delays by circumventing the added control-layers.

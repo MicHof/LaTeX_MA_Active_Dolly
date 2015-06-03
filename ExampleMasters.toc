@@ -8,9 +8,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{List of Figures}{v}{section*.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{List of Tables}{vi}{section*.2}
+\contentsline {chapter}{List of Tables}{vii}{section*.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{List of Acronyms}{vii}{section*.2}
+\contentsline {chapter}{List of Acronyms}{viii}{section*.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}Introduction (3 Seiten)}{1}{chapter.1}
 \defcounter {refsection}{0}\relax 
@@ -156,18 +156,18 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {8.2}Results from processing time evaluation}{49}{section.8.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.3}Results from in vehicle testing}{49}{section.8.3}
+\contentsline {section}{\numberline {8.3}Results from in vehicle testing}{50}{section.8.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.4}Results from hardware-in-the-loop testing}{49}{section.8.4}
+\contentsline {section}{\numberline {8.4}Results from hardware-in-the-loop testing}{50}{section.8.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.5}Comparison}{52}{section.8.5}
+\contentsline {section}{\numberline {8.5}Comparison}{54}{section.8.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {9}Conclusion (2 Seiten)}{53}{chapter.9}
+\contentsline {chapter}{\numberline {9}Conclusion (2 Seiten)}{57}{chapter.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9.1}Recommendation}{53}{section.9.1}
+\contentsline {section}{\numberline {9.1}Recommendation}{57}{section.9.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9.2}Future Work}{53}{section.9.2}
+\contentsline {section}{\numberline {9.2}Future Work}{57}{section.9.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Appendix}{55}{appendix.A}
+\contentsline {chapter}{\numberline {A}Appendix}{59}{appendix.A}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{References}{59}{table.A.3}
+\contentsline {chapter}{References}{63}{table.A.3}

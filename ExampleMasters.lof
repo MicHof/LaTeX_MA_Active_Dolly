@@ -36,6 +36,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Example of \gls {FMEA}-worksheet for the first step of the FMEA}}{36}{figure.6.1}
 \defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Step input 8 degree}}{37}{figure.6.2}
+\defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {7.1}{\ignorespaces Functionality Architecture in simulation}}{39}{figure.7.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {7.2}{\ignorespaces Example of step input for delay determination, front axle lifted, $8^\circ $ amplitude, six repetitions.}}{41}{figure.7.2}
@@ -52,18 +54,28 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {7.8}{\ignorespaces Functionality Architecture on track testing}}{48}{figure.7.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8.1}{\ignorespaces HIL-test low-speed front axle}}{50}{figure.8.1}
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Rise time from send out request to achieve a certain steering angle on the dolly.}}{49}{figure.8.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8.2}{\ignorespaces HIL-test low-speed rear axle}}{50}{figure.8.2}
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Step input 5 degree}}{50}{figure.8.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8.3}{\ignorespaces Details of HIL-test low-speed front axle}}{51}{figure.8.3}
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Step input with rate limiter}}{51}{figure.8.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8.4}{\ignorespaces HIL-test front axle measurements from VTM and ETS-CAN}}{52}{figure.8.4}
+\contentsline {figure}{\numberline {8.4}{\ignorespaces Low rate input}}{51}{figure.8.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8.5}{\ignorespaces Details of HIL-test front axle measurements from VTM and ETS-CAN}}{52}{figure.8.5}
+\contentsline {figure}{\numberline {8.5}{\ignorespaces High rate input}}{52}{figure.8.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Dolly craned up slightly to determine delay of steering actuation}}{55}{figure.A.1}
+\contentsline {figure}{\numberline {8.6}{\ignorespaces HIL-test low-speed front axle}}{52}{figure.8.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {A.2}{\ignorespaces MicroAutoBoxII viewed from the top including cables for \gls {ZIF} -connector, Host-PC, Simulation-PC and power supply (clockwise, starting on the right)}}{56}{figure.A.2}
+\contentsline {figure}{\numberline {8.7}{\ignorespaces HIL-test low-speed rear axle}}{53}{figure.8.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {A.3}{\ignorespaces ControlDesk \gls {GUI} for basic testing and start-up of the dolly}}{56}{figure.A.3}
+\contentsline {figure}{\numberline {8.8}{\ignorespaces Details of HIL-test low-speed front axle}}{53}{figure.8.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {8.9}{\ignorespaces HIL-test front axle measurements from VTM and ETS-CAN}}{54}{figure.8.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {8.10}{\ignorespaces Details of HIL-test front axle measurements from VTM and ETS-CAN}}{55}{figure.8.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Dolly craned up slightly to determine delay of steering actuation}}{59}{figure.A.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {A.2}{\ignorespaces MicroAutoBoxII viewed from the top including cables for \gls {ZIF} -connector, Host-PC, Simulation-PC and power supply (clockwise, starting on the right)}}{60}{figure.A.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {A.3}{\ignorespaces ControlDesk \gls {GUI} for basic testing and start-up of the dolly}}{60}{figure.A.3}
