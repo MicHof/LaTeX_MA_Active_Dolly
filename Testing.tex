@@ -8,13 +8,14 @@
 \label{chap:testing}
 
 \section{Overview}
-In different states of the project different kind of tests were performed. As a first step bench tests were done to verify the developed software. Following that, several tests on the actual dolly, with the dolly in standstill and no trailers connected, were made.
+In different states of the project different kind of tests were performed. As a first step bench tests were done to verify the developed software (section \ref{sec:bench-testing}). Following that, several tests on the actual dolly, with the dolly in standstill and no trailers connected, were made (sections \ref{chap:processing_time_delay} and \ref{sec:vehicle-testing}). The final step achieved in this thesis was Hardware-in-the-loop testing (section \ref{sec:HIL}).
+For the future tests with the dolly as part of a A-double combination on a test track are planed (section \ref{sec:track-testing}).
 
 \section{Bench-Testing}
 \label{sec:bench-testing}
 \subsection{VTM maneuver verification}
 
-For the testing of the vehicle model controllers described in chapter \ref{chap:steering_model} as a first step all the parts were simulated in Simulink. Therefore all parts of the functionality architecture introduced in section \ref{sec:func_architecture} are simulated.
+In order to get data to compare the results of the tests that would be conducted, several simulations using \gls{VTM} and the vehicle model controllers described in chapter \ref{chap:steering_model} were performed in Simulink. Therefore all parts of the functionality architecture introduced in section \ref{sec:func_architecture} are simulated.
 For the \gls{HMI} lookup tables were used for the steering angle and vehicle speed input, so instead of actual driver input a pre-defined maneuver was executed. The \gls{VMM} consists of the vehicle model controller. The steering actuators in the \gls{MSD} domain were simulated by implementing a first order filter and a time delay, that represents the delay caused by the hydraulic system. For the vehicle plant the \gls{VTM} (see section \ref{sec:VTM}) was used. Figure \ref{fig:funct_architecture_sim} shows how the parts of the functionality architecture are divided to different systems for the simulation of the vehicle model controllers.
 
 \begin{figure*}[!htb]
@@ -60,7 +61,7 @@ As outlined in section \ref{sec:measurement_setup} the dolly is equipped with a 
 
 The response time of the dolly's steering system was determined in workshop environment in stand-still without any additional axle loads. Tests were conducted for both axles individually to ensure that maximum power was available preventing further delays through insufficient electrical power or hydraulic pressure. A repeated steering angle in the form of a step input was used to determine the reaction time of the system. The step amplitude was increased over different tests to account for possible dependencies on articulation of the steering system. The tests each started and ended with a steering angle of $0^\circ .$ An example for the test sequence can be seen in figure \ref{fig:example_for_step_input_delay_measuring}. Clearly the difference between the requested angle and the actual articulation of the wheel can be seen. Further discussion of the results can be found in section \ref{sec:results_processing_time}.\\
 
-\begin{figure*}
+\begin{figure*} [!htb]
 \centering
 \includegraphics[width=1\linewidth]{figures/example_for_step_input_delay_measuring}
 \caption{Example of step input for delay determination, front axle lifted, $8^\circ $ amplitude, six repetitions.}
@@ -121,7 +122,7 @@ As also described in section \ref{sec:results_processing_time} additional respon
 \end{table}
 
 
-All testing was automated in ControlDesk using Python scripts to loop through the different tests. The utilized \gls{GUI} \gls{CAN} be seen in figure \ref{fig:control_desk_GUI}. Logging within ControlDesk was started and stopped manually after each test and automatically exported to MATLAB for parsing and analysis. All data was acquired from the steering knuckle sensors originally present in the \gls{ETS}. This sensor's signal is available on the \gls{ETS}-\gls{CAN} (also see section \ref{sec:dolly_system}). 
+All testing was automated in ControlDesk using Python scripts to loop through the different tests. The utilized \gls{GUI} can be seen in figure \ref{fig:control_desk_GUI}. Logging within ControlDesk was started and stopped manually after each test and automatically exported to MATLAB for parsing and analysis. All data was acquired from the steering knuckle sensors originally present in the \gls{ETS}. This sensor's signal is available on the \gls{ETS}-\gls{CAN} (also see section \ref{sec:dolly_system}). 
 
 It was decided to neglect the delays induced by the \gls{CAN} communication. The reason for this is, that both the request as well as the measuring are send over the \gls{CAN}. Which means that the two transmission times are counted with different signs and thus almost exactly cancel out only leaving double the worst case transmission (maximum stuffing bits, worst case arbitration) time as a maximum error of 232$\mu$s. This is sufficiently low regarding the fact, that the simulation on the \gls{MABII} is executed every 0.001s.     
 
@@ -132,7 +133,7 @@ It was decided to neglect the delays induced by the \gls{CAN} communication. The
 
 To have a complete picture of the occuring delays in the measuring chain all relevant bigger execution blocks of the code running cyclically on the Arduino Due to broadcast the \gls{IMU} data to the CAN-bus were evaluated for execution time. Figure \ref{fig:arduino_delays_sketch} gives an overview, into which functions the code was grouped as well as the respectively used protocol for communication. The output via the serial port (\gls{UART}) for visualization purposes on the computer while logging takes very long compared to the execution times of the other depicted code blocks.\footnote{The maximum transmission rate on the \gls{UART} for the Due is 115200bit/s. Transmitting the payload (3x3 sensor axes, signed integer) only excluding all control bits accumulates to 3 sensors x 3 axes x 16bit = 144bit  or 1.25ms}It therefore is disabled while actually logging. 
 
-The delays were evaluated by inserting time-stamped variables into the code before and after each examined function's call. Using the Due's $micros()$ function a resolution in microseonds \gls{CAN} be achieved\footnote{On earlier/smaller Arduinos $micros()$ resolution is 4$\mu$s!} with an accuracy of the inverse of the processors clock frequency (i.e. 11.9ns for the Due). $micros()$' call/execution time was neglected as it is in the magnitude of a couple of dozen nanoseconds. As 
+The delays were evaluated by inserting time-stamped variables into the code before and after each examined function's call. Using the Due's $micros()$ function a resolution in microseonds \gls{CAN} be achieved\footnote{On earlier/smaller Arduinos $micros()$ resolution is 4$\mu$s!} with an accuracy of the inverse of the processors clock frequency (i.e. 11.9ns for the Due). $micros()$' call/execution time was neglected as it is in the magnitude of a couple of dozen nanoseconds.
 
 \begin{figure*}[h!]
 \centering
@@ -147,7 +148,7 @@ The delays were evaluated by inserting time-stamped variables into the code befo
 
 \subsection{System calibration}
 
-The two \gls{ECU}s on the standard \gls{ETS} were calibrated to account for the hardware characteristics before handing-over the legacy system to the active converter dolly project. The parameter set included zeroing of hydraulic pressure levels of the steering system and the integration of the \gls{EBS}-\gls{CAN} signals as well as the articulation angle sensor \gls{CAN} (\gls{ASF}), as it would theoretically be possible to use other sources for the speed-signal needed in the legacy \gls{ETS}. This calibration ensured a correctly and fully working base-system, which in case of failure could be reverted back to. Further on this parameter sets will not be changed to prevent inconsistent behaviour. 
+The two \gls{ECU}s on the standard \gls{ETS} were calibrated to account for the hardware characteristics before handing-over the legacy system to the active converter dolly project. The parameter set included zeroing of hydraulic pressure levels of the steering system and the integration of the \gls{EBS}-\gls{CAN} signals as well as the \gls{ASF}-\gls{CAN}, as it would theoretically be possible to use other sources for the speed-signal needed in the legacy \gls{ETS}. This calibration ensured a correctly and fully working base-system, which in case of failure could be reverted back to. Further on this parameter sets will not be changed to prevent inconsistent behaviour. 
 
 \subsection{Actuator tests}
 
@@ -182,8 +183,7 @@ As was laid out in section HIER-REF-FUER-BILD-MIT-WEITERFUEHRPARAMETERN! some CA
 \label{sec:HIL}
 \begin{itemize}
 	\item description of \gls{HIL} 
-	\item Functional architecture diagram (MSD replaced with actual dolly)
-	\item Limitations (axle loads, standing still)
+
 \end{itemize}
 
 \gls{VTM} includes a lot of processing heavy sub-models (tire models, vehicle parameter sets) which lead to processing power not sufficing to allow for \gls{VTM} 's execution in the dSpace environment on the \gls{MABII}. To perform \gls{HIL} -testing it was thus necessary to split the comptuational load and accomplish real-time data exchange between the hardware controlling system on the \gls{MABII} and the rest of the simulation which will be run parallely in Simulink in real-time on a standard PC. Though there are dedicated real-time platforms available to achieve real-time execution it was decided to rely on a standard PC to minimize costs and have a lean work-process without extra steps of code conversion to different platforms. Figure \ref{fig:HIL_overview} illustrates the distribution of the \gls{HIL} -setup's different components over two computers, the \gls{MABII} and the actual hardware. 
@@ -205,15 +205,15 @@ Usually Simulink simulations are computed as fast as possible and then afterward
 
 Limitations: \gls{HIL} -testing took place in workshop environment and thus the dolly was not rolling compromising the tire friction compared with a rolling combination. As outlined in section \ref{sec:results_processing_time} this does not increase the reaction time of the system, though. Furthermore the additional axle load was zero for both axles, as it was not possible to increase the load without a trailer in the lab environment at hand. This is also unlikely to change the results, as is suggested in \ref{sec:results_processing_time} the axle-load is no deciding factor in the wheel articulation's performance. 
 
-The setup for the HIL-testing can also be represented using the functionality architecture introduced in section \ref{sec:func_architecture}.
-Compared with the testing of the controllers described in section \ref{sec:bench-testing}, the division of the functionality architecture changed. The MSD are no longer simulated but the actual dolly together with the MABII, which is needed as an interface between the MSD and the other parts of the functionality architecture, is used. The HMI, VMM and vehicle plant are still simulated in Simulink. Figure \ref{fig:funct_architecture_hil} shows how the parts are divided to different systems.
-\begin{figure*}[!htb]
-	\centering
-	\includegraphics[width=0.5\linewidth]{figures/functionality_architecture_hil}
-	
-	\caption{Functionality Architecture for HIL-testing}
-	\label{fig:funct_architecture_hil}
-\end{figure*}\\
+%The setup for the HIL-testing can also be represented using the functionality architecture introduced in section \ref{sec:func_architecture}.
+%Compared with the testing of the controllers described in section \ref{sec:bench-testing}, the division of the functionality architecture changed. The MSD are no longer simulated but the actual dolly together with the MABII, which is needed as an interface between the MSD and the other parts of the functionality architecture, is used. The HMI, VMM and vehicle plant are still simulated in Simulink. Figure \ref{fig:funct_architecture_hil} shows how the parts are divided to different systems.
+%\begin{figure*}[!htb]
+%	\centering
+%	\includegraphics[width=0.5\linewidth]{figures/functionality_architecture_hil}
+%	
+%	\caption{Functionality Architecture for HIL-testing}
+%	\label{fig:funct_architecture_hil}
+%\end{figure*}\\
 
 \subsection{Low-speed controller}
 The maneuver that was used for testing the Low-speed controller was a 180 degree turn at constant speed. The steering angle of the tractor can be seen in Figure \ref{fig:HIL002_delta11}.\\

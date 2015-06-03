@@ -7,11 +7,12 @@
 
 \chapter{Fault detection and system ability (5 Seiten)}
 \label{chap:fault_detection}
-\section{\gls{FMEA}}
+\section{\acrfull{FMEA}}
 \label{sec:FMEA}
-\gls{FMEA}s were developed by the US military in the late 1940s and later also used by NASA in the Apollo project in the 1960s.
-A \gls{FMEA} is used to detect possible failures before they appear. Therefore the \gls{FMEA} is done in a early stage of a project in order to be able to take the results of the \gls{FMEA} into consideration when developing a system. In the process every possible failure of a system are taken into consideration. 
+\gls{FMEA} were developed by the US military in the late 1940s and later also used by NASA in the Apollo project in the 1960s.
+\gls{FMEA} are used to detect possible failures before they appear. Therefore the \gls{FMEA} is done in a early stage of a project in order to be able to take the results of the \gls{FMEA} into consideration when developing a system. In the process every possible failure of a system are taken into consideration. 
 
+To detect the safety critical parts of the whole dolly system and improve the safety a \gls{FMEA} was conducted for this project.
 In a first step a block diagram of the system with all of its inputs, outputs and subsytems was created to gain a complete understanding of the system. Every subsystem was broken down to the lowest level and for those subsystems block diagrams with all the components, inputs and outputs were created as well.
 
 Starting from the block diagrams all potential failure modes were determined for every component of the system respectively subsystem. As a next step the potential effects of these failure modes were determined and the severity of these effects were evaluated on a scale from one to ten,  with 1 being the lowest severity and ten being the highest severity. For the evaluation a table that shows how different severities correlate with the numbers was used (see Table \ref{tab:fmea_severity}). 
@@ -21,7 +22,7 @@ After the severity, probability and detectability were evaluated, a \gls{RPN} is
 \begin{equation*}
 RPN=severity*probability*detectability
 \end{equation*}      
-This \gls{RPN} is used to identify the failure mechanisms that need to be addressed. After the \gls{RPN} for every causes is calculated, the \gls{RPN} are ranked from highest to lowest using a Pareto diagram. The causes with the highest \gls{RPN} need to be addressed first. Special attention needs to be paid to cases where a high severity number, which means 9 or 10, occurred, even if the \gls{RPN} isn't as high as for other cases. 
+This \gls{RPN} is used to identify the failure mechanisms that need to be addressed. After the \gls{RPN} for every causes is calculated, the \gls{RPN} are ranked from highest to lowest using a Pareto diagram (see figure \ref{fig:pareto}). The causes with the highest \gls{RPN} need to be addressed first. Special attention needs to be paid to cases where a high severity number, which means 9 or 10, occurred, even if the \gls{RPN} isn't as high as for other cases. 
 %In table \ref{tab:RPN} it is shown how the risk priority number have to be handled.
 %\begin{table}[h]
 %	\centering
@@ -35,7 +36,7 @@ This \gls{RPN} is used to identify the failure mechanisms that need to be addres
 		
 %	\end{tabular} \\
 %\end{table}
-In order to lower the \gls{RPN} for those cases actions need to be decided, that either lower the severity, probability or detectability of them or more than one of those factors. After the performance of these actions the severity, probability and detectability are evaluated again and a new \gls{RPN} is calculated. If the \gls{RPN} still is to high a iteration of the process needs to be done. \cite{din_60812_fmea}
+In order to lower the \gls{RPN} for those cases actions need to be decided, that either lower the severity, probability or detectability of them or more than one of those factors. After the performance of these actions the severity, probability and detectability are evaluated again and a new \gls{RPN} is calculated. If the \gls{RPN} still is to high a iteration of the process needs to be done \cite{din_60812_fmea}.
 Figure \ref{fig:fmea_example} shows a screen shot of the FMEA-Excel-worksheet for the first iteration.    
 \begin{figure*}[!htb]
 	\centering
@@ -77,7 +78,7 @@ Depending on those parameters the capabilities are lowered.
 \begin{itemize}
 	\item warnings from dolly \gls{ECU} \\
 	In the original state, the \gls{ETS}-\gls{ECU} monitors all safety critical components of the dolly. In case of a malfunction, an error code is sent via the \gls{CAN}-Bus and the error message is visible on the diagnose displays of the dolly. Depending on the severity of the error the steering is deactivated and the axes steer back to a steering angle of 0 deg.
-	Due to the required modification of the \gls{ASF}- and speed-signal, the inbuilt supervision of the \gls{ETS}-\gls{ECU} is no longer fully functioning. Therefore a additional supervision of the system has to be implemented in the Simulink-model. This supervision considers the current capabilities of the dolly and reduces the requested steering angle or steering rate, if needed.    
+	Due to the required modification of the \gls{ASF}- and \gls{EBS}-signal, the inbuilt supervision of the \gls{ETS}-\gls{ECU} is no longer fully functioning. Therefore a additional supervision of the system has to be implemented in the Simulink-model. This supervision considers the current capabilities of the dolly and reduces the requested steering angle and steering rate, if needed.    
 	\item warnings from \gls{EBS}
 	\item warnings from vehicle
 	\item 'own' error codes and warnings (e.g. logging, \gls{MABII} related, arduino-\gls{IMU} related)

@@ -102,7 +102,7 @@ The inputs to the block are:
  	\item WheelSpeedDiffMainAxle: The wheel speed difference from the dolly's \gls{EBS}
  \end{itemize}
  The outputs are used to monitor the dolly's state and for the calculation of the current capabilities (see section \ref{sec:maxi_capabilities}).
- Figure \ref{fig:steering_interface_inside} shows the inside of the steering interface block. It contains \gls{RTI} \gls{CAN} MultiMessage blocks (see section \ref{RTI_CAN}).   
+ Figure \ref{fig:steering_interface_inside_pdf} shows the inside of the steering interface block. It contains \gls{RTI} \gls{CAN} MultiMessage blocks (see section \ref{sec:matlab}).   
  
  \begin{figure*}[!htb]
  	\centering
@@ -117,7 +117,7 @@ The inputs to the block are:
   
 \section{ControlDesk monitoring environment}
 \label{sec:control_desk}
-The software used to monitor the Simulink model running on the \gls{MABII} and for logging of data is called dSpace ControlDesk. It also provides the possibility to control the Simulink model running on the MABII, for example by changing parameters like constants in the model during run-time. Therefore it was used for bench-testing the dolly system (see section \ref{sec:bench-testing}) to directly send steering angle request to the \gls{ETS}-\gls{CAN} via the steering interface (section \ref{sec:steering_interface}). In ControlDesk the \gls{CAN}s that the \gls{MABII} is connected to can be monitored as well. This proofed very useful for checking if all systems work correctly during early stages of development. 
+The software used to monitor the Simulink model running on the \gls{MABII} and for logging of data is called dSpace ControlDesk. It also provides the possibility to control the Simulink model, for example by changing parameters like constants in the model during run-time. Therefore it was used for bench-testing the dolly system (see section \ref{sec:bench-testing}) to directly send steering angle request to the \gls{ETS}-\gls{CAN} via the steering interface (section \ref{sec:steering_interface}). In ControlDesk the \gls{CAN}s that the \gls{MABII} is connected to can be monitored as well. This proofed very useful for checking if all systems work correctly during early stages of development. 
 
 \subsection{Maneuver control}
 Though as mentioned in section \ref{sec:realtime_environment} the \gls{MABII} is capable of running headless and it would be possible to execute the maneuvers fully independently on start-up, it was decided to rely on manual maneuver triggering to have an extra level of safety. For controlled testing environments with clearly delimited maneuvers, the structure shown in figure \ref{fig:controlDesk_trigger} was introduced and allows to either command a steering request of zero to the dolly or patch through the calculated steering angle that is computed by the steering controller and thus starting the maneuver. 
