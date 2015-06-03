@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.5.26)  3 JUN 2015 09:50
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.5.26)  3 JUN 2015 15:45
 entering extended mode
 **ExampleMasters.tex
 (C:\Users\1.5V\Documents\GitHub\LaTeX_MA_Active_Dolly\ExampleMasters.tex
@@ -1457,13 +1457,25 @@ File: figures/Avancez_white.pdf Graphic file (type pdf)
 <use figures/Avancez_white.pdf>
 Package pdftex.def Info: figures/Avancez_white.pdf used on input line 116.
 (pdftex.def)             Requested size: 95.60344pt x 89.35773pt.
+Package epstopdf Info: Source file: <figures/ExampleCover.eps>
+(epstopdf)                    date: 2015-06-03 15:30:53
+(epstopdf)                    size: 68542 bytes
+(epstopdf)             Output file: <figures/ExampleCover-eps-converted-to.pdf>
 
-<figures/ExampleCover.png, id=228, 306.9066pt x 448.074pt>
-File: figures/ExampleCover.png Graphic file (type png)
+(epstopdf)                    date: 2015-06-03 15:35:32
+(epstopdf)                    size: 29621 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/ExampleCover-eps-co
+nverted-to.pdf figures/ExampleCover.eps>
+(epstopdf)             \includegraphics on input line 116.
+Package epstopdf Info: Output file is already uptodate.
 
-<use figures/ExampleCover.png>
-Package pdftex.def Info: figures/ExampleCover.png used on input line 116.
-(pdftex.def)             Requested size: 231.52339pt x 338.01689pt.
+<figures/ExampleCover-eps-converted-to.pdf, id=228, 961.5925pt x 543.02875pt>
+File: figures/ExampleCover-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figures/ExampleCover-eps-converted-to.pdf>
+Package pdftex.def Info: figures/ExampleCover-eps-converted-to.pdf used on inpu
+t line 116.
+(pdftex.def)             Requested size: 478.00725pt x 269.93936pt.
 Package microtype Info: Loading generic settings for font family
 (microtype)             `cmss' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
@@ -1477,20 +1489,21 @@ Overfull \hbox (18.02646pt too wide) in paragraph at lines 116--116
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/1.5V/Documents/G
 itHub/LaTeX_MA_Active_Dolly/figures/Avancez_white.pdf> <C:/Users/1.5V/Documents
-/GitHub/LaTeX_MA_Active_Dolly/figures/ExampleCover.png>] [-99] [-98]
+/GitHub/LaTeX_MA_Active_Dolly/figures/ExampleCover-eps-converted-to.pdf>]
+[-99] [-98]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 116.
 
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 116.
- [-97] [1]
-[2
+
+[-97] [1] [2
 
 
-] (C:\Users\1.5V\Documents\GitHub\LaTeX_MA_Active_Dolly\ExampleMasters.toc
+]
+(C:\Users\1.5V\Documents\GitHub\LaTeX_MA_Active_Dolly\ExampleMasters.toc
 [3])
 \tf@toc=\write9
  [4]
@@ -1531,40 +1544,70 @@ T
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 33--34
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--38
+Underfull \hbox (badness 10000) in paragraph at lines 36--39
 
  []
 
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 62--63
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5]
+Underfull \hbox (badness 10000) in paragraph at lines 63--64
 
  []
 
-[6] [7] <figures/v_model/Folie1.jpg, id=857, 963.6pt x 542.025pt>
-File: figures/v_model/Folie1.jpg Graphic file (type jpg)
+[6] [7]
+Package epstopdf Info: Source file: <figures/v_model/Folie1.eps>
+(epstopdf)                    date: 2015-06-03 15:19:24
+(epstopdf)                    size: 75003 bytes
+(epstopdf)             Output file: <figures/v_model/Folie1-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2015-06-03 15:20:17
+(epstopdf)                    size: 18741 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/v_model/Folie1-eps-
+converted-to.pdf figures/v_model/Folie1.eps>
+(epstopdf)             \includegraphics on input line 95.
+Package epstopdf Info: Output file is already uptodate.
 
-<use figures/v_model/Folie1.jpg>
-Package pdftex.def Info: figures/v_model/Folie1.jpg used on input line 95.
-(pdftex.def)             Requested size: 430.1962pt x 241.98193pt.
+<figures/v_model/Folie1-eps-converted-to.pdf, id=936, 961.5925pt x 543.02875pt>
+File: figures/v_model/Folie1-eps-converted-to.pdf Graphic file (type pdf)
+<use figures/v_model/Folie1-eps-converted-to.pdf>
+Package pdftex.def Info: figures/v_model/Folie1-eps-converted-to.pdf used on in
+put line 95.
+(pdftex.def)             Requested size: 430.1962pt x 242.94377pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [8 <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/v_model/Folie
-1.jpg>]
-<figures/functionality_architecture.png, id=868, 963.6pt x 542.025pt>
-File: figures/functionality_architecture.png Graphic file (type png)
+1-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <figures/functionality_architecture.eps>
+(epstopdf)                    date: 2015-06-03 15:25:44
+(epstopdf)                    size: 65013 bytes
+(epstopdf)             Output file: <figures/functionality_architecture-eps-con
+verted-to.pdf>
+(epstopdf)                    date: 2015-06-03 15:35:33
+(epstopdf)                    size: 15203 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/functionality_archi
+tecture-eps-converted-to.pdf figures/functionality_architecture.eps>
+(epstopdf)             \includegraphics on input line 120.
+Package epstopdf Info: Output file is already uptodate.
 
-<use figures/functionality_architecture.png>
-Package pdftex.def Info: figures/functionality_architecture.png used on input l
-ine 120.
-(pdftex.def)             Requested size: 477.99902pt x 268.86974pt.
- [9 <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/functionality
-_architecture.png>])
+<figures/functionality_architecture-eps-converted-to.pdf, id=956, 961.5925pt x 
+543.02875pt>
+File: figures/functionality_architecture-eps-converted-to.pdf Graphic file (typ
+e pdf)
+ <use figures/functionality_architecture-eps-converted-to.pdf>
+Package pdftex.def Info: figures/functionality_architecture-eps-converted-to.pd
+f used on input line 120.
+(pdftex.def)             Requested size: 477.99902pt x 269.93936pt.
+
+[9 <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/functionality_
+architecture-eps-converted-to.pdf>])
 (C:\Users\1.5V\Documents\GitHub\LaTeX_MA_Active_Dolly\DynamicModel.tex [10]
 Chapter 3.
 
@@ -1575,7 +1618,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `subscript' on input line 11.
 
-<figures/Low_speed_diagram.png, id=881, 606.01407pt x 424.58624pt>
+<figures/Low_speed_diagram.png, id=984, 606.01407pt x 424.58624pt>
 File: figures/Low_speed_diagram.png Graphic file (type png)
 
 <use figures/Low_speed_diagram.png>
@@ -1595,15 +1638,15 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 [12 <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/Low_speed_dia
 gram.png>]
-<figures/Inverse_of_A-double_single-track.png, id=899, 670.00313pt x 485.56406p
-t>
+<figures/Inverse_of_A-double_single-track.png, id=1003, 670.00313pt x 485.56406
+pt>
 File: figures/Inverse_of_A-double_single-track.png Graphic file (type png)
  <use figures/Inverse_of_A-double_single-track.png>
 Package pdftex.def Info: figures/Inverse_of_A-double_single-track.png used on i
 nput line 78.
 (pdftex.def)             Requested size: 238.99951pt x 173.20256pt.
 
-<figures/inverse_controller.png, id=902, 641.39626pt x 307.1475pt>
+<figures/inverse_controller.png, id=1006, 641.39626pt x 307.1475pt>
 File: figures/inverse_controller.png Graphic file (type png)
 
 <use figures/inverse_controller.png>
@@ -1615,20 +1658,35 @@ Package pdftex.def Info: figures/inverse_controller.png used on input line 91.
 (C:\Users\1.5V\Documents\GitHub\LaTeX_MA_Active_Dolly\HardwareSetUp.tex
 [14]
 Chapter 4.
+Package epstopdf Info: Source file: <figures/combination_overview_with_position
+s.eps>
+(epstopdf)                    date: 2015-06-03 15:24:15
+(epstopdf)                    size: 37303 bytes
+(epstopdf)             Output file: <figures/combination_overview_with_position
+s-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-03 15:35:34
+(epstopdf)                    size: 11656 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/combination_overvie
+w_with_positions-eps-converted-to.pdf figures/combination_overview_with_positio
+ns.eps>
+(epstopdf)             \includegraphics on input line 18.
+Package epstopdf Info: Output file is already uptodate.
 
-<figures/combination_overview_with_positions.jpg, id=922, 822.07124pt x 216.81p
-t>
-File: figures/combination_overview_with_positions.jpg Graphic file (type jpg)
- <use figures/combination_overview_with_positions.jpg>
-Package pdftex.def Info: figures/combination_overview_with_positions.jpg used o
-n input line 18.
-(pdftex.def)             Requested size: 477.99902pt x 126.06416pt.
+<figures/combination_overview_with_positions-eps-converted-to.pdf, id=1026, 961
+.5925pt x 543.02875pt>
+File: figures/combination_overview_with_positions-eps-converted-to.pdf Graphic 
+file (type pdf)
+
+<use figures/combination_overview_with_positions-eps-converted-to.pdf>
+Package pdftex.def Info: figures/combination_overview_with_positions-eps-conver
+ted-to.pdf used on input line 18.
+(pdftex.def)             Requested size: 477.99902pt x 269.93936pt.
  [15
 
 
  <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/combination_over
-view_with_positions.jpg>] <figures/legacy_system_vse.jpg, id=948, 998.22937pt x
- 465.23813pt>
+view_with_positions-eps-converted-to.pdf>]
+<figures/legacy_system_vse.jpg, id=1058, 998.22937pt x 465.23813pt>
 File: figures/legacy_system_vse.jpg Graphic file (type jpg)
 
 <use figures/legacy_system_vse.jpg>
@@ -1639,47 +1697,75 @@ Underfull \hbox (badness 10000) in paragraph at lines 50--51
 
  []
 
-[16 <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/legacy_system
-_vse.jpg>] <figures/system_overview_ETS.jpg, id=958, 963.6pt x 542.025pt>
+<figures/system_overview_ETS.jpg, id=1064, 963.6pt x 542.025pt>
 File: figures/system_overview_ETS.jpg Graphic file (type jpg)
 
 <use figures/system_overview_ETS.jpg>
 Package pdftex.def Info: figures/system_overview_ETS.jpg used on input line 56.
 
 (pdftex.def)             Requested size: 477.99902pt x 268.86974pt.
- [17 <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/system_overv
-iew_ETS.jpg>]
+ [16] [17 <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/legacy_
+system_vse.jpg> <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/s
+ystem_overview_ETS.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 90--91
 
  []
 
-
+[18]
 Underfull \hbox (badness 10000) in paragraph at lines 93--94
 
  []
 
-[18]
+
 Underfull \hbox (badness 10000) in paragraph at lines 100--101
 
  []
 
-<figures/can_extension.png, id=1026, 963.6pt x 446.41782pt>
-File: figures/can_extension.png Graphic file (type png)
+Package epstopdf Info: Source file: <figures/can_extension.eps>
+(epstopdf)                    date: 2015-06-03 15:28:36
+(epstopdf)                    size: 74507 bytes
+(epstopdf)             Output file: <figures/can_extension-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2015-06-03 15:35:35
+(epstopdf)                    size: 19674 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/can_extension-eps-c
+onverted-to.pdf figures/can_extension.eps>
+(epstopdf)             \includegraphics on input line 107.
+Package epstopdf Info: Output file is already uptodate.
 
-<use figures/can_extension.png>
-Package pdftex.def Info: figures/can_extension.png used on input line 107.
-(pdftex.def)             Requested size: 477.99902pt x 221.4441pt.
+<figures/can_extension-eps-converted-to.pdf, id=1135, 961.5925pt x 543.02875pt>
+File: figures/can_extension-eps-converted-to.pdf Graphic file (type pdf)
+<use figures/can_extension-eps-converted-to.pdf>
+Package pdftex.def Info: figures/can_extension-eps-converted-to.pdf used on inp
+ut line 107.
+(pdftex.def)             Requested size: 477.99902pt x 269.93936pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 124--125
 
  []
 
-File: figures/ExampleCover.png Graphic file (type png)
-<use figures/ExampleCover.png>
-Package pdftex.def Info: figures/ExampleCover.png used on input line 128.
-(pdftex.def)             Requested size: 238.99951pt x 348.9425pt.
- [19] [20 <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/can_ext
-ension.png>]
+Package epstopdf Info: Source file: <figures/ExampleCover.eps>
+(epstopdf)                    date: 2015-06-03 15:30:53
+(epstopdf)                    size: 68542 bytes
+(epstopdf)             Output file: <figures/ExampleCover-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2015-06-03 15:35:32
+(epstopdf)                    size: 29621 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/ExampleCover-eps-co
+nverted-to.pdf figures/ExampleCover.eps>
+(epstopdf)             \includegraphics on input line 128.
+Package epstopdf Info: Output file is already uptodate.
+File: figures/ExampleCover-eps-converted-to.pdf Graphic file (type pdf)
+<use figures/ExampleCover-eps-converted-to.pdf>
+Package pdftex.def Info: figures/ExampleCover-eps-converted-to.pdf used on inpu
+t line 128.
+(pdftex.def)             Requested size: 621.40018pt x 350.91786pt.
+
+Overfull \hbox (143.40115pt too wide) in paragraph at lines 128--129
+[][] 
+ []
+
+[19]
 Underfull \hbox (badness 10000) in paragraph at lines 141--142
 
  []
@@ -1694,7 +1780,7 @@ Package epstopdf Info: Source file: <figures/dolly_split.eps>
 verted-to.pdf figures/dolly_split.eps>
 (epstopdf)             \includegraphics on input line 145.
 Package epstopdf Info: Output file is already uptodate.
-<figures/dolly_split-eps-converted-to.pdf, id=1070, 963.6pt x 541.02126pt>
+<figures/dolly_split-eps-converted-to.pdf, id=1175, 963.6pt x 541.02126pt>
 File: figures/dolly_split-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/dolly_split-eps-converted-to.pdf>
@@ -1706,32 +1792,72 @@ Underfull \hbox (badness 10000) in paragraph at lines 150--151
 
  []
 
-<figures/BOB_schema.png, id=1091, 963.6pt x 542.025pt>
-File: figures/BOB_schema.png Graphic file (type png)
+[20 <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/can_extension
+-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <figures/BOB_schema.eps>
+(epstopdf)                    date: 2015-06-03 15:35:04
+(epstopdf)                    size: 329789 bytes
+(epstopdf)             Output file: <figures/BOB_schema-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-03 15:35:36
+(epstopdf)                    size: 113064 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/BOB_schema-eps-conv
+erted-to.pdf figures/BOB_schema.eps>
+(epstopdf)             \includegraphics on input line 154.
+Package epstopdf Info: Output file is already uptodate.
 
-<use figures/BOB_schema.png>
-Package pdftex.def Info: figures/BOB_schema.png used on input line 154.
-(pdftex.def)             Requested size: 477.99902pt x 268.86974pt.
- [21 <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/dolly_split-
-eps-converted-to.pdf>]
+<figures/BOB_schema-eps-converted-to.pdf, id=1218, 961.5925pt x 543.02875pt>
+File: figures/BOB_schema-eps-converted-to.pdf Graphic file (type pdf)
 
-LaTeX Warning: Reference `sec:overview_of_the_model' on page 22 undefined on in
+<use figures/BOB_schema-eps-converted-to.pdf>
+Package pdftex.def Info: figures/BOB_schema-eps-converted-to.pdf used on input 
+line 154.
+(pdftex.def)             Requested size: 477.99902pt x 269.93936pt.
+
+Underfull \vbox (badness 2951) has occurred while \output is active []
+
+ [21]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [22 <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/dolly_split-
+eps-converted-to.pdf> <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/fig
+ures/BOB_schema-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `sec:overview_of_the_model' on page 23 undefined on in
 put line 169.
 
-[22 <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/BOB_schema.pn
-g>] [23]
+[23]
 Underfull \hbox (badness 10000) in paragraph at lines 210--211
 
  []
 
-<figures/IMU_overview.jpg, id=1176, 963.6pt x 542.025pt>
-File: figures/IMU_overview.jpg Graphic file (type jpg)
+Package epstopdf Info: Source file: <figures/IMU_overview.eps>
+(epstopdf)                    date: 2015-06-03 15:44:56
+(epstopdf)                    size: 61277 bytes
+(epstopdf)             Output file: <figures/IMU_overview-eps-converted-to.pdf>
 
-<use figures/IMU_overview.jpg>
-Package pdftex.def Info: figures/IMU_overview.jpg used on input line 214.
-(pdftex.def)             Requested size: 477.99902pt x 268.86974pt.
+(epstopdf)             Command: <epstopdf --outfile=figures/IMU_overview-eps-co
+nverted-to.pdf figures/IMU_overview.eps>
+(epstopdf)             \includegraphics on input line 214.
+runsystem(epstopdf --outfile=figures/IMU_overview-eps-converted-to.pdf figures/
+IMU_overview.eps)...executed (allowed).
+
+Package epstopdf Info: Result file: <figures/IMU_overview-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2015-06-03 15:45:05
+(epstopdf)                    size: 16612 bytes.
+
+<figures/IMU_overview-eps-converted-to.pdf, id=1305, 961.5925pt x 543.02875pt>
+File: figures/IMU_overview-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figures/IMU_overview-eps-converted-to.pdf>
+Package pdftex.def Info: figures/IMU_overview-eps-converted-to.pdf used on inpu
+t line 214.
+(pdftex.def)             Requested size: 477.99902pt x 269.93936pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [24 <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/IMU_overview
-.jpg>])
+-eps-converted-to.pdf>])
 (C:\Users\1.5V\Documents\GitHub\LaTeX_MA_Active_Dolly\SoftwareSetUp.tex
 [25] [26
 
@@ -1748,7 +1874,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 50--54
 
  []
 
-[28] <figures/steering_interface.png, id=1271, 331.99031pt x 402.75468pt>
+[28] <figures/steering_interface.png, id=1423, 331.99031pt x 402.75468pt>
 File: figures/steering_interface.png Graphic file (type png)
 
 <use figures/steering_interface.png>
@@ -1763,31 +1889,15 @@ n input line 102.
 
 LaTeX Warning: Reference `RTI_CAN' on page 30 undefined on input line 102.
 
-<figures/steering_interface_inside.pdf, id=1284, 597.23125pt x 845.1575pt>
+<figures/steering_interface_inside.pdf, id=1436, 597.23125pt x 845.1575pt>
 File: figures/steering_interface_inside.pdf Graphic file (type pdf)
 
 <use figures/steering_interface_inside.pdf>
 Package pdftex.def Info: figures/steering_interface_inside.pdf used on input li
 ne 106.
-(pdftex.def)             Requested size: 477.99902pt x 676.43643pt.
+(pdftex.def)             Requested size: 454.09761pt x 642.61009pt.
 
-
-LaTeX Warning: Float too large for page by 23.24258pt on input line 110.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.111 
-      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-<figures/controlDesk_trigger.pdf, id=1309, 963.6pt x 542.025pt>
+<figures/controlDesk_trigger.pdf, id=1461, 963.6pt x 542.025pt>
 File: figures/controlDesk_trigger.pdf Graphic file (type pdf)
 
 <use figures/controlDesk_trigger.pdf>
@@ -1816,7 +1926,7 @@ Chapter 6.
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\gls' on input line 10.
 
-<figures/fmea_example.png, id=1389, 679.03688pt x 359.09157pt>
+<figures/fmea_example.png, id=1541, 679.03688pt x 359.09157pt>
 File: figures/fmea_example.png Graphic file (type png)
 
 <use figures/fmea_example.png>
@@ -1835,7 +1945,7 @@ df>
 (epstopdf)             \includegraphics on input line 68.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/step_input_8deg-eps-converted-to.pdf, id=1403, 479.7925pt x 258.9675pt
+<figures/step_input_8deg-eps-converted-to.pdf, id=1555, 479.7925pt x 258.9675pt
 >
 File: figures/step_input_8deg-eps-converted-to.pdf Graphic file (type pdf)
  <use figures/step_input_8deg-eps-converted-to.pdf>
@@ -1864,7 +1974,7 @@ tecture_sim-eps-converted-to.pdf figures/functionality_architecture_sim.eps>
 (epstopdf)             \includegraphics on input line 23.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/functionality_architecture_sim-eps-converted-to.pdf, id=1443, 963.6pt 
+<figures/functionality_architecture_sim-eps-converted-to.pdf, id=1595, 963.6pt 
 x 541.02126pt>
 File: figures/functionality_architecture_sim-eps-converted-to.pdf Graphic file 
 (type pdf)
@@ -1873,35 +1983,36 @@ File: figures/functionality_architecture_sim-eps-converted-to.pdf Graphic file
 Package pdftex.def Info: figures/functionality_architecture_sim-eps-converted-t
 o.pdf used on input line 23.
 (pdftex.def)             Requested size: 238.99951pt x 134.18178pt.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.28 
-     
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-[39 <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/functionality
-_architecture_sim-eps-converted-to.pdf>]
+ [39 <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/functionalit
+y_architecture_sim-eps-converted-to.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 61--62
 
  []
 
 [40]
-<figures/example_for_step_input_delay_measuring.jpg, id=1493, 592.2125pt x 316.
-18124pt>
-File: figures/example_for_step_input_delay_measuring.jpg Graphic file (type jpg
-)
- <use figures/example_for_step_input_delay_measuring.jpg>
-Package pdftex.def Info: figures/example_for_step_input_delay_measuring.jpg use
-d on input line 65.
-(pdftex.def)             Requested size: 477.99902pt x 255.21286pt.
+Package epstopdf Info: Source file: <figures/example_for_step_input_delay_measu
+ring.eps>
+(epstopdf)                    date: 2015-06-03 14:50:00
+(epstopdf)                    size: 122911 bytes
+(epstopdf)             Output file: <figures/example_for_step_input_delay_measu
+ring-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-06-03 14:51:07
+(epstopdf)                    size: 9717 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/example_for_step_in
+put_delay_measuring-eps-converted-to.pdf figures/example_for_step_input_delay_m
+easuring.eps>
+(epstopdf)             \includegraphics on input line 65.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/example_for_step_input_delay_measuring-eps-converted-to.pdf, id=1645, 
+479.7925pt x 264.99pt>
+File: figures/example_for_step_input_delay_measuring-eps-converted-to.pdf Graph
+ic file (type pdf)
+
+<use figures/example_for_step_input_delay_measuring-eps-converted-to.pdf>
+Package pdftex.def Info: figures/example_for_step_input_delay_measuring-eps-con
+verted-to.pdf used on input line 65.
+(pdftex.def)             Requested size: 477.99902pt x 264.00275pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 71--72
 
@@ -1914,30 +2025,39 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [41 <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/example_for_s
-tep_input_delay_measuring.jpg>] [42]
-<figures/arduino_delays_sketch.jpg, id=1527, 963.6pt x 208.52907pt>
-File: figures/arduino_delays_sketch.jpg Graphic file (type jpg)
+tep_input_delay_measuring-eps-converted-to.pdf>] [42]
+Package epstopdf Info: Source file: <figures/arduino_delays_sketch.eps>
+(epstopdf)                    date: 2015-06-03 15:21:30
+(epstopdf)                    size: 48259 bytes
+(epstopdf)             Output file: <figures/arduino_delays_sketch-eps-converte
+d-to.pdf>
+(epstopdf)                    date: 2015-06-03 15:35:38
+(epstopdf)                    size: 11173 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/arduino_delays_sket
+ch-eps-converted-to.pdf figures/arduino_delays_sketch.eps>
+(epstopdf)             \includegraphics on input line 139.
+Package epstopdf Info: Output file is already uptodate.
 
-<use figures/arduino_delays_sketch.jpg>
-Package pdftex.def Info: figures/arduino_delays_sketch.jpg used on input line 1
-39.
-(pdftex.def)             Requested size: 477.99902pt x 103.44016pt.
+<figures/arduino_delays_sketch-eps-converted-to.pdf, id=1689, 961.5925pt x 543.
+02875pt>
+File: figures/arduino_delays_sketch-eps-converted-to.pdf Graphic file (type pdf
+)
+ <use figures/arduino_delays_sketch-eps-converted-to.pdf>
+Package pdftex.def Info: figures/arduino_delays_sketch-eps-converted-to.pdf use
+d on input line 139.
+(pdftex.def)             Requested size: 477.99902pt x 269.93936pt.
 
-<figures/ETS_display_homescreen.jpg, id=1545, 2252.415pt x 2123.935pt>
+Underfull \vbox (badness 1502) has occurred while \output is active []
+
+ [43 <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/arduino_dela
+ys_sketch-eps-converted-to.pdf>]
+<figures/ETS_display_homescreen.jpg, id=1724, 2252.415pt x 2123.935pt>
 File: figures/ETS_display_homescreen.jpg Graphic file (type jpg)
 
 <use figures/ETS_display_homescreen.jpg>
 Package pdftex.def Info: figures/ETS_display_homescreen.jpg used on input line 
 159.
 (pdftex.def)             Requested size: 286.80232pt x 270.41733pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[43 <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/arduino_delay
-s_sketch.jpg>]
-Underfull \vbox (badness 2351) has occurred while \output is active []
-
  [44 <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/ETS_display_
 homescreen.jpg>]
 Package epstopdf Info: Source file: <figures/HIL_overview.eps>
@@ -1951,15 +2071,19 @@ Package epstopdf Info: Source file: <figures/HIL_overview.eps>
 nverted-to.pdf figures/HIL_overview.eps>
 (epstopdf)             \includegraphics on input line 193.
 Package epstopdf Info: Output file is already uptodate.
- <figures/HIL_overview-eps-converted-to.pdf, id=1577, 963.6pt x 542.025pt>
+
+<figures/HIL_overview-eps-converted-to.pdf, id=1749, 963.6pt x 542.025pt>
 File: figures/HIL_overview-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/HIL_overview-eps-converted-to.pdf>
 Package pdftex.def Info: figures/HIL_overview-eps-converted-to.pdf used on inpu
 t line 193.
 (pdftex.def)             Requested size: 477.99902pt x 268.86974pt.
- [45 <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/HIL_overview
--eps-converted-to.pdf>]
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[45]
 Package epstopdf Info: Source file: <figures/functionality_architecture_hil.eps
 >
 (epstopdf)                    date: 2015-05-25 12:08:28
@@ -1973,7 +2097,7 @@ tecture_hil-eps-converted-to.pdf figures/functionality_architecture_hil.eps>
 (epstopdf)             \includegraphics on input line 212.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/functionality_architecture_hil-eps-converted-to.pdf, id=1627, 963.6pt 
+<figures/functionality_architecture_hil-eps-converted-to.pdf, id=1776, 963.6pt 
 x 541.02126pt>
 File: figures/functionality_architecture_hil-eps-converted-to.pdf Graphic file 
 (type pdf)
@@ -1988,27 +2112,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 208--217
  []
 
 Package epstopdf Info: Source file: <figures/HIL_delta11.eps>
-(epstopdf)                    date: 2015-06-01 13:57:28
-(epstopdf)                    size: 91687 bytes
+(epstopdf)                    date: 2015-06-03 15:00:36
+(epstopdf)                    size: 92596 bytes
 (epstopdf)             Output file: <figures/HIL_delta11-eps-converted-to.pdf>
-(epstopdf)                    date: 2015-06-01 14:11:47
-(epstopdf)                    size: 13134 bytes
+(epstopdf)                    date: 2015-06-03 15:01:26
+(epstopdf)                    size: 13373 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/HIL_delta11-eps-con
 verted-to.pdf figures/HIL_delta11.eps>
 (epstopdf)             \includegraphics on input line 222.
 Package epstopdf Info: Output file is already uptodate.
-<figures/HIL_delta11-eps-converted-to.pdf, id=1629, 467.7475pt x 270.00874pt>
+<figures/HIL_delta11-eps-converted-to.pdf, id=1778, 471.7625pt x 270.00874pt>
 File: figures/HIL_delta11-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/HIL_delta11-eps-converted-to.pdf>
 Package pdftex.def Info: figures/HIL_delta11-eps-converted-to.pdf used on input
  line 222.
-(pdftex.def)             Requested size: 477.99902pt x 275.94086pt.
+(pdftex.def)             Requested size: 477.99902pt x 273.58423pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [46 <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/functionalit
-y_architecture_hil-eps-converted-to.pdf>]
+ [46 <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/HIL_overview
+-eps-converted-to.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [47 <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/functionalit
+y_architecture_hil-eps-converted-to.pdf> <C:/Users/1.5V/Documents/GitHub/LaTeX_
+MA_Active_Dolly/figures/HIL_delta11-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figures/functionality_architecture_track.e
 ps>
 (epstopdf)                    date: 2015-05-25 12:08:28
@@ -2023,7 +2152,7 @@ tecture_track-eps-converted-to.pdf figures/functionality_architecture_track.eps
 (epstopdf)             \includegraphics on input line 240.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/functionality_architecture_track-eps-converted-to.pdf, id=1663, 963.6p
+<figures/functionality_architecture_track-eps-converted-to.pdf, id=1847, 963.6p
 t x 541.02126pt>
 File: figures/functionality_architecture_track-eps-converted-to.pdf Graphic fil
 e (type pdf)
@@ -2032,11 +2161,13 @@ e (type pdf)
 Package pdftex.def Info: figures/functionality_architecture_track-eps-converted
 -to.pdf used on input line 240.
 (pdftex.def)             Requested size: 238.99951pt x 134.18178pt.
- [47 <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/HIL_delta11-
-eps-converted-to.pdf>])
-(C:\Users\1.5V\Documents\GitHub\LaTeX_MA_Active_Dolly\Discussion.tex [48 <C:/Us
-ers/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/functionality_architect
-ure_track-eps-converted-to.pdf>]
+ [48 <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/functionalit
+y_architecture_track-eps-converted-to.pdf>])
+(C:\Users\1.5V\Documents\GitHub\LaTeX_MA_Active_Dolly\Discussion.tex [49]
+[50
+
+
+]
 Chapter 8.
 Package epstopdf Info: Source file: <figures/delay_testing_lin_interpolation.ep
 s>
@@ -2044,25 +2175,21 @@ s>
 (epstopdf)                    size: 126507 bytes
 (epstopdf)             Output file: <figures/delay_testing_lin_interpolation-ep
 s-converted-to.pdf>
+(epstopdf)                    date: 2015-06-03 09:51:03
+(epstopdf)                    size: 9385 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/delay_testing_lin_i
 nterpolation-eps-converted-to.pdf figures/delay_testing_lin_interpolation.eps>
-(epstopdf)             \includegraphics on input line 25.
-runsystem(epstopdf --outfile=figures/delay_testing_lin_interpolation-eps-conver
-ted-to.pdf figures/delay_testing_lin_interpolation.eps)...executed (allowed).
+(epstopdf)             \includegraphics on input line 27.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <figures/delay_testing_lin_interpolation-ep
-s-converted-to.pdf>
-(epstopdf)                    date: 2015-06-03 09:51:03
-(epstopdf)                    size: 9385 bytes.
-
-<figures/delay_testing_lin_interpolation-eps-converted-to.pdf, id=1712, 470.758
+<figures/delay_testing_lin_interpolation-eps-converted-to.pdf, id=1891, 470.758
 74pt x 258.9675pt>
 File: figures/delay_testing_lin_interpolation-eps-converted-to.pdf Graphic file
  (type pdf)
 
 <use figures/delay_testing_lin_interpolation-eps-converted-to.pdf>
 Package pdftex.def Info: figures/delay_testing_lin_interpolation-eps-converted-
-to.pdf used on input line 25.
+to.pdf used on input line 27.
 (pdftex.def)             Requested size: 477.99902pt x 262.95392pt.
 Package epstopdf Info: Source file: <figures/lifted_front_5deg.eps>
 (epstopdf)                    date: 2015-06-02 19:35:36
@@ -2073,16 +2200,18 @@ Package epstopdf Info: Source file: <figures/lifted_front_5deg.eps>
 (epstopdf)                    size: 9922 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/lifted_front_5deg-e
 ps-converted-to.pdf figures/lifted_front_5deg.eps>
-(epstopdf)             \includegraphics on input line 40.
+(epstopdf)             \includegraphics on input line 43.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/lifted_front_5deg-eps-converted-to.pdf, id=1713, 474.77374pt x 258.967
+<figures/lifted_front_5deg-eps-converted-to.pdf, id=1894, 474.77374pt x 258.967
 5pt>
 File: figures/lifted_front_5deg-eps-converted-to.pdf Graphic file (type pdf)
  <use figures/lifted_front_5deg-eps-converted-to.pdf>
 Package pdftex.def Info: figures/lifted_front_5deg-eps-converted-to.pdf used on
- input line 40.
+ input line 43.
 (pdftex.def)             Requested size: 477.99902pt x 260.73712pt.
+ [51 <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/delay_testin
+g_lin_interpolation-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figures/rate_limiter1.eps>
 (epstopdf)                    date: 2015-06-02 14:10:35
 (epstopdf)                    size: 145550 bytes
@@ -2092,15 +2221,15 @@ Package epstopdf Info: Source file: <figures/rate_limiter1.eps>
 (epstopdf)                    size: 9263 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/rate_limiter1-eps-c
 onverted-to.pdf figures/rate_limiter1.eps>
-(epstopdf)             \includegraphics on input line 48.
+(epstopdf)             \includegraphics on input line 54.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/rate_limiter1-eps-converted-to.pdf, id=1715, 471.7625pt x 258.9675pt>
+<figures/rate_limiter1-eps-converted-to.pdf, id=1909, 471.7625pt x 258.9675pt>
 File: figures/rate_limiter1-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/rate_limiter1-eps-converted-to.pdf>
 Package pdftex.def Info: figures/rate_limiter1-eps-converted-to.pdf used on inp
-ut line 48.
+ut line 54.
 (pdftex.def)             Requested size: 477.99902pt x 262.39676pt.
 Package epstopdf Info: Source file: <figures/rate_limiter2.eps>
 (epstopdf)                    date: 2015-06-02 14:10:35
@@ -2111,20 +2240,15 @@ Package epstopdf Info: Source file: <figures/rate_limiter2.eps>
 (epstopdf)                    size: 10141 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/rate_limiter2-eps-c
 onverted-to.pdf figures/rate_limiter2.eps>
-(epstopdf)             \includegraphics on input line 55.
+(epstopdf)             \includegraphics on input line 61.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/rate_limiter2-eps-converted-to.pdf, id=1716, 470.75874pt x 258.9675pt>
+<figures/rate_limiter2-eps-converted-to.pdf, id=1910, 470.75874pt x 258.9675pt>
 File: figures/rate_limiter2-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/rate_limiter2-eps-converted-to.pdf>
 Package pdftex.def Info: figures/rate_limiter2-eps-converted-to.pdf used on inp
-ut line 55.
+ut line 61.
 (pdftex.def)             Requested size: 477.99902pt x 262.95392pt.
- [49
-
-
- <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/delay_testing_li
-n_interpolation-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figures/rate_limiter4.eps>
 (epstopdf)                    date: 2015-06-02 14:10:35
 (epstopdf)                    size: 133230 bytes
@@ -2134,21 +2258,23 @@ Package epstopdf Info: Source file: <figures/rate_limiter4.eps>
 (epstopdf)                    size: 9097 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/rate_limiter4-eps-c
 onverted-to.pdf figures/rate_limiter4.eps>
-(epstopdf)             \includegraphics on input line 63.
+(epstopdf)             \includegraphics on input line 69.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/rate_limiter4-eps-converted-to.pdf, id=1730, 471.7625pt x 258.9675pt>
+<figures/rate_limiter4-eps-converted-to.pdf, id=1911, 471.7625pt x 258.9675pt>
 File: figures/rate_limiter4-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/rate_limiter4-eps-converted-to.pdf>
 Package pdftex.def Info: figures/rate_limiter4-eps-converted-to.pdf used on inp
-ut line 63.
+ut line 69.
 (pdftex.def)             Requested size: 477.99902pt x 262.39676pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 83--84
+Underfull \hbox (badness 10000) in paragraph at lines 89--90
 
  []
 
+[52 <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/lifted_front_
+5deg-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figures/HIL002_front.eps>
 (epstopdf)                    date: 2015-06-01 12:44:08
 (epstopdf)                    size: 151660 bytes
@@ -2158,17 +2284,19 @@ Package epstopdf Info: Source file: <figures/HIL002_front.eps>
 (epstopdf)                    size: 17624 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/HIL002_front-eps-co
 nverted-to.pdf figures/HIL002_front.eps>
-(epstopdf)             \includegraphics on input line 87.
+(epstopdf)             \includegraphics on input line 93.
 Package epstopdf Info: Output file is already uptodate.
-<figures/HIL002_front-eps-converted-to.pdf, id=1733, 479.7925pt x 258.9675pt>
+
+<figures/HIL002_front-eps-converted-to.pdf, id=1927, 479.7925pt x 258.9675pt>
 File: figures/HIL002_front-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/HIL002_front-eps-converted-to.pdf>
 Package pdftex.def Info: figures/HIL002_front-eps-converted-to.pdf used on inpu
-t line 87.
+t line 93.
 (pdftex.def)             Requested size: 477.99902pt x 258.00267pt.
- [50 <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/lifted_front
-_5deg-eps-converted-to.pdf>]
+ [53 <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/rate_limiter
+1-eps-converted-to.pdf> <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/f
+igures/rate_limiter2-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figures/HIL002_rear.eps>
 (epstopdf)                    date: 2015-06-01 12:44:08
 (epstopdf)                    size: 151903 bytes
@@ -2177,15 +2305,15 @@ Package epstopdf Info: Source file: <figures/HIL002_rear.eps>
 (epstopdf)                    size: 18038 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/HIL002_rear-eps-con
 verted-to.pdf figures/HIL002_rear.eps>
-(epstopdf)             \includegraphics on input line 98.
+(epstopdf)             \includegraphics on input line 104.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/HIL002_rear-eps-converted-to.pdf, id=1749, 479.7925pt x 258.9675pt>
+<figures/HIL002_rear-eps-converted-to.pdf, id=1953, 479.7925pt x 258.9675pt>
 File: figures/HIL002_rear-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/HIL002_rear-eps-converted-to.pdf>
 Package pdftex.def Info: figures/HIL002_rear-eps-converted-to.pdf used on input
- line 98.
+ line 104.
 (pdftex.def)             Requested size: 477.99902pt x 258.00267pt.
 Package epstopdf Info: Source file: <figures/HIL002_front_closeup.eps>
 (epstopdf)                    date: 2015-06-01 12:44:08
@@ -2196,25 +2324,30 @@ Package epstopdf Info: Source file: <figures/HIL002_front_closeup.eps>
 (epstopdf)                    size: 9749 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/HIL002_front_closeu
 p-eps-converted-to.pdf figures/HIL002_front_closeup.eps>
-(epstopdf)             \includegraphics on input line 107.
+(epstopdf)             \includegraphics on input line 113.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/HIL002_front_closeup-eps-converted-to.pdf, id=1751, 471.7625pt x 258.9
+<figures/HIL002_front_closeup-eps-converted-to.pdf, id=1955, 471.7625pt x 258.9
 675pt>
 File: figures/HIL002_front_closeup-eps-converted-to.pdf Graphic file (type pdf)
 
  <use figures/HIL002_front_closeup-eps-converted-to.pdf>
 Package pdftex.def Info: figures/HIL002_front_closeup-eps-converted-to.pdf used
- on input line 107.
+ on input line 113.
 (pdftex.def)             Requested size: 477.99902pt x 262.39676pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--113
+Underfull \hbox (badness 10000) in paragraph at lines 109--119
 
  []
 
-[51 <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/rate_limiter1
+[54 <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/rate_limiter4
 -eps-converted-to.pdf> <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/fi
-gures/rate_limiter2-eps-converted-to.pdf>]
+gures/HIL002_front-eps-converted-to.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [55 <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/HIL002_rear-
+eps-converted-to.pdf> <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/fig
+ures/HIL002_front_closeup-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figures/HIL002_alles.eps>
 (epstopdf)                    date: 2015-06-01 13:57:28
 (epstopdf)                    size: 205013 bytes
@@ -2224,22 +2357,16 @@ Package epstopdf Info: Source file: <figures/HIL002_alles.eps>
 (epstopdf)                    size: 54702 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/HIL002_alles-eps-co
 nverted-to.pdf figures/HIL002_alles.eps>
-(epstopdf)             \includegraphics on input line 117.
+(epstopdf)             \includegraphics on input line 123.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/HIL002_alles-eps-converted-to.pdf, id=1777, 475.7775pt x 253.94875pt>
+<figures/HIL002_alles-eps-converted-to.pdf, id=2002, 475.7775pt x 253.94875pt>
 File: figures/HIL002_alles-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/HIL002_alles-eps-converted-to.pdf>
 Package pdftex.def Info: figures/HIL002_alles-eps-converted-to.pdf used on inpu
-t line 117.
+t line 123.
 (pdftex.def)             Requested size: 477.99902pt x 255.14546pt.
- [52 <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/rate_limiter
-4-eps-converted-to.pdf> <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/f
-igures/HIL002_front-eps-converted-to.pdf>] [53 <C:/Users/1.5V/Documents/GitHub/
-LaTeX_MA_Active_Dolly/figures/HIL002_rear-eps-converted-to.pdf> <C:/Users/1.5V/
-Documents/GitHub/LaTeX_MA_Active_Dolly/figures/HIL002_front_closeup-eps-convert
-ed-to.pdf>]
 Package epstopdf Info: Source file: <figures/HIL002_alles_details.eps>
 (epstopdf)                    date: 2015-06-01 13:57:28
 (epstopdf)                    size: 170049 bytes
@@ -2249,37 +2376,37 @@ Package epstopdf Info: Source file: <figures/HIL002_alles_details.eps>
 (epstopdf)                    size: 39810 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/HIL002_alles_detail
 s-eps-converted-to.pdf figures/HIL002_alles_details.eps>
-(epstopdf)             \includegraphics on input line 127.
+(epstopdf)             \includegraphics on input line 133.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/HIL002_alles_details-eps-converted-to.pdf, id=1824, 471.7625pt x 253.9
+<figures/HIL002_alles_details-eps-converted-to.pdf, id=2006, 471.7625pt x 253.9
 4875pt>
 File: figures/HIL002_alles_details-eps-converted-to.pdf Graphic file (type pdf)
 
  <use figures/HIL002_alles_details-eps-converted-to.pdf>
 Package pdftex.def Info: figures/HIL002_alles_details-eps-converted-to.pdf used
- on input line 127.
+ on input line 133.
 (pdftex.def)             Requested size: 477.99902pt x 257.31155pt.
 )
-(C:\Users\1.5V\Documents\GitHub\LaTeX_MA_Active_Dolly\Conclusion.tex [54 <C:/Us
+(C:\Users\1.5V\Documents\GitHub\LaTeX_MA_Active_Dolly\Conclusion.tex [56 <C:/Us
 ers/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/HIL002_alles-eps-conver
-ted-to.pdf>] [55 <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/
-HIL002_alles_details-eps-converted-to.pdf>] [56
+ted-to.pdf>] [57 <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/
+HIL002_alles_details-eps-converted-to.pdf>] [58
 
 
 ]
 Chapter 9.
-[57]) (C:\Users\1.5V\Documents\GitHub\LaTeX_MA_Active_Dolly\blinddarm.tex
-[58]
+[59]) (C:\Users\1.5V\Documents\GitHub\LaTeX_MA_Active_Dolly\blinddarm.tex
+[60]
 Appendix A.
-<figures/dolly_craned_up.jpg, id=1872, 3276.24pt x 2457.18pt>
+<figures/dolly_craned_up.jpg, id=2054, 3276.24pt x 2457.18pt>
 File: figures/dolly_craned_up.jpg Graphic file (type jpg)
 
 <use figures/dolly_craned_up.jpg>
 Package pdftex.def Info: figures/dolly_craned_up.jpg used on input line 15.
 (pdftex.def)             Requested size: 477.99902pt x 358.47534pt.
 
-<figures/MABII_topview_cropped.jpg, id=1873, 2675.9975pt x 1835.85875pt>
+<figures/MABII_topview_cropped.jpg, id=2055, 2675.9975pt x 1835.85875pt>
 File: figures/MABII_topview_cropped.jpg Graphic file (type jpg)
 
 <use figures/MABII_topview_cropped.jpg>
@@ -2290,7 +2417,7 @@ Package pdftex.def Info: figures/MABII_topview_cropped.jpg used on input line 2
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/CD_Layout.png, id=1876, 1025.33063pt x 547.2947pt>
+<figures/CD_Layout.png, id=2058, 1025.33063pt x 547.2947pt>
 File: figures/CD_Layout.png Graphic file (type png)
 
 <use figures/CD_Layout.png>
@@ -2333,14 +2460,14 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 ) (C:\Users\1.5V\Documents\GitHub\LaTeX_MA_Active_Dolly\glossary.tex
 \@gls@deffile=\write12
-) [59
+) [61
 
 
  <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/dolly_craned_up.
 jpg>]
-[60 <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/MABII_topview
+[62 <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/MABII_topview
 _cropped.jpg> <C:/Users/1.5V/Documents/GitHub/LaTeX_MA_Active_Dolly/figures/CD_
-Layout.png>] [61] [62]
+Layout.png>] [63] [64]
 Package microtype Info: Loading generic settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
@@ -2384,7 +2511,7 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-[63
+[65
 
 
 ]
@@ -2413,11 +2540,11 @@ Overfull \hbox (9.09294pt too wide) in paragraph at lines 155--155
 Gyro, Ac-celerom-e-ter, Com-pass, and Al-time-ter (L3GD20H,
  []
 
-[64]
+[66]
 
 Package nag Warning: 1 complaints in total.
 
-[65]
+[67]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 157.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 157.
  (C:\Users\1.5V\Documents\GitHub\LaTeX_MA_Active_Dolly\ExampleMasters.aux)
@@ -2435,13 +2562,13 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package logreq Info: Writing requests to 'ExampleMasters.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 30505 strings out of 493706
- 540961 string characters out of 3142168
- 945654 words of memory out of 3000000
+ 30507 strings out of 493706
+ 541587 string characters out of 3142168
+ 945648 words of memory out of 3000000
  32767 multiletter control sequences out of 15000+200000
  17100 words of font info for 117 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 55i,14n,54p,2421b,2391s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,14n,54p,2421b,2393s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{glo:MSD} has been referenced but does not exist, 
 replaced by a fixed one
 
@@ -2464,9 +2591,9 @@ fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
 nts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
 /type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
 ype1/public/amsfonts/cm/cmtt12.pfb>
-Output written on ExampleMasters.pdf (79 pages, 10472808 bytes).
+Output written on ExampleMasters.pdf (81 pages, 10257619 bytes).
 PDF statistics:
- 2082 PDF objects out of 2487 (max. 8388607)
- 294 named destinations out of 1000 (max. 500000)
+ 2264 PDF objects out of 2487 (max. 8388607)
+ 296 named destinations out of 1000 (max. 500000)
  24725 words of extra memory for PDF output out of 24883 (max. 10000000)
 
