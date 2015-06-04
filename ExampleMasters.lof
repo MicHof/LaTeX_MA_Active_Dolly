@@ -14,19 +14,19 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Positioning of different sensors on the \gls {HCT} vehicle}}{15}{figure.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Active dolly legacy steering system supplied by VSE\cite {dolly_datasheet}}}{17}{figure.4.2}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Active dolly legacy steering system supplied by VSE\cite {dolly_datasheet}}}{16}{figure.4.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {4.3}{\ignorespaces System overview for sensors and signal path for \gls {ETS} legacy system by VSE}}{17}{figure.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Extension of \gls {MABII} \gls {CAN}-buses (hardware overview)}}{20}{figure.4.4}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Interfaces and communication systems on the dolly}}{18}{figure.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Dolly Interfaces}}{21}{figure.4.5}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Split of \gls {ETS}-\gls {CAN}}}{19}{figure.4.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Split of \gls {ETS}-\gls {CAN}}}{22}{figure.4.6}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Breakout box scheme}}{20}{figure.4.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Breakout box scheme}}{22}{figure.4.7}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Extension of \gls {MABII} \gls {CAN}-buses (hardware overview)}}{23}{figure.4.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Connection of \gls {IMU} with Arudino Due to \gls {MABII}}}{24}{figure.4.8}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Connection of \gls {IMU} with Arudino Due to \gls {MABII}}}{25}{figure.4.8}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Steering interface block}}{29}{figure.5.1}
 \defcounter {refsection}{0}\relax 
@@ -46,36 +46,36 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {7.4}{\ignorespaces \gls {ETS}' diagnosis sceen patched out of the original ETS-locke rto allow easy access during workshop testing. The display is showing the homescreen.}}{44}{figure.7.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.5}{\ignorespaces Overview of \gls {HIL} -simulation, distribution of sub-functions over different physical platforms (top) and correlation to Volvo functional architecture (bottom)}}{46}{figure.7.5}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Overview of \gls {HIL} -simulation, distribution of sub-functions over different physical platforms (top) and correlation to Volvo functional architecture (bottom)}}{45}{figure.7.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.6}{\ignorespaces Functionality Architecture for HIL-testing}}{47}{figure.7.6}
+\contentsline {figure}{\numberline {7.6}{\ignorespaces HIL test steering angle tractor}}{47}{figure.7.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.7}{\ignorespaces HIL test steering angle tractor}}{47}{figure.7.7}
+\contentsline {figure}{\numberline {7.7}{\ignorespaces Functionality Architecture on track testing}}{47}{figure.7.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.8}{\ignorespaces Functionality Architecture on track testing}}{48}{figure.7.8}
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Step input 5 degree}}{49}{figure.8.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Rise time from send out request to achieve a certain steering angle on the dolly.}}{51}{figure.8.1}
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Rise time from send out request to achieve a certain steering angle on the dolly.}}{50}{figure.8.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8.2}{\ignorespaces Step input 5 degree}}{52}{figure.8.2}
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Ramp input}}{51}{figure.8.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8.3}{\ignorespaces Step input with rate limiter}}{53}{figure.8.3}
+\contentsline {figure}{\numberline {8.4}{\ignorespaces Ramp input low slope}}{51}{figure.8.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8.4}{\ignorespaces Low rate input}}{53}{figure.8.4}
+\contentsline {figure}{\numberline {8.5}{\ignorespaces Ramp input high slope}}{52}{figure.8.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8.5}{\ignorespaces High rate input}}{54}{figure.8.5}
+\contentsline {figure}{\numberline {8.6}{\ignorespaces HIL-test low-speed front axle}}{52}{figure.8.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8.6}{\ignorespaces HIL-test low-speed front axle}}{54}{figure.8.6}
+\contentsline {figure}{\numberline {8.7}{\ignorespaces HIL-test low-speed rear axle}}{53}{figure.8.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8.7}{\ignorespaces HIL-test low-speed rear axle}}{55}{figure.8.7}
+\contentsline {figure}{\numberline {8.8}{\ignorespaces Details of HIL-test low-speed front axle}}{54}{figure.8.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8.8}{\ignorespaces Details of HIL-test low-speed front axle}}{55}{figure.8.8}
+\contentsline {figure}{\numberline {8.9}{\ignorespaces HIL-test front axle measurements from VTM and ETS-CAN}}{54}{figure.8.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8.9}{\ignorespaces HIL-test front axle measurements from VTM and ETS-CAN}}{56}{figure.8.9}
+\contentsline {figure}{\numberline {8.10}{\ignorespaces Details of HIL-test front axle measurements from VTM and ETS-CAN}}{55}{figure.8.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8.10}{\ignorespaces Details of HIL-test front axle measurements from VTM and ETS-CAN}}{57}{figure.8.10}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Dolly craned up slightly to determine delay of steering actuation}}{59}{figure.A.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Dolly craned up slightly to determine delay of steering actuation}}{61}{figure.A.1}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces MicroAutoBoxII viewed from the top including cables for \gls {ZIF} -connector, Host-PC, Simulation-PC and power supply (clockwise, starting on the right)}}{60}{figure.A.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {A.2}{\ignorespaces MicroAutoBoxII viewed from the top including cables for \gls {ZIF} -connector, Host-PC, Simulation-PC and power supply (clockwise, starting on the right)}}{62}{figure.A.2}
+\contentsline {figure}{\numberline {A.3}{\ignorespaces ControlDesk \gls {GUI} for basic testing and start-up of the dolly}}{60}{figure.A.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {A.3}{\ignorespaces ControlDesk \gls {GUI} for basic testing and start-up of the dolly}}{62}{figure.A.3}
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Pareto diagram for RPNs of FMEA}}{63}{figure.A.4}

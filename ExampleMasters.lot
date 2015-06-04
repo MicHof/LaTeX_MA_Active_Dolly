@@ -6,7 +6,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {table}{\numberline {3.1}{\ignorespaces Control gains and performance improvement}}{11}{table.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.1}{\ignorespaces Available sensors of VSE's ETS}}{23}{table.4.1}
+\contentsline {table}{\numberline {4.1}{\ignorespaces Properties of dolly}}{17}{table.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.2}{\ignorespaces Available sensors of VSE's ETS}}{24}{table.4.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {table}{\numberline {5.1}{\ignorespaces CAN-layout MABII}}{27}{table.5.1}
 \defcounter {refsection}{0}\relax 
@@ -16,8 +18,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {table}{\numberline {7.2}{\ignorespaces Test matrix for delay measurings with ramp input}}{42}{table.7.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {A.1}{\ignorespaces Severity table for \gls {FMEA} \cite {FMEA_tables}}}{63}{table.A.1}
+\contentsline {table}{\numberline {A.1}{\ignorespaces Severity table for \gls {FMEA} \cite {FMEA_tables}}}{61}{table.A.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {A.2}{\ignorespaces Probability table for \gls {FMEA} \cite {FMEA_tables}}}{63}{table.A.2}
+\contentsline {table}{\numberline {A.2}{\ignorespaces Probability table for \gls {FMEA} \cite {FMEA_tables}}}{61}{table.A.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {A.3}{\ignorespaces Detectability table for \gls {FMEA} \cite {FMEA_tables}}}{64}{table.A.3}
+\contentsline {table}{\numberline {A.3}{\ignorespaces Detectability table for \gls {FMEA} \cite {FMEA_tables}}}{62}{table.A.3}

@@ -4,7 +4,7 @@
 \begin{document}
 \clearpage
 {\pagestyle{empty}\cleardoublepage}%
-\chapter{Verification and validation of steering  (2-3 Seiten)}
+\chapter{Verification and validation of steering}
 \label{chap:testing}
 
 \section{Overview}
@@ -39,14 +39,7 @@ To test the functionality of the \gls{ASF}-Sensor as a first step it was just co
 As outlined in section \ref{sec:interface_with_dolly} the signals generated for each \gls{ETS}-\gls{ECU} need to differ to achieve independent steering. The \gls{CAN}-wiring of the legacy system thus had to be interrupted and split. To ensure that only the correct set of messages was available after the splitting point, Arduino Dues were spliced into the system at all relevant junctions. This was a necessary procedure as gateway-systems between all different \gls{CAN}-subnets on the dolly are in place and needed to be circumvented, which proofed to be a challenging task operating under the maxim of easy revertability to the original state.
 
 
-\subsection{Fault detection system verification}
-\label{sec:fault_detect_test}
 
-\begin{itemize}
-	\item send faulty inputs
-	\item show plot of faulty input and system reaction
-	
-\end{itemize}
 \section{Processing time evaluation}
 \label{chap:processing_time_delay}
 \subsection{Background}
@@ -178,12 +171,11 @@ As was laid out in section HIER-REF-FUER-BILD-MIT-WEITERFUEHRPARAMETERN! some CA
 
 \section{Hardware-in-the-loop testing}
 \label{sec:HIL}
-\begin{itemize}
-	\item description of \gls{HIL} 
 
-\end{itemize}
+Track-testing takes a lot of time and preparation and thus is very expensive and oftentimes also dangerous. As only the complete system can be tested, it is only very late in the development process that it becomes possible to conduct such tests. To front-load the work in and distribute the verification process more evenly over the whole development cycle, testing of sub-assemblies of the final hardware system with simulation of the remaining parts in real-time allows to validate respective components along with their development-process. To do so a simulation environment has to be established with connection to the hardware-subsystem that is under evaluation. In this chapter the connection of the actual dolly, running the prototypes of the final track-setup, will be tested with the controllers to verify proper interaction.\cite{rapidcontrolprototyping}
 
-\gls{VTM} includes a lot of processing heavy sub-models (tire models, vehicle parameter sets) which lead to processing power not sufficing to allow for \gls{VTM} 's execution in the dSpace environment on the \gls{MABII}. To perform \gls{HIL} -testing it was thus necessary to split the comptuational load and accomplish real-time data exchange between the hardware controlling system on the \gls{MABII} and the rest of the simulation which will be run parallely in Simulink in real-time on a standard PC. Though there are dedicated real-time platforms available to achieve real-time execution it was decided to rely on a standard PC to minimize costs and have a lean work-process without extra steps of code conversion to different platforms. Figure \ref{fig:HIL_overview} illustrates the distribution of the \gls{HIL} -setup's different components over two computers, the \gls{MABII} and the actual hardware. 
+
+\gls{VTM} includes a lot of processing heavy sub-models (tire models, vehicle parameter sets) which lead to processing power not sufficing to allow for \gls{VTM} 's execution in the dSpace environment on the \gls{MABII}. To perform \gls{HIL} -testing it was thus necessary to split the computational load and accomplish real-time data exchange between the hardware controlling system on the \gls{MABII} and the rest of the simulation which will be run parallely in Simulink in real-time on a standard PC. Though there are dedicated real-time platforms available to achieve real-time execution it was decided to rely on a standard PC to minimize costs and have a lean work-process without extra steps of code conversion to different platforms. Figure \ref{fig:HIL_overview} illustrates the distribution of the \gls{HIL} -setup's different components according to the functionality model over two computers, the \gls{MABII} and the actual hardware. 
 
 \begin{figure*}[h]
 	\centering
@@ -252,12 +244,6 @@ As outlined in the respective publications, the test-maneuvers for the low-speed
 
 
 
-
-\subsection{Test setup and instrumentation}
-
-\begin{itemize}
-	\item detailed description of placement of sensors, wiring, logging-PC
-\end{itemize}
 
 
 \end{document}

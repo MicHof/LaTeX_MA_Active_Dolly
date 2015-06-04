@@ -12,7 +12,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{List of Acronyms}{viii}{section*.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {1}Introduction (3 Seiten)}{1}{chapter.1}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.1}Purpose}{1}{section.1.1}
 \defcounter {refsection}{0}\relax 
@@ -22,7 +22,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.4}Structure of this thesis}{2}{section.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Overview (6-7 Seiten)}{5}{chapter.2}
+\contentsline {chapter}{\numberline {2}Overview}{5}{chapter.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.1}Background of high capacity transport vehicles (HCT vehicles)}{5}{section.2.1}
 \defcounter {refsection}{0}\relax 
@@ -34,7 +34,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.5}Functionality architecture}{9}{section.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Vehicle Model controllers (3 Seiten)}{11}{chapter.3}
+\contentsline {chapter}{\numberline {3}Vehicle Model controllers}{11}{chapter.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.1}Low-Speed controller \cite {Low-speed_paper}}{11}{section.3.1}
 \defcounter {refsection}{0}\relax 
@@ -46,13 +46,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.3}Interface with Real-Time environment}{14}{section.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Hardware architecture(9 Seiten)}{15}{chapter.4}
+\contentsline {chapter}{\numberline {4}Hardware architecture}{15}{chapter.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.1}Hardware overview}{15}{section.4.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.2}Utilized dolly system}{16}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Interfaces and connections with dolly}{18}{section.4.3}
+\contentsline {section}{\numberline {4.3}Interfaces and connections with dolly}{17}{section.4.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.4}Interfaces with truck}{20}{section.4.4}
 \defcounter {refsection}{0}\relax 
@@ -68,7 +68,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.7.2}Inertial measurement unit}{24}{subsection.4.7.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Software Architecture (8 Seiten)}{27}{chapter.5}
+\contentsline {chapter}{\numberline {5}Software Architecture}{27}{chapter.5}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.1}Matlab/Simulink environment}{27}{section.5.1}
 \defcounter {refsection}{0}\relax 
@@ -80,19 +80,17 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.1.2}Virtual Truck Modelling Library}{29}{subsection.5.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.3}CAN-bus extension}{29}{subsection.5.1.3}
-\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.2}Steering interface}{29}{section.5.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.3}ControlDesk monitoring environment}{30}{section.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.1}Maneuver control}{31}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.1}Maneuver control}{30}{subsection.5.3.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.3.2}Monitoring and logging}{31}{subsection.5.3.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.4}Arduino IDE and applications}{31}{section.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Fault detection and system ability (5 Seiten)}{35}{chapter.6}
+\contentsline {chapter}{\numberline {6}Fault detection and system ability}{35}{chapter.6}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6.1}\acrfull {FMEA}}{35}{section.6.1}
 \defcounter {refsection}{0}\relax 
@@ -102,7 +100,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6.4}Warning and state-info system}{36}{section.6.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Verification and validation of steering (2-3 Seiten)}{39}{chapter.7}
+\contentsline {chapter}{\numberline {7}Verification and validation of steering}{39}{chapter.7}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {7.1}Overview}{39}{section.7.1}
 \defcounter {refsection}{0}\relax 
@@ -111,8 +109,6 @@
 \contentsline {subsection}{\numberline {7.2.1}VTM maneuver verification}{39}{subsection.7.2.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.2.2}CAN verification}{40}{subsection.7.2.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.2.3}Fault detection system verification}{40}{subsection.7.2.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {7.3}Processing time evaluation}{40}{section.7.3}
 \defcounter {refsection}{0}\relax 
@@ -126,7 +122,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.4.1}System calibration}{43}{subsection.7.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.4.2}Actuator tests}{44}{subsection.7.4.2}
+\contentsline {subsection}{\numberline {7.4.2}Actuator tests}{43}{subsection.7.4.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.4.3}Algorithm evaluation}{44}{subsection.7.4.3}
 \defcounter {refsection}{0}\relax 
@@ -136,19 +132,15 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.5.1}Low-speed controller}{46}{subsection.7.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.5.2}High-speed controller}{47}{subsection.7.5.2}
+\contentsline {subsection}{\numberline {7.5.2}High-speed controller}{46}{subsection.7.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.6}Track testing}{47}{section.7.6}
+\contentsline {section}{\numberline {7.6}Track testing}{46}{section.7.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.6.1}Testmaneuvers}{48}{subsection.7.6.1}
+\contentsline {subsection}{\numberline {7.6.1}Testenvironment AstaZero}{47}{subsection.7.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.6.2}Testenvironment AstaZero}{48}{subsection.7.6.2}
+\contentsline {subsection}{\numberline {7.6.2}Testmaneuvers}{48}{subsection.7.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.6.3}Testmatrix}{48}{subsection.7.6.3}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.6.4}Test setup and instrumentation}{48}{subsection.7.6.4}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {8}Discussion (3-4 Seiten)}{49}{chapter.8}
+\contentsline {chapter}{\numberline {8}Discussion}{49}{chapter.8}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {8.1}Results from bench testing}{49}{section.8.1}
 \defcounter {refsection}{0}\relax 
@@ -158,7 +150,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {8.4}Results from hardware-in-the-loop testing}{52}{section.8.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {9}Conclusion (2 Seiten)}{57}{chapter.9}
+\contentsline {chapter}{\numberline {9}Conclusion}{57}{chapter.9}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {9.1}Recommendation}{57}{section.9.1}
 \defcounter {refsection}{0}\relax 

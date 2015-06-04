@@ -560,25 +560,6 @@
   \field{year}{2013}
 \endentry
 
-\entry{nilsson2015traffic}{article}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Nilsson}{N.}%
-     {Peter}{P.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{publisher}{1}{%
-    {Chalmers University of Technology}%
-  }
-  \strng{namehash}{NP1}
-  \strng{fullhash}{NP1}
-  \field{sortinit}{N}
-  \field{title}{On Traffic Situation Predictions for Automated Driving of Long
-  Vehicle Combinations}
-  \field{year}{2015}
-\endentry
-
 \entry{uip_ethernet_github}{misc}{}
   \field{sortinit}{N}
   \field{title}{ntruchsess/arduino_uip}
@@ -699,44 +680,6 @@
   \field{year}{2012}
 \endentry
 
-\entry{greenhouse_gas_emisions}{article}{}
-  \name{author}{3}{}{%
-    {{}%
-     {Steenhof}{S.}%
-     {Paul}{P.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Woudsma}{W.}%
-     {Clarence}{C.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Sparling}{S.}%
-     {Erik}{E.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{SPWCSE1}
-  \strng{fullhash}{SPWCSE1}
-  \field{sortinit}{S}
-  \verb{doi}
-  \verb http://dx.doi.org/10.1016/j.trd.2006.07.003
-  \endverb
-  \field{issn}{1361-9209}
-  \field{number}{5}
-  \field{pages}{369 \bibrangedash  376}
-  \field{title}{Greenhouse gas emissions and the surface transport of freight
-  in Canada}
-  \verb{url}
-  \verb http://www.sciencedirect.com/science/article/pii/S1361920906000411
-  \endverb
-  \field{volume}{11}
-  \field{journaltitle}{Transportation Research Part D: Transport and
-  Environment}
-  \field{year}{2006}
-\endentry
-
 \entry{gyrometer_datasheet}{manual}{}
   \name{author}{1}{}{%
     {{}%
@@ -767,37 +710,6 @@
   \field{title}{LSM303D - Ultra compact high performance e-Compass 3D
   accelerometer and 3D magnetometer module: Datasheet — preliminary data}
   \field{year}{2012}
-\endentry
-
-\entry{CANbus_sorgen_und_noete}{inproceedings}{}
-  \name{author}{3}{}{%
-    {{}%
-     {Tindell}{T.}%
-     {KW}{K.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Hansson}{H.}%
-     {Hans}{H.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Wellings}{W.}%
-     {Andy~J}{A.~J.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{organization}{1}{%
-    {IEEE}%
-  }
-  \strng{namehash}{TKHHWAJ1}
-  \strng{fullhash}{TKHHWAJ1}
-  \field{sortinit}{T}
-  \field{booktitle}{Real-Time Systems Symposium, 1994., Proceedings.}
-  \field{pages}{259\bibrangedash 263}
-  \field{title}{Analysing real-time communications: controller area network
-  (CAN)}
-  \field{year}{1994}
 \endentry
 
 \entry{HCT_vehicles_Australia}{online}{}
