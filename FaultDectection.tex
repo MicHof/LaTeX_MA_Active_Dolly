@@ -51,39 +51,40 @@ The consequences of the \gls{FMEA} conducted for this thesis were:
 	\item Bench- and \gls{HIL} -testing is necessary to validate  the vehicle model controllers and to exclude dangerous behavior, that might be caused by delays in the system. 
 	\item A start-up checklist for the track testing needs to be created	 
 \end{itemize}  
-\section{Safety concepts}
-\label{sec:safetyconcepts}
 
 \section{Maximum capabilities of the system}
 \label{sec:maxi_capabilities}
 The capabilities of the system \gls{CAN} be divided into two parts. For one thing there are the capabilities that are independent from influences. These are the maximum steering angle and maximum steering rate, which is limited through the \gls{ETS}-\gls{ECU}, because of the physical limitation of the hydraulic system.
 For another thing there are the capabilities that are influenced by the vehicle speed, load of the dolly, state of the hydraulic and electrical system of the dolly, and environmental influences.
 Depending on those parameters the capabilities are lowered.
-\begin{itemize}
-	\item give indicator of maximum angle/angle rate
-	\item describe "algorithm"/lookuptable
-	\item explain underlying physical correlation (ref to MA from )
-\end{itemize}
+The maximum angle for stand-still is 24 degree in both direction for front and rear axle. 
+The requested angle can only given as a step input of maximum 7 degree. For higher step inputs, the \gls{ETS}-system switches to alarm mode. This can be seen in figure \ref{fig:max_step_input} for a step input of the request angle of 8 degree. Because the system is in alarm mode the request angle transformed to a target angle and hence there is no steering.
 \begin{figure*}[!hbt]
 	\centering
 	\includegraphics[width=1\linewidth]{figures/step_input_8deg}
 	\caption{Step input 8 degree}
 	
 	\label{fig:max_step_input}
-\end{figure*}
+\end{figure*}  
+The maximum steering rate was determined with the tests described in section \ref{sec:measuring_delay} to 5 deg/s.
 
-\colorbox{yellow}{blablabla maximale rate}
 \section{Warning and state-info system}
 \label{sec:warning_system}
-\begin{itemize}
-	\item warnings from dolly \gls{ECU} \\
-	In the original state, the \gls{ETS}-\gls{ECU} monitors all safety critical components of the dolly. In case of a malfunction, an error code is sent via the \gls{CAN}-Bus and the error message is visible on the diagnose displays of the dolly. Depending on the severity of the error the steering is deactivated and the axes steer back to a steering angle of 0 deg.
-	Due to the required modification of the \gls{ASF}- and \gls{EBS}-signal, the inbuilt supervision of the \gls{ETS}-\gls{ECU} is no longer fully functioning. Therefore a additional supervision of the system has to be implemented in the Simulink-model. This supervision considers the current capabilities of the dolly and reduces the requested steering angle and steering rate, if needed.    
+
+In the original state, the \gls{ETS}-\gls{ECU} monitors all safety critical components of the dolly. In case of a malfunction, an error code is sent via the \gls{CAN}-Bus and the error message is visible on the diagnose displays of the dolly. Depending on the severity of the error the steering is deactivated and the axes steer back to a steering angle of 0 deg.
+Due to the required modification of the \gls{ASF}- and \gls{EBS}-signal, the inbuilt supervision of the \gls{ETS}-\gls{ECU} is no longer fully functioning. Therefore a additional supervision of the system has to be implemented in the Simulink-model. This supervision considers the current capabilities of the dolly and reduces the requested steering angle and steering rate, if needed. 
+\begin{itemize}   
 	\item warnings from \gls{EBS}
 	\item warnings from vehicle
 	\item 'own' error codes and warnings (e.g. logging, \gls{MABII} related, arduino-\gls{IMU} related)
 \end{itemize}
 
+\begin{figure*}[!htb]
+	\centering
+	\includegraphics[width=1\linewidth]{figures/system_mod}
+	\caption{Complete dolly system with supervision block}
+	\label{fig:system_modification}
+\end{figure*}
 
 
 

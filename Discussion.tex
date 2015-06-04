@@ -20,16 +20,6 @@
 \section{Results from processing time evaluation}
 \label{sec:results_processing_time}
 
-
-
-
-\begin{itemize}
-	\item diagrams (over amplitude, show time)
-	\item explain different curves
-	\item explain data gathering
-	\item mention ramp input 
-	\item show reaction time
-\end{itemize}
 Figure \ref{fig:step_input} shows the requested angle, target angle and actual angle of the dolly's front axle over time. As described in section \ref{sec:measuring_delay} the requested angle is a step input, in this case of 5 degree.
 \begin{figure*}[!hbt]
 	\centering
@@ -48,31 +38,33 @@ The delays over the different request angle step inputs were plotted and a linea
 	\label{fig:delay_testing_lin_interpolation}
 \end{figure*}
 The deducted delay is 0.26s for the front axle and 0.3s for the rear axle.
-
-During plot analysis of preliminary results it was discussed, whether it would be possible to by-pass the occuring delay by feeding a ramp-input instead of a step-input into the \gls{ETS}. It was assumed that there is a low-pass filter in place which would not affect ramp inputs. Subsequent tests with ramp inputs with varying slopes and amplitudes showed that it was indeed possible to eliminate the low-pass filter leading to no delay between the target angle and the request angle. Figure 
-Nevertheless it was not possible to get any faster change than with the request of a step input. It thus can be concluded that the maximum steering rate of $5 ^\circ /s$ can not be circumvented.
-\begin{figure*}[!hbt]
+During plot analysis of preliminary results it was discussed, whether it would be possible to by-pass the occuring delay by feeding a ramp-input instead of a step-input into the \gls{ETS}. It was assumed that there is a low-pass filter in place which would not affect ramp inputs. Subsequent tests with ramp inputs with varying slopes and amplitudes showed that it was indeed possible to eliminate the low-pass filter leading to no delay between the target angle and the request angle. Examples of the ramp inputs with different rates can be seen in the figures \ref{fig:rate_limiter1}, \ref{fig:rate_limiter2} and \ref{fig:rate_limiter3}.\\
+\begin{figure*}[!htb]
 	\centering
 	\includegraphics[width=1\linewidth]{figures/rate_limiter1}
-	\caption{Ramp input}
+	\caption{Ramp input rate 0.01}
 	
 	\label{fig:rate_limiter1}
 \end{figure*}
 \begin{figure*}[!hbt]
-\centering
+	\centering
 	\includegraphics[width=1\linewidth]{figures/rate_limiter2}
-	\caption{Ramp input low slope}
+	\caption{Ramp input rate 0.001}
 	
 	\label{fig:rate_limiter2}
 \end{figure*}
-
 \begin{figure*}[!hbt]
 	\centering
-	\includegraphics[width=1\linewidth]{figures/rate_limiter4}
-	\caption{Ramp input high slope}
+	\includegraphics[width=1\linewidth]{figures/rate_limiter3}
+	\caption{Ramp input rate 0.1}
 	
-	\label{fig:rate_limiter4}
+	\label{fig:rate_limiter3}
 \end{figure*}
+
+With a rate of 0.01 the request angle and target angle align. They also align at a rate of 0.001 but for that case their slope is much lower, so it takes a insufficient long time to reach the indented angle. For a rate of 0.1 the signals of the request angle and the target angle don't align anymore. For rates higher than 0.3, the \gls{ETS}-system switches to alarm mode, because the request angle changes to fast, so the signal is implausible for the system.   
+
+
+Comparing figure \ref{fig:rate_limiter1} and figure \ref{fig:rate_limiter3} indicates that it is not possible to get any faster change with a ramp input than with the request of a step input. It thus can be concluded that the maximum steering rate of $5 ^\circ /s$ can not be circumvented.
 
 
 \section{Results from in vehicle testing}
