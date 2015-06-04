@@ -10,14 +10,14 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {table}{\numberline {5.1}{\ignorespaces CAN-layout MABII}}{27}{table.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {5.2}{\ignorespaces List of utilized libraries on the Arduino platform}}{31}{table.5.2}
+\contentsline {table}{\numberline {5.2}{\ignorespaces List of utilized libraries on the Arduino platform}}{32}{table.5.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {table}{\numberline {7.1}{\ignorespaces Test matrix for delay measuring with lifted axle (analogous matrix for non-lifted testing (\#19-\#36))}}{42}{table.7.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {table}{\numberline {7.2}{\ignorespaces Test matrix for delay measurings with ramp input}}{42}{table.7.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {A.1}{\ignorespaces Severity table for \gls {FMEA} \cite {FMEA_tables}}}{63}{table.A.1}
+\contentsline {table}{\numberline {A.1}{\ignorespaces Severity table for \gls {FMEA} \cite {FMEA_tables}}}{61}{table.A.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {A.2}{\ignorespaces Probability table for \gls {FMEA} \cite {FMEA_tables}}}{63}{table.A.2}
+\contentsline {table}{\numberline {A.2}{\ignorespaces Probability table for \gls {FMEA} \cite {FMEA_tables}}}{61}{table.A.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {A.3}{\ignorespaces Detectability table for \gls {FMEA} \cite {FMEA_tables}}}{64}{table.A.3}
+\contentsline {table}{\numberline {A.3}{\ignorespaces Detectability table for \gls {FMEA} \cite {FMEA_tables}}}{62}{table.A.3}

@@ -137,13 +137,8 @@ Sending a steering request of zero results in the dolly behaving like a passive 
 
 
 \subsection{Monitoring and logging}
-\begin{itemize}
-	\item data-format
-	\item frequency
-	\item synchronizing over different CANs	
-\end{itemize}
 
-
+All relevant information from the dolly, the installed \gls{IMU}s as well as additional information from the truck (see section \ref{sec:interface_with_truck}) are available on the \gls{CAN}-buses in the \gls{MABII}. Using the \gls{MABII} to log data thus provides a straight-forward way to keep log-files consistent and synchronized over all interconnected systems. ControlDesk lets the user select representations of all parameters and variables that are included in the underlying Simulink-model to be logged. Here these selection will be directly timestamped and exported to .mat-files for further analysis. The logging frequency corresponds to the step-time of the simulation running on the \gls{MABII}, 0.001s in this case. Values that did not change in this time span, which is true for a lot of measurings and signals broadcasted on the \gls{CAN}, are held at their previous value.s
 \section{Arduino IDE and applications}
 \label{sec:arduino_applications}
 

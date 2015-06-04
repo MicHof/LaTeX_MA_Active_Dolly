@@ -17,15 +17,15 @@
 \BOOKMARK [0][]{chapter.3}{Vehicle Model controllers \(3 Seiten\)}{}% 17
 \BOOKMARK [1][]{section.3.1}{Low-Speed controller Low-speedpaper}{chapter.3}% 18
 \BOOKMARK [1][]{section.3.2}{High-Speed controller High-speedpaper}{chapter.3}% 19
-\BOOKMARK [1][]{section.3.3}{Real-Time implementation of controllers}{chapter.3}% 20
-\BOOKMARK [1][]{section.3.4}{Interface with Real-Time environment}{chapter.3}% 21
-\BOOKMARK [0][]{chapter.4}{Hardware architecture\(9 Seiten\)}{}% 22
-\BOOKMARK [1][]{section.4.1}{Hardware overview}{chapter.4}% 23
-\BOOKMARK [1][]{section.4.2}{Utilized dolly system}{chapter.4}% 24
-\BOOKMARK [1][]{section.4.3}{Real-Time Environment}{chapter.4}% 25
-\BOOKMARK [1][]{section.4.4}{Interfaces and connections with dolly}{chapter.4}% 26
-\BOOKMARK [1][]{section.4.5}{Interfaces with truck}{chapter.4}% 27
-\BOOKMARK [1][]{section.4.6}{Measurment Setup}{chapter.4}% 28
+\BOOKMARK [1][]{section.3.3}{Interface with Real-Time environment}{chapter.3}% 20
+\BOOKMARK [0][]{chapter.4}{Hardware architecture\(9 Seiten\)}{}% 21
+\BOOKMARK [1][]{section.4.1}{Hardware overview}{chapter.4}% 22
+\BOOKMARK [1][]{section.4.2}{Utilized dolly system}{chapter.4}% 23
+\BOOKMARK [1][]{section.4.3}{Interfaces and connections with dolly}{chapter.4}% 24
+\BOOKMARK [1][]{section.4.4}{Interfaces with truck}{chapter.4}% 25
+\BOOKMARK [1][]{section.4.5}{Arduino Due}{chapter.4}% 26
+\BOOKMARK [1][]{section.4.6}{Real-Time Environment}{chapter.4}% 27
+\BOOKMARK [1][]{section.4.7}{Measurment Setup}{chapter.4}% 28
 \BOOKMARK [0][]{chapter.5}{Software Architecture \(8 Seiten\)}{}% 29
 \BOOKMARK [1][]{section.5.1}{Matlab/Simulink environment}{chapter.5}% 30
 \BOOKMARK [1][]{section.5.2}{Steering interface}{chapter.5}% 31
@@ -53,4 +53,4 @@
 \BOOKMARK [1][]{section.9.1}{Recommendation}{chapter.9}% 53
 \BOOKMARK [1][]{section.9.2}{Future Work}{chapter.9}% 54
 \BOOKMARK [0][]{appendix.A}{Appendix}{}% 55
-\BOOKMARK [0][]{table.A.3}{References}{}% 56
+\BOOKMARK [0][]{figure.A.4}{References}{}% 56

@@ -63,12 +63,12 @@ Short overview for the dolly, including:
 
 \section{Interfaces and connections with dolly}
 \label{sec:interface_with_dolly}
-Figure \ref{fig:dolly_interfaces} gives an overview of all the in- and outputs of the dolly.\\
+Figure \ref{fig:dolly_interfaces} gives an overview of all the in- and outputs of the dolly.
 
 \begin{figure*}[!htb]
 
-	\includegraphics[width=1.3\linewidth]{figures/ExampleCover}
-	\caption{Dolly Interfaces}
+	\includegraphics[width=0.9\linewidth]{figures/ExampleCover}
+	\caption{Interfaces and communication systems on the dolly}
 	\label{fig:dolly_interfaces}
 \end{figure*}
 
@@ -157,14 +157,11 @@ A gateway from CAN-protocol to the standardized \gls{UDP} used for communication
 \textit{Excursus: The \gls{CAN}-protocol is the most widespread protocol to allow for communication between different \gls{ECU}s in the automotive field. Development began at the Robert Bosch GmbH, but is now standardized and enhanced and adjusted for special purposes internationally. Messages are broadcasted by the bus-participants and stamped with their unique identifier, which also doubles as an arbitration token to handle message prioritization. Each bus-participant can listen to all available messages and "only picks from the bus what he needs". The standard message has a size of eight bytes \`{a} eight bit, transmitted after the identifier and followed by an ending sequence. Hardware-wise \gls{CAN}-communication relies on only a pair of twisted wires, where a very robust voltage difference signal is transmitted. }\cite{CAN_intro}\\
 
 
-By utilizing the \gls{UDP}-protocol to acquire data into the simulation, the \gls{MABII} environment's very convenient possibilty to incorporate \gls{CAN} database files (.dbc-file)\footnote{Correlates physical human readable/understable signals with units to the actual distribution over the different bytes of a \gls{CAN}-frame. It allows to "decrypt" the information which is available on a \gls{CAN}-bus and allows to code and send messages in the respective format that the other bus-participants (ECUs, sensors) expect.}, which is the usual way to exchange information and instructions for \gls{CAN}-networks is no longer available. To decompose the \gls{UDP} packets into the original signals it was necessary to implement the function of a .dbc-file in the underlying Simulink-model. 
+By utilizing the \gls{UDP}-protocol to acquire data into the simulation, the \gls{MABII} environment's very convenient possibilty to incorporate \gls{CAN} database files (.dbc-file)\footnote{Correlates physical human readable/understable signals with units to the actual distribution over the different bytes of a \gls{CAN}-frame. It allows to "decrypt" the information which is available on a \gls{CAN}-bus and to code and send messages in the respective format that the other bus-participants (ECUs, sensors) expect.}, which is the usual way to exchange information and instructions for \gls{CAN}-networks is no longer available. To decompose the \gls{UDP} packets into the original signals it was necessary to implement the function of a .dbc-file in the underlying Simulink-model. 
 
 All messages that the CAN-gateway is supposed to handle and forward are put into one \gls{UDP} frame in succession with respective CAN-identifiers and additional spacer bytes between signals. The \gls{UDP} frame is broadcasted every time a new CAN-message reaches the gateway on one of its \gls{CAN}-buses. Messages that were not updated with the incoming \gls{CAN}-message will be kept at their previous value. This is called for, as \gls{UDP} is a connection-less protocol without any loss-prevention mechanisms like acknowledgment-handling or retransmission of messages. Holding the values if not available ensures, that at least some value is available on the bus. \gls{UDP} also doesn't have native timestamping, which is why a \gls{GPS}-shield was introduced to receive the high-precision time to allow for easy synchronizing of logging over different platforms (\gls{MABII}-environment, \gls{IMU}s, external \gls{CAN}) by adding the global time to each sent packet.
 
-To allow for easier scalability to add more CAN-buses in the future it was decided to not use the Due's two native CAN-controllers but rely on the external MCP2515 in combination with the already mentioned transceiver (MCP2551). As shown in figure \ref{fig:can_extension} it is controlled via \gls{SPI} . More bus-participants \gls{CAN} be added conveniently by incorporating additional instances of these two microships and attaching them to a device selection pin (depicted as SS) each.\\
-
-
-
+To allow for easier scalability to add more \gls{CAN}-buses in the future it was decided to not use the Due's two native CAN-controllers but rely on the external MCP2515 in combination with the already mentioned transceiver (MCP2551). As shown in figure \ref{fig:can_extension} it is controlled via \gls{SPI}. More bus-participants \gls{CAN} be added conveniently by incorporating additional instances of these two microships and attaching them to a device selection pin (depicted as SS) each.\\
 
 \begin{figure*}[!htb]
 	\centering
@@ -174,20 +171,20 @@ To allow for easier scalability to add more CAN-buses in the future it was decid
 \end{figure*}
 
 
-\begin{itemize}
+%\begin{itemize}
 	
-	\item daten-konvertierung und packaging zu \gls{UDP} und von \gls{UDP} zu Daten in CD!!
+	%\item daten-konvertierung und packaging zu \gls{UDP} und von \gls{UDP} zu Daten in CD!!
 	%\item Skizze des Systems
-	\item verwendete bibliotheken
+	%\item verwendete bibliotheken
 	
-\end{itemize}
+%\end{itemize}
 
 \section{Measurment Setup}
 \label{sec:measurement_setup}
 
 \subsection{On-board sensors}
 
-\begin{table}[!htb]
+\begin{table}
 	\begin{tabular}{llll}
 		\textbf{Sensor}       & \textbf{Measurings}                                                 & \textbf{Type} & \textbf{Mounting point} \\
 		Draw bar sensor  & \begin{tabular}[c]{@{}l@{}}Articulation angle\\ Temperature\end{tabular} & External      & Draw bar                 \\
@@ -198,13 +195,9 @@ To allow for easier scalability to add more CAN-buses in the future it was decid
 	\label{tab:ets_sensors}
 \end{table}
 
-
-
-
-
 \subsection{Inertial measurement unit}
 \label{sec:IMU}
-To determine the processing delays in the control chain (refer to chapter \ref{chap:processing_time_delay}) as well as logging implementation for verification and analyses purposes a number of inertial measurement units (IMU) where utilizied throughout this thesis' work. The system at hand combined a gyroscope (L3GD20H), and an accelero- and magnetometer (LSM303D) into an \gls{IMU} put on one circuit board.\cite{IMU_homepage_shop} This one-chip solution allowed for a convenient access to the sensor measurings, as the sensor outputs could be received via Inter-Integrated Circuit-protocol (I$^{2}$C)  which eliminates the need for a transducer. Furthermore a high-pass filter is integrated into the \gls{IMU}'s accelerometer, which leads to simpler compensation of the immanent drift of the magnetormeter. These units supply the measurings for three axes each at a maximum frequency of 1600Hz for the accelerometer and 757.6Hz for the gyroscope.  \cite{accelerometer_datasheet}\cite{gyrometer_datasheet}
+To determine the processing delays in the control chain (refer to chapter \ref{chap:processing_time_delay}) as well as logging implementation for verification and analyses purposes a number of inertial measurement units (IMU) where utilizied throughout this thesis' work. The system at hand combined a gyroscope (L3GD20H), and an accelero- and magnetometer (LSM303D) into an \gls{IMU} put on one circuit board.\cite{IMU_homepage_shop} This one-chip solution allowed for a convenient access to the sensor measurings, as the sensor outputs could be received via Inter-Integrated Circuit-protocol (I$^{2}$C)  which eliminates the need for a transducer. Furthermore a high-pass filter is integrated into the \gls{IMU}'s accelerometer, which leads to simpler compensation of the immanent drift of the magnetormeter. These units supply the measurings for three axes each at a maximum frequency of 1600Hz for the accelerometer and 757.6Hz for the gyroscope.\cite{accelerometer_datasheet}\cite{gyrometer_datasheet}
 
 The \gls{IMU}-chip was put in a suitable plastic housing and cast into resin, to fixate the \gls{IMU} securily and prevent movement relative to the truck-frame on which it will is mounted as well as ensuring water-proofing.
 
@@ -212,14 +205,18 @@ Figure \ref{fig:IMU_overview} shows, how the \gls{IMU} is connected to the Ardui
 
 A maximum of two \gls{IMU}s \gls{CAN} run on one \gls{I2C} line as it is possible to override the last bit of the otherwise hard-coded \gls{I2C} address via a hardware jumper. If both \gls{I2C} lines of the Due are used, it would be possible to connect up to four IMUs to one Arduino. Though eight \gls{IMU}s are desired for the whole \gls{HCT} vehicle, this was outruled as a possibility for this project, due to the limitations of the physical bus-length of the \gls{I2C} lines of only a few meters (as the name already suggests \gls{I2C} is not meant for long distance communication). As \gls{CAN} also be seen in the overview figure of the setup on the truck in figure \ref{fig:combination_overview_with_positions} this distance would be exceeded with the distance between the different mounting points (15-20m).
 
-In the final measuring setup the assembly shown in figure \ref{fig:IMU_overview} will be present four times in the whole combination, to gather motion data from each independently moving part. Figure \ref{fig:combination_overview_with_positions} shows those placements in an overview sketch. The correct placement will be as close as possible to the \gls{COG} of the respective unit to have as little influence of the vehicle's rotary motions as possible, which drastically reduces work in  data analysis further on. \gls{COG}  locations \gls{CAN} be gathered from Volvo's internal database and are available at the test site. Putting two \gls{IMU}s in each spot allows for averaging and ensure redundancy should one \gls{IMU} chip fail or produce corrupt outputs, which occured from time to time during the bench-testing of the assembly if the voltage of the preliminary power-supply dropped due to other loads.\\
+In the final measuring setup the assembly shown in figure \ref{fig:IMU_overview} will be present four times in the whole combination, to gather motion data from each independently moving part. 
 
 \begin{figure*}[!htb]
-\centering
-\includegraphics[width=1\linewidth]{figures/IMU_overview}
-\caption{Connection of \gls{IMU} with Arudino Due to \gls{MABII}}
-\label{fig:IMU_overview}
+	\centering
+	\includegraphics[width=1\linewidth]{figures/IMU_overview}
+	\caption{Connection of \gls{IMU} with Arudino Due to \gls{MABII}}
+	\label{fig:IMU_overview}
 \end{figure*}
+
+
+Figure \ref{fig:combination_overview_with_positions} shows those placements in an overview sketch. The correct placement will be as close as possible to the \gls{COG} of the respective unit to have as little influence of the vehicle's rotary motions as possible, which drastically reduces work in  data analysis further on. \gls{COG}  locations can be gathered from Volvo's internal database and are available at the test site. Putting two \gls{IMU}s in each spot allows for averaging and ensure redundancy should one \gls{IMU} chip fail or produce corrupt outputs, which occured from time to time during the bench-testing of the assembly if the voltage of the preliminary power-supply dropped due to other loads.\\
+
 
 
 
