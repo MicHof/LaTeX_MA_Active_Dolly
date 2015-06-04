@@ -44,9 +44,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.2.1}Input parameters}{13}{subsection.3.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Real-Time implementation of controllers}{14}{section.3.3}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.4}Interface with Real-Time environment}{14}{section.3.4}
+\contentsline {section}{\numberline {3.3}Interface with Real-Time environment}{14}{section.3.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {4}Hardware architecture(9 Seiten)}{15}{chapter.4}
 \defcounter {refsection}{0}\relax 
@@ -54,21 +52,21 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.2}Utilized dolly system}{16}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Real-Time Environment}{18}{section.4.3}
+\contentsline {section}{\numberline {4.3}Interfaces and connections with dolly}{18}{section.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.1}CAN-bus extension}{18}{subsection.4.3.1}
+\contentsline {section}{\numberline {4.4}Interfaces with truck}{20}{section.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Interfaces and connections with dolly}{20}{section.4.4}
+\contentsline {section}{\numberline {4.5}Arduino Due}{20}{section.4.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.5}Interfaces with truck}{23}{section.4.5}
+\contentsline {section}{\numberline {4.6}Real-Time Environment}{21}{section.4.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.6}Measurment Setup}{23}{section.4.6}
+\contentsline {subsection}{\numberline {4.6.1}CAN-bus extension}{22}{subsection.4.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.1}On-board sensors}{23}{subsection.4.6.1}
+\contentsline {section}{\numberline {4.7}Measurment Setup}{24}{section.4.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.2}Inertial measurement unit}{23}{subsection.4.6.2}
+\contentsline {subsection}{\numberline {4.7.1}On-board sensors}{24}{subsection.4.7.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.3}Arduino Due}{25}{subsection.4.6.3}
+\contentsline {subsection}{\numberline {4.7.2}Inertial measurement unit}{24}{subsection.4.7.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {5}Software Architecture (8 Seiten)}{27}{chapter.5}
 \defcounter {refsection}{0}\relax 
@@ -80,7 +78,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{RTI Ethernet (UDP) Blockset}{28}{subsubsection*.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1.2}Virtual Truck Modelling Library}{28}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.2}Virtual Truck Modelling Library}{29}{subsection.5.1.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.1.3}CAN-bus extension}{29}{subsection.5.1.3}
 \defcounter {refsection}{0}\relax 
@@ -88,7 +86,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.3}ControlDesk monitoring environment}{30}{section.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.1}Maneuver control}{30}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.1}Maneuver control}{31}{subsection.5.3.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.3.2}Monitoring and logging}{31}{subsection.5.3.2}
 \defcounter {refsection}{0}\relax 
@@ -96,7 +94,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {6}Fault detection and system ability (5 Seiten)}{35}{chapter.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}\gls {FMEA}}{35}{section.6.1}
+\contentsline {section}{\numberline {6.1}\acrfull {FMEA}}{35}{section.6.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6.2}Safety concepts}{36}{section.6.2}
 \defcounter {refsection}{0}\relax 
@@ -112,7 +110,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.2.1}VTM maneuver verification}{39}{subsection.7.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.2.2}CAN verification}{39}{subsection.7.2.2}
+\contentsline {subsection}{\numberline {7.2.2}CAN verification}{40}{subsection.7.2.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.2.3}Fault detection system verification}{40}{subsection.7.2.3}
 \defcounter {refsection}{0}\relax 
@@ -136,11 +134,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {7.5}Hardware-in-the-loop testing}{45}{section.7.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.5.1}Low-speed controller}{47}{subsection.7.5.1}
+\contentsline {subsection}{\numberline {7.5.1}Low-speed controller}{46}{subsection.7.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.5.2}High-speed controller}{48}{subsection.7.5.2}
+\contentsline {subsection}{\numberline {7.5.2}High-speed controller}{47}{subsection.7.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.6}Track testing}{48}{section.7.6}
+\contentsline {section}{\numberline {7.6}Track testing}{47}{section.7.6}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.6.1}Testmaneuvers}{48}{subsection.7.6.1}
 \defcounter {refsection}{0}\relax 
@@ -148,26 +146,24 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {7.6.3}Testmatrix}{48}{subsection.7.6.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.6.4}Test setup and instrumentation}{49}{subsection.7.6.4}
+\contentsline {subsection}{\numberline {7.6.4}Test setup and instrumentation}{48}{subsection.7.6.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {8}Discussion (3-4 Seiten)}{51}{chapter.8}
+\contentsline {chapter}{\numberline {8}Discussion (3-4 Seiten)}{49}{chapter.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.1}Results from bench testing}{51}{section.8.1}
+\contentsline {section}{\numberline {8.1}Results from bench testing}{49}{section.8.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.2}Results from processing time evaluation}{51}{section.8.2}
+\contentsline {section}{\numberline {8.2}Results from processing time evaluation}{49}{section.8.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.3}Results from in vehicle testing}{52}{section.8.3}
+\contentsline {section}{\numberline {8.3}Results from in vehicle testing}{50}{section.8.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.4}Results from hardware-in-the-loop testing}{53}{section.8.4}
+\contentsline {section}{\numberline {8.4}Results from hardware-in-the-loop testing}{52}{section.8.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.5}Comparison}{56}{section.8.5}
+\contentsline {chapter}{\numberline {9}Conclusion (2 Seiten)}{57}{chapter.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {9}Conclusion (2 Seiten)}{59}{chapter.9}
+\contentsline {section}{\numberline {9.1}Recommendation}{57}{section.9.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9.1}Recommendation}{59}{section.9.1}
+\contentsline {section}{\numberline {9.2}Future Work}{57}{section.9.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9.2}Future Work}{59}{section.9.2}
+\contentsline {chapter}{\numberline {A}Appendix}{59}{appendix.A}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Appendix}{61}{appendix.A}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{References}{65}{table.A.3}
+\contentsline {chapter}{References}{65}{figure.A.4}

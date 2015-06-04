@@ -28,37 +28,40 @@ Figure \ref{fig:combination_overview_with_positions} also depicts another import
 
 \section{Utilized dolly system}
 \label{sec:dolly_system}
-The utilized dolly by Parator Industri AB (Parator) is equipped with two steerable axles. They are controlled by an after-market solution called \gls{ETS} supplied by \gls{VSE}, of which figure \ref{fig:legacy_system_vse} gives an overview. Their product includes sensors, \gls{ECU}s and hydraulic systems which come in a ready-to-mount housing, which is placed on the trailer/dolly. This solution is usually sold as a low-speed active steering system for truck-trailer combinations to provide better maneuverability at low speeds in inner-city areas. Besides electrical power and compressed-air (see "2" in the figure) supply there is no connection with the truck in place. This allows for use with many different truck/trailer \gls{OEM}, as no insight into proprietary \gls{CAN} is needed. In the original \gls{VSE} system the two parameters that influence the actuation of the dolly's steering are vehicle speed ("4") and kingpin-deflection ("3"). This deflection is the angle between the truck and trailer, which is measured by an additional kingpin-angle sensor supplied by \gls{VSE} and mounted in the eye of the kingpin hub. Furthermore every steering-knuckle of the dolly is equipped with an angle sensor to provide appropriate wheel-individual feedback for the \gls{VSE} control-system. A diagnosis screen is available in the \gls{VSE}-unit, which allows for relatively simple set-up, calibration and parametrization to be done.\cite{dolly_datasheet}
-
+The utilized dolly by Parator Industri AB (Parator) is equipped with two steerable axles. They are controlled by an after-market solution called \gls{ETS} supplied by \gls{VSE}, of which figure \ref{fig:legacy_system_vse} gives an overview.
 \begin{figure*}[!htb]
 	\centering
 	\includegraphics[width=1.0\linewidth]{figures/legacy_system_vse}
 	\caption{Active dolly legacy steering system supplied by VSE\cite{dolly_datasheet}}
 	\label{fig:legacy_system_vse}
+\end{figure*} \\
+ Their product includes sensors, \gls{ECU}s and hydraulic systems which come in a ready-to-mount housing, which is placed on the trailer/dolly. This solution is usually sold as a low-speed active steering system for truck-trailer combinations to provide better maneuverability at low speeds in inner-city areas. Besides electrical power and compressed-air (see "2" in the figure) supply there is no connection with the truck in place. This allows for use with many different truck/trailer \gls{OEM}, as no insight into proprietary \gls{CAN} is needed. In the original \gls{VSE} system the two parameters that influence the actuation of the dolly's steering are vehicle speed ("4") and kingpin-deflection ("3"). This deflection is the angle between the truck and trailer, which is measured by an additional kingpin-angle sensor supplied by \gls{VSE} and mounted in the eye of the kingpin hub. Furthermore every steering-knuckle of the dolly is equipped with an angle sensor to provide appropriate wheel-individual feedback for the \gls{VSE} control-system. A diagnosis screen is available in the \gls{VSE}-unit, which allows for relatively simple set-up, calibration and parametrization to be done.\cite{dolly_datasheet} An overview of the implementation of the \gls{ETS}-system in the dolly can be seen in figure \ref{fig:system_overview_ETS}. 
+\begin{figure*}[!htb]
+	\centering
+	\includegraphics[width=1\linewidth]{figures/system_overview_ETS}
+	
+	\caption{System overview for sensors and signal path for \gls{ETS} legacy system by VSE}
+	\label{fig:system_overview_ETS}
 \end{figure*}
+
 
 VSE provides assisted steering up to a speed of 25km/h over which the possible steering angle is limited until it reaches zero at 55km/h. At this threshold the steerable axles are locked and thus behave like normal rigid axles. This according to the manufacturer is to ensure stability at higher speeds.\cite{dolly_datasheet} Locking the steering at higher speeds leads to a more predictable behaviour for the user and system robustness. However, performance during high speed maneuvers be improved by uniformly steering the dolly as well.\cite{performance_improvement} The desired demonstration of the algorithm presented in chapter \ref{chap:steering_model} will as outlined in the introduction to this thesis, include steering at higher speeds, thus a work-around had to be established.\\
+Table \ref{tab:dolly_prop} provides an overview of the properties of the dolly.
 
-
-
-\begin{figure*}[!htb]
-\centering
-\includegraphics[width=1\linewidth]{figures/system_overview_ETS}
-
-\caption{System overview for sensors and signal path for \gls{ETS} legacy system by VSE}
-\label{fig:system_overview_ETS}
-\end{figure*}
-
-
-
-
-Short overview for the dolly, including: 
-
-\begin{itemize}
-\item mechanical properties in short (weight, turning radius, max. tonnage)
-
-
-\end{itemize}
+\begin{table}[!htb]
+	\centering
+	\caption{Properties of dolly}
+	\label{tab:dolly_prop}
+	\begin{tabular}{l r}
+		Length   & 6192 mm   \\ 
+		Width   &       2600 mm     \\
+		Maximum load total   &      18,000 kg   \\
+		Maximum load front axle &      9,000 kg      \\
+		Maximum load rear axle& 9,000 kg  \\
+		Maximum load drawbar& 500 kg  \\
+		Maximum load fifth wheel& 18,000 kg  \\
+	\end{tabular} \\
+\end{table}
 
 
 \section{Interfaces and connections with dolly}

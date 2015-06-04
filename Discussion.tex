@@ -20,14 +20,7 @@
 \section{Results from processing time evaluation}
 \label{sec:results_processing_time}
 
-Delay is 0.26s for front and 0.3s for rear.
 
-\begin{figure*}[!hbt]
-\centering
-\includegraphics[width=1\linewidth]{figures/delay_testing_lin_interpolation}
-\caption{Rise time from send out request to achieve a certain steering angle on the dolly.}
-\label{fig:delay_testing_lin_interpolation}
-\end{figure*}
 
 
 \begin{itemize}
@@ -46,20 +39,29 @@ Figure \ref{fig:step_input} shows the requested angle, target angle and actual a
 	\label{fig:step_input}
 \end{figure*}\\
 The target angle's slope is constant and lower than the slope of the request angle. The actual angle has approximately the same slope as the target angle, but it is delayed. The actual angle tends to overshoot the requested angle for falling slopes. Furthermore the slope of the actual angle is reduced when the actual angle almost reached the request. There is also a saddle point around an angle of 0 degree for rising slopes of the actual angle.          
+The delays over the different request angle step inputs were plotted and a linear regression was made to deduct the actual delay for small changes of the request angle. This delay is the relevant delay, since in real driving situations the requested angle is never a step input but rather changes only slowly. The delay over the step inputs together with the linear regression is shown in figure \ref{fig:delay_testing_lin_interpolation}.    
 
-During plot analysis of preliminary results it was discussed, whether it would be possible to by-pass the occuring delay by feeding a ramp-input instead of a step-input into the \gls{ETS}. It was assumed that there is a low-pass filter in place which would not affect ramp inputs. Subsequent tests with ramp inputs with varying slopes and amplitudes showed that it was indeed possible to eliminate the low-pass filter leading to no delay between the target angle and the request angle.
+\begin{figure*}[!hbt]
+	\centering
+	\includegraphics[width=1\linewidth]{figures/delay_testing_lin_interpolation}
+	\caption{Rise time from send out request to achieve a certain steering angle on the dolly.}
+	\label{fig:delay_testing_lin_interpolation}
+\end{figure*}
+The deducted delay is 0.26s for the front axle and 0.3s for the rear axle.
+
+During plot analysis of preliminary results it was discussed, whether it would be possible to by-pass the occuring delay by feeding a ramp-input instead of a step-input into the \gls{ETS}. It was assumed that there is a low-pass filter in place which would not affect ramp inputs. Subsequent tests with ramp inputs with varying slopes and amplitudes showed that it was indeed possible to eliminate the low-pass filter leading to no delay between the target angle and the request angle. Figure 
 Nevertheless it was not possible to get any faster change than with the request of a step input. It thus can be concluded that the maximum steering rate of $5 ^\circ /s$ can not be circumvented.
 \begin{figure*}[!hbt]
 	\centering
 	\includegraphics[width=1\linewidth]{figures/rate_limiter1}
-	\caption{Step input with rate limiter}
+	\caption{Ramp input}
 	
 	\label{fig:rate_limiter1}
 \end{figure*}
 \begin{figure*}[!hbt]
 \centering
 	\includegraphics[width=1\linewidth]{figures/rate_limiter2}
-	\caption{Low rate input}
+	\caption{Ramp input low slope}
 	
 	\label{fig:rate_limiter2}
 \end{figure*}
@@ -67,7 +69,7 @@ Nevertheless it was not possible to get any faster change than with the request 
 \begin{figure*}[!hbt]
 	\centering
 	\includegraphics[width=1\linewidth]{figures/rate_limiter4}
-	\caption{High rate input}
+	\caption{Ramp input high slope}
 	
 	\label{fig:rate_limiter4}
 \end{figure*}
@@ -141,18 +143,6 @@ To get a more detailed view of this delay as well as the limitation of the reque
 \begin{itemize}
 	\item compare plots from \gls{HIL}  with simulation
 \end{itemize}
-
-
-\section{Comparison}
-\label{sec:results_comparrison}
-\begin{itemize}
-	\item \gls{VTM}  $<=>$ testing
-\end{itemize}
-
-
-
-
-
 
 
 \end{document}
