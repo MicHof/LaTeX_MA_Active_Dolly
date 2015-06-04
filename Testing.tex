@@ -242,34 +242,19 @@ Since a complete vehicle combination will be used for track testing, this corres
 	\caption{Functionality Architecture on track testing}
 	\label{fig:funct_architecture_track}
 \end{figure*} 
-\subsection{Testmaneuvers}
-
-\begin{itemize}
-	\item lit research for standard maneuvers
-	\item sine-wave
-	\item outline critical parts of maneuver
-	\item figure with SA over time
-	\item expected behaviour from simulation
-\end{itemize}
 
 \subsection{Testenvironment AstaZero}
 
-\begin{itemize}
-	\item overview of AZ
-	\item map in appendix?
-	\item restrictions of environment
-	
-\end{itemize}
 
-\subsection{Testmatrix}
+The test with this dolly platform will be carried out at the AstaZero test-site close to Gothenborg, a cooperative automotive test-track funded by SP Technical Research Institute of Sweden and Chalmers University of Technology. It provides a state of the art closed off environment, which guarrantess safety and repeatable traffic conditions as well as enough space to carry out dynamic maneuvers at high speeds with a \gls{HCT} combination. Especially the so called high-speed area will be especially useful, as the combination has enough distance to gather the desired speed before maneuvering.
 
-\begin{itemize}
-	\item checklist for launch
-	\item parameters that very varied
-	\item different runs
-	\item planned maneuvers
-	
-\end{itemize}
+\subsection{Testmaneuvers}
+
+As outlined in the respective publications, the test-maneuvers for the low-speed controller will be a 180$^{\circ}$ turn and a S-turn.\cite{Low-speed_paper}. The high-speed controller will be tested with a single lane-change representing an over-taking maneuver in traffic or the avoiding of an obstacle.\cite{High-speed_paper} To input this driving scenarios consistently with a high repeatability into the combination, Volvo's \gls{VDS} steering system will be utilized. Originally it is developed to support the driver by mechanically decoupling the steering column from the steering-wheel but introducing electric-motors to give feedback and torque sensors to monitor driver inputs. As this system can fully control the truck's steering, it is possible to tap into the respective \gls{ECU}. The necessary steering pattern was generated for the work of the mentioned papers already and is send out to the truck from the \gls{MABII} to the \gls{CAN} coming from the truck (see also section \ref{sec:interface_with_truck}).
+
+
+
+
 
 \subsection{Test setup and instrumentation}
 
