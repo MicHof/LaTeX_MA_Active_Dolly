@@ -90,55 +90,51 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.4}Arduino IDE and applications}{31}{section.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Fault detection and system ability}{35}{chapter.6}
+\contentsline {chapter}{\numberline {6}Verification and validation of steering}{35}{chapter.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}\acrfull {FMEA}}{35}{section.6.1}
+\contentsline {section}{\numberline {6.1}Overview}{35}{section.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.2}Safety concepts}{36}{section.6.2}
+\contentsline {section}{\numberline {6.2}Bench-Testing}{35}{section.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.3}Maximum capabilities of the system}{36}{section.6.3}
+\contentsline {subsection}{\numberline {6.2.1}VTM maneuver verification}{35}{subsection.6.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.4}Warning and state-info system}{36}{section.6.4}
+\contentsline {subsection}{\numberline {6.2.2}CAN verification}{36}{subsection.6.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Verification and validation of steering}{39}{chapter.7}
+\contentsline {section}{\numberline {6.3}Processing time evaluation}{36}{section.6.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.1}Overview}{39}{section.7.1}
+\contentsline {subsection}{\numberline {6.3.1}Background}{36}{subsection.6.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.2}Bench-Testing}{39}{section.7.2}
+\contentsline {subsection}{\numberline {6.3.2}Measured input delay}{36}{subsection.6.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.2.1}VTM maneuver verification}{39}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {6.3.3}Delays in logging measuring chain}{38}{subsection.6.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.2.2}CAN verification}{40}{subsection.7.2.2}
+\contentsline {section}{\numberline {6.4}Vehicle testing}{39}{section.6.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.3}Processing time evaluation}{40}{section.7.3}
+\contentsline {subsection}{\numberline {6.4.1}System calibration}{39}{subsection.6.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.3.1}Background}{40}{subsection.7.3.1}
+\contentsline {subsection}{\numberline {6.4.2}Actuator tests}{39}{subsection.6.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.3.2}Measured input delay}{40}{subsection.7.3.2}
+\contentsline {subsection}{\numberline {6.4.3}Sensor testing}{40}{subsection.6.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.3.3}Delays in logging measuring chain}{42}{subsection.7.3.3}
+\contentsline {section}{\numberline {6.5}Hardware-in-the-loop testing}{40}{section.6.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.4}Vehicle testing}{43}{section.7.4}
+\contentsline {subsection}{\numberline {6.5.1}Low-speed controller}{42}{subsection.6.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.4.1}System calibration}{43}{subsection.7.4.1}
+\contentsline {subsection}{\numberline {6.5.2}High-speed controller}{43}{subsection.6.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.4.2}Actuator tests}{43}{subsection.7.4.2}
+\contentsline {section}{\numberline {6.6}Track testing}{43}{section.6.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.4.3}Algorithm evaluation}{44}{subsection.7.4.3}
+\contentsline {subsection}{\numberline {6.6.1}Testenvironment AstaZero}{43}{subsection.6.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.4.4}Sensor testing}{44}{subsection.7.4.4}
+\contentsline {subsection}{\numberline {6.6.2}Testmaneuvers}{43}{subsection.6.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.5}Hardware-in-the-loop testing}{45}{section.7.5}
+\contentsline {chapter}{\numberline {7}Fault detection and system ability}{45}{chapter.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.5.1}Low-speed controller}{46}{subsection.7.5.1}
+\contentsline {section}{\numberline {7.1}\acrfull {FMEA}}{45}{section.7.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.5.2}High-speed controller}{46}{subsection.7.5.2}
+\contentsline {section}{\numberline {7.2}Maximum capabilities of the system}{46}{section.7.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.6}Track testing}{46}{section.7.6}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.6.1}Testenvironment AstaZero}{47}{subsection.7.6.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.6.2}Testmaneuvers}{48}{subsection.7.6.2}
+\contentsline {section}{\numberline {7.3}Warning and state-info system}{46}{section.7.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {8}Discussion}{49}{chapter.8}
 \defcounter {refsection}{0}\relax 

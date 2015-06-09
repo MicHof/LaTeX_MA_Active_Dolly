@@ -34,33 +34,35 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Trigger to start maneuver or fall back to safe-mode (e.i commanding a steering angle of zero degree on the dolly); this structure was used in \gls {HIL}-testing}}{33}{figure.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Example of \gls {FMEA}-worksheet for the first step of the FMEA}}{36}{figure.6.1}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Functionality Architecture in simulation}}{35}{figure.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Step input 8 degree}}{37}{figure.6.2}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Example of step input for delay determination, front axle lifted, $8^\circ $ amplitude, six repetitions.}}{37}{figure.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Functionality Architecture in simulation}}{39}{figure.7.1}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Execution blocks for \gls {IMU} data acquisition on the Arduino Due (overview)}}{39}{figure.6.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Example of step input for delay determination, front axle lifted, $8^\circ $ amplitude, six repetitions.}}{41}{figure.7.2}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces \gls {ETS}' diagnosis sceen patched out of the original ETS-locker to allow easy access during workshop testing. The display is showing the homescreen.}}{40}{figure.6.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Execution blocks for \gls {IMU} data acquisition on the Arduino Due (overview)}}{43}{figure.7.3}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Overview of \gls {HIL} -simulation, distribution of sub-functions over different physical platforms (top) and correlation to Volvo functional architecture (bottom)}}{41}{figure.6.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.4}{\ignorespaces \gls {ETS}' diagnosis sceen patched out of the original ETS-locke rto allow easy access during workshop testing. The display is showing the homescreen.}}{44}{figure.7.4}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces HIL test steering angle tractor}}{42}{figure.6.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.5}{\ignorespaces Overview of \gls {HIL} -simulation, distribution of sub-functions over different physical platforms (top) and correlation to Volvo functional architecture (bottom)}}{45}{figure.7.5}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Functionality Architecture on track testing}}{43}{figure.6.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.6}{\ignorespaces HIL test steering angle tractor}}{47}{figure.7.6}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Example of \gls {FMEA}-worksheet for the first step of the FMEA}}{46}{figure.7.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.7}{\ignorespaces Functionality Architecture on track testing}}{47}{figure.7.7}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Step input 8 degree}}{47}{figure.7.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Complete dolly system with supervision block}}{47}{figure.7.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {8.1}{\ignorespaces Step input 5 degree}}{49}{figure.8.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {8.2}{\ignorespaces Rise time from send out request to achieve a certain steering angle on the dolly.}}{50}{figure.8.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8.3}{\ignorespaces Ramp input}}{51}{figure.8.3}
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Ramp input rate 0.01}}{51}{figure.8.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8.4}{\ignorespaces Ramp input low slope}}{51}{figure.8.4}
+\contentsline {figure}{\numberline {8.4}{\ignorespaces Ramp input rate 0.001}}{51}{figure.8.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8.5}{\ignorespaces Ramp input high slope}}{52}{figure.8.5}
+\contentsline {figure}{\numberline {8.5}{\ignorespaces Ramp input rate 0.1}}{52}{figure.8.5}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {8.6}{\ignorespaces HIL-test low-speed front axle}}{52}{figure.8.6}
 \defcounter {refsection}{0}\relax 
@@ -71,6 +73,10 @@
 \contentsline {figure}{\numberline {8.9}{\ignorespaces HIL-test front axle measurements from VTM and ETS-CAN}}{54}{figure.8.9}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {8.10}{\ignorespaces Details of HIL-test front axle measurements from VTM and ETS-CAN}}{55}{figure.8.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {8.11}{\ignorespaces Details of HIL-test front axle measurements from VTM and ETS-CAN}}{55}{figure.8.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {8.12}{\ignorespaces Details of HIL-test front axle measurements from VTM and ETS-CAN}}{56}{figure.8.12}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {A.1}{\ignorespaces Dolly craned up slightly to determine delay of steering actuation}}{59}{figure.A.1}
 \defcounter {refsection}{0}\relax 

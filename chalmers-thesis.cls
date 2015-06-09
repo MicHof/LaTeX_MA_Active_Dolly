@@ -801,7 +801,7 @@
 
 \clearpage
 \addcontentsline{toc}{chapter}{List of Acronyms}
-\printglossary[type=\acronymtype]
+\printglossary[type=\acronymtype,nonumberlist]
 
  % Sets up page numbering for the rest of the document.
  \if@draft

@@ -160,14 +160,15 @@ Actuator tests to verify working hydraulic system for the steering system and co
 
 The three angle-sensors to determine the articulation between the different independently moving units of the combinations differ in form-factor as they are mounted either on the fifth-wheel turntable or the king-pin respectively, nonetheless all rely on the same measuring principle and broadcast their gathered data in the same fashion on a private \gls{CAN}-bus (refer to figure \ref{fig:dolly_interfaces}). 
 
-As was laid out in section HIER-REF-FUER-BILD-MIT-WEITERFUEHRPARAMETERN! some CAN-messages needed to be patched through to the receiving \gls{ECU} and some had to be changed. It was necessary to run the sensors in bench-tests first to ensure this communication was understood and controllable before implementing it into the final system. The \gls{VSE} sensors need to be connected to 24V \gls{DC} and then independently setup and broadcast the angle of deflection of their turning-plate. The CAN-signal was picked up with a slim Arduino CAN-setup at first to verify the data. In further tests the \gls{CAN}-reception was realized n th \gls{MABII} where subsequently the describes by-pass with modification of selected signals was developed. HIER NOCH EIN BILD VOM SENSOR AM ARDUINO BREADBOARD!!!! Further calibration or testing was not necessary for this sensors, as they are very robust and reliable. 
+As can be gathered from figure \ref{fig:system_modification} some CAN-messages needed to be patched through to the receiving \gls{ECU} and some had to be changed. It was necessary to run the sensors in bench-tests first to ensure this communication was understood and controllable before implementing it into the final system. The \gls{VSE} sensors need to be connected to 24V \gls{DC} and then independently setup and broadcast the angle of deflection of their turning-plate. The CAN-signal was picked up with a slim Arduino CAN-setup at first to verify the data. In further tests the \gls{CAN}-reception was realized n th \gls{MABII} where subsequently the describes by-pass with modification of selected signals was developed.% HIER NOCH EIN BILD VOM SENSOR AM ARDUINO BREADBOARD!!!! 
+Further calibration or testing was not necessary for this sensors, as they are very robust and reliable. 
 
 
 
-\begin{itemize}
-	\item zero IMUs, make sure paired sensors show the same outputs
+%\begin{itemize}
+%	\item zero IMUs, make sure paired sensors show the same outputs
 	
-\end{itemize}
+%\end{itemize}
 
 \section{Hardware-in-the-loop testing}
 \label{sec:HIL}
@@ -208,7 +209,7 @@ Limitations: \gls{HIL} -testing took place in workshop environment and thus the 
 The maneuver that was used for testing the Low-speed controller was a 180 degree turn at constant speed. The steering angle of the tractor can be seen in Figure \ref{fig:HIL002_delta11}.\\
 \begin{figure*}[!htb]
 	\centering
-	\includegraphics[width=1\linewidth]{figures/HIL_delta11}
+	\includegraphics[width=0.7\linewidth]{figures/HIL_delta11}
 	\caption{HIL test steering angle tractor}
 	
 	\label{fig:HIL002_delta11}
