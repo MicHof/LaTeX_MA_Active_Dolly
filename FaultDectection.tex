@@ -73,11 +73,11 @@ The maximum steering rate was determined with the tests described in section \re
 
 In the original state, the \gls{ETS}-\gls{ECU} monitors all safety critical components of the dolly. In case of a malfunction, an error code is sent via the \gls{CAN}-Bus and the error message is visible on the diagnose displays of the dolly. Depending on the severity of the error the steering is deactivated and the axes steer back to a steering angle of 0 deg.
 Due to the required modification of the \gls{ASF}- and \gls{EBS}-signal, the inbuilt supervision of the \gls{ETS}-\gls{ECU} is no longer fully functioning. Therefore a additional supervision of the system has to be implemented in the Simulink-model. This supervision considers the current capabilities of the dolly and reduces the requested steering angle and steering rate, if needed. 
-\begin{itemize}   
-	\item warnings from \gls{EBS}
-	\item warnings from vehicle
-	\item 'own' error codes and warnings (e.g. logging, \gls{MABII} related, arduino-\gls{IMU} related)
-\end{itemize}
+%\begin{itemize}   
+%	\item warnings from \gls{EBS}
+%	\item warnings from vehicle
+%	\item 'own' error codes and warnings (e.g. logging, \gls{MABII} related, arduino-\gls{IMU} related)
+%\end{itemize}
 
 \begin{figure*}[!htb]
 	\centering

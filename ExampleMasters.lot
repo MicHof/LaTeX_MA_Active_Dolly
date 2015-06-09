@@ -14,9 +14,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {table}{\numberline {5.2}{\ignorespaces List of utilized libraries on the Arduino platform}}{31}{table.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {7.1}{\ignorespaces Test matrix for delay measuring with lifted axle (analogous matrix for non-lifted testing (\#19-\#36))}}{42}{table.7.1}
+\contentsline {table}{\numberline {6.1}{\ignorespaces Test matrix for delay measuring with lifted axle (analogous matrix for non-lifted testing (\#19-\#36))}}{38}{table.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {7.2}{\ignorespaces Test matrix for delay measurings with ramp input}}{42}{table.7.2}
+\contentsline {table}{\numberline {6.2}{\ignorespaces Test matrix for delay measurings with ramp input}}{38}{table.6.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {table}{\numberline {A.1}{\ignorespaces Severity table for \gls {FMEA} \cite {FMEA_tables}}}{61}{table.A.1}
 \defcounter {refsection}{0}\relax 

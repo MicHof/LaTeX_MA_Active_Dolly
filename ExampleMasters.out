@@ -31,25 +31,24 @@
 \BOOKMARK [1][]{section.5.2}{Steering interface}{chapter.5}% 31
 \BOOKMARK [1][]{section.5.3}{ControlDesk monitoring environment}{chapter.5}% 32
 \BOOKMARK [1][]{section.5.4}{Arduino IDE and applications}{chapter.5}% 33
-\BOOKMARK [0][]{chapter.6}{Fault detection and system ability}{}% 34
-\BOOKMARK [1][]{section.6.1}{FMEA}{chapter.6}% 35
-\BOOKMARK [1][]{section.6.2}{Safety concepts}{chapter.6}% 36
-\BOOKMARK [1][]{section.6.3}{Maximum capabilities of the system}{chapter.6}% 37
-\BOOKMARK [1][]{section.6.4}{Warning and state-info system}{chapter.6}% 38
-\BOOKMARK [0][]{chapter.7}{Verification and validation of steering}{}% 39
-\BOOKMARK [1][]{section.7.1}{Overview}{chapter.7}% 40
-\BOOKMARK [1][]{section.7.2}{Bench-Testing}{chapter.7}% 41
-\BOOKMARK [1][]{section.7.3}{Processing time evaluation}{chapter.7}% 42
-\BOOKMARK [1][]{section.7.4}{Vehicle testing}{chapter.7}% 43
-\BOOKMARK [1][]{section.7.5}{Hardware-in-the-loop testing}{chapter.7}% 44
-\BOOKMARK [1][]{section.7.6}{Track testing}{chapter.7}% 45
-\BOOKMARK [0][]{chapter.8}{Discussion}{}% 46
-\BOOKMARK [1][]{section.8.1}{Results from bench testing}{chapter.8}% 47
-\BOOKMARK [1][]{section.8.2}{Results from processing time evaluation}{chapter.8}% 48
-\BOOKMARK [1][]{section.8.3}{Results from in vehicle testing}{chapter.8}% 49
-\BOOKMARK [1][]{section.8.4}{Results from hardware-in-the-loop testing}{chapter.8}% 50
-\BOOKMARK [0][]{chapter.9}{Conclusion}{}% 51
-\BOOKMARK [1][]{section.9.1}{Recommendation}{chapter.9}% 52
-\BOOKMARK [1][]{section.9.2}{Future Work}{chapter.9}% 53
-\BOOKMARK [0][]{appendix.A}{Appendix}{}% 54
-\BOOKMARK [0][]{figure.A.4}{References}{}% 55
+\BOOKMARK [0][]{chapter.6}{Verification and validation of steering}{}% 34
+\BOOKMARK [1][]{section.6.1}{Overview}{chapter.6}% 35
+\BOOKMARK [1][]{section.6.2}{Bench-Testing}{chapter.6}% 36
+\BOOKMARK [1][]{section.6.3}{Processing time evaluation}{chapter.6}% 37
+\BOOKMARK [1][]{section.6.4}{Vehicle testing}{chapter.6}% 38
+\BOOKMARK [1][]{section.6.5}{Hardware-in-the-loop testing}{chapter.6}% 39
+\BOOKMARK [1][]{section.6.6}{Track testing}{chapter.6}% 40
+\BOOKMARK [0][]{chapter.7}{Fault detection and system ability}{}% 41
+\BOOKMARK [1][]{section.7.1}{FMEA}{chapter.7}% 42
+\BOOKMARK [1][]{section.7.2}{Maximum capabilities of the system}{chapter.7}% 43
+\BOOKMARK [1][]{section.7.3}{Warning and state-info system}{chapter.7}% 44
+\BOOKMARK [0][]{chapter.8}{Discussion}{}% 45
+\BOOKMARK [1][]{section.8.1}{Results from bench testing}{chapter.8}% 46
+\BOOKMARK [1][]{section.8.2}{Results from processing time evaluation}{chapter.8}% 47
+\BOOKMARK [1][]{section.8.3}{Results from in vehicle testing}{chapter.8}% 48
+\BOOKMARK [1][]{section.8.4}{Results from hardware-in-the-loop testing}{chapter.8}% 49
+\BOOKMARK [0][]{chapter.9}{Conclusion}{}% 50
+\BOOKMARK [1][]{section.9.1}{Recommendation}{chapter.9}% 51
+\BOOKMARK [1][]{section.9.2}{Future Work}{chapter.9}% 52
+\BOOKMARK [0][]{appendix.A}{Appendix}{}% 53
+\BOOKMARK [0][]{figure.A.4}{References}{}% 54
