@@ -44,7 +44,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {6.5}{\ignorespaces Overview of \gls {HIL} -simulation, distribution of sub-functions over different physical platforms (top) and correlation to Volvo functional architecture (bottom)}}{41}{figure.6.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.6}{\ignorespaces HIL test steering angle tractor}}{42}{figure.6.6}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces HIL test steering angle tractor}}{43}{figure.6.6}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {6.7}{\ignorespaces Functionality Architecture on track testing}}{43}{figure.6.7}
 \defcounter {refsection}{0}\relax 
@@ -58,25 +58,25 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {8.2}{\ignorespaces Rise time from send out request to achieve a certain steering angle on the dolly.}}{50}{figure.8.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8.3}{\ignorespaces Ramp input rate 0.01}}{51}{figure.8.3}
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Ramp input rate 0.01}}{50}{figure.8.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {8.4}{\ignorespaces Ramp input rate 0.001}}{51}{figure.8.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8.5}{\ignorespaces Ramp input rate 0.1}}{52}{figure.8.5}
+\contentsline {figure}{\numberline {8.5}{\ignorespaces Ramp input rate 0.1}}{51}{figure.8.5}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {8.6}{\ignorespaces HIL-test low-speed front axle}}{52}{figure.8.6}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {8.7}{\ignorespaces HIL-test low-speed rear axle}}{53}{figure.8.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8.8}{\ignorespaces Details of HIL-test low-speed front axle}}{54}{figure.8.8}
+\contentsline {figure}{\numberline {8.8}{\ignorespaces Details of HIL-test low-speed front axle}}{53}{figure.8.8}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {8.9}{\ignorespaces HIL-test front axle measurements from VTM and ETS-CAN}}{54}{figure.8.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8.10}{\ignorespaces Details of HIL-test front axle measurements from VTM and ETS-CAN}}{55}{figure.8.10}
+\contentsline {figure}{\numberline {8.10}{\ignorespaces Details of \gls {HIL}-test front axle measurements from \gls {VTM} and \gls {ETS}-\gls {CAN}}}{54}{figure.8.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8.11}{\ignorespaces Details of HIL-test front axle measurements from VTM and ETS-CAN}}{55}{figure.8.11}
+\contentsline {figure}{\numberline {8.11}{\ignorespaces Comparison between swept pathes of different units in the \gls {HCT} combination during \gls {HIL}-testing and \gls {VTM}-simulation}}{55}{figure.8.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8.12}{\ignorespaces Details of HIL-test front axle measurements from VTM and ETS-CAN}}{56}{figure.8.12}
+\contentsline {figure}{\numberline {8.12}{\ignorespaces Deviation between \gls {HIL}-testing and \gls {VTM}-simulation plotted over distance traveled during 180$^\circ $-turn}}{56}{figure.8.12}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {A.1}{\ignorespaces Dolly craned up slightly to determine delay of steering actuation}}{59}{figure.A.1}
 \defcounter {refsection}{0}\relax 
@@ -85,3 +85,7 @@
 \contentsline {figure}{\numberline {A.3}{\ignorespaces ControlDesk \gls {GUI} for basic testing and start-up of the dolly}}{60}{figure.A.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {A.4}{\ignorespaces Pareto diagram for RPNs of FMEA}}{63}{figure.A.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {A.5}{\ignorespaces Path representation of different units in the \gls {HCT} combination simulated in VTM}}{63}{figure.A.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {A.6}{\ignorespaces Path representation of different units in the \gls {HCT} combination during \gls {HIL}-testing}}{64}{figure.A.6}

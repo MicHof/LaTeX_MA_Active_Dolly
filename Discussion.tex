@@ -7,15 +7,15 @@
 \chapter{Discussion}
 \label{chap:discussion}
 
-\section{Results from bench testing}
-\label{sec:results_bench}
+%\section{Results from bench testing}
+%\label{sec:results_bench}
 
-\begin{itemize}
-	\item lessons-learned?
-	\item adaptation for future projects
-	\item what was taken over for further tests? 
-	\item what couldnt be simultaed?
-\end{itemize}
+%\begin{itemize}%
+%	\item lessons-learned?
+%	\item adaptation for future projects
+%	\item what was taken over for further tests? 
+%	\item what couldnt be simultaed?
+%\end{itemize}
 
 \section{Results from processing time evaluation}
 \label{sec:results_processing_time}
@@ -67,17 +67,19 @@ With a rate of 0.01 the request angle and target angle align. They also align at
 Comparing figure \ref{fig:rate_limiter1} and figure \ref{fig:rate_limiter3} indicates that it is not possible to get any faster change with a ramp input than with the request of a step input. It thus can be concluded that the maximum steering rate of $5 ^\circ /s$ can not be circumvented.
 
 
-\section{Results from in vehicle testing}
-\label{sec:results_vehicle_testing}
+%\section{Results from in vehicle testing}
+%\label{sec:results_vehicle_testing}
 
 
 
 
-\begin{itemize}
-	\item CAN-analysis
-	\item robustness?
-	\item reliability of safety features
-\end{itemize}
+%\begin{itemize}
+%	\item CAN-analysis
+%%	\item robustness?
+%	\item reliability of safety features
+%\end{itemize}
+
+
 \section{Results from hardware-in-the-loop testing}
 
 Figure \ref{fig:HIL002_front} shows the measurements of the ETS-CAN of the front axle of the dolly for the low-speed maneuver described in section \ref{sec:HIL}.\\
@@ -90,7 +92,7 @@ Figure \ref{fig:HIL002_front} shows the measurements of the ETS-CAN of the front
 	\label{fig:HIL002_front}
 \end{figure*}
 
-The request angle is the angle that was requested from the controller and then sent from the simulation-PC to the MABII. The target angle is the angle that was calculated by the ETS-ECU and sent as a request to the actuators of the dolly. The actual angle is the angle that the sensors on the dolly's wheels measured.
+The request angle is the angle that was requested from the controller and then sent from the sSimulation-PC to the \gls{MABII}. The target angle is the angle that was calculated by the \gls{ETS}-\gls{ECU} and sent as a request to the actuators of the dolly. The actual angle is the angle that the sensors on the dolly's wheels measured and which is the articulation of the dolly's wheel on the ground.
 Figure \ref{fig:HIL002_rear} shows the same measurements for the rear axle.
 
 \begin{figure*}[!htb]
@@ -100,7 +102,7 @@ Figure \ref{fig:HIL002_rear} shows the same measurements for the rear axle.
 	
 	\label{fig:HIL002_rear}
 \end{figure*}
-Since the same requested angle for front and rear is the same, below only the front axle is looked upon.
+Since the same requested angle for front and rear is the same, below only the front axle is looked upon. Both axles show a very similar behaviour and thus only considering one is justifiable.
 Figure \ref{fig:HIL002_front_closeup} shows an extraction of the measurements of the front axle. 
 \begin{figure*}[!htb]
 	\centering
@@ -109,9 +111,9 @@ Figure \ref{fig:HIL002_front_closeup} shows an extraction of the measurements of
 	
 	\label{fig:HIL002_front_closeup}
 \end{figure*} \\
-As already mentioned in section \ref{sec:measuring_delay} there is a delay between the angle requested of the ETS-ECU and the actual angle of the wheels. This can also be seen in this plot. In comparison to this, the delay between the angle request that is sent from the MABII to the CAN and the target angle that is sent from the ETS-ECU to the actuators is very small and can therefore be neglected.\\
+As already mentioned in section \ref{sec:measuring_delay} there is a delay between the angle requested of the \gls{ETS}-\gls{ECU} and the actual angle of the wheels. This can very distinctifvly be seen in this plot. In comparison to this, the delay between the angle request that is sent from the \gls{MABII} to the \gls{CAN} and the target angle that is sent from the \gls{ETS}-\gls{ECU} to the actuators is very small and can therefore be neglected.\\
 
-To get a picture of the overall results of the HIL-test, Figure \ref{fig:HIL002_complete} shows the measurements conducted on the simulation-PC and the measurements done in ControllDesk in the same plot.  
+To get an impression of the overall results of the \gls{HIL}-test, figure \ref{fig:HIL002_complete} shows the measurements conducted on the simulation-PC and the measurements done in ControllDesk in the same plot. 
 \begin{figure*}[!htb]
 	\centering
 	\includegraphics[width=1\linewidth]{figures/HIL006_alles}
@@ -119,56 +121,38 @@ To get a picture of the overall results of the HIL-test, Figure \ref{fig:HIL002_
 	\label{fig:HIL002_complete}
 \end{figure*}
 
-For one thing the plot shows the limitation of the angle that is requested from the controller by the supervisor block described in section \ref{sec:warning_system}. For another thing it shows that there is a relatively high delay between the signal of the actual angle of the dolly from the ETS-CAN and the signal that is feedback to the simulation-PC. This is most likely caused by the use of the serial interface to transmit the signal from the CAN to the simulation-PC. This delay causes a amplification of the articulation angle between the first semitrailer and the dolly, which directly correlates to the steering angle request to the dolly. This amplification can be seen in the end of the measurements.\\
-To get a more detailed view of this delay as well as the limitation of the request angle Figure \ref{fig:HIL002_complete_details} shows a extraction of Figure \ref{fig:HIL002_complete}.   
+For one thing the plot shows the limitation of the angle that is requested from the controller by the supervisor block described in section \ref{sec:warning_system}. For another thing it shows that there is a relatively high delay between the signal of the actual angle of the dolly from the \gls{ETS}-\gls{CAN} and the signal that is feedback to the simulation-PC. This is most likely caused by the use of the serial interface to transmit the signal from the CAN to the simulation-PC. \\
+To get a more detailed view of this delay as well as the limitation of the request angle figure \ref{fig:HIL002_complete_details} shows a extraction of figure \ref{fig:HIL002_complete}.   
 
 \begin{figure*}[!htb]
 	\centering
 	\includegraphics[width=1\linewidth]{figures/HIL006_alles_details}
-	\caption{Details of HIL-test front axle measurements from VTM and ETS-CAN}
+	\caption{Details of \gls{HIL}-test front axle measurements from \gls{VTM} and \gls{ETS}-\gls{CAN}}
 	
 	\label{fig:HIL002_complete_details}
 \end{figure*}
 
 
-The tested controller was evaluated in \gls{HIL} testing as well as in pure simulation in \gls{VTM}. The two resulting curves of the vehicles path can be seen in figures 
-
-<<<<<<< HEAD
-\begin{itemize}
-	\item compare plots from \gls{HIL}  with simulation
-\end{itemize}
-\begin{figure*}[!htb]
-	\centering
-	\includegraphics[width=1\linewidth]{figures/xy_VTM}
-	\caption{x-y plot for the different units simulation only}
-	
-	\label{fig:xy_VTM}
-\end{figure*}
-\begin{figure*}[!htb]
-	\centering
-	\includegraphics[width=1\linewidth]{figures/xy_HIL}
-	\caption{x-y plot for the different units Hardware-in-the-loop}
-	
-	\label{fig:xy_HIL}
-\end{figure*}
-=======
-\begin{figure*}[!htb]
-	\centering
-	\includegraphics[width=1\linewidth]{figures/HIL_Plot_for_180_deg_turn}
-	\caption{Details of HIL-test front axle measurements from VTM and ETS-CAN}
-	
-	\label{fig:HIL_Plot_for_180_deg_turn}
-\end{figure*}
+The tested controller was evaluated in \gls{HIL} testing as well as in pure simulation in \gls{VTM}. The two resulting curves of the vehicles path can be seen in figures \ref{fig:xy_HIL} for the \gls{HIL}-testing and \ref{fig:xy_VTM} for the pure \gls{VTM}-simulation of the same maneuver respectively. For easier comparison figure \ref{fig:xy_HIL_and_VTM} depicts the pathes for both environments. The steering reacts a bit slower for the \gls{HIL}-tests, but overall the paths are very similiar. The actual performance of the algorithm and its evaluation is not part of this thesis, but it was the to have an as similar matching between simulation and \gls{VTS} environment.
 
 
 \begin{figure*}[!htb]
 	\centering
-	\includegraphics[width=1\linewidth]{figures/VTM_Plot_for_180_deg_turn}
-	\caption{Details of HIL-test front axle measurements from VTM and ETS-CAN}
+	\includegraphics[width=1\linewidth]{figures/xy_HIL_and_VTM}
+	\caption{Comparison between swept pathes of different units in the \gls{HCT} combination during \gls{HIL}-testing and \gls{VTM}-simulation}
 	
-	\label{fig:VTM_Plot_for_180_deg_turn}
+	\label{fig:xy_HIL_and_VTM}
 \end{figure*}
 
->>>>>>> origin/master
+As can be gathered from figure \ref{fig:compare_HIL_VTS}, the error between the two environments accumulates over time. This is a consequence of slightly different paths they choose due to the dolly not really allowing steering of very small angles (-1 to 1$^\circ$). This is caused by hardware limitations and a dead-band filter which is present in the \gls{ETS}-\gls{ECU}. The end of the measuring can practically be ignored from approximately 100m of distance traveled, as this is mostly caused by different angles at which the combination exits the turn. This can be compensated for by fine-tuning the steering inputs, which was omitted for this thesis, as it was only the aim to demonstrate the general function of the controller. Fine-tuning will only be conducted once the final controller is ready and correctly implemented. 
+
+\begin{figure*}[!htb]
+	\centering
+	\includegraphics[width=1\linewidth]{figures/compare_HIL_VTS}
+	\caption{Deviation between \gls{HIL}-testing and \gls{VTM}-simulation plotted over distance traveled during 180$^\circ$-turn}
+	
+	\label{fig:compare_HIL_VTS}
+\end{figure*}
+
 
 \end{document}
