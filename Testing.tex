@@ -9,7 +9,7 @@
 
 \section{Overview}
 In different states of the project different kind of tests were performed. As a first step bench tests were done to verify the developed software (section \ref{sec:bench-testing}). Following that, several tests on the actual dolly, with the dolly in standstill and no trailers connected, were made (sections \ref{chap:processing_time_delay} and \ref{sec:vehicle-testing}). The final step achieved in this thesis was Hardware-in-the-loop testing (section \ref{sec:HIL}).
-For the future tests with the dolly as part of a A-double combination on a test track are planed (section \ref{sec:track-testing}).
+For the future tests with the dolly as part of a A-double combination on a test track are planned (section \ref{sec:track-testing}).
 
 \section{Bench-Testing}
 \label{sec:bench-testing}
@@ -34,7 +34,7 @@ For the \gls{HMI} lookup tables were used for the steering angle and vehicle spe
 	
 \end{itemize}
 \subsection{CAN verification}
-To test the functionality of the \gls{ASF}-Sensor as a first step it was just connected to power supply and an Arduino with a attached \gls{CAN}-shield. After the \gls{CAN}-message was received successfully with the Arduino, as a next step the sensor's \gls{CAN} pins were connected to the \gls{MABII}. On the \gls{MABII} a simple model, that only contained one \gls{CAN}-Controller with the corresponding dbc-file, was loaded. The bus-monitor tool of ControlDesk, that shows all incoming and outgoing signals on the \gls{CAN} for the corresponding dbc-file, was used to check the sensor signals. 
+To test the functionality of the \gls{ASF}-Sensor as a first step it was connected to power supply and an Arduino with a attached \gls{CAN}-shield. After the \gls{CAN}-message was received successfully with the Arduino, as a next step the sensor's \gls{CAN} pins were connected to the \gls{MABII}. On the \gls{MABII} a simple model, that only contained one \gls{CAN}-Controller with the corresponding dbc-file, was loaded. The bus-monitor tool of ControlDesk, that shows all incoming and outgoing signals on the \gls{CAN} for the corresponding dbc-file, was used to check the sensor signals. 
 
 As outlined in section \ref{sec:interface_with_dolly} the signals generated for each \gls{ETS}-\gls{ECU} need to differ to achieve independent steering. The \gls{CAN}-wiring of the legacy system thus had to be interrupted and split. To ensure that only the correct set of messages was available after the splitting point, Arduino Dues were spliced into the system at all relevant junctions. This was a necessary procedure as gateway-systems between all different \gls{CAN}-subnets on the dolly are in place and needed to be circumvented, which proofed to be a challenging task operating under the maxim of easy revertability to the original state.
 
@@ -216,8 +216,18 @@ The maneuver that was used for testing the Low-speed controller was a 180$^{\cir
 	
 	\label{fig:HIL002_delta11}
 \end{figure*}
-As a first step a very simple controller was used for controlling the steering of the dolly. The controller used the articulation angle between the first semitrailer and the dolly as an input. The output to both axles was this angle multiplied with a gain of -0.8.
+As a first step a very simple controller was used for controlling the steering of the dolly. The controller used the articulation angle between the first semitrailer and the dolly as an input. Equations \eqref{eq:delta31_HIL} and \eqref{eq:delta32_HIL} shows how the steering angle for the dolly's front and rear axle respectively correlates with the articulation angle between the dolly and the first semitrailer.
 
+\begin{equation}
+\delta_{31}=-0.8*\Delta\psi_2
+\label{eq:delta31_HIL}
+\end{equation}
+
+
+\begin{equation}
+\delta_{32}=-0.8*\Delta\psi_2
+\label{eq:delta32_HIL}
+\end{equation}
 
 
 \subsection{High-speed controller}
@@ -238,11 +248,11 @@ Since a complete vehicle combination will be used for track testing, this corres
 \subsection{Testenvironment AstaZero}
 
 
-The test with this dolly platform will be carried out at the AstaZero test-site close to Gothenborg, a cooperative automotive test-track funded by SP Technical Research Institute of Sweden and Chalmers University of Technology. It provides a state of the art closed off environment, which guarrantess safety and repeatable traffic conditions as well as enough space to carry out dynamic maneuvers at high speeds with a \gls{HCT} combination. Especially the so called high-speed area will be especially useful, as the combination has enough distance to gather the desired speed before maneuvering.
+The test with this dolly platform will be carried out at the AstaZero test-site close to Gothenborg, a cooperative automotive test-track funded by SP Technical Research Institute of Sweden and Chalmers University of Technology. It provides a state of the art closed off environment, which guarrantess safety and repeatable traffic conditions as well as enough space to carry out dynamic maneuvers at high speeds with a \gls{HCT} combination. The so called high-speed area will be especially useful, as the combination has enough distance to gather the desired speed before maneuvering.
 
 \subsection{Testmaneuvers}
 
-As outlined in the respective publications, the test-maneuvers for the low-speed controller will be a 180$^{\circ}$ turn and a S-turn.\cite{Low-speed_paper}. The high-speed controller will be tested with a single lane-change representing an over-taking maneuver in traffic or the avoiding of an obstacle.\cite{High-speed_paper} To input this driving scenarios consistently with a high repeatability into the combination, Volvo's \gls{VDS} steering system will be utilized. Originally it is developed to support the driver by mechanically decoupling the steering column from the steering-wheel but introducing electric-motors to give feedback and torque sensors to monitor driver inputs. As this system can fully control the truck's steering, it is possible to tap into the respective \gls{ECU}. The necessary steering pattern was generated for the work of the mentioned papers already and is send out to the truck from the \gls{MABII} to the \gls{CAN} coming from the truck (see also section \ref{sec:interface_with_truck}).
+As outlined in the respective publications, the test-maneuvers for the low-speed controller will be a 180$^{\circ}$ turn and a S-turn.\cite{Low-speed_paper}. The high-speed controller will be tested with a single lane-change representing an over-taking maneuver in traffic or the avoiding of an obstacle.\cite{High-speed_paper} To input this driving scenarios consistently with a high repeatability into the combination, Volvo's \gls{VDS} steering system will be utilized. Originally it is developed to support the driver by mechanically decoupling the steering column from the steering-wheel by introducing electric-motors to give feedback and torque sensors to monitor driver inputs. As this system can fully control the truck's steering, it is possible to tap into the respective \gls{ECU}. The necessary steering pattern was generated for the work of the mentioned papers already and is send out to the truck from the \gls{MABII} to the \gls{CAN} coming from the truck (see also section \ref{sec:interface_with_truck}).
 
 
 
