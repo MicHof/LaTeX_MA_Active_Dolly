@@ -29,7 +29,7 @@ Figure \ref{fig:step_input} shows the requested angle, target angle and actual a
 	\label{fig:step_input}
 \end{figure*}
 The target angle's slope is constant and lower than the slope of the request angle. The actual angle has approximately the same slope as the target angle, but it is delayed. The actual angle tends to overshoot the requested angle for falling slopes. Furthermore the slope of the actual angle is reduced when the actual angle almost reached the request. There is also a saddle point around an angle of 0 degree for rising slopes of the actual angle.          
-The delays over the different request angle step inputs were plotted and a linear regression was made to deduct the actual delay for small changes of the request angle. This delay is the relevant delay, since in real driving situations the requested angle is never a step input but rather changes slowly. The delay over the step inputs together with the linear regression is shown in figure \ref{fig:delay_testing_lin_interpolation}.    
+The delays over the different request angle step inputs were plotted and a linear regression was made to deduct the actual delay for small changes of the request angle. This delay is the relevant delay, since in real driving situations the requested angle is never a step input but rather changes only slowly. The delay over the step inputs together with the linear regression is shown in figure \ref{fig:delay_testing_lin_interpolation}.    
 
 \begin{figure*}[!hbt]
 	\centering
@@ -92,7 +92,7 @@ Figure \ref{fig:HIL002_front} shows the measurements of the ETS-CAN of the front
 	\label{fig:HIL002_front}
 \end{figure*}
 
-The request angle is the angle that was requested from the controller and then sent from the sSimulation-PC to the \gls{MABII}. The target angle is the angle that was calculated by the \gls{ETS}-\gls{ECU} and sent as a request to the actuators of the dolly. The actual angle is the angle that the sensors on the dolly's wheels measured and which is the articulation of the dolly's wheel on the ground.
+The request angle is the angle that was requested from the controller and then sent from the Simulation-PC to the \gls{MABII}. The target angle is the angle that was calculated by the \gls{ETS}-\gls{ECU} and sent as a request to the actuators of the dolly. The actual angle is the angle that the sensors on the dolly's wheels measured and which is the articulation of the dolly's wheel on the ground.
 Figure \ref{fig:HIL002_rear} shows the same measurements for the rear axle.
 
 \begin{figure*}[!htb]
@@ -102,7 +102,7 @@ Figure \ref{fig:HIL002_rear} shows the same measurements for the rear axle.
 	
 	\label{fig:HIL002_rear}
 \end{figure*}
-Since the same requested angle for front and rear is the same, below only the front axle is looked upon. Both axles show a very similar behaviour and thus only considering one is justifiable.
+Since the requested angle for front and rear is the same, below only the front axle is pictured. Both axles show a very similar behaviour and thus only considering one is justifiable.
 Figure \ref{fig:HIL002_front_closeup} shows an extraction of the measurements of the front axle. 
 \begin{figure*}[!htb]
 	\centering
@@ -111,7 +111,7 @@ Figure \ref{fig:HIL002_front_closeup} shows an extraction of the measurements of
 	
 	\label{fig:HIL002_front_closeup}
 \end{figure*} \\
-As already mentioned in section \ref{sec:measuring_delay} there is a delay between the angle requested of the \gls{ETS}-\gls{ECU} and the actual angle of the wheels. This can very distinctively be seen in this plot. In comparison to this, the delay between the angle request that is sent from the \gls{MABII} to the \gls{CAN} and the target angle that is sent from the \gls{ETS}-\gls{ECU} to the actuators is very small and can therefore be neglected.\\
+As already mentioned in section \ref{sec:measuring_delay} there is a delay between the angle requested of the \gls{ETS}-\gls{ECU} and the actual angle of the wheels. This can very distinctifvly be seen in this plot. In comparison to this, the delay between the angle request that is sent from the \gls{MABII} to the \gls{CAN} and the target angle that is sent from the \gls{ETS}-\gls{ECU} to the actuators is very small and can therefore be neglected.\\
 
 To get an impression of the overall results of the \gls{HIL}-test, figure \ref{fig:HIL002_complete} shows the measurements conducted on the simulation-PC and the measurements done in ControllDesk in the same plot. 
 \begin{figure*}[!htb]
@@ -133,13 +133,17 @@ To get a more detailed view of this delay as well as the limitation of the reque
 \end{figure*}
 
 
-The tested controller was evaluated in \gls{HIL} testing as well as in pure simulation in \gls{VTM}. The two resulting curves of the vehicles path can be seen in figures \ref{fig:xy_HIL} for the \gls{HIL}-testing and \ref{fig:xy_VTM} for the pure \gls{VTM}-simulation of the same maneuver respectively. For easier comparison figure \ref{fig:xy_HIL_and_VTM} depicts the paths for both environments. The steering reacts a bit slower for the \gls{HIL}-tests, but overall the paths are very similar. The actual performance of the algorithm and its evaluation is not part of this thesis, but it was done to validate the matching between simulation and \gls{ETS} environment.
+The tested controller was evaluated in \gls{HIL} testing as well as in pure simulation in \gls{VTM}. The two resulting curves of the vehicles path can be seen in figures \ref{fig:xy_HIL} for the \gls{HIL}-testing and \ref{fig:xy_VTM} for the pure \gls{VTM}-simulation of the same maneuver respectively. For easier comparison figure \ref{fig:xy_HIL_and_VTM} depicts the pathes for both environments. The steering reacts a bit slower for the \gls{HIL}-tests, but overall the paths are very similiar. The actual performance of the algorithm and its evaluation is not part of this thesis, but it was the to have an as similar matching between simulation and \gls{VTM} environment.
 
 
 \begin{figure*}[!htb]
 	\centering
 	\includegraphics[width=1\linewidth]{figures/xy_HIL_and_VTM}
+<<<<<<< HEAD
 	\caption{Comparison between swept paths of different units in the \acrshort{HCT} combination during \acrlong{HIL}-testing and \acrshort{VTM}-simulation}
+=======
+	\caption{Comparison between swept pathes of different units in the \gls{HCT} combination during \gls{HIL}-testing and \gls{VTM}-simulation}
+>>>>>>> origin/master
 	
 	\label{fig:xy_HIL_and_VTM}
 \end{figure*}
