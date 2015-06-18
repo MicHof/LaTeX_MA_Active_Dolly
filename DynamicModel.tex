@@ -9,7 +9,7 @@
 The vehicle model controllers that were used in this thesis were developed in a research project at Chalmers.
 There are two different controllers used to control the steerable axles of the dolly. One is used for low-speed and one for high-speed maneuvers. The main purpose of the low-speed controller is the reduction of off-tracking.
 For the high-speed controller the aim is to reduce the rearward amplification.
-\section{Low-Speed controller \cite{Low-speed_paper}}
+\section[Low-Speed controller]{Low-Speed controller \cite{Low-speed_paper}}
 \label{sec:low-speed_controller}
 The low-speed controller is implemented in path-distance domain $\eta$. The path-distance is calculated by integrating the forward speed $v_{x,1}(t)$. \\
 The steering angle of the first axle of the dolly is calculated as follows: 
@@ -46,7 +46,7 @@ Figure \ref{fig:low_speed_diagram} shows the implementation of the controller in
 \begin{figure*}[!htb]
 	\centering
 	\includegraphics[width=1.0\linewidth]{figures/Low_speed_diagram}
-	\caption{Controller implementation in the functional architecture \cite{Low-speed_paper}}
+	\caption[Controller implementation in the functionality architecture]{Controller implementation in the functionality architecture \cite{Low-speed_paper}}
 	\label{fig:low_speed_diagram}
 \end{figure*}
 
@@ -61,7 +61,7 @@ The input parameters for the low-speed controller are:
 	
 \end{itemize}
 
-\section{High-Speed controller \cite{High-speed_paper}}
+\section[High-Speed controller]{High-Speed controller \cite{High-speed_paper}}
 \label{sec:high-speed_controller}
 The high-speed controller is implemented using a nonlinear inverse of a dynamic vehicle model.
 The aim of the controller is to copy the movement of the first unit to the following ones at a certain point. Therefore the movements of the following units need to be delayed by the time it takes them to reach this point. For the dolly unit, this delay $\tau_{13}$ is calculated with the vehicle speed $v_x$ and the distance $l_{cg13}$ between the \gls{COG}  of the tractor and the dolly as follows:
@@ -77,7 +77,7 @@ This reference signal, together with the steering angle of the tractor, the forw
 \begin{figure*}[!htb]
 	\centering
 	\includegraphics[width=0.5\linewidth]{figures/Inverse_of_A-double_single-track}
-	\caption{Inverse of the single track A-double model \cite{High-speed_paper}}
+	\caption[Inverse of the single track A-double model]{Inverse of the single track A-double model \cite{High-speed_paper}}
 	
 	\label{fig:inverse_single_track_model}
 \end{figure*}
@@ -90,7 +90,7 @@ Figure \ref{fig:inverse_model_controller} shows the input and outputs of the inv
 \begin{figure*}[!htb]
 	\centering
 	\includegraphics[width=0.5\linewidth]{figures/inverse_controller}
-	\caption{Inverse model controller\cite{High-speed_paper}}
+	\caption[Inverse model controller]{Inverse model controller\cite{High-speed_paper}}
 	
 	\label{fig:inverse_model_controller}
 \end{figure*}\\

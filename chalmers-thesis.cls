@@ -792,6 +792,10 @@
  \tableofcontents
 
 \clearpage
+\addcontentsline{toc}{chapter}{List of Acronyms}
+\printglossary[type=\acronymtype,nonumberlist]
+
+\clearpage
 \addcontentsline{toc}{chapter}{\listfigurename}
 \listoffigures
 
@@ -799,9 +803,7 @@
 \addcontentsline{toc}{chapter}{\listtablename}
 \listoftables
 
-\clearpage
-\addcontentsline{toc}{chapter}{List of Acronyms}
-\printglossary[type=\acronymtype,nonumberlist]
+
 
  % Sets up page numbering for the rest of the document.
  \if@draft

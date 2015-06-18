@@ -66,19 +66,20 @@
 \copyrightyear{2015}
 
 % You should scale the figure according to textwidth and or paperheight.
-%\coverfigure{\includegraphics[width=\textwidth,height=0.7\paperheight,keepaspectratio]{figures/ExampleCover}}width=0.5\linewidth
-\coverfigure{\includegraphics[width=1\linewidth,height=1\paperheight,keepaspectratio]{figures/ExampleCover}}
+\coverfigure{\includegraphics[width=1.3\textwidth,keepaspectratio]{figures/ExampleCover}}
+
+
 \covercaption{The cover picture shows a block diagram of all the subsystems of the converter-dolly used in this project}
 
 \firstabstract{To improve the dynamic behaviour of high capacity transport vehicles, the second semi-trailer can be equipped with steered and braked axles. By improving the actuation and steering strategy, the combinations performance can be increased drastically. 
 
-This thesis modified an existing steered dolly to accommodate a RapidPrototpying system, so that the previously developed steering algorithms can be executed in real-time and evaluated in a hardware-in-the-loop simulation as well as on-track testing further on. The main-outcomes are a ready-to-use interface for algorithm development in MATLAB's Simulink that allows to request steering angles and braking torques individually for each axle and supplies feedback for all relevant parameters (e.g. articulation angle between different units of combination, steering angle of tractor) for their computation in real-time. To ensure safety of the whole combination, especially during track-tests, a supervisor system was implemented to limit the request based on vehicle-dynamic simulations and hardware limitations. Additionally an inertial measurement unit setup was developed and implemented for use on the combination to gather sufficient data for each of the combination's independently moving units dynamic behaviour during testing to calibrate and parametrize the tested algorithms. 
+This thesis modified an existing steered dolly to accommodate a rapid prototpying system, so that previously developed steering algorithms can be executed in real-time and evaluated in a hardware-in-the-loop simulation as well as on-track testing further on. The main-outcomes are a ready-to-use interface for algorithm development in MATLAB/Simulink that allows to request steering angles individually for each axle and supplies feedback for all relevant parameters (e.g. articulation angle between different units of combination, steering angle of tractor) for their computation in real-time. On top of that a concept for requesting braking torques from the dolly's braking system for future projects was developed. To ensure safety of the whole combination, especially during track-tests, a supervisor system was implemented to limit the request based on hardware limitations. Additionally an inertial measurement unit setup was developed and implemented for use on the combination to gather sufficient data for each of the combination's independently moving units dynamic behavior during testing to calibrate and parametrize the tested algorithms. 
 
 In the scope of this thesis the dolly was modified to conduct hardware-in-the-loop simulations. All necessary systems to achieve this were built as prototypes for a workshop test-environment limiting the use-case to a standing-system. Reliable track-proof solutions were developed and commissioned for manufacturing, so that track-testing is possible soon after. 
 
 	}
 %\secondabstract{swedish}{\lipsum} % Optional
-\keywords{High capacity transport vehicles, steered converter dolly, RapidPrototyping, dSpace MicroAutobBoxII, Arduino platform}
+\keywords{High capacity transport vehicles, steered converter dolly, rapid prototyping, dSpace MicroAutobBoxII, Arduino platform, Truck dynamics}
 
 
 %\preface{} % You \gls{CAN} use \input to put preface and acknowledgements in another document

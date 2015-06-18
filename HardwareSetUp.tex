@@ -16,7 +16,7 @@ As already outlined in chapter \ref{chap:overview} the \gls{HCT} vehicles consis
 \begin{figure*}[!htb]
 	\centering
 	\includegraphics[width=1\linewidth]{figures/combination_overview_with_positions}
-	\caption{Positioning of different sensors on the \gls{HCT} vehicle}
+	\caption{Positioning of different sensors on the \acrlong{HCT} vehicle}
 	\label{fig:combination_overview_with_positions}
 \end{figure*}
 
@@ -32,15 +32,14 @@ The utilized dolly by Parator Industri AB (Parator) is equipped with two steerab
 \begin{figure*}[!htb]
 	\centering
 	\includegraphics[width=1.0\linewidth]{figures/legacy_system_vse}
-	\caption{Active dolly legacy steering system supplied by VSE\cite{dolly_datasheet}}
+	\caption[Active dolly legacy steering system supplied by VSE]{Active dolly legacy steering system supplied by VSE \cite{dolly_datasheet}}
 	\label{fig:legacy_system_vse}
 \end{figure*} \\
  Their product includes sensors, \gls{ECU}s and hydraulic systems which come in a ready-to-mount housing, which is placed on the trailer/dolly. This solution is usually sold as a low-speed active steering system for truck-trailer combinations to provide better maneuverability at low speeds in inner-city areas. Besides electrical power and compressed-air (see "2" in the figure) supply there is no connection with the truck in place. This allows for use with many different truck/trailer \gls{OEM}, as no insight into proprietary \gls{CAN} is needed. In the original \gls{VSE} system the two parameters that influence the actuation of the dolly's steering are vehicle speed ("4") and kingpin-deflection ("3"). This deflection is the angle between the truck and trailer, which is measured by an additional kingpin-angle sensor supplied by \gls{VSE} and mounted in the eye of the kingpin hub. Furthermore every steering-knuckle of the dolly is equipped with an angle sensor to provide appropriate wheel-individual feedback for the \gls{VSE} control-system. A diagnosis screen is available in the \gls{VSE}-unit, which allows for relatively simple set-up, calibration and parametrization to be done.\cite{dolly_datasheet} An overview of the implementation of the \gls{ETS}-system in the dolly can be seen in figure \ref{fig:system_overview_ETS}. 
 \begin{figure*}[!htb]
 	\centering
 	\includegraphics[width=1\linewidth]{figures/system_overview_ETS}
-	
-	\caption{System overview for sensors and signal path for \gls{ETS} legacy system by VSE}
+	\caption[System overview for sensors and signal path for \acrlong{ETS} legacy system by VSE]{System overview for sensors and signal path for \acrlong{ETS} legacy system by VSE}
 	\label{fig:system_overview_ETS}
 \end{figure*}
 
@@ -88,7 +87,7 @@ One of the \gls{CAN}-buses contains the signals from the EBS-ECUs and the articu
 \begin{figure*}[!htb]
 	\centering
 	\includegraphics[width=1\linewidth]{figures/dolly_split}
-	\caption{Split of \gls{ETS}-\gls{CAN}}
+	\caption[Split of \acrshort{ETS}-\acrshort{CAN}]{Split of \gls{ETS}-\gls{CAN}}
 	\label{fig:dolly_split}
 \end{figure*}  
 
@@ -169,7 +168,7 @@ To allow for easier scalability to add more \gls{CAN}-buses in the future it was
 \begin{figure*}[!htb]
 	\centering
 	\includegraphics[width=1\linewidth]{figures/can_extension}
-	\caption{Extension of \gls{MABII} \gls{CAN}-buses (hardware overview)}
+	\caption[Extension of \acrshort{MABII} \acrshort{CAN}-buses (hardware overview)]{Extension of \gls{MABII} \gls{CAN}-buses (hardware overview)}
 	\label{fig:can_extension}
 \end{figure*}
 
@@ -215,7 +214,7 @@ In the final measuring setup the assembly shown in figure \ref{fig:IMU_overview}
 \begin{figure*}[!htb]
 	\centering
 	\includegraphics[width=1\linewidth]{figures/IMU_overview}
-	\caption{Connection of \gls{IMU} with Arduino Due to \gls{MABII}}
+	\caption[Connection of \acrshort{IMU} with Arduino Due to \acrshort{MABII}]{Connection of \gls{IMU} with Arduino Due to \gls{MABII}}
 	\label{fig:IMU_overview}
 \end{figure*}
 

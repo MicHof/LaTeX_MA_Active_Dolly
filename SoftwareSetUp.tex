@@ -31,7 +31,7 @@ The \textit{ControllerSetup}-block is used for setting up a \gls{CAN}-controller
 	\centering
 	\includegraphics[width=0.5\linewidth]{figures/RTI_ControllerSetup}
 	
-	\caption{\gls{RTI} \gls{CAN} MultiMessage ControllerSetup-block}
+	\caption[\acrshort{RTI} \acrshort{CAN} MultiMessage ControllerSetup-block]{\gls{RTI} \gls{CAN} MultiMessage ControllerSetup-block}
 	\label{fig:RTI_ControllerSetup}
 \end{figure*} \\
 
@@ -61,7 +61,7 @@ In the \textit{Main}-Block a \gls{dbc}-file is connected to one of the controlle
 	\centering
 	\includegraphics[width=0.5\linewidth]{figures/RTI_Main}
 	
-	\caption{\gls{RTI} \gls{CAN} MultiMessage Main-block General settings}
+	\caption[\acrshort{RTI} \acrshort{CAN} MultiMessage Main-block General settings]{\gls{RTI} \gls{CAN} MultiMessage Main-block General settings}
 	\label{fig:RTI_Main}
 \end{figure*} \\
 A \textit{ControllerSetup} block can only be connected to one \textit{Main Block} at a time. When the \gls{dbc}-file is loaded in the \textit{Main Block}, the different messages and signals that are specified in the \gls{dbc}-file can be chosen as inputs and/or outputs of the \textit{Main block}. Figure \ref{fig:RTI_Main_signals} shows an example of the signals that can be chosen for the \gls{dbc}-file of the \gls{ASF}-sensor.  
@@ -69,7 +69,7 @@ A \textit{ControllerSetup} block can only be connected to one \textit{Main Block
 	\centering
 	\includegraphics[width=0.5\linewidth]{figures/RTI_Main_signals}
 	
-	\caption{\gls{RTI} \gls{CAN} MultiMessage Main-block Rx-signals example}
+	\caption[\acrshort{RTI} \acrshort{CAN} MultiMessage Main-block Rx-signals example]{\gls{RTI} \gls{CAN} MultiMessage Main-block Rx-signals example}
 	\label{fig:RTI_Main_signals}
 \end{figure*} \\
 For signals that should be transmitted it has to be defined when they should be transmitted. There are different ways to specify this. One way is to set a cycle time in the Simulink model, that determines with which frequency the signal is sent out. Another way is to use triggers that trigger the transmission every time a specific event happens. This can be set in the tab \textit{Messages} under \textit{Triggering}.
@@ -135,7 +135,7 @@ The inputs to the block are:
  	\centering
  	\includegraphics[width=0.95\linewidth]{figures/steering_interface_inside}
  	
- 	\caption{Steering interface block \gls{CAN} layout}
+ 	\caption[Steering interface block \acrshort{CAN} layout]{Steering interface block \gls{CAN} layout}
  	\label{fig:steering_interface_inside_pdf}
  \end{figure*}
  
@@ -152,7 +152,7 @@ Though as mentioned in section \ref{sec:realtime_environment} the \gls{MABII} is
 \begin{figure*}[!htb]
 	\centering
 	\includegraphics[width=0.6\linewidth]{figures/controlDesk_trigger}
-	\caption{Trigger to start maneuver or fall back to safe-mode (e.i commanding a steering angle of zero degree on the dolly); this structure was used in \gls{HIL}-testing}
+	\caption[Trigger to start maneuver or fall back to safe-mode (e.i commanding a steering angle of zero degree on the dolly); this structure was used in \acrshort{HIL}-testing]{Trigger to start maneuver or fall back to safe-mode (e.i commanding a steering angle of zero degree on the dolly); this structure was used in \gls{HIL}-testing}
 	\label{fig:controlDesk_trigger}
 \end{figure*}
 
