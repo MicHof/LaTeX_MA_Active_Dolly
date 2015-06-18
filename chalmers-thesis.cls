@@ -719,6 +719,7 @@
 \newcommand{\makeacknowledgementspage}{% Note: Doesn't need a new page.
  \presectiontitle{\acknowledgementsname}
  \@acknowledgements
+\subfile{Danksaying}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
