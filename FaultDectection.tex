@@ -9,7 +9,7 @@
 \label{chap:fault_detection}
 \section{\acrlong{FMEA}}
 \label{sec:FMEA}
-\acrfull{FMEA} were developed by the US military in the late 1940s and later also used by NASA in the Apollo project in the 1960s.
+\acrfull{FMEA} was developed by the US military in the late 1940s and later also used by NASA in the Apollo project in the 1960s.
 \gls{FMEA} are used to detect possible failures before they appear. Therefore the \gls{FMEA} is done in a early stage of a project in order to be able to take the results of the \gls{FMEA} into consideration when developing a system. In the process every possible failure of a system are taken into consideration. 
 
 To detect the safety critical parts of the whole dolly system and improve the safety a \gls{FMEA} was conducted for this project.
@@ -22,7 +22,7 @@ After the severity, probability and detectability were evaluated, a \gls{RPN} is
 \begin{equation*}
 RPN=severity*probability*detectability
 \end{equation*}      
-This \gls{RPN} is used to identify the failure mechanisms that need to be addressed. After the \gls{RPN} for every causes is calculated, the \gls{RPN} are ranked from highest to lowest using a Pareto diagram (see figure \ref{fig:pareto}). The causes with the highest \gls{RPN} need to be addressed first. Special attention needs to be paid to cases where a high severity number, which means 9 or 10, occurred, even if the \gls{RPN} isn't as high as for other cases. 
+This \gls{RPN} is used to identify the failure mechanisms that need to be addressed. After the \gls{RPN} for every causes is calculated, the \gls{RPN} are ranked from highest to lowest using a Pareto diagram (see figure \ref{fig:pareto}). The causes with the highest \gls{RPN} need to be addressed first. Special attention needs to be paid to cases where a high severity number, which means 9 or 10, occurred, even if the \gls{RPN} isn't as high as for other cases. The two lines that can be seen in figure \ref{fig:pareto} were defined with a \gls{RPN} of 40 for the green and a \gls{RPN} of 100 for the red line. Where the green line is the limit for the \gls{RPN}s under which no action needs to be taken and the red line is the limit for the \gls{RPN}s over which the causes needs to be addressed in any case. For \gls{RPN}s between the green and the red line it was decided, after evaluating each of the causes individually, if actions needs to be taken.  
 %In table \ref{tab:RPN} it is shown how the risk priority number have to be handled.
 %\begin{table}[h]
 %	\centering
@@ -44,47 +44,41 @@ Figure \ref{fig:fmea_example} shows a screen shot of the FMEA-Excel-worksheet fo
 	\caption{Example of \acrshort{FMEA}-worksheet for the first step of the \acrshort{FMEA}}
 	\label{fig:fmea_example}
 \end{figure*}
-The consequences of the \gls{FMEA} conducted for this thesis were:
+The consequences of the \gls{FMEA} conducted for this thesis were:\\
 \begin{itemize}
 	\item Special attention needs to be paid to the mounting of the \gls{MABII} in the Dolly's \gls{ETS}-box
 	\item The design of the breakout box was revised
-	\item Bench- and \gls{HIL} -testing is necessary to validate  the vehicle model controllers and to exclude dangerous behavior, that might be caused by delays in the system. 
+	\item Bench- and \gls{HIL}-testing is necessary to validate  the vehicle model controllers and to exclude dangerous behavior, that might be caused by delays in the system. 
 	\item A start-up checklist for the track testing needs to be created	 
 \end{itemize}  
 
 \section{Maximum capabilities of the system}
 \label{sec:maxi_capabilities}
-The capabilities of the system \gls{CAN} be divided into two parts. For one thing there are the capabilities that are independent from influences. These are the maximum steering angle and maximum steering rate, which is limited through the \gls{ETS}-\gls{ECU}, because of the physical limitation of the hydraulic system.
+The capabilities of the system can be divided into two parts. For one thing there are the capabilities that are independent from influences. These are the maximum steering angle and maximum steering rate, which is limited through the \gls{ETS}-\gls{ECU}, because of the physical limitation of the hydraulic system.
 For another thing there are the capabilities that are influenced by the vehicle speed, load of the dolly, state of the hydraulic and electrical system of the dolly, and environmental influences.
 Depending on those parameters the capabilities are lowered.
-The maximum angle for stand-still is 24 degree in both direction for front and rear axle. 
-The requested angle can only given as a step input of maximum 7 degree. For higher step inputs, the \gls{ETS}-system switches to alarm mode. This can be seen in figure \ref{fig:max_step_input} for a step input of the request angle of 8 degree. Because the system is in alarm mode the request angle transformed to a target angle and hence there is no steering.
+The maximum angle for stand-still is 24$^\circ$ in both direction for front and rear axle. 
+The requested angle can only given as a step input of maximum 7$^\circ$. For higher step inputs, the \gls{ETS}-system switches to alarm mode. This can be seen in figure \ref{fig:max_step_input} for a step input of the request angle of 8$^\circ$. Because the system is in alarm mode the request angle transformed to a target angle and hence there is no steering.
 \begin{figure*}[!hbt]
 	\centering
 	\includegraphics[width=1\linewidth]{figures/step_input_8deg}
-	\caption{Step input 8 degree}
+	\caption{Steering angle request step input 8$^\circ$}
 	
 	\label{fig:max_step_input}
 \end{figure*}  
-The maximum steering rate was determined with the tests described in section \ref{sec:measuring_delay} to 5 deg/s.
+The maximum steering rate was determined with the tests described in section \ref{sec:measuring_delay} to 5$^\circ$/s.
 
 \section{Warning and state-info system}
 \label{sec:warning_system}
 
-In the original state, the \gls{ETS}-\gls{ECU} monitors all safety critical components of the dolly. In case of a malfunction, an error code is sent via the \gls{CAN}-Bus and the error message is visible on the diagnose displays of the dolly. Depending on the severity of the error the steering is deactivated and the axes steer back to a steering angle of 0 deg.
-Due to the required modification of the \gls{ASF}- and \gls{EBS}-signal, the inbuilt supervision of the \gls{ETS}-\gls{ECU} is no longer fully functioning. Therefore a additional supervision of the system has to be implemented in the Simulink-model. This supervision considers the current capabilities of the dolly and reduces the requested steering angle and steering rate, if needed. 
+In the original state, the \gls{ETS}-\gls{ECU} monitors all safety critical components of the dolly. In case of a malfunction, an error code is sent via the \gls{CAN}-Bus and the error message is visible on the diagnose displays of the dolly. Depending on the severity of the error the steering is deactivated and the axes steer back to a steering angle of 0$^\circ$.
+Due to the required modification of the \gls{ASF}- and \gls{EBS}-signal, the inbuilt supervision of the \gls{ETS}-\gls{ECU} is no longer fully functioning. Therefore an additional supervision of the system has to be implemented in the Simulink-model. This supervisor considers the current capabilities of the dolly and reduces the requested steering angle and steering rate, if needed. 
 %\begin{itemize}   
 %	\item warnings from \gls{EBS}
 %	\item warnings from vehicle
 %	\item 'own' error codes and warnings (e.g. logging, \gls{MABII} related, arduino-\gls{IMU} related)
 %\end{itemize}
 
-\begin{figure*}[!htb]
-	\centering
-	\includegraphics[width=1\linewidth]{figures/system_mod}
-	\caption{Complete dolly system with supervision block}
-	\label{fig:system_modification}
-\end{figure*}
 
 
 

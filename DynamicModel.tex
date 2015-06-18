@@ -6,10 +6,10 @@
 {\pagestyle{empty}\cleardoublepage}%
 \chapter{Vehicle Model controllers}
 \label{chap:steering_model}
-The vehicle model controllers that were used in this thesis were developed in a research project at Chalmers.
+The vehicle model controllers that were used in this thesis were developed in a research project at Chalmers University of Technology.
 There are two different controllers used to control the steerable axles of the dolly. One is used for low-speed and one for high-speed maneuvers. The main purpose of the low-speed controller is the reduction of off-tracking.
 For the high-speed controller the aim is to reduce the rearward amplification.
-\section[Low-Speed controller]{Low-Speed controller \cite{Low-speed_paper}}
+\section[Low-Speed controller]{Low-Speed controller\cite{Low-speed_paper}}
 \label{sec:low-speed_controller}
 The low-speed controller is implemented in path-distance domain $\eta$. The path-distance is calculated by integrating the forward speed $v_{x,1}(t)$. \\
 The steering angle of the first axle of the dolly is calculated as follows: 
@@ -24,15 +24,18 @@ where $\delta_{31}$ is the steering angle of the dolly's front axle, $\delta_{11
 \end{equation}
 \label{eq:delta32_lowspeed}
 where $\delta_{32}$ is the steering angle of the dolly's second axle, $\eta_5$ is the distance between the dolly's second and first axle, and $k_5$ is a gain.\\
-The gains $k_1, k_2, k_3, k_4, k_5$ were optimized using the particle swarm optimization.
-Table \ref{tab:gains_after_optimization} shows the values of the gains after the optimization and the improvement of the controller for different maneuvers compared to a simulation without steering of the dolly.
+The gains $k_1, k_2, k_3, k_4, k_5$ were optimized using particle swarm optimization.
+Table \ref{tab:gains_after_optimization} shows the improvement achieved with the controller for different maneuvers compared to a simulation without steering of the dolly.
+\begin{comment}
+
+
 \begin{table}[h]
 	\centering
 	\caption{Control gains and performance improvement}
 	\label{tab:gains_after_optimization}
 	\begin{tabular}{l|l|l l l}
-		& &  & Improvement  \\ \hline
-		Gain & Value & 180-deg turn (\%) & 90-deg turn (\%) & S-turn\\ \hline
+		& &  & Improvement [\%]  \\ \hline
+		Gain & Value & 180-deg turn  & 90-deg turn & S-turn\\ \hline
 		$k_1$   &       -0.2126      &             \\
 		$k_2$    &            -0.1567 &             \\
 		$k_3$  &      -0.8780       &           +44.61 & +37.75 & +45.07  \\
@@ -41,7 +44,25 @@ Table \ref{tab:gains_after_optimization} shows the values of the gains after the
 		
 	\end{tabular} \\
 \end{table}\\
-Figure \ref{fig:low_speed_diagram} shows the implementation of the controller in the functional architecture, introduced in section \ref{sec:func_architecture}.
+\end{comment}
+\begin{table}[h]
+	\centering
+	\caption{Performance improvement with low-speed controller}
+	\label{tab:gains_after_optimization}
+	\begin{tabular}{l|l l l}
+		
+	Maneuver& 180-deg turn  & 90-deg turn & S-turn\\ \hline
+		     
+		
+	Improvement [\%]&        +44.61 & +37.75 & +45.07  \\
+		
+		
+	\end{tabular} \\
+\end{table}\\
+\begin{comment}
+
+
+Figure \ref{fig:low_speed_diagram} shows the implementation of the controller in the functionality architecture, introduced in section \ref{sec:func_architecture}.
 
 \begin{figure*}[!htb]
 	\centering
@@ -49,7 +70,7 @@ Figure \ref{fig:low_speed_diagram} shows the implementation of the controller in
 	\caption[Controller implementation in the functionality architecture]{Controller implementation in the functionality architecture \cite{Low-speed_paper}}
 	\label{fig:low_speed_diagram}
 \end{figure*}
-
+\end{comment}
 \subsection{Input parameters}
 \label{sec:input_parameters_LS}
 The input parameters for the low-speed controller are:
@@ -60,8 +81,9 @@ The input parameters for the low-speed controller are:
 	\item The vehicle speed for the transformation from time to path-distance domain:  $v_x$
 	
 \end{itemize}
+They are constants or can be easily acquired via articulation sensors or are present on one of the \gls{CAN}-buses of the truck.
 
-\section[High-Speed controller]{High-Speed controller \cite{High-speed_paper}}
+\section[High-Speed controller]{High-Speed controller\cite{High-speed_paper}}
 \label{sec:high-speed_controller}
 The high-speed controller is implemented using a nonlinear inverse of a dynamic vehicle model.
 The aim of the controller is to copy the movement of the first unit to the following ones at a certain point. Therefore the movements of the following units need to be delayed by the time it takes them to reach this point. For the dolly unit, this delay $\tau_{13}$ is calculated with the vehicle speed $v_x$ and the distance $l_{cg13}$ between the \gls{COG}  of the tractor and the dolly as follows:
@@ -82,7 +104,7 @@ This reference signal, together with the steering angle of the tractor, the forw
 	\label{fig:inverse_single_track_model}
 \end{figure*}
 
-To determine the performance of this controller simulations of a single lane change at 20 meters per second and a sine wave steering input of 0.4 Hz with an amplitude of 0.026 rad were done. As a result the rearward amplification of the yaw rate of the second trailer is 0.95 with this controller compared to 1.49 for a passive dolly. Furthermore the transient off-tracking is improved by 67\%. 
+To determine the performance of this controller, simulations of a single lane change at 20 meters per second and a sine wave steering input of 0.4 Hz with an amplitude of 0.026 rad were done. As a result the rearward amplification of the yaw rate of the second trailer is 0.95 with this controller compared to 1.49 for a passive dolly. Furthermore the transient off-tracking is improved by 67\%. 
 
 \subsection{Input parameters}
 \label{sec:input_parameters_HS}
@@ -101,13 +123,13 @@ The input parameters of the high-speed controller are:
 \item The reference signal of the lateral acceleration of the dolly: $a_{y3ref}$
 \end{itemize}
 
-
+\begin{comment}
 \section{Interface with Real-Time environment}
 \label{sec:interface_with_real_time}
 As described in section \ref{sec:low-speed_controller} and \ref{sec:high-speed_controller} the controllers need different kind of input signals. These signals are received by the Simulink model running on the \gls{MABII} via \gls{CAN} (refer to section \ref{sec:matlab}). When the controllers are tested on a test track they are implemented in the same Simulink model, so they can get the necessary input signals directly within the model. For the \gls{HIL}-tests, that were conducted the controllers where implemented in a Simulink model running on a simulation PC. In that case the necessary inputs were sent to this PC via serial interface. In  section \ref{sec:HIL} this approach is described in detail.     
 
 In order to guaranty safety at all time the steering angle requests of the controllers are checked before sending them to the dolly. This is done by first sending the requests to a supervisor block in the same Simulink model. The supervisor block compares the steering angle requests with the current capabilities of the system. The functionality of that block is described in detail in section \ref{sec:warning_system}.   
-
+\end{comment}
 
 
 \end{document}

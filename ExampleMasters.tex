@@ -62,16 +62,16 @@
 \division{Division of Vehicle Dynamics \\ Vehicle Dynamics Group} 
 
 
-\reportno{2015:01}
+\reportno{2015:62}
 \copyrightyear{2015}
 
 % You should scale the figure according to textwidth and or paperheight.
-\coverfigure{\includegraphics[width=1.3\textwidth,keepaspectratio]{figures/ExampleCover}}
+\coverfigure{\includegraphics[width=0.42\textwidth,keepaspectratio]{figures/ExampleCover}}
 
 
 \covercaption{The cover picture shows a block diagram of all the subsystems of the converter-dolly used in this project}
 
-\firstabstract{To improve the dynamic behaviour of high capacity transport vehicles, the second semi-trailer can be equipped with steered and braked axles. By improving the actuation and steering strategy, the combinations performance can be increased drastically. 
+\firstabstract{To improve the dynamic behaviour and maneuverability of high capacity transport vehicles, the converter dolly can be equipped with steered and braked axles. By improving the actuation and steering strategy, the combinations performance can be increased drastically. 
 
 This thesis modified an existing steered dolly to accommodate a rapid prototpying system, so that previously developed steering algorithms can be executed in real-time and evaluated in a hardware-in-the-loop simulation as well as on-track testing further on. The main-outcomes are a ready-to-use interface for algorithm development in MATLAB/Simulink that allows to request steering angles individually for each axle and supplies feedback for all relevant parameters (e.g. articulation angle between different units of combination, steering angle of tractor) for their computation in real-time. On top of that a concept for requesting braking torques from the dolly's braking system for future projects was developed. To ensure safety of the whole combination, especially during track-tests, a supervisor system was implemented to limit the request based on hardware limitations. Additionally an inertial measurement unit setup was developed and implemented for use on the combination to gather sufficient data for each of the combination's independently moving units dynamic behavior during testing to calibrate and parametrize the tested algorithms. 
 
@@ -83,7 +83,9 @@ In the scope of this thesis the dolly was modified to conduct hardware-in-the-lo
 
 
 %\preface{} % You \gls{CAN} use \input to put preface and acknowledgements in another document
-%\acknowledgements{}
+
+\acknowledgements{This thesis was carried out at the Vehicle Engineering and Autonomous Systems division at Chalmers. We are very thankful for the friendly and welcoming environment that we found here. Our sincere thanks especially go to Manjurul Islam, PhD - our supervisor - and Prof. Bengt Jacobson who co-supervised us. Immense trust was put in our work in advance and we were provided with the possibility to work independently early on with very advanced technology and had the possibility to develop our concepts with great support and funding within the Active Dolly Build-Up research project. Thank you very much for a very interesting and educational time. \\
+	As this practical thesis ties in with many suppliers and different parties, we also want to express our gratitude towards the many contributors and interesting discussion partners. First and foremost Leo Laine, PhD (Volvo Trucks AB) has to be mentioned, who advised on our thesis and gave some vital input and impulses for our work and linked us with many contacts within Volvo Trucks. Oskar Gellerbrant and Martin Härberg from Fenco AB, who gave great help and input on dSpace-related issues. Richard Dahlsj\"{o} from VM-trailers for providing us with some practical advice and supplies for early prototypes. VSEs Rik de Zaaijer provided with very detailed information and good input, which greatly accelerated work in the early stages. The local WABCO subsidiary (Joakim Jonsson, Erik Helldin) provided us with nice contacts, diagnosis equipment, great advice and technical help concerning the brake systems on the dolly. The Chalmers workshop provided us with an uncomplicated way to build our lab-prototypes. For further equipment manufacturing we had the nice chance to discuss and cooperate with Segula AB (Jesper Larsson, Arpit Karsolia).}
 
 % You \gls{CAN} add extra contents such as abbreviations and nomenclature using.
 % Use \presectiontitle to render add titles to new sections.

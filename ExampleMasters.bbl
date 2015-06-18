@@ -16,71 +16,6 @@
   {}
 \endgroup
 
-\entry{HCT_vehicles_test_netherlands}{article}{}
-  \name{author}{6}{}{%
-    {{}%
-     {Aarts}{A.}%
-     {Loes}{L.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Honer}{H.}%
-     {M}{M}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Davydenko}{D.}%
-     {Igor}{I.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Quak}{Q.}%
-     {Hans}{H.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Van~Staalduinen}{V.~S.}%
-     {J}{J}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Verweij}{V.}%
-     {Kees}{K.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{AL+1}
-  \strng{fullhash}{ALHMDIQHVSJVK1}
-  \field{sortinit}{A}
-  \field{title}{Longer and heavier vehicles in the Netherlands: Facts, figures
-  and experiences in the period 1995-2010}
-  \field{journaltitle}{The Hague: Ministerie van Verkeer en Waterstaat (VenW)}
-  \field{year}{2010}
-\endentry
-
-\entry{HCT_vehicles_USA}{online}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Agency}{A.}%
-     {U.S. Environmental~Protection}{U.~E.~P.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{AUEP1}
-  \strng{fullhash}{AUEP1}
-  \field{sortinit}{A}
-  \field{subtitle}{a glance at clean freight strategies}
-  \field{title}{Longer combination vehicles}
-  \verb{url}
-  \verb http://www.epa.gov/smartway/forpartners/documents/trucks/techsheets-tru
-  \verb ck/420f10053.pdf
-  \endverb
-  \field{year}{2010}
-  \field{urlday}{09}
-  \field{urlmonth}{02}
-  \field{urlyear}{2015}
-\endentry
-
 \entry{EMS}{article}{}
   \name{author}{2}{}{%
     {{}%
@@ -154,29 +89,6 @@
   Adelaide, South Australia, Australia}
   \field{title}{Correlation between truck combination length and injury risk}
   \field{year}{2013}
-\endentry
-
-\entry{HCT_vehicles_Mexico}{online}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Board}{B.}%
-     {Transportation~Research}{T.~R.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{BTR1}
-  \strng{fullhash}{BTR1}
-  \field{sortinit}{B}
-  \field{title}{REVIEW OF MEXICAN EXPERIENCE WITH THE REGULATION OF LARGE
-  COMMERCIAL MOTOR VEHICLES}
-  \verb{url}
-  \verb http://onlinepubs.trb.org/onlinepubs/nchrp/nchrp_rrd_362.pdf
-  \endverb
-  \field{month}{10}
-  \field{year}{2011}
-  \field{urlday}{09}
-  \field{urlmonth}{02}
-  \field{urlyear}{2015}
 \endentry
 
 \entry{dolly_datasheet}{manual}{}
@@ -320,6 +232,21 @@
   \field{year}{2015}
 \endentry
 
+\entry{control_desk_help}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {GmbH}{G.}%
+     {}{}%
+     {dSpace}{d.}%
+     {}{}}%
+  }
+  \strng{namehash}{Gd1}
+  \strng{fullhash}{Gd1}
+  \field{sortinit}{G}
+  \field{title}{ControlDesk Next Generation 5.2 - HelpDesk}
+  \field{year}{2014}
+\endentry
+
 \entry{MABII_product_descr}{manual}{}
   \name{author}{1}{}{%
     {{}%
@@ -409,34 +336,6 @@
   \endverb
   \field{urlday}{25}
   \field{urlmonth}{05}
-  \field{urlyear}{2015}
-\endentry
-
-\entry{HCT_vehicles_Canada}{online}{}
-  \name{author}{2}{}{%
-    {{}%
-     {Infrastructure}{I.}%
-     {Alberta}{A.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Transportation}{T.}%
-     {}{}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{IAT1}
-  \strng{fullhash}{IAT1}
-  \field{sortinit}{I}
-  \field{title}{Highway Provider View of Long Combination Vehicles}
-  \verb{url}
-  \verb http://www.transportation.alberta.ca/Content/docType59/Production/FAQs%
-  \verb 28US%29.pdf
-  \endverb
-  \field{month}{03}
-  \field{year}{2005}
-  \field{urlday}{09}
-  \field{urlmonth}{02}
   \field{urlyear}{2015}
 \endentry
 
@@ -560,6 +459,25 @@
   \field{year}{2013}
 \endentry
 
+\entry{nilsson2015traffic}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Nilsson}{N.}%
+     {Peter}{P.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Chalmers University of Technology}%
+  }
+  \strng{namehash}{NP1}
+  \strng{fullhash}{NP1}
+  \field{sortinit}{N}
+  \field{title}{On Traffic Situation Predictions for Automated Driving of Long
+  Vehicle Combinations}
+  \field{year}{2015}
+\endentry
+
 \entry{uip_ethernet_github}{misc}{}
   \field{sortinit}{N}
   \field{title}{ntruchsess/arduino_uip}
@@ -567,35 +485,6 @@
   \verb https://github.com/ntruchsess/arduino_uip
   \endverb
   \field{year}{2014}
-\endentry
-
-\entry{EU_driving_licenses}{online}{}
-  \name{author}{2}{}{%
-    {{}%
-     {PARLIAMENT}{P.}%
-     {THE~EUROPEAN}{T.~E.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {UNION}{U.}%
-     {THE COUNCIL OF THE~EUROPEAN}{T.~C. O. T.~E.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{PTEUTCOTE1}
-  \strng{fullhash}{PTEUTCOTE1}
-  \field{sortinit}{P}
-  \field{title}{DIRECTIVE 2006/126/EC}
-  \verb{url}
-  \verb http://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32006L012
-  \verb 6&from=DE
-  \endverb
-  \field{day}{20}
-  \field{month}{12}
-  \field{year}{2006}
-  \field{urlday}{07}
-  \field{urlmonth}{05}
-  \field{urlyear}{2015}
 \endentry
 
 \entry{IMU_homepage_shop}{manual}{}
@@ -710,79 +599,6 @@
   \field{title}{LSM303D - Ultra compact high performance e-Compass 3D
   accelerometer and 3D magnetometer module: Datasheet — preliminary data}
   \field{year}{2012}
-\endentry
-
-\entry{HCT_vehicles_Australia}{online}{}
-  \name{author}{2}{}{%
-    {{}%
-     {Transport}{T.}%
-     {Department}{D.}%
-     {of}{o.}%
-     {}{}}%
-    {{}%
-     {Roads}{R.}%
-     {Main}{M.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{TDoRM1}
-  \strng{fullhash}{TDoRM1}
-  \field{sortinit}{T}
-  \field{title}{Guideline for Multi-combination Vehicles in Queensland}
-  \verb{url}
-  \verb http://www.tmr.qld.gov.au/~/media/busind/Heavyvehicles/guidepermits/Gui
-  \verb deline_mcv_form1.pdf
-  \endverb
-  \field{month}{07}
-  \field{year}{2013}
-  \field{urlday}{09}
-  \field{urlmonth}{02}
-  \field{urlyear}{2015}
-\endentry
-
-\entry{96/53/EC}{online}{}
-  \name{author}{1}{}{%
-    {{}%
-     {UNION}{U.}%
-     {THE COUNCIL OF THE~EUROPEAN}{T.~C. O. T.~E.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{UTCOTE1}
-  \strng{fullhash}{UTCOTE1}
-  \field{sortinit}{U}
-  \field{title}{Council Directive 96/53/EC}
-  \verb{url}
-  \verb http://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:31996L0053
-  \verb &from=en
-  \endverb
-  \field{day}{25}
-  \field{month}{07}
-  \field{year}{1996}
-  \field{urlday}{05}
-  \field{urlmonth}{02}
-  \field{urlyear}{2015}
-\endentry
-
-\entry{Vaegverket}{online}{}
-  \name{author}{1}{}{%
-    {{}%
-     {V{\"a}gverket}{V.}%
-     {}{}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{V1}
-  \strng{fullhash}{V1}
-  \field{sortinit}{V}
-  \field{title}{Weight and Dimensions for Road Traffic}
-  \verb{url}
-  \verb http://www.unece.org/fileadmin/DAM/trans/wp24/wp24-presentations/docume
-  \verb nts/pres08-04.pdf
-  \endverb
-  \field{urlday}{05}
-  \field{urlmonth}{02}
-  \field{urlyear}{2015}
 \endentry
 
 \entry{Schmitz_dolly}{article}{}

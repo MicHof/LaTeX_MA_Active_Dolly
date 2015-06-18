@@ -12,24 +12,25 @@
 
 \section{Matlab/Simulink environment}
 \label{sec:matlab}
-
-%%\subsection{FMI toolbox}
-
-
+This section is fairly detailed to document important details for future work.
 
 \subsection{dSpace RTI-blockset}
 
-The dSpace RTI-Blockset (Real-time interface) is a plug-in for MATLAB/Simulink that makes it possible to connect a Simulink-model to the different inputs and outputs of the \gls{MABII} There are \gls{RTI}-blocks for \gls{CAN}, Ethernet, and the analog and digital outputs of the \gls{MABII}
+The dSpace \gls{RTI}-Blockset is a plugin for MATLAB/Simulink that makes it possible to connect a Simulink-model to the different inputs and outputs of the \gls{MABII} There are \gls{RTI}-blocks for \gls{CAN}, Ethernet, and the analog and digital outputs of the \gls{MABII}.
 In this project the \gls{RTI} \gls{CAN} MultiMessage and the \gls{RTI} Ethernet (UDP) Blocksets were used.\\ 
 \subsubsection{RTI \gls{CAN} MultiMessage Blockset}
-The \gls{RTI} \gls{CAN} MultiMessage blocks establish an interface between the physical \gls{CAN}-Buses of the \gls{MABII} and the Simulink-model running on the \gls{MABII} There are four different blocks in this blockset: A \textit{GeneralSetup}-, a \textit{ControllerSetup}-, a \textit{Main}- and a \textit{Gateway}-block. 
-
+The \gls{RTI} \gls{CAN} MultiMessage blocks establish an interface between the physical \gls{CAN}-Buses of the \gls{MABII} and the Simulink-model running on the \gls{MABII}. There are four different blocks in this blockset that were used in this project:
+\begin{itemize}
+\item \textit{GeneralSetup}
+\item \textit{ControllerSetup}
+\item \textit{Main}
+\end{itemize}
 The \textit{GeneralSetup} block is used for setting the paths of the model root and the destination folder for generated files. 
 
 The \textit{ControllerSetup}-block is used for setting up a \gls{CAN}-controller. Figure \ref{fig:RTI_ControllerSetup} shows the parameters that need to be set in it.
 \begin{figure*}[!htb]
 	\centering
-	\includegraphics[width=0.5\linewidth]{figures/RTI_ControllerSetup}
+	\includegraphics[width=0.8\linewidth]{figures/RTI_ControllerSetup}
 	
 	\caption[\acrshort{RTI} \acrshort{CAN} MultiMessage ControllerSetup-block]{\gls{RTI} \gls{CAN} MultiMessage ControllerSetup-block}
 	\label{fig:RTI_ControllerSetup}
@@ -53,13 +54,10 @@ First the name of the controller has to be set. After that the physical CAN-Bus,
 
 After setting the module- and controller number the identifier format has to be set to either standard or extended format, the transceiver type must be chosen between ISO11898-2 and ISO11898-6. ISO11898-2 is used for a high-speed medium access unit and ISO11989-6 for the selective wake-up functionality of a high-speed medium access unit. If needed, a termination resistance of 120 Ohms can be set in the block as well. As a last step the Baud rate of the \gls{CAN}-bus has to be defined.
 
-
-
-
 In the \textit{Main}-Block a \gls{dbc}-file is connected to one of the controller blocks, that were created before. Figure \ref{fig:RTI_Main} shows the \gls{GUI} of this \textit{Main}-Block. 
 \begin{figure*}[!htb]
 	\centering
-	\includegraphics[width=0.5\linewidth]{figures/RTI_Main}
+	\includegraphics[width=0.8\linewidth]{figures/RTI_Main}
 	
 	\caption[\acrshort{RTI} \acrshort{CAN} MultiMessage Main-block General settings]{\gls{RTI} \gls{CAN} MultiMessage Main-block General settings}
 	\label{fig:RTI_Main}
@@ -67,16 +65,15 @@ In the \textit{Main}-Block a \gls{dbc}-file is connected to one of the controlle
 A \textit{ControllerSetup} block can only be connected to one \textit{Main Block} at a time. When the \gls{dbc}-file is loaded in the \textit{Main Block}, the different messages and signals that are specified in the \gls{dbc}-file can be chosen as inputs and/or outputs of the \textit{Main block}. Figure \ref{fig:RTI_Main_signals} shows an example of the signals that can be chosen for the \gls{dbc}-file of the \gls{ASF}-sensor.  
 \begin{figure*}[!htb]
 	\centering
-	\includegraphics[width=0.5\linewidth]{figures/RTI_Main_signals}
+	\includegraphics[width=0.8\linewidth]{figures/RTI_Main_signals}
 	
 	\caption[\acrshort{RTI} \acrshort{CAN} MultiMessage Main-block Rx-signals example]{\gls{RTI} \gls{CAN} MultiMessage Main-block Rx-signals example}
 	\label{fig:RTI_Main_signals}
 \end{figure*} \\
 For signals that should be transmitted it has to be defined when they should be transmitted. There are different ways to specify this. One way is to set a cycle time in the Simulink model, that determines with which frequency the signal is sent out. Another way is to use triggers that trigger the transmission every time a specific event happens. This can be set in the tab \textit{Messages} under \textit{Triggering}.
 
-The \textit{Gateway block} can be used to gateway signals from one \gls{CAN} to another. In this project this block wasn't used. 
 \subsubsection{RTI Ethernet (UDP) Blockset}
-The \gls{RTI} Ethernet (\gls{UDP}) Blockset was used for two purposes: On the one hand for the \gls{HIL} -testing (see section \ref{sec:HIL}), on the other hand for the \gls{CAN}-bus extension of the \gls{MABII}. The \gls{RTI} Ethernet (UDP) Blockset contains four different blocks: An setup-, RX-, TX-, and an interrupt-block.\\
+The \gls{RTI} Ethernet (\gls{UDP}) Blockset was used for two purposes: On the one hand for the \gls{HIL} -testing (see section \ref{sec:HIL}), on the other hand for the \gls{CAN}-bus extension of the \gls{MABII}. The \gls{RTI} Ethernet (UDP) Blockset contains four different blocks: A setup-, RX-, TX-, and an interrupt-block.\\
 The \textit{Ethernet\_UDP\_SETUP} block consists of two pages. In the \textit{Unit} page the main settings for the Ethernet are made. First the interface name has to be chosen. Then the board type has to be selected. There are two types of boards: \textit{ETH Type 1} and \textit{ECU Type 1 ETH}. If the Ethernet cable is connected to the Ethernet port of the \gls{MABII}, \textit{ETH Type 1} has to be chosen. The module number, which has to be set in the next step, must be set to 1 since the used \gls{MABII} only has one module.
 After that, the local \gls{IP} address has to be set.\\
 On the options page of the setup block up to four different sockets can be enabled. For each socket a local port number, the remote ip address and the remote port number have to be set.\\
@@ -87,12 +84,12 @@ The \textit{Ethernet\_UDP\_TX} block is used to send data over Ethernet. This ca
 \begin{equation}
 data\ port\ width=(MaxMessageSize + 3) / 4
 \end{equation}
-The inputs to the transmit block are the data to transmit, the message size and a constant to enable the transmission. The data format of the data to transmit needs to be uint32. Similar to the receive block a so called \textit{DSEncode} block can be found in the demo for this blockset. This block encodes muxed signals of different types in a way, that they can be transmitted with the transmit block. In the \textit{DSEncode} block the data type of the different signals, that are put in the block, need to be specified.
+The inputs to the transmit block are the data to transmit, the message size and a trigger to enable the transmission. The data format of the data to transmit needs to be uint32. Similar to the receive block a so called \textit{DSEncode} block can be found in the demo for this blockset. This block encodes multiplexed signals of different types in a way, that they can be transmitted with the transmit block. In the \textit{DSEncode} block the data type of the different signals, that are put in the block, need to be specified.
 
 The \textit{Ethernet\_UDP\_INTERRUPT} can be used to make the hardware interrupts available as trigger sources.
 \subsection{Virtual Truck Modelling Library}
 \label{sec:VTM}
-The \gls{VTM} is a computational framework used within Volvo Trucks to simulate the dynamic behaviours of trucks and combinations. As a library it extends Simulink, where maneuvers, track layout and the trucks kinematic and dynamic properties are linked together and then computed. This toolbox was used as a base for the simulation of \gls{HCT} vehicles including the dolly for this project. It is possible to run simulation offline with a predefined maneuver and a given environment as well online where these parameters are fed into the calculation live or as measurings from the real-world environment. For online use all relevant parameters and states can be accessed in Simulink or in case of execution on the \gls{MABII} through ControlDesk as their respective representation of the Simulink variable. 
+The \gls{VTM} is a computational framework used within Volvo Trucks to simulate the dynamic behaviour of trucks and combinations. As a library it extends Simulink, where maneuvers, track layout and the trucks kinematic and dynamic properties are linked together and then computed. This toolbox was used as a base for the simulation of \gls{HCT} vehicles including the dolly for this project. It is possible to run simulation offline with a predefined maneuver and a given environment as well online where these parameters are fed into the calculation live or as measurings from the real-world environment. For online use all relevant parameters and states can be accessed in Simulink or in case of execution on the \gls{MABII} through ControlDesk as their respective representation of the Simulink variable. 
 
 %\subsection{CAN-bus extension}
 %\label{sec:can_bus_extension_software}
@@ -117,8 +114,8 @@ Figure \ref{fig:steering_interface} shows the steering interface block with its 
 \end{figure*} \\
 The inputs to the block are:
 \begin{itemize}
-	\item Delta31: Steering angle requests for front axle of the dolly 
-	\item Delta32: Steering angle requests for rear axle of the dolly 
+	\item Delta31: Steering angle requests for front axle of the dolly sent from the steering controller model
+	\item Delta32: Steering angle requests for rear axle of the dolly sent from the steering controller model
 \end{itemize} 
  The outputs of the block are:
  \begin{itemize}
@@ -129,9 +126,9 @@ The inputs to the block are:
  	\item WheelSpeedDiffMainAxle: The wheel speed difference from the dolly's \gls{EBS}
  \end{itemize}
  The outputs are used to monitor the dolly's state and for the calculation of the current capabilities (see section \ref{sec:maxi_capabilities}).
- Figure \ref{fig:steering_interface_inside_pdf} shows the inside of the steering interface block. It contains \gls{RTI} \gls{CAN} MultiMessage blocks (see section \ref{sec:matlab}).   
+ Figure \ref{fig:steering_interface_inside_pdf} shows the inside of the steering interface block. It contains \gls{RTI} \gls{CAN} MultiMessage blocks (see section \ref{sec:matlab}) for communication with the dolly.   
  
- \begin{figure*}[!htb]
+ \begin{figure*}[!p]
  	\centering
  	\includegraphics[width=0.95\linewidth]{figures/steering_interface_inside}
  	
@@ -139,9 +136,16 @@ The inputs to the block are:
  	\label{fig:steering_interface_inside_pdf}
  \end{figure*}
  
- The software CAN-layout corresponds to the hardware CAN-layout described in section \ref{sec:interface_with_dolly}. There are five different CAN-controllers. Controller1 is used to receive the signals of the ASF-Sensor and the dolly's \gls{EBS} system. These signals, except for the "Angle", "Wheel\_BasedVehicleSpeed" and the "WheelSpeedDiffMainAxle" signals are forwarded to Controller2 and Controller3. Controller2 corresponds to the \gls{ETS}-\gls{CAN} of the front axle and Controller3 to the one of the rear axle. The inputs Delta31 and Delta32 are sent to the front \gls{ETS}-\gls{CAN} (Controller2) and rear \gls{ETS}-\gls{CAN} (Controller3), respectively. For the signals "Wheel\_BasedVehicleSpeed" and  "WheelSpeedDiffMainAxle" constants with the value zero are forwarded both to Controller2 and Controller3.
- Controller4 and Controller5 also correspond to the front \gls{ETS}-\gls{CAN} and rear \gls{ETS}-\gls{CAN}, respectively. As mentioned in section \ref{sec:interface_with_dolly} this is necessary because different CAN-protocols are used. The signals received from those Controllers, together with the signals from Controller1, that weren't forwarded, are outputs of the steering interface block.
-  
+
+ The software \gls{CAN}-layout corresponds to the hardware \gls{CAN}-layout described in section \ref{sec:interface_with_dolly}. There are five different CAN-controllers. Controller1 is used to receive the signals of the \gls{ASF}-Sensor and the dolly's \gls{EBS} system. These signals, except for the \textit{Angle}, \textit{Wheel\_BasedVehicleSpeed} and the \textit{WheelSpeedDiffMainAxle} signals are forwarded to Controller2 and Controller3. Controller2 corresponds to the \gls{ETS}-\gls{CAN} of the front axle and Controller3 to the one of the rear axle. The inputs \textit{Delta31} and \textit{Delta32} are sent to the front \gls{ETS}-\gls{CAN} (Controller2) and rear \gls{ETS}-\gls{CAN} (Controller3), respectively. For the signals \textit{Wheel\_BasedVehicleSpeed} and  \textit{WheelSpeedDiffMainAxle} constants with the value zero are forwarded both to Controller2 and Controller3.
+ Controller4 and Controller5 also correspond to the front \gls{ETS}-\gls{CAN} and rear \gls{ETS}-\gls{CAN}, respectively. As mentioned in section \ref{sec:interface_with_dolly} this is necessary because different CAN-protocols are used. The signals received from those Controllers, together with the signals from Controller1, that weren't forwarded, are outputs of the steering interface block. In figure \ref{fig:system_modification} a scheme of the modification of these signals is shown.
+\begin{figure*}[!htb]
+	\centering
+	\includegraphics[width=0.8\linewidth]{figures/system_mod}
+	\caption{Modification of \gls{ASF}- and \gls{EBS}-signals in \gls{MABII}}
+	\label{fig:system_modification}
+\end{figure*}
+
 \section{ControlDesk monitoring environment}
 \label{sec:control_desk}
 The software used to monitor the Simulink model running on the \gls{MABII} and for logging of data is called dSpace ControlDesk. It also provides the possibility to control the Simulink model, for example by changing parameters like constants in the model during run-time. Therefore it was used for bench-testing the dolly system (see section \ref{sec:bench-testing}) to directly send steering angle request to the \gls{ETS}-\gls{CAN} via the steering interface (section \ref{sec:steering_interface}). In ControlDesk the \gls{CAN}s that the \gls{MABII} is connected to can be monitored as well. This proofed very useful for checking if all systems work correctly during early stages of development. 
@@ -156,7 +160,7 @@ Though as mentioned in section \ref{sec:realtime_environment} the \gls{MABII} is
 	\label{fig:controlDesk_trigger}
 \end{figure*}
 
-Sending a steering request of zero results in the dolly behaving like a passive un-steered dolly, which is also the fall-back level implemented in hardware in the legacy \gls{ETS} system. The constant block in the depicted system can be changed manually in ControlDesk to use this as a maneuver start-switch, but of course can also be accessed by the model itself. The supervisor-block can thus shutdown the steering completely on software level, preventing the triggering of the hardware-level error-mode. the hardware implementation moves the hydraulic piston of the steering system back to the middle position, if pressure is not present anymore. In doing so it enters error-mode, which needs to be reset by turning the truck's ignition off and on again. Software shutdown within the environment developed in this thesis, allows reverting back from locked mode to steering mode. 
+Sending a steering request of zero results in the dolly behaving like a passive un-steered dolly, which is also the fall-back level implemented in hardware in the legacy \gls{ETS} system. The constant block in the depicted system can be changed manually in ControlDesk to use this as a maneuver start-switch, but of course can also be accessed by the model itself. The supervisor-block can thus shutdown the steering completely on software level, preventing the triggering of the hardware-level error-mode. The hardware implementation moves the hydraulic piston of the steering system back to the middle position, if pressure is not present anymore. In doing so it enters error-mode, which needs to be reset by turning the truck's ignition off and on again in standstill. Software shutdown within the environment developed in this thesis, allows reverting back from locked mode to steering mode. 
 
 
 
