@@ -19,20 +19,29 @@
 
 \subsection{dSpace RTI-blockset}
 
-The dSpace RTI-Blockset (Real-time interface) is a plug-in for MATLAB/Simulink that makes it possible to connect a simulink-model to the different inputs and outputs of the \gls{MABII} There are \gls{RTI}-blocks for CAN, Ethernet, and the analog and digital outputs of the \gls{MABII}
+The dSpace RTI-Blockset (Real-time interface) is a plug-in for MATLAB/Simulink that makes it possible to connect a Simulink-model to the different inputs and outputs of the \gls{MABII} There are \gls{RTI}-blocks for \gls{CAN}, Ethernet, and the analog and digital outputs of the \gls{MABII}
 In this project the \gls{RTI} \gls{CAN} MultiMessage and the \gls{RTI} Ethernet (UDP) Blocksets were used.\\ 
 \subsubsection{RTI \gls{CAN} MultiMessage Blockset}
-The \gls{RTI} \gls{CAN} MultiMessage blocks establish an interface between the physical \gls{CAN}-Buses of the \gls{MABII} and the simulink-model running on the \gls{MABII} There are four different blocks in this blockset: A GeneralSetup-, a ControllerSetup-, a Main- and a Gateway-block. 
+The \gls{RTI} \gls{CAN} MultiMessage blocks establish an interface between the physical \gls{CAN}-Buses of the \gls{MABII} and the Simulink-model running on the \gls{MABII} There are four different blocks in this blockset: A \textit{GeneralSetup}-, a \textit{ControllerSetup}-, a \textit{Main}- and a \textit{Gateway}-block. 
 
-In the "GeneralSetup" block the paths of the model root and the destination folder for generated files are set. 
+The \textit{GeneralSetup} block is used for setting the paths of the model root and the destination folder for generated files. 
 
-In the "ControllerSetup" block first the name of the controller has to be set. After that the physical CAN-Bus, that should be used, is set by choosing a module number and a controller number. How the module- and controller numbers have to be set for the different CAN-buses of the \gls{MABII} is shown in table \ref{tab:CAN-layout}.
+The \textit{ControllerSetup}-block is used for setting up a \gls{CAN}-controller. Figure \ref{fig:RTI_ControllerSetup} shows the parameters that need to be set in it.
+\begin{figure*}[!htb]
+	\centering
+	\includegraphics[width=0.5\linewidth]{figures/RTI_ControllerSetup}
+	
+	\caption{\gls{RTI} \gls{CAN} MultiMessage ControllerSetup-block}
+	\label{fig:RTI_ControllerSetup}
+\end{figure*} \\
+
+First the name of the controller has to be set. After that the physical CAN-Bus, that should be used, is set by choosing a module number and a controller number. How the module- and controller numbers have to be set for the different \gls{CAN}-buses of the \gls{MABII} is shown in table \ref{tab:CAN-layout}. The table also shows which pins are used for the different \gls{CAN}s on the \gls{ZIF}-connector (see figure \ref{fig:ZIF_connector}), which is used to input them to the \gls{MABII}. 
 \begin{table}[h]
 	\centering
 	\caption{CAN-layout MABII}
 	\label{tab:CAN-layout}
 	\begin{tabular}{c|c|c|c|c|}
-		CAN   & Module number & Controller number & \gls{ZIF} -Pin CAN-High & \gls{ZIF} -Pin \gls{CAN}-Low  \\ \hline
+		CAN   & Module number & Controller number & \gls{ZIF}-Pin CAN-High & \gls{ZIF}-Pin \gls{CAN}-Low  \\ \hline
 		CAN1     &       1 & 1  & c2 & c3         \\
 		CAN2   &      1 & 2  & b2 & b3    \\
 		CAN3 &      2 & 1 & B2 & B3        \\
@@ -45,27 +54,45 @@ In the "ControllerSetup" block first the name of the controller has to be set. A
 After setting the module- and controller number the identifier format has to be set to either standard or extended format, the transceiver type must be chosen between ISO11898-2 and ISO11898-6. ISO11898-2 is used for a high-speed medium access unit and ISO11989-6 for the selective wake-up functionality of a high-speed medium access unit. If needed, a termination resistance of 120 Ohms can be set in the block as well. As a last step the Baud rate of the \gls{CAN}-bus has to be defined.
 
 
-In the "Main Block" a dbc-file is connected to one of the controller blocks, that were created before. A "ControllerSetup" block \gls{CAN} only be connected to one "Main Block" at a time. When the dbc-file is loaded in the "Main Block", the different messages and signals that are specified in the dbc-file can be chosen as inputs and/or outputs of the "Main block". For signals that should be transmitted it has to be defined when they should be transmitted. There are different ways to specify this. One way is to set a cycle time in the simulink model, that determines with which frequency the signal is sent out. Another way is to use triggers that trigger the transmission every time a specific event happens. This \gls{CAN} be set in the tab "Messages" under "Triggering".
 
-The "Gateway block" is used to gateway signals from one \gls{CAN} to another. 
+
+In the \textit{Main}-Block a \gls{dbc}-file is connected to one of the controller blocks, that were created before. Figure \ref{fig:RTI_Main} shows the \gls{GUI} of this \textit{Main}-Block. 
+\begin{figure*}[!htb]
+	\centering
+	\includegraphics[width=0.5\linewidth]{figures/RTI_Main}
+	
+	\caption{\gls{RTI} \gls{CAN} MultiMessage Main-block General settings}
+	\label{fig:RTI_Main}
+\end{figure*} \\
+A \textit{ControllerSetup} block can only be connected to one \textit{Main Block} at a time. When the \gls{dbc}-file is loaded in the \textit{Main Block}, the different messages and signals that are specified in the \gls{dbc}-file can be chosen as inputs and/or outputs of the \textit{Main block}. Figure \ref{fig:RTI_Main_signals} shows an example of the signals that can be chosen for the \gls{dbc}-file of the \gls{ASF}-sensor.  
+\begin{figure*}[!htb]
+	\centering
+	\includegraphics[width=0.5\linewidth]{figures/RTI_Main_signals}
+	
+	\caption{\gls{RTI} \gls{CAN} MultiMessage Main-block Rx-signals example}
+	\label{fig:RTI_Main_signals}
+\end{figure*} \\
+For signals that should be transmitted it has to be defined when they should be transmitted. There are different ways to specify this. One way is to set a cycle time in the Simulink model, that determines with which frequency the signal is sent out. Another way is to use triggers that trigger the transmission every time a specific event happens. This can be set in the tab \textit{Messages} under \textit{Triggering}.
+
+The \textit{Gateway block} can be used to gateway signals from one \gls{CAN} to another. In this project this block wasn't used. 
 \subsubsection{RTI Ethernet (UDP) Blockset}
-The \gls{RTI} Ethernet (\gls{UDP}) Blockset was used for two purposes: On the one hand for the \gls{HIL} -testing (see section \ref{sec:HIL}), on the other hand for the \gls{CAN}-bus extension of the \gls{MABII} (see section \ref{sec:can_bus_extension_software}). The \gls{RTI} Ethernet (UDP) Blockset contains four different blocks: An setup-, RX-, TX-, and an interrupt-block.\\
-The "Ethernet\_UDP\_SETUP" block consists of two pages. In the "Unit" page the main settings for the Ethernet are made. First the interface name has to be chosen. Then the board type has to be selected. There are two types of boards: "ETH Type 1" and "ECU Type 1 ETH". If the Ethernet cable is connected to the Ethernet port of the \gls{MABII}, "ETH Type 1" has to be chosen. The module number, which has to be set in the next step, must be set to 1 since the used \gls{MABII} only has one module.
+The \gls{RTI} Ethernet (\gls{UDP}) Blockset was used for two purposes: On the one hand for the \gls{HIL} -testing (see section \ref{sec:HIL}), on the other hand for the \gls{CAN}-bus extension of the \gls{MABII}. The \gls{RTI} Ethernet (UDP) Blockset contains four different blocks: An setup-, RX-, TX-, and an interrupt-block.\\
+The \textit{Ethernet\_UDP\_SETUP} block consists of two pages. In the \textit{Unit} page the main settings for the Ethernet are made. First the interface name has to be chosen. Then the board type has to be selected. There are two types of boards: \textit{ETH Type 1} and \textit{ECU Type 1 ETH}. If the Ethernet cable is connected to the Ethernet port of the \gls{MABII}, \textit{ETH Type 1} has to be chosen. The module number, which has to be set in the next step, must be set to 1 since the used \gls{MABII} only has one module.
 After that, the local \gls{IP} address has to be set.\\
-On the options page of the setup block up to four different sockets \gls{CAN} be enabled. For each socket a local port number, the remote ip address and the remote port number have to be set.\\
+On the options page of the setup block up to four different sockets can be enabled. For each socket a local port number, the remote ip address and the remote port number have to be set.\\
  
-The "Ethernet\_UDP\_RX" block is used to receive data over Ethernet. To set up this block the board type, module number and socket number need to be set corresponding to the settings that were made in the "Ethernet \gls{UDP} Setup" block. Furthermore the maximum message size \gls{CAN} be defined. Outputs of this block are the received data, the message size and a status. The datatype of the received data is uint32. If the data wasn't transmitted as uint32 it needs to be decoded. In the demo for the Ethernet blocks a block called "DSDecode32" \gls{CAN} be found. With this block the decoding \gls{CAN} be done, by choosing the desired output data format. To get the single signals the output of that block just needs to be demuxed. If the data type of the transmitted data was already uint32 the signal \gls{CAN} be demuxed right away.
+The \textit{Ethernet\_UDP\_RX} block is used to receive data over Ethernet. To set up this block the board type, module number and socket number need to be set corresponding to the settings that were made in the "Ethernet \gls{UDP} Setup" block. Furthermore the maximum message size can be defined. Outputs of this block are the received data, the message size and a status. The datatype of the received data is uint32. If the data wasn't transmitted as uint32 it needs to be decoded. In the demo for the Ethernet blocks a block called \textit{DSDecode32} can be found. With this block the decoding can be done, by choosing the desired output data format. To get the single signals the output of that block just needs to be demuxed. If the data type of the transmitted data was already uint32 the signal can be demuxed right away.
 
-The "Ethernet\_UDP\_TX" block is used to send data over Ethernet. This \gls{CAN} be done in a similar way as for the receive block. The only difference is that in the transmit block additionally a send timeout \gls{CAN} be set. The maximum message size must match the port width of the data that is send out. It \gls{CAN} be calculated by:
+The \textit{Ethernet\_UDP\_TX} block is used to send data over Ethernet. This can be done in a similar way as for the receive block. The only difference is that in the transmit block additionally a send timeout can be set. The maximum message size must match the port width of the data that is send out. It can be calculated by:
 \begin{equation}
 data\ port\ width=(MaxMessageSize + 3) / 4
 \end{equation}
-The inputs to the transmit block are the data to transmit, the message size and a constant to enable the transmission. The data format of the data to transmit needs to be uint32. Similar to the receive block a so called "DSEncode" block \gls{CAN} be found in the demo for this blockset. This block encodes muxed signals of different types in a way, that they \gls{CAN} be transmitted with the transmit block. In the "DSEncode" block the data type of the different signals, that are put in the block, need to be specified.
+The inputs to the transmit block are the data to transmit, the message size and a constant to enable the transmission. The data format of the data to transmit needs to be uint32. Similar to the receive block a so called \textit{DSEncode} block can be found in the demo for this blockset. This block encodes muxed signals of different types in a way, that they can be transmitted with the transmit block. In the \textit{DSEncode} block the data type of the different signals, that are put in the block, need to be specified.
 
-The "Ethernet\_UDP\_INTERRUPT" \gls{CAN} be used to make the hardware interrupts available as trigger sources.
+The \textit{Ethernet\_UDP\_INTERRUPT} can be used to make the hardware interrupts available as trigger sources.
 \subsection{Virtual Truck Modelling Library}
 \label{sec:VTM}
-The \gls{VTM} is a computational framework used within Volvo Trucks to simulate the dynamic behaviours of trucks and combinations. As a library it extends Simulink, where maneuvers, track layout and the trucks kinematic and dynamic properties are linked together and then computed. This toolbox was used as a base for the simulation of \gls{HCT} vehicles including the dolly for this project. It is possible to run simulation offline with a predefined maneuver and a given environment as well online where these parameters are fed into the calculation live or as measurings from the real-world environment. For online use all relevant parameters and states \gls{CAN} be accessed in Simulink or in case of execution on the \gls{MABII} through ControlDesk as their respective representation of the Simulink variable. 
+The \gls{VTM} is a computational framework used within Volvo Trucks to simulate the dynamic behaviours of trucks and combinations. As a library it extends Simulink, where maneuvers, track layout and the trucks kinematic and dynamic properties are linked together and then computed. This toolbox was used as a base for the simulation of \gls{HCT} vehicles including the dolly for this project. It is possible to run simulation offline with a predefined maneuver and a given environment as well online where these parameters are fed into the calculation live or as measurings from the real-world environment. For online use all relevant parameters and states can be accessed in Simulink or in case of execution on the \gls{MABII} through ControlDesk as their respective representation of the Simulink variable. 
 
 %\subsection{CAN-bus extension}
 %\label{sec:can_bus_extension_software}
