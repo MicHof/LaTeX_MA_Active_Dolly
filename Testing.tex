@@ -27,12 +27,7 @@ For the \gls{HMI} lookup tables were used for the steering angle and vehicle spe
 	\label{fig:funct_architecture_sim}
 \end{figure*}
 
-\begin{itemize}
-	\item include simulation results for maneuver of controller being run inside \gls{VTM} 
-	\item perhaps include some picture of the video-output, with the actuated truck
-	\item plots for maneuver (steering input, speed over time)
-	
-\end{itemize}
+
 \subsection{CAN verification}
 To test the functionality of the \gls{ASF}-Sensor as a first step it was just connected to power supply and an Arduino with a attached \gls{CAN}-shield. After the \gls{CAN}-message was received successfully with the Arduino, as a next step the sensor's \gls{CAN} pins were connected to the \gls{MABII}. On the \gls{MABII} a simple model, that only contained one \gls{CAN}-Controller with the corresponding dbc-file, was loaded. The bus-monitor tool of ControlDesk, that shows all incoming and outgoing signals on the \gls{CAN} for the corresponding dbc-file, was used to check the sensor signals. 
 
@@ -208,7 +203,9 @@ Limitations: \gls{HIL} -testing took place in workshop environment and thus the 
 %\end{figure*}\\
 
 \subsection{Low-speed controller}
-The maneuver that was used for testing the Low-speed controller was a 180$^{\circ}$ turn at constant speed. The steering angle of the tractor can be seen in Figure \ref{fig:HIL002_delta11}.\\
+The maneuver that was used for testing the Low-speed controller was a 180$^{\circ}$ turn at constant speed. The steering angle of the tractor can be seen in Figure \ref{fig:HIL002_delta11}.
+As a first step a very simple controller was used for controlling the steering of the dolly. The controller used the articulation angle between the first semitrailer and the dolly as an input. The output to both axles was this angle multiplied with a gain of -0.8.\\
+
 \begin{figure*}[!htb]
 	\centering
 	\includegraphics[width=0.7\linewidth]{figures/HIL_delta11}
@@ -216,11 +213,11 @@ The maneuver that was used for testing the Low-speed controller was a 180$^{\cir
 	
 	\label{fig:HIL002_delta11}
 \end{figure*}
-As a first step a very simple controller was used for controlling the steering of the dolly. The controller used the articulation angle between the first semitrailer and the dolly as an input. The output to both axles was this angle multiplied with a gain of -0.8.
 
 
 
-\subsection{High-speed controller}
+
+%\subsection{High-speed controller}
 
 \section{Track testing}
 \label{sec:track-testing}
